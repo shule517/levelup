@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dousl2l7dapbw"
+path="res://.godot/imported/yurei.aseprite-5acff4d92a114a048814c414b6134798.res"
+
+[deps]
+
+source_file="res://scene/Yurei/yurei.aseprite"
+dest_files=["res://.godot/imported/yurei.aseprite-5acff4d92a114a048814c414b6134798.res"]
+
+[params]
+

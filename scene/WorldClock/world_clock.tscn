@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5714kl8webjf"]
+
+[ext_resource type="Script" path="res://scene/WorldClock/world_clock.gd" id="1_8uxv4"]
+[ext_resource type="FontFile" uid="uid://bmv2868bcw4dt" path="res://scene/WorldClock/x12y12pxMaruMinyaM.ttf" id="1_qat3b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nvyr3"]
+font = ExtResource("1_qat3b")
+
+[node name="WorldClock" type="Node2D"]
+script = ExtResource("1_8uxv4")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "０８：１１"
+label_settings = SubResource("LabelSettings_nvyr3")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://ctuyquw6eqlk"
+path="res://.godot/imported/kage.aseprite-3b1d989b055906c1ac9ba5695be7f39b.res"
+
+[deps]
+
+source_file="res://Assets/kage.aseprite"
+dest_files=["res://.godot/imported/kage.aseprite-3b1d989b055906c1ac9ba5695be7f39b.res"]
+
+[params]
+

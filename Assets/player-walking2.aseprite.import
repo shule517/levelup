@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b6jkl4itpqeeu"
+path="res://.godot/imported/player-walking2.aseprite-c3360c9d3ba76cff7b7994160aa30926.res"
+
+[deps]
+
+source_file="res://Assets/player-walking2.aseprite"
+dest_files=["res://.godot/imported/player-walking2.aseprite-c3360c9d3ba76cff7b7994160aa30926.res"]
+
+[params]
+

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bkxgxtegi7557"
+path="res://.godot/imported/nupu.aseprite-5cb9543396f9907ecda4cd27370d7533.res"
+
+[deps]
+
+source_file="res://scene/Nupu/nupu.aseprite"
+dest_files=["res://.godot/imported/nupu.aseprite-5cb9543396f9907ecda4cd27370d7533.res"]
+
+[params]
+

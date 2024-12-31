@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://ces1trfo186r7"
+path="res://.godot/imported/カラス.aseprite-b5a69f6f677a798711d594e3a6566c1a.res"
+
+[deps]
+
+source_file="res://scene/Karasu/カラス.aseprite"
+dest_files=["res://.godot/imported/カラス.aseprite-b5a69f6f677a798711d594e3a6566c1a.res"]
+
+[params]
+

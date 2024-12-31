@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://bux57ckmy2stp"]
+
+[ext_resource type="Texture2D" uid="uid://bfckg6kntqvfa" path="res://scene/Nupu/nupu.png" id="1_1go3d"]
+[ext_resource type="Script" path="res://scene/Nupu/nupu.gd" id="1_68a42"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghrrv"]
+atlas = ExtResource("1_1go3d")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4356o"]
+atlas = ExtResource("1_1go3d")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4qmq"]
+atlas = ExtResource("1_1go3d")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5ues"]
+atlas = ExtResource("1_1go3d")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3klb5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghrrv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4356o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4qmq")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5ues")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghrrv")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7e0t6"]
+radius = 2.0
+height = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w0wxn"]
+radius = 76.0066
+
+[node name="Nupu" type="CharacterBody2D"]
+script = ExtResource("1_68a42")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -15)
+sprite_frames = SubResource("SpriteFrames_3klb5")
+animation = &"sleep"
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "res://scene/Nupu/",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/Nupu/nupu.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"output_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5bedce90ad07c211e7072d47e67f8dd1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_7e0t6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_w0wxn")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
