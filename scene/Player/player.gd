@@ -101,7 +101,7 @@ func _process(_delta):
 		#print(scale.x)
 		sprite.play("walk")
 		#scale.x *=
-		#sprite.flip_h = value.x < 0
+		sprite.flip_h = value.x < 0
 		attack_target = null
 		$WeaponSprite2D.visible = false
 
