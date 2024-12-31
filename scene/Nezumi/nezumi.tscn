@@ -1,9 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://crx78tiy2lwrx"]
+[gd_scene load_steps=15 format=3 uid="uid://crx78tiy2lwrx"]
 
 [ext_resource type="Script" path="res://scene/Nezumi/nezumi.gd" id="1_x18rc"]
+[ext_resource type="Shader" path="res://scene/Nezumi/nezumi.gdshader" id="2_5lths"]
 [ext_resource type="Texture2D" uid="uid://3ns77ik7o866" path="res://scene/Nezumi/ネズミ.png" id="2_bvx3s"]
+[ext_resource type="FontFile" uid="uid://b533rou4k6drt" path="res://scene/WorldClock/x12y16pxMaruMonica.ttf" id="3_lgtxu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ir5a"]
+shader = ExtResource("2_5lths")
+shader_parameter/is_selected = false
+shader_parameter/modulate = null
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ctxhg"]
 atlas = ExtResource("2_bvx3s")
@@ -103,6 +108,13 @@ _data = {
 "damaged": SubResource("Animation_ob4jj")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_c8q5t"]
+font = ExtResource("3_lgtxu")
+font_size = 9
+font_color = Color(0.897137, 0.68752, 0.703066, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Nezumi" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_x18rc")
 
@@ -144,6 +156,15 @@ autostart = true
 libraries = {
 "": SubResource("AnimationLibrary_db08b")
 }
+
+[node name="Label" type="Label" parent="."]
+offset_left = -46.0
+offset_top = 3.0
+offset_right = 45.0
+offset_bottom = 26.0
+text = "ねずみ"
+label_settings = SubResource("LabelSettings_c8q5t")
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

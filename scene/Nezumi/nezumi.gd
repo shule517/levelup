@@ -11,6 +11,7 @@ var new_material = ShaderMaterial.new()
 var floating_damage: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 
 func _ready() -> void:
+	$Label.visible = false
 	new_material.shader = sprite.material.shader
 	sprite.material = new_material
 
@@ -39,6 +40,7 @@ func _physics_process(delta: float) -> void:
 		sprite.play("idle")
 
 func set_is_selected(value: bool) -> void:
+	$Label.visible = value
 	new_material.set_shader_parameter("is_selected", value)
 
 var audio_players: Array = []
