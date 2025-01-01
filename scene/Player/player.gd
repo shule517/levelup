@@ -184,12 +184,11 @@ func attack() -> void:
 		before_attack_time = Time.get_unix_time_from_system()
 		$AnimationPlayer.stop()
 		$AnimationPlayer.play("attack")
-		play_sound_effect(preload("res://scene/Player/tm2_swing006.wav")) # 攻撃
+		play_sound_effect(preload("res://scene/Player/se/tm2_swing006.wav")) # 攻撃
 		await get_tree().create_timer(0.2).timeout
 		is_instance_valid(attack_target) && attack_target.damage(randi_range(10, 99))
-		play_sound_effect(preload("res://scene/Player/hit_p07.wav")) # 敵にHIT
-		#play_sound_effect(preload("res://scene/Player/決定ボタンを押す46.mp3"))
-		#enemy.queue_free() # TODO: DEBUG 適当に消す。ほんとはNezumi側にメソッド作ったほうがいい
+		play_sound_effect(preload("res://scene/Player/se/hit_p07.wav")) # 敵にHIT
+		#play_sound_effect(preload("res://scene/Player/se/決定ボタンを押す46.mp3"))
 	else:
 		$WeaponSprite2D.visible = false
 
