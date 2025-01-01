@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://v44aiakk6f2s"
+path="res://.godot/imported/ネズミ.aseprite-c22a97009bf0a47fa4ab6bc8832c30fa.res"
+
+[deps]
+
+source_file="res://scene/Enemy/Nezumi/ネズミ.aseprite"
+dest_files=["res://.godot/imported/ネズミ.aseprite-c22a97009bf0a47fa4ab6bc8832c30fa.res"]
+
+[params]
+

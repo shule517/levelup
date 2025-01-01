@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dyqxqqrjedcfm"]
 
-[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://scene/Nezumi/enemy.tscn" id="1_g7pxc"]
-[ext_resource type="Texture2D" uid="uid://crx0viuw4vj0x" path="res://scene/Kinoko/キノコ.png" id="2_2q1qg"]
-[ext_resource type="Script" path="res://scene/Kinoko/kinoko.gd" id="2_yom8x"]
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://scene/Enemy/Base/enemy.tscn" id="1_g7pxc"]
+[ext_resource type="Texture2D" uid="uid://crx0viuw4vj0x" path="res://scene/Enemy/Kinoko/キノコ.png" id="2_2q1qg"]
+[ext_resource type="Script" path="res://scene/Enemy/Kinoko/kinoko.gd" id="2_yom8x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vlb4b"]
 atlas = ExtResource("2_2q1qg")

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ceks8pnwd8wtq"
-path="res://.godot/imported/voice034.wav-5c0cb19f56cc9598c2a95ce3e8b75d94.sample"
+path="res://.godot/imported/voice034.wav-e052df88af2ba9e3bd7f94a9972c010d.sample"
 
 [deps]
 
-source_file="res://scene/Nezumi/やられた声/voice034.wav"
-dest_files=["res://.godot/imported/voice034.wav-5c0cb19f56cc9598c2a95ce3e8b75d94.sample"]
+source_file="res://scene/Enemy/Nezumi/やられた声/voice034.wav"
+dest_files=["res://.godot/imported/voice034.wav-e052df88af2ba9e3bd7f94a9972c010d.sample"]
 
 [params]
 

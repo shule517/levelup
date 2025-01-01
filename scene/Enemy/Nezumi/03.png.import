@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3ns77ik7o866"
-path="res://.godot/imported/ネズミ.png-2dbede9e4a6fc84c46726cbabfeccd4b.ctex"
+uid="uid://qjgaxmhrbj7c"
+path="res://.godot/imported/03.png-3a0b53082ff3d8aeb61a9dbab4f7b77a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Nezumi/ネズミ.png"
-dest_files=["res://.godot/imported/ネズミ.png-2dbede9e4a6fc84c46726cbabfeccd4b.ctex"]
+source_file="res://scene/Enemy/Nezumi/03.png"
+dest_files=["res://.godot/imported/03.png-3a0b53082ff3d8aeb61a9dbab4f7b77a.ctex"]
 
 [params]
 

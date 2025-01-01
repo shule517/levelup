@@ -78,11 +78,11 @@ func damage(damage: int) -> void:
 
 	hp -= damage
 
-	play_sound_effect(preload("res://scene/Nezumi/やられた声/voice028.wav")) # damage
+	play_sound_effect(preload("res://scene/Enemy/Nezumi/やられた声/voice028.wav")) # damage
 
 	# やっつけた
 	if hp <= 0:
-		play_sound_effect(preload("res://scene/Nezumi/やられた声/voice017.wav")) # やられた
+		play_sound_effect(preload("res://scene/Enemy/Nezumi/やられた声/voice017.wav")) # やられた
 		var tween = get_tree().create_tween()
 		#tween.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUART)
 		#tween.tween_property(sprite, "modulate", Color(1.0, 1.0, 1.0, 0.5), 2.0)
