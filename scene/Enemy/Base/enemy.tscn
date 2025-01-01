@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://crx78tiy2lwrx"]
+[gd_scene load_steps=21 format=3 uid="uid://crx78tiy2lwrx"]
 
 [ext_resource type="Script" path="res://scene/Enemy/Base/enemy.gd" id="1_x18rc"]
 [ext_resource type="Shader" path="res://scene/Enemy/Nezumi/nezumi.gdshader" id="2_5lths"]
 [ext_resource type="Texture2D" uid="uid://3ns77ik7o866" path="res://scene/Enemy/Nezumi/ネズミ.png" id="2_bvx3s"]
 [ext_resource type="FontFile" uid="uid://b533rou4k6drt" path="res://scene/WorldClock/x12y16pxMaruMonica.ttf" id="3_lgtxu"]
+[ext_resource type="Texture2D" uid="uid://b3rp4ks6m4mf1" path="res://scene/Enemy/Base/2460_2.png" id="5_88es7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ir5a"]
 shader = ExtResource("2_5lths")
@@ -115,6 +116,42 @@ font_color = Color(0.897137, 0.68752, 0.703066, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrmdf"]
+atlas = ExtResource("5_88es7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epvhu"]
+atlas = ExtResource("5_88es7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjf6k"]
+atlas = ExtResource("5_88es7")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3g3a"]
+atlas = ExtResource("5_88es7")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jtrxe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrmdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epvhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjf6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3g3a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_x18rc")
 
@@ -165,6 +202,23 @@ offset_bottom = 13.0
 text = "ねずみ"
 label_settings = SubResource("LabelSettings_c8q5t")
 horizontal_alignment = 1
+
+[node name="CursorAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -23)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_jtrxe")
+animation = &"idle"
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://scene/Enemy/Base/taikiloop_icon/2460_2.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "d0f6194c4f8c6bef6ac93067f6982027"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

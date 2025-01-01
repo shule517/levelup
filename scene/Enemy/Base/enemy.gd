@@ -15,6 +15,8 @@ func _ready() -> void:
 	$Label.visible = false
 	new_material.shader = sprite.material.shader
 	sprite.material = new_material
+	
+	$CursorAnimatedSprite2D.play("idle")
 
 	# AudioStreamPlayerノードを作成し、配列に追加
 	for i in range(10):

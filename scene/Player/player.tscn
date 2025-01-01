@@ -39,7 +39,7 @@ radius = 2.0
 height = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nldkh"]
-radius = 57.0351
+radius = 142.004
 
 [sub_resource type="Animation" id="Animation_2ewc6"]
 length = 0.001
