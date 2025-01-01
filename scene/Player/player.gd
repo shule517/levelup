@@ -90,22 +90,30 @@ func _process(_delta):
 	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
 
 	if (value.x == 0 && value.y == 0):
-		sprite.play("idle")
+		pass
 	else:
-		#if value.x == 0:
-			#pass
-		#elif value.x > 0 && value.x != 1.0:
-			#scale.x = 1.0
-		#elif value.x < 0 && value.x != -1.0:
-			#scale.x = -1.0
-		#print(scale.x)
-		sprite.play("walk")
-		#scale.x *=
-		sprite.flip_h = value.x < 0
 		attack_target = null
 		$WeaponSprite2D.visible = false
 
+	if is_instance_valid(attack_target):
+		var distance = attack_target.position.distance_to(position)
+		if 20 < distance:
+			value = (attack_target.position - position).normalized()
+			print(value)
+		else:
+			print("20 >= distance")
+	else:
+		print("attack_target is null")
+
+	if (value.x == 0 && value.y == 0):
+		sprite.play("idle")
+	else:
+		sprite.play("walk")
+		sprite.flip_h = value.x < 0
+		$WeaponSprite2D.visible = false
+
 	velocity = value * SPEED
+	print("velocity: %s" % velocity)
 	#velocity.x += value.x * SPEED
 	#print(str(value))
 	move_and_slide()
@@ -181,14 +189,16 @@ func _process(_delta):
 
 func attack() -> void:
 	if is_instance_valid(attack_target) && attack_target.is_alive():
-		before_attack_time = Time.get_unix_time_from_system()
-		$AnimationPlayer.stop()
-		$AnimationPlayer.play("attack")
-		play_sound_effect(preload("res://scene/Player/se/tm2_swing006.wav")) # 攻撃
-		await get_tree().create_timer(0.2).timeout
-		is_instance_valid(attack_target) && attack_target.damage(randi_range(10, 99))
-		play_sound_effect(preload("res://scene/Player/se/hit_p07.wav")) # 敵にHIT
-		#play_sound_effect(preload("res://scene/Player/se/決定ボタンを押す46.mp3"))
+		var distance = position.distance_to(attack_target.position)
+		if distance <= 20:
+			before_attack_time = Time.get_unix_time_from_system()
+			$AnimationPlayer.stop()
+			$AnimationPlayer.play("attack")
+			play_sound_effect(preload("res://scene/Player/se/tm2_swing006.wav")) # 攻撃
+			await get_tree().create_timer(0.2).timeout
+			is_instance_valid(attack_target) && attack_target.damage(randi_range(10, 99))
+			play_sound_effect(preload("res://scene/Player/se/hit_p07.wav")) # 敵にHIT
+			#play_sound_effect(preload("res://scene/Player/se/決定ボタンを押す46.mp3"))
 	else:
 		$WeaponSprite2D.visible = false
 
