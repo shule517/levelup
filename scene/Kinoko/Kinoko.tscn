@@ -36,6 +36,7 @@ animations = [{
 
 [node name="Kinoko" instance=ExtResource("1_g7pxc")]
 script = ExtResource("2_yom8x")
+active = false
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_2svgl")

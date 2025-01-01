@@ -249,7 +249,7 @@ y_sort_enabled = true
 position = Vector2(-299, -217)
 
 [node name="Nezumi5" parent="Node2D" instance=ExtResource("1_ewdrg")]
-position = Vector2(-332, -24)
+position = Vector2(161, -220)
 
 [node name="Nupu" parent="Node2D" instance=ExtResource("4_3qy1k")]
 position = Vector2(95, 22)
@@ -272,7 +272,7 @@ position = Vector2(-170, -128)
 position = Vector2(-78, -145)
 
 [node name="Nezumi6" parent="Node2D" instance=ExtResource("1_ewdrg")]
-position = Vector2(-168, -49)
+position = Vector2(61, -339)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

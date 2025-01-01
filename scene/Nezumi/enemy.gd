@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var player: Node = get_tree().get_nodes_in_group("Player")[0]
 @export var speed: float = 30.0
+@export var active: bool = true
 
 var hp = 250
 var walking: bool = false
@@ -24,7 +25,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	new_material.set_shader_parameter("modulate", modulate)
 
-	if walking && is_alive():
+	if active && walking && is_alive():
 		# 移動
 		var distance = player.global_position.distance_to(global_position)
 
