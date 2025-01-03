@@ -35,9 +35,10 @@ func select_target() -> void:
 		i.set_is_selected(false)
 
 	if !overlapping_bodies.is_empty():
-		select_body().set_is_selected(true)
+		select_body() && select_body().set_is_selected(true)
 
 func select_body() -> Node2D:
+	overlapping_bodies = overlapping_bodies.filter(func(a): return a.is_alive())
 	if !overlapping_bodies.is_empty():
 		return overlapping_bodies[target_index % overlapping_bodies.size()]
 	return null
