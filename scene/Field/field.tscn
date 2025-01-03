@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://opi2a215jcf4"]
+[gd_scene load_steps=10 format=3 uid="uid://opi2a215jcf4"]
 
 [ext_resource type="PackedScene" uid="uid://ckeor1b6bs7mr" path="res://scene/Enemy/Nezumi/nezumi.tscn" id="1_ewdrg"]
 [ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="1_oekny"]
 [ext_resource type="Texture2D" uid="uid://c2aisx6juln08" path="res://Assets/glasstown001.png" id="2_1uvk5"]
 [ext_resource type="PackedScene" uid="uid://bux57ckmy2stp" path="res://scene/Nupu/nupu.tscn" id="4_3qy1k"]
 [ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://scene/WorldClock/world_clock.tscn" id="6_eiw5w"]
+[ext_resource type="PackedScene" uid="uid://dyqxqqrjedcfm" path="res://scene/Enemy/Kinoko/Kinoko.tscn" id="6_qvd5t"]
 [ext_resource type="PackedScene" uid="uid://b8rt14k38oxvu" path="res://scene/Enemy/MonsterSpawn/monster_spawn.tscn" id="7_46qys"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghbfk"]
@@ -248,7 +249,7 @@ position = Vector2(30, 83)
 
 [node name="MonsterSpawn" parent="Objects" instance=ExtResource("7_46qys")]
 y_sort_enabled = true
-position = Vector2(-305, -49)
+position = Vector2(-66, 192)
 monster_scene = ExtResource("1_ewdrg")
 spawn_interval_rand_range = 10
 spawn_count = 1
@@ -257,7 +258,7 @@ spawn_count = 1
 position = Vector2(113, 25)
 
 [node name="Player" parent="Objects" instance=ExtResource("1_oekny")]
-position = Vector2(-282, -99)
+position = Vector2(-202, -146)
 
 [node name="Camera2D" type="Camera2D" parent="Objects/Player"]
 position = Vector2(2.08165e-12, 2.08165e-12)
@@ -268,6 +269,27 @@ position_smoothing_speed = 8.0
 y_sort_enabled = true
 position = Vector2(-441, 5)
 monster_scene = ExtResource("1_ewdrg")
+spawn_interval_rand_range = 10
+spawn_count = 1
+
+[node name="MonsterSpawn3" parent="Objects" instance=ExtResource("7_46qys")]
+y_sort_enabled = true
+position = Vector2(-192, 71)
+monster_scene = ExtResource("6_qvd5t")
+spawn_interval_rand_range = 10
+spawn_count = 1
+
+[node name="MonsterSpawn4" parent="Objects" instance=ExtResource("7_46qys")]
+y_sort_enabled = true
+position = Vector2(-59, -38)
+monster_scene = ExtResource("6_qvd5t")
+spawn_interval_rand_range = 10
+spawn_count = 1
+
+[node name="MonsterSpawn5" parent="Objects" instance=ExtResource("7_46qys")]
+y_sort_enabled = true
+position = Vector2(38, -122)
+monster_scene = ExtResource("6_qvd5t")
 spawn_interval_rand_range = 10
 spawn_count = 1
 
