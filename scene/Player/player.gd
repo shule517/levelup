@@ -60,14 +60,14 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		#)
 			
 		#nearest_body.set_is_selected(true)
-		print(overlapping_bodies)
+		#print(overlapping_bodies)
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Enemy"):
 		overlapping_bodies.erase(body)
 		#select_target()
 		body.set_is_selected(false)
-		print(overlapping_bodies)
+		#print(overlapping_bodies)
 
 var attack_target = null
 
@@ -99,11 +99,13 @@ func _process(_delta):
 		var distance = attack_target.position.distance_to(position)
 		if 20 < distance:
 			value = (attack_target.position - position).normalized()
-			print(value)
+			#print(value)
 		else:
-			print("20 >= distance")
+			pass
+			#print("20 >= distance")
 	else:
-		print("attack_target is null")
+		pass
+		#print("attack_target is null")
 
 	if (value.x == 0 && value.y == 0):
 		sprite.play("idle")
@@ -113,7 +115,7 @@ func _process(_delta):
 		$WeaponSprite2D.visible = false
 
 	velocity = value * SPEED
-	print("velocity: %s" % velocity)
+	#print("velocity: %s" % velocity)
 	#velocity.x += value.x * SPEED
 	#print(str(value))
 	move_and_slide()
