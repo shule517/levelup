@@ -68,7 +68,7 @@ func start_atack() -> void:
 var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 func damage(damage: int) -> void:
 	play_sound_effect(damage_sound)
-	var floating_damage: FloatingDamage = preload("res://scene/FloatingDamage/floating_damage.tscn").instantiate().duplicate()
+	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
 	floating_damage.init(damage, true)
 	add_child(floating_damage)
 

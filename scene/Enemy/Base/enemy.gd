@@ -23,7 +23,6 @@ extends CharacterBody2D
 
 var walking: bool = false
 var new_material := ShaderMaterial.new()
-var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 
 func _ready() -> void:
 	attack_timer.wait_time = attack_interval
@@ -86,12 +85,13 @@ func play_sound_effect(sound_effect: AudioStream, volume_db: float = 0.0) -> voi
 func is_alive() -> bool:
 	return hp > 0
 
+var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 func damage(damage: int) -> void:
 	if hp <= 0:
 		return
 
 	$AnimationPlayer.play("damaged")
-	var floating_damage: FloatingDamage = preload("res://scene/FloatingDamage/floating_damage.tscn").instantiate()
+	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
 	floating_damage.init(damage, false)
 	add_child(floating_damage)
 
