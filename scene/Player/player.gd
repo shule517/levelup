@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export_group("SE")
 @export var attack_sound: AudioStream
 @export var hit_sound: AudioStream
+@export var damage_sound: AudioStream
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -66,6 +67,7 @@ func start_atack() -> void:
 
 func damage(damage: int) -> void:
 	print(damage)
+	play_sound_effect(damage_sound)
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("button_left"):

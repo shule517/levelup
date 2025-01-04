@@ -1,16 +1,19 @@
 class_name FloatingDamage
 extends Marker2D
 
-var velocity := Vector2(0,-90)
-var gravity := Vector2(0,1.0)
-var mass: int = 100
-var text: String:
-	get:
-		return $Label.text
+@export var move_x: float = -0.5
+@export var font_color: Color
+
+var velocity := Vector2(0, -90)
+const GRAVITY := Vector2(0, 1.0)
+const MASS: int = 100
+
+var damage: int:
 	set(value):
-		$Label.text = value
+		$Label.text = " ".join(str(value).split()) # 文字と文字の間にスペースを入れる
 
 func _ready() -> void:
+	$Label.label_settings.font_color = font_color
 	# 初期値
 	scale = Vector2.ONE * 1.5
 
@@ -24,9 +27,9 @@ func _ready() -> void:
 	tween.tween_callback(_destory)
 
 func _process(delta: float) -> void:
-	velocity += gravity * mass * delta
+	velocity += GRAVITY * MASS * delta
 	position += velocity * delta
-	position.x -= 0.5
+	position.x += move_x
 
 func _destory() -> void:
 	queue_free()

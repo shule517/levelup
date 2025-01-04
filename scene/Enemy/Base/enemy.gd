@@ -92,7 +92,7 @@ func damage(damage: int) -> void:
 
 	$AnimationPlayer.play("damaged")
 	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
-	floating_damage.text = " ".join(str(damage).split()) # 文字と文字の間にスペースを入れる
+	floating_damage.damage = damage
 	add_child(floating_damage)
 
 	hp -= damage
@@ -125,4 +125,5 @@ func _on_attack_timer_timeout() -> void:
 	if walking && is_alive():
 		play_sound_effect(attack_sound)
 		sprite.play("attack")
+		await get_tree().create_timer(0.3).timeout
 		player.damage(123)
