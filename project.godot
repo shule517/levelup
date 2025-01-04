@@ -21,8 +21,8 @@ aseprite_executable_path="/Users/pixel_hal/Applications/Aseprite.app/Contents/Ma
 
 [display]
 
-window/size/viewport_width=1200
-window/size/viewport_height=1200
+window/size/viewport_width=2560
+window/size/viewport_height=1440
 window/stretch/scale=4.0
 window/stretch/scale_mode="integer"
 
