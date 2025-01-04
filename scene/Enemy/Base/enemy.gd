@@ -13,8 +13,8 @@ extends CharacterBody2D
 @export var idle_sound: AudioStream = null
 @export var move_sound: AudioStream = null
 @export var attack_sound: AudioStream = null
-@export var damage_sound: AudioStream = null
-@export var die_sound: AudioStream = null
+@export var damage_sound: AudioStream = preload("res://scene/Enemy/Nezumi/やられた声/voice028.wav")
+@export var die_sound: AudioStream = preload("res://scene/Enemy/Nezumi/やられた声/voice017.wav")
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var player: Node = get_tree().get_nodes_in_group("Player")[0]
@@ -104,17 +104,11 @@ func damage(damage: int) -> void:
 	hp -= damage
 
 	# ダメージSE
-	if damage_sound != null:
-		play_sound_effect(damage_sound)
-	else:
-		play_sound_effect(preload("res://scene/Enemy/Nezumi/やられた声/voice028.wav"))
+	play_sound_effect(damage_sound)
 
 	# やっつけたSE
 	if hp <= 0:
-		if die_sound != null:
-			play_sound_effect(die_sound)
-		else:
-			play_sound_effect(preload("res://scene/Enemy/Nezumi/やられた声/voice017.wav"))
+		play_sound_effect(die_sound)
 		var tween = get_tree().create_tween()
 		tween.tween_property(sprite, "scale", Vector2(0, 0), 2.0)
 		tween.play()
