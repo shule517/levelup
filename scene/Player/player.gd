@@ -17,7 +17,7 @@ var target_index: int = 0
 
 var audio_players: Array[AudioStreamPlayer] = []
 var current_player_index: int = 0
-var before_attack_time: int = Time.get_unix_time_from_system()
+var before_attack_time: float = Time.get_unix_time_from_system()
 
 func _ready() -> void:
 	$WeaponSprite2D.visible = false
@@ -64,7 +64,6 @@ func start_atack() -> void:
 		attack_target = select_body()
 		$WeaponSprite2D.visible = true
 		attack()
-		$AtackTimer.start()
 
 var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 func damage(damage: int) -> void:
@@ -116,11 +115,16 @@ func attack() -> void:
 		var distance: float = position.distance_to(attack_target.position)
 		if distance <= 20:
 			before_attack_time = Time.get_unix_time_from_system()
+
+			$AtackTimer.stop()
+			$AtackTimer.start()
+
 			$AnimationPlayer.stop()
 			$AnimationPlayer.play("attack")
 			play_sound_effect(attack_sound) # 攻撃
 			await get_tree().create_timer(0.2).timeout
-			is_instance_valid(attack_target) && attack_target.damage(randi_range(10, 99))
+			if is_instance_valid(attack_target):
+				attack_target.damage(randi_range(10, 99))
 			play_sound_effect(hit_sound) # 敵にHIT
 	else:
 		$WeaponSprite2D.visible = false

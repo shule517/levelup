@@ -63,9 +63,9 @@ func set_is_selected(value: bool) -> void:
 	new_material.set_shader_parameter("is_selected", value)
 
 # 歩く音を再生する
-var before_play_move_sound_time: int = 0
+var before_play_move_sound_time: float = 0
 func play_move_sound() -> void:
-	var diff_time: int = Time.get_unix_time_from_system() - before_play_move_sound_time
+	var diff_time: float = Time.get_unix_time_from_system() - before_play_move_sound_time
 	if move_sound != null && diff_time > 0.7:
 		play_sound_effect(move_sound, -10.0)
 		before_play_move_sound_time = Time.get_unix_time_from_system()
@@ -75,10 +75,10 @@ var audio_players: Array[AudioStreamPlayer] = []
 var current_player_index: int = 0
 func play_sound_effect(sound_effect: AudioStream, volume_db: float = 0.0) -> void:
 	# 現在のAudioStreamPlayerを取得し再生
-	var player: AudioStreamPlayer = audio_players[current_player_index]
-	player.stream = sound_effect
-	player.volume_db = volume_db
-	player.play()
+	var audio_player: AudioStreamPlayer = audio_players[current_player_index]
+	audio_player.stream = sound_effect
+	audio_player.volume_db = volume_db
+	audio_player.play()
 
 	# 次に使うAudioStreamPlayerを切り替え
 	current_player_index = (current_player_index + 1) % audio_players.size()
