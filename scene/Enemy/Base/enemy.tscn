@@ -154,9 +154,6 @@ animations = [{
 
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_x18rc")
-active = false
-damage_sound = null
-die_sound = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
 texture_filter = 1
@@ -164,7 +161,7 @@ material = SubResource("ShaderMaterial_4ir5a")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_xe8dg")
 animation = &"idle"
-frame_progress = 0.290735
+frame_progress = 0.654771
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -198,7 +195,7 @@ libraries = {
 "": SubResource("AnimationLibrary_db08b")
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="NameLabel" type="Label" parent="."]
 offset_left = -46.0
 offset_top = 3.0
 offset_right = 45.0

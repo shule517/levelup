@@ -2,9 +2,9 @@ extends Marker2D
 
 class_name FloatingDamage
 
-var velocity = Vector2(0,-90)
-var gravity = Vector2(0,1.0)
-var mass = 100
+var velocity := Vector2(0,-90)
+var gravity := Vector2(0,1.0)
+var mass: int = 100
 #var text_scale = Vector2.ONE * 1
 var text: String:
 	get:

@@ -10,24 +10,24 @@ const SPEED: float    = 50.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var overlapping_bodies = []
-var target_index = 0
+var overlapping_bodies: Array[Node2D] = []
+var target_index: int = 0
 
-var audio_players: Array = []
-var current_player_index = 0
-var before_attack_time = Time.get_unix_time_from_system()
+var audio_players: Array[AudioStreamPlayer] = []
+var current_player_index: int = 0
+var before_attack_time: int = Time.get_unix_time_from_system()
 
-func _ready():
+func _ready() -> void:
 	$WeaponSprite2D.visible = false
 	# AudioStreamPlayerノードを作成し、配列に追加
 	for i in range(10):
-		var player = AudioStreamPlayer.new()
+		var player := AudioStreamPlayer.new()
 		add_child(player)
 		audio_players.append(player)
 
-func play_sound_effect(sound_effect: AudioStream):
+func play_sound_effect(sound_effect: AudioStream) -> void:
 	# 現在のAudioStreamPlayerを取得し再生
-	var player = audio_players[current_player_index]
+	var player: AudioStreamPlayer = audio_players[current_player_index]
 	player.stream = sound_effect
 	player.play()
 
@@ -42,7 +42,7 @@ func select_target() -> void:
 		select_body() && select_body().set_is_selected(true)
 
 func select_body() -> Node2D:
-	overlapping_bodies = overlapping_bodies.filter(func(a): return a.is_alive())
+	overlapping_bodies = overlapping_bodies.filter(func(node: Node2D) -> bool: return node.is_alive())
 	if !overlapping_bodies.is_empty():
 		return overlapping_bodies[target_index % overlapping_bodies.size()]
 	return null
@@ -56,8 +56,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		overlapping_bodies.erase(body)
 		body.set_is_selected(false)
 
-var attack_target = null
-
+var attack_target: Node2D = null
 func start_atack() -> void:
 	if Time.get_unix_time_from_system() - before_attack_time > 1.4:
 		attack_target = select_body()
@@ -65,10 +64,10 @@ func start_atack() -> void:
 		attack()
 		$AtackTimer.start()
 
-func damage(damage: int):
+func damage(damage: int) -> void:
 	print(damage)
 
-func _process(_delta):
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("button_left"):
 		target_index += 1
 
@@ -92,7 +91,7 @@ func _process(_delta):
 		$WeaponSprite2D.visible = false
 
 	if is_instance_valid(attack_target):
-		var distance = attack_target.position.distance_to(position)
+		var distance: float = attack_target.position.distance_to(position)
 		if 20 < distance:
 			value = (attack_target.position - position).normalized()
 			#print(value)
@@ -115,7 +114,7 @@ func _process(_delta):
 
 func attack() -> void:
 	if is_instance_valid(attack_target) && attack_target.is_alive():
-		var distance = position.distance_to(attack_target.position)
+		var distance: float = position.distance_to(attack_target.position)
 		if distance <= 20:
 			before_attack_time = Time.get_unix_time_from_system()
 			$AnimationPlayer.stop()
