@@ -186,7 +186,7 @@ shape = SubResource("CapsuleShape2D_cq3dd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_i5gpt")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="AttackTimer" type="Timer" parent="."]
 wait_time = 4.0
 autostart = true
 
@@ -223,4 +223,4 @@ metadata/_aseprite_wizard_source_file_hash_ = "d0f6194c4f8c6bef6ac93067f6982027"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

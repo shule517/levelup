@@ -2,13 +2,11 @@
 class_name Enemy
 extends CharacterBody2D
 
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var player: Node = get_tree().get_nodes_in_group("Player")[0]
-
 @export_category("モンスターの基本情報")
 @export var monster_name: String = "モンスター"
 @export var hp = 250
 @export var move_speed: float = 30.0
+@export var attack_interval: float = 3.0
 @export var active: bool = true
 
 @export_category("SE")
@@ -18,11 +16,16 @@ extends CharacterBody2D
 @export var damage_sound: AudioStream = null
 @export var die_sound: AudioStream = null
 
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var player: Node = get_tree().get_nodes_in_group("Player")[0]
+@onready var attack_timer: Timer = $AttackTimer
+
 var walking: bool = false
 var new_material = ShaderMaterial.new()
 var floating_damage: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 
 func _ready() -> void:
+	attack_timer.wait_time = attack_interval
 	$Label.visible = false
 	$Label.text = monster_name
 	new_material.shader = sprite.material.shader
@@ -50,9 +53,12 @@ func _physics_process(delta: float) -> void:
 			velocity = direction * move_speed
 			sprite.flip_h = direction.x > 0 # キャラの向きをあわせる
 			move_and_slide()
-		else:
-			sprite.play("idle")
-	else:
+		#else:
+			#sprite.play("idle")
+	#else:
+		#sprite.play("idle")
+
+	if not sprite.is_playing():
 		sprite.play("idle")
 
 func set_is_selected(value: bool) -> void:
@@ -129,6 +135,8 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		#set_is_selected(false)
 		walking = false
 
-func _on_timer_timeout() -> void:
-	if !walking:
-		pass
+func _on_attack_timer_timeout() -> void:
+	if walking && is_alive():
+		play_sound_effect(attack_sound)
+		sprite.play("attack")
+		player.damage(123)

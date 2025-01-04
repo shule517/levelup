@@ -64,7 +64,10 @@ func start_atack() -> void:
 		$WeaponSprite2D.visible = true
 		attack()
 		$AtackTimer.start()
-	
+
+func damage(damage: int):
+	print(damage)
+
 func _process(_delta):
 	if Input.is_action_just_pressed("button_left"):
 		target_index += 1
