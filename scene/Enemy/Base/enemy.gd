@@ -59,15 +59,13 @@ func set_is_selected(value: bool) -> void:
 	$Label.visible = value
 	new_material.set_shader_parameter("is_selected", value)
 
-var before_play_move_time = 0
+# 歩く音
+var before_play_move_sound_time = 0
 func play_move_sound() -> void:
-	print("play_move_sound")
-	var diff_time = Time.get_unix_time_from_system() - before_play_move_time
-	print(diff_time)
+	var diff_time = Time.get_unix_time_from_system() - before_play_move_sound_time
 	if move_sound != null && diff_time > 0.7:
 		play_sound_effect(move_sound, -10.0)
-		print(before_play_move_time)
-		before_play_move_time = Time.get_unix_time_from_system()
+		before_play_move_sound_time = Time.get_unix_time_from_system()
 
 var audio_players: Array[AudioStreamPlayer] = []
 var current_player_index = 0
