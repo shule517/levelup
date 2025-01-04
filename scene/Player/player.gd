@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 @export_group("SE")
@@ -65,9 +66,12 @@ func start_atack() -> void:
 		attack()
 		$AtackTimer.start()
 
+var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 func damage(damage: int) -> void:
-	print(damage)
 	play_sound_effect(damage_sound)
+	var floating_damage: FloatingDamage = preload("res://scene/FloatingDamage/floating_damage.tscn").instantiate().duplicate()
+	floating_damage.init(damage, true)
+	add_child(floating_damage)
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("button_left"):
@@ -96,13 +100,6 @@ func _process(_delta: float) -> void:
 		var distance: float = attack_target.position.distance_to(position)
 		if 20 < distance:
 			value = (attack_target.position - position).normalized()
-			#print(value)
-		else:
-			pass
-			#print("20 >= distance")
-	else:
-		pass
-		#print("attack_target is null")
 
 	if (value.x == 0 && value.y == 0):
 		sprite.play("idle")

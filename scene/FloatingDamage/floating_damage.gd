@@ -1,8 +1,8 @@
 class_name FloatingDamage
 extends Marker2D
 
-@export var move_x: float = -0.5
-@export var font_color: Color
+var move_x: float = -0.5
+var font_color: Color = Color.WHITE
 
 var velocity := Vector2(0, -90)
 const GRAVITY := Vector2(0, 1.0)
@@ -12,8 +12,19 @@ var damage: int:
 	set(value):
 		$Label.text = " ".join(str(value).split()) # 文字と文字の間にスペースを入れる
 
+func set_font_color(color: Color) -> void:
+	var label_settings:LabelSettings = $Label.label_settings.duplicate()
+	label_settings.font_color = color
+	$Label.label_settings = label_settings
+
+func init(damage: int, is_damege := false) -> void:
+	self.damage = damage
+	if is_damege:
+		self.move_x *= -1
+		self.font_color = Color.RED
+
 func _ready() -> void:
-	$Label.label_settings.font_color = font_color
+	set_font_color(font_color)
 	# 初期値
 	scale = Vector2.ONE * 1.5
 
@@ -32,4 +43,5 @@ func _process(delta: float) -> void:
 	position.x += move_x
 
 func _destory() -> void:
-	queue_free()
+	pass
+	#queue_free()

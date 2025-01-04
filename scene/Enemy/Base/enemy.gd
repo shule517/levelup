@@ -17,7 +17,7 @@ extends CharacterBody2D
 @export var die_sound: AudioStream = preload("res://scene/Enemy/Nezumi/やられた声/voice017.wav")
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var player: Node = get_tree().get_nodes_in_group("Player")[0]
+@onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
 @onready var attack_timer: Timer = $AttackTimer
 @onready var name_label: Label = $NameLabel
 
@@ -36,9 +36,9 @@ func _ready() -> void:
 
 	# AudioStreamPlayerノードを作成し、配列に追加
 	for i in range(10):
-		var player := AudioStreamPlayer.new()
-		add_child(player)
-		audio_players.append(player)
+		var audip_player := AudioStreamPlayer.new()
+		add_child(audip_player)
+		audio_players.append(audip_player)
 
 func _physics_process(delta: float) -> void:
 	new_material.set_shader_parameter("modulate", modulate)
@@ -91,8 +91,8 @@ func damage(damage: int) -> void:
 		return
 
 	$AnimationPlayer.play("damaged")
-	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
-	floating_damage.damage = damage
+	var floating_damage: FloatingDamage = preload("res://scene/FloatingDamage/floating_damage.tscn").instantiate()
+	floating_damage.init(damage, false)
 	add_child(floating_damage)
 
 	hp -= damage
@@ -126,4 +126,4 @@ func _on_attack_timer_timeout() -> void:
 		play_sound_effect(attack_sound)
 		sprite.play("attack")
 		await get_tree().create_timer(0.3).timeout
-		player.damage(123)
+		player.damage(randi_range(0, 100))
