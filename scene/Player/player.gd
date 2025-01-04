@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export_group("SE")
 @export var attack_sound: AudioStream
 @export var hit_sound: AudioStream
 
@@ -57,6 +58,13 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 var attack_target = null
 
+func start_atack() -> void:
+	if Time.get_unix_time_from_system() - before_attack_time > 1.4:
+		attack_target = select_body()
+		$WeaponSprite2D.visible = true
+		attack()
+		$AtackTimer.start()
+	
 func _process(_delta):
 	if Input.is_action_just_pressed("button_left"):
 		target_index += 1
@@ -65,19 +73,18 @@ func _process(_delta):
 		target_index -= 1
 
 	if Input.is_action_just_pressed("button_a"):
-		if Time.get_unix_time_from_system() - before_attack_time > 1.4:
-			attack_target = select_body()
-			$WeaponSprite2D.visible = true
-			attack()
-			$AtackTimer.start()
+		start_atack()
+
+	# 攻撃ターゲットがいる場合は、すぐに攻撃をはじめる
+	if attack_target != null:
+		start_atack()
 
 	select_target()
 
 	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
 
-	if (value.x == 0 && value.y == 0):
-		pass
-	else:
+	# 移動したら、攻撃をキャンセルする
+	if not (value.x == 0 && value.y == 0):
 		attack_target = null
 		$WeaponSprite2D.visible = false
 

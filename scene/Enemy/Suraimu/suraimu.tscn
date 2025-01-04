@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://csj0hwaue3oq1"]
+[gd_scene load_steps=16 format=3 uid="uid://csj0hwaue3oq1"]
 
 [ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://scene/Enemy/Base/enemy.tscn" id="1_c35nx"]
 [ext_resource type="Texture2D" uid="uid://c3ikuimxsunlg" path="res://scene/Enemy/Suraimu/suraimu.png" id="2_1k3mf"]
@@ -6,6 +6,12 @@
 [ext_resource type="AudioStream" uid="uid://b82ndrleq1m7v" path="res://scene/Enemy/Base/poring_attack.wav" id="3_7phjd"]
 [ext_resource type="AudioStream" uid="uid://g54r3jxhbl3o" path="res://scene/Enemy/Suraimu/poring_die.wav" id="4_irsp8"]
 [ext_resource type="AudioStream" uid="uid://pgokwekydarh" path="res://scene/Enemy/Suraimu/poring_damage.wav" id="4_n4j6q"]
+[ext_resource type="Shader" path="res://scene/Enemy/Nezumi/nezumi.gdshader" id="6_asera"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ut0is"]
+shader = ExtResource("6_asera")
+shader_parameter/is_selected = false
+shader_parameter/modulate = null
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jexpq"]
 atlas = ExtResource("2_1k3mf")
@@ -85,9 +91,10 @@ damage_sound = ExtResource("4_n4j6q")
 die_sound = ExtResource("4_irsp8")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
+material = SubResource("ShaderMaterial_ut0is")
 position = Vector2(2.08165e-12, -6)
 sprite_frames = SubResource("SpriteFrames_x1sck")
-frame_progress = 0.212859
+frame_progress = 0.124935
 offset = Vector2(2.08165e-12, -7)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -99,3 +106,10 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scene/Enemy/Suraimu/suraimu.aseprite"
 }
 metadata/_aseprite_wizard_source_file_hash_ = "8d342541588d04ef5b5b73d5fabd16ef"
+
+[node name="Label" parent="." index="5"]
+visible = false
+text = "スライム"
+
+[node name="CursorAnimatedSprite2D" parent="." index="6"]
+frame_progress = 0.794775

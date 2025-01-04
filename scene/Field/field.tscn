@@ -259,6 +259,9 @@ position_smoothing_speed = 8.0
 [node name="Suraimu" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-144, -130)
 
+[node name="Suraimu2" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-47, -14)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="WorldClock" parent="CanvasLayer" instance=ExtResource("6_eiw5w")]
