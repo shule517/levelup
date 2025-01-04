@@ -8,8 +8,8 @@ extends Node2D
 
 @onready var spawn_timer: Timer = $SpawnTimer
 @onready var monsters: Node2D = $Monsters
-@onready var objects_node = get_parent()
-@onready var array = []
+@onready var objects_node: Node2D = get_parent()
+@onready var array: Array[Node2D] = []
 
 func _ready() -> void:
 	spawn_timer.wait_time = spawn_interval + randi_range(0, spawn_interval_rand_range)
@@ -20,9 +20,9 @@ func _on_spawn_timer_timeout() -> void:
 	spawn()
 
 func spawn() -> void:
-	array = array.filter(func(a): return is_instance_valid(a))
+	array = array.filter(func(node: Node2D) -> bool: return is_instance_valid(node))
 	if array.size() < spawn_count:
-		var monster = monster_scene.instantiate()
+		var monster := monster_scene.instantiate()
 		monster.position = position
 		array.append(monster)
 		objects_node.add_child.call_deferred(monster)
