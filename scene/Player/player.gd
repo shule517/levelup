@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@export var attack_sound: AudioStream
+@export var hit_sound: AudioStream
+
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
 const SPEED: float    = 50.0
@@ -107,11 +110,10 @@ func attack() -> void:
 			before_attack_time = Time.get_unix_time_from_system()
 			$AnimationPlayer.stop()
 			$AnimationPlayer.play("attack")
-			play_sound_effect(preload("res://scene/Player/se/tm2_swing006.wav")) # 攻撃
+			play_sound_effect(attack_sound) # 攻撃
 			await get_tree().create_timer(0.2).timeout
 			is_instance_valid(attack_target) && attack_target.damage(randi_range(10, 99))
-			play_sound_effect(preload("res://scene/Player/se/hit_p07.wav")) # 敵にHIT
-			#play_sound_effect(preload("res://scene/Player/se/決定ボタンを押す46.mp3"))
+			play_sound_effect(hit_sound) # 敵にHIT
 	else:
 		$WeaponSprite2D.visible = false
 

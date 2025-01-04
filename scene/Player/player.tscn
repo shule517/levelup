@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=14 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/Player/player.gd" id="1_7typn"]
+[ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/Player/se/attack/attack_short_sword.wav" id="2_1lcni"]
 [ext_resource type="Texture2D" uid="uid://bf2yjwiaoevmr" path="res://scene/Player/03.png" id="3_66885"]
+[ext_resource type="AudioStream" uid="uid://cp62sk7i6x5pv" path="res://scene/Player/se/hit/_hit_sword.wav" id="3_w4xvg"]
 [ext_resource type="Texture2D" uid="uid://c2f5o6wcrkfx5" path="res://scene/Player/player.png" id="5_kk861"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d1p4v"]
@@ -140,6 +142,8 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_7typn")
+attack_sound = ExtResource("2_1lcni")
+hit_sound = ExtResource("3_w4xvg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
