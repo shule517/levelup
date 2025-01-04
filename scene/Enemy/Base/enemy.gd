@@ -7,6 +7,7 @@ extends CharacterBody2D
 
 @export_category("モンスターの基本情報")
 @export var monster_name: String = "モンスター"
+@export var hp = 250
 @export var move_speed: float = 30.0
 @export var active: bool = true
 
@@ -17,10 +18,8 @@ extends CharacterBody2D
 @export var damage_sound: AudioStream = null
 @export var die_sound: AudioStream = null
 
-var hp = 250
 var walking: bool = false
 var new_material = ShaderMaterial.new()
-
 var floating_damage: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 
 func _ready() -> void:
@@ -60,7 +59,7 @@ func set_is_selected(value: bool) -> void:
 	$Label.visible = value
 	new_material.set_shader_parameter("is_selected", value)
 
-# 歩く音
+# 歩く音を再生する
 var before_play_move_sound_time = 0
 func play_move_sound() -> void:
 	var diff_time = Time.get_unix_time_from_system() - before_play_move_sound_time
@@ -68,9 +67,9 @@ func play_move_sound() -> void:
 		play_sound_effect(move_sound, -10.0)
 		before_play_move_sound_time = Time.get_unix_time_from_system()
 
+# SEを再生する
 var audio_players: Array[AudioStreamPlayer] = []
 var current_player_index = 0
-
 func play_sound_effect(sound_effect: AudioStream, volume_db: float = 0.0):
 	# 現在のAudioStreamPlayerを取得し再生
 	var player = audio_players[current_player_index]
@@ -94,11 +93,6 @@ func damage(damage: int) -> void:
 	var array_str = str_damage.split()
 	var str = " ".join(array_str)
 	text.text = str
-	#text.text = String(Array(.split())).join(" ")
-	#text.text = ["1 3", "3 2", "4 2"].pick_random()
-	var root = get_tree().root
-	#text.position = position
-	#root.add_child(text)
 	add_child(text)
 
 	hp -= damage
@@ -116,12 +110,9 @@ func damage(damage: int) -> void:
 		else:
 			play_sound_effect(preload("res://scene/Enemy/Nezumi/やられた声/voice017.wav"))
 		var tween = get_tree().create_tween()
-		#tween.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUART)
-		#tween.tween_property(sprite, "modulate", Color(1.0, 1.0, 1.0, 0.5), 2.0)
 		tween.tween_property(sprite, "scale", Vector2(0, 0), 2.0)
 		tween.play()
 		tween.tween_callback(_destory)
-		#await get_tree().create_timer(2.0).timeout
 
 func _destory() -> void:
 	queue_free()
