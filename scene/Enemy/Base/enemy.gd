@@ -23,7 +23,7 @@ extends CharacterBody2D
 
 var walking: bool = false
 var new_material := ShaderMaterial.new()
-var floating_damage: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
+var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 
 func _ready() -> void:
 	attack_timer.wait_time = attack_interval
@@ -32,7 +32,6 @@ func _ready() -> void:
 	name_label.z_index = 100
 	new_material.shader = sprite.material.shader
 	sprite.material = new_material
-
 	$CursorAnimatedSprite2D.play("idle")
 
 	# AudioStreamPlayerノードを作成し、配列に追加
@@ -55,10 +54,6 @@ func _physics_process(delta: float) -> void:
 			velocity = direction * move_speed
 			sprite.flip_h = direction.x > 0 # キャラの向きをあわせる
 			move_and_slide()
-		#else:
-			#sprite.play("idle")
-	#else:
-		#sprite.play("idle")
 
 	if not sprite.is_playing():
 		sprite.play("idle")
@@ -96,12 +91,9 @@ func damage(damage: int) -> void:
 		return
 
 	$AnimationPlayer.play("damaged")
-	var text: FloatingDamage = floating_damage.instantiate()
-	var str_damage := str(damage)
-	var array_str := str_damage.split()
-	var str := " ".join(array_str)
-	text.text = str
-	add_child(text)
+	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
+	floating_damage.text = " ".join(str(damage).split()) # 文字と文字の間にスペースを入れる
+	add_child(floating_damage)
 
 	hp -= damage
 
@@ -122,13 +114,11 @@ func _destory() -> void:
 # プレイヤーが範囲に入った
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		#set_is_selected(true)
 		walking = true
 
 # プレイヤーが範囲から出た
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		#set_is_selected(false)
 		walking = false
 
 func _on_attack_timer_timeout() -> void:
