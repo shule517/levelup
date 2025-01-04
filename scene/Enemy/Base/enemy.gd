@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export_category("モンスターの基本情報")
 @export var monster_name: String = "モンスター"
 @export var hp: int = 250
+@export var monster_exp: int = 1
 @export var move_speed: float = 30.0
 @export var attack_interval: float = 3.0
 @export var active: bool = true
@@ -102,6 +103,7 @@ func damage(damage: int) -> void:
 
 	# やっつけたSE
 	if hp <= 0:
+		player.receive_exp(monster_exp)
 		play_sound_effect(die_sound)
 		var tween := get_tree().create_tween()
 		tween.tween_property(sprite, "scale", Vector2(0, 0), 2.0)

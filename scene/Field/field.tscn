@@ -258,15 +258,19 @@ position_smoothing_speed = 8.0
 
 [node name="Suraimu" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-144, -130)
+monster_exp = null
 
 [node name="Suraimu2" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-47, -14)
+monster_exp = null
 
 [node name="Suraimu3" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(65, -116)
+monster_exp = null
 
 [node name="Suraimu4" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(176, -123)
+monster_exp = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

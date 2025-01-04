@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://blya38t8ab52i"
-path="res://.godot/imported/levelup.wav-1c064395539de3606e9168959d0c4998.sample"
+uid="uid://cmlsvmo8834i1"
+path="res://.godot/imported/levelup.wav-52046d24c902d09149f222277b846b23.sample"
 
 [deps]
 
-source_file="res://scene/Player/levelup.wav"
-dest_files=["res://.godot/imported/levelup.wav-1c064395539de3606e9168959d0c4998.sample"]
+source_file="res://scene/Player/se/levelup.wav"
+dest_files=["res://.godot/imported/levelup.wav-52046d24c902d09149f222277b846b23.sample"]
 
 [params]
 

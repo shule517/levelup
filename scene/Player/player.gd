@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var attack_sound: AudioStream
 @export var hit_sound: AudioStream
 @export var damage_sound: AudioStream
+@export var levelup_sound: AudioStream
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -128,6 +129,27 @@ func attack() -> void:
 			play_sound_effect(hit_sound) # 敵にHIT
 	else:
 		$WeaponSprite2D.visible = false
+
+var levelup_table: Array[int] = [1, 3, 5, 8, 11, 14, 17, 20, 25, 32, 38, 44, 52, 60, 76, 86, 97, 109, 122]
+var player_exp: int = 0
+var player_level: int = 1
+func receive_exp(monster_exp: int) -> void:
+	player_exp += monster_exp
+	print("経験値をGET: %d -> 現在のレベル: %d -> next: %d" % [monster_exp, player_level, next_exp() - player_exp])
+	if can_levelup():
+		levelup()
+
+func levelup() -> void:
+	player_level += 1
+	player_exp = 0
+	play_sound_effect(levelup_sound)
+	print("levelup!!!!!! %d levelになった!!" % player_level)
+
+func can_levelup() -> bool:
+	return next_exp() <= player_exp
+
+func next_exp() -> int:
+	return levelup_table[player_level - 1]
 
 func _on_atack_timer_timeout() -> void:
 	attack()
