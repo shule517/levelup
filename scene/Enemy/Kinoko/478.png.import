@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqakvw8ua02f3"
-path="res://.godot/imported/キノコ.png-24ff799ea71d2caf679a7de534d41b3e.ctex"
+uid="uid://bb27h1jk403g1"
+path="res://.godot/imported/478.png-463579fa1af4afbccc619852ed8c8af5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://キノコ.png"
-dest_files=["res://.godot/imported/キノコ.png-24ff799ea71d2caf679a7de534d41b3e.ctex"]
+source_file="res://scene/Enemy/Kinoko/478.png"
+dest_files=["res://.godot/imported/478.png-463579fa1af4afbccc619852ed8c8af5.ctex"]
 
 [params]
 

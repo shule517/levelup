@@ -1,0 +1,101 @@
+[gd_scene load_steps=14 format=3 uid="uid://csj0hwaue3oq1"]
+
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://scene/Enemy/Base/enemy.tscn" id="1_c35nx"]
+[ext_resource type="Texture2D" uid="uid://c3ikuimxsunlg" path="res://scene/Enemy/Suraimu/suraimu.png" id="2_1k3mf"]
+[ext_resource type="AudioStream" uid="uid://4ur1h21drcmo" path="res://scene/Enemy/Suraimu/poring_move.wav" id="2_rwsah"]
+[ext_resource type="AudioStream" uid="uid://b82ndrleq1m7v" path="res://scene/Enemy/Base/poring_attack.wav" id="3_7phjd"]
+[ext_resource type="AudioStream" uid="uid://g54r3jxhbl3o" path="res://scene/Enemy/Suraimu/poring_die.wav" id="4_irsp8"]
+[ext_resource type="AudioStream" uid="uid://pgokwekydarh" path="res://scene/Enemy/Suraimu/poring_damage.wav" id="4_n4j6q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jexpq"]
+atlas = ExtResource("2_1k3mf")
+region = Rect2(0, 28, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iijy2"]
+atlas = ExtResource("2_1k3mf")
+region = Rect2(20, 28, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hjpp"]
+atlas = ExtResource("2_1k3mf")
+region = Rect2(40, 28, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62cxm"]
+atlas = ExtResource("2_1k3mf")
+region = Rect2(0, 0, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hhd8"]
+atlas = ExtResource("2_1k3mf")
+region = Rect2(20, 0, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahbpj"]
+atlas = ExtResource("2_1k3mf")
+region = Rect2(40, 0, 20, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x1sck"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jexpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iijy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hjpp")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62cxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hhd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahbpj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62cxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hhd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahbpj")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Suraimu" instance=ExtResource("1_c35nx")]
+monster_name = "スライム"
+move_speed = 20.0
+move_sound = ExtResource("2_rwsah")
+attack_sound = ExtResource("3_7phjd")
+damage_sound = ExtResource("4_n4j6q")
+die_sound = ExtResource("4_irsp8")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(2.08165e-12, -6)
+sprite_frames = SubResource("SpriteFrames_x1sck")
+frame_progress = 0.212859
+offset = Vector2(2.08165e-12, -7)
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/Enemy/Suraimu/suraimu.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "8d342541588d04ef5b5b73d5fabd16ef"

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5x4um7lprjnj"
-path="res://.godot/imported/wheat_04.png-90a4b09a8e9f11be7d9d324a908d023e.ctex"
+path="res://.godot/imported/wheat_04.png-95f7b987fa20f6baafab0c07e8315a66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Crops_作物/wheat_04.png"
-dest_files=["res://.godot/imported/wheat_04.png-90a4b09a8e9f11be7d9d324a908d023e.ctex"]
+source_file="res://Assets/Crops_作物/wheat_04.png"
+dest_files=["res://.godot/imported/wheat_04.png-95f7b987fa20f6baafab0c07e8315a66.ctex"]
 
 [params]
 

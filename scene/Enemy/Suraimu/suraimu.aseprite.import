@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bbpututrb5u3b"
+path="res://.godot/imported/suraimu.aseprite-e5343d097011bb35c5221d31c16f0a93.res"
+
+[deps]
+
+source_file="res://scene/Enemy/Suraimu/suraimu.aseprite"
+dest_files=["res://.godot/imported/suraimu.aseprite-e5343d097011bb35c5221d31c16f0a93.res"]
+
+[params]
+

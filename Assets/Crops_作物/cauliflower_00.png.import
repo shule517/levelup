@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://thn1v7b7eg4e"
-path="res://.godot/imported/cauliflower_00.png-4776e7dcb5fcc229c0e49e4c2a2b5403.ctex"
+path="res://.godot/imported/cauliflower_00.png-a1563ce22be808974e93be48d6050070.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Crops_作物/cauliflower_00.png"
-dest_files=["res://.godot/imported/cauliflower_00.png-4776e7dcb5fcc229c0e49e4c2a2b5403.ctex"]
+source_file="res://Assets/Crops_作物/cauliflower_00.png"
+dest_files=["res://.godot/imported/cauliflower_00.png-a1563ce22be808974e93be48d6050070.ctex"]
 
 [params]
 

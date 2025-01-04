@@ -21,7 +21,7 @@ func _ready():
 		add_child(player)
 		audio_players.append(player)
 
-func play_sound_effect(sound_effect):
+func play_sound_effect(sound_effect: AudioStream):
 	# 現在のAudioStreamPlayerを取得し再生
 	var player = audio_players[current_player_index]
 	player.stream = sound_effect
