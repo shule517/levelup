@@ -167,7 +167,7 @@ material = SubResource("ShaderMaterial_4ir5a")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_xe8dg")
 animation = &"idle"
-frame_progress = 0.116455
+frame_progress = 0.502849
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",

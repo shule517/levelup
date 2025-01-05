@@ -21,6 +21,7 @@ extends CharacterBody2D
 @onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
 @onready var attack_timer: Timer = $AttackTimer
 @onready var name_label: Label = $NameLabel
+@onready var cursor_animated_sprite: AnimatedSprite2D = $CursorAnimatedSprite2D
 
 var is_hunting := false
 var can_attack := false
@@ -35,7 +36,9 @@ func _ready() -> void:
 	new_material.shader = sprite.material.shader
 	sprite.material = new_material
 	new_material.set_shader_parameter("enabled", false) # TODO: shaderを殺す
-	$CursorAnimatedSprite2D.play("idle")
+
+	cursor_animated_sprite.visible = false
+	cursor_animated_sprite.play("idle")
 
 	# AudioStreamPlayerノードを作成し、配列に追加
 	for i in range(10):
@@ -63,6 +66,7 @@ func _physics_process(delta: float) -> void:
 
 func set_is_selected(value: bool) -> void:
 	name_label.visible = value
+	cursor_animated_sprite.visible = value
 	new_material.set_shader_parameter("is_selected", value)
 
 # 歩く音を再生する

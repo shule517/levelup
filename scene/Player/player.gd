@@ -93,7 +93,7 @@ func select_body() -> Enemy:
 		return visible_enemies[target_index % visible_enemies.size()]
 	return null
 
-var attack_target: Node2D = null
+var attack_target: Enemy = null
 func start_atack() -> void:
 	if Time.get_unix_time_from_system() - before_attack_time > 1.4:
 		attack_target = select_body()
