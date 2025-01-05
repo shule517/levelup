@@ -50,8 +50,7 @@ func _physics_process(delta: float) -> void:
 
 	if active && is_hunting:
 		# 移動
-		var distance: float = player.global_position.distance_to(global_position)
-		if distance >= 15.0:
+		if not can_attack:
 			play_move_sound()
 			sprite.play("walk")
 			var direction: Vector2 = (player.global_position - global_position).normalized()
