@@ -75,6 +75,7 @@ func _physics_process(delta: float) -> void:
 			move_and_slide()
 
 	if not sprite.is_playing():
+		print("idle")
 		sprite.play("idle")
 
 func set_is_selected(value: bool) -> void:

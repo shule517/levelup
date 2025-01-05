@@ -5,3 +5,5 @@
 
 [node name="Nezumi" instance=ExtResource("1_rvsqy")]
 script = ExtResource("1_x18rc")
+monster_name = "ねずみ"
+move_speed = 40.0

@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://opi2a215jcf4"]
+[gd_scene load_steps=13 format=3 uid="uid://opi2a215jcf4"]
 
 [ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="1_oekny"]
 [ext_resource type="Texture2D" uid="uid://c2aisx6juln08" path="res://Assets/glasstown001.png" id="2_1uvk5"]
 [ext_resource type="PackedScene" uid="uid://bux57ckmy2stp" path="res://scene/Nupu/nupu.tscn" id="4_3qy1k"]
 [ext_resource type="PackedScene" uid="uid://csj0hwaue3oq1" path="res://scene/Enemy/Suraimu/suraimu.tscn" id="4_vhx3v"]
+[ext_resource type="PackedScene" uid="uid://dyqxqqrjedcfm" path="res://scene/Enemy/Kinoko/Kinoko.tscn" id="6_bifwu"]
 [ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://scene/WorldClock/world_clock.tscn" id="6_eiw5w"]
+[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://scene/PlayerStatus/player_status.tscn" id="6_vyjou"]
+[ext_resource type="PackedScene" uid="uid://ckeor1b6bs7mr" path="res://scene/Enemy/Nezumi/nezumi.tscn" id="7_ng00h"]
+[ext_resource type="AudioStream" uid="uid://cdhygd4sgd112" path="res://scene/Enemy/Kinoko/spore_damage.wav" id="9_i6y0j"]
+[ext_resource type="AudioStream" uid="uid://bxd6somy7bvnn" path="res://scene/Enemy/Kinoko/spore_die.wav" id="10_sg4sf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghbfk"]
 texture = ExtResource("2_1uvk5")
@@ -290,14 +295,32 @@ position = Vector2(36, -80)
 [node name="Suraimu11" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-18, -5)
 
+[node name="Nezumi" parent="Objects" instance=ExtResource("7_ng00h")]
+position = Vector2(-184, -47)
+
+[node name="Kinoko" parent="Objects" instance=ExtResource("6_bifwu")]
+position = Vector2(-264, -145)
+active = true
+damage_sound = ExtResource("9_i6y0j")
+die_sound = ExtResource("10_sg4sf")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="右上Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 grow_horizontal = 0
 
-[node name="WorldClock" parent="CanvasLayer/Control" instance=ExtResource("6_eiw5w")]
+[node name="WorldClock" parent="CanvasLayer/右上Control" instance=ExtResource("6_eiw5w")]
 position = Vector2(-94, 16)
+
+[node name="左上Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerStatus" parent="CanvasLayer/左上Control" instance=ExtResource("6_vyjou")]
+position = Vector2(9, 10)

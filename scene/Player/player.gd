@@ -43,6 +43,9 @@ func _ready() -> void:
 
 # メインループ
 func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("button_plus"):
+		levelup()
+
 	if Input.is_action_just_pressed("button_left"):
 		target_index += 1
 
@@ -174,13 +177,20 @@ func receive_exp(monster_exp: int) -> void:
 
 func levelup() -> void:
 	global.player_level += 1
-	
-	global.player_max_hp = ceil(global.player_max_hp * 1.09)
+
+	global.player_max_hp = ceil(global.player_max_hp * 1.49)
 	global.player_hp = global.player_max_hp
-	global.player_atk = ceil(global.player_atk * 1.08)
-	global.player_def = ceil(global.player_def * 1.06)
+	global.player_atk = ceil(global.player_atk * 1.48)
+	global.player_def = ceil(global.player_def * 1.46)
 	global.player_next_exp = ceil(global.player_next_exp * 1.21)
 	global.player_exp = 0
+	
+	#global.player_max_hp = ceil(global.player_max_hp * 1.09)
+	#global.player_hp = global.player_max_hp
+	#global.player_atk = ceil(global.player_atk * 1.08)
+	#global.player_def = ceil(global.player_def * 1.06)
+	#global.player_next_exp = ceil(global.player_next_exp * 1.21)
+	#global.player_exp = 0
 
 	play_sound_effect(levelup_sound)
 	$LevelupAnimatedSprite2D.z_index = 1000

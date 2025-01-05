@@ -1,45 +1,66 @@
-[gd_scene load_steps=7 format=3 uid="uid://dyqxqqrjedcfm"]
+[gd_scene load_steps=9 format=3 uid="uid://dyqxqqrjedcfm"]
 
 [ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://scene/Enemy/Base/enemy.tscn" id="1_g7pxc"]
 [ext_resource type="Texture2D" uid="uid://crx0viuw4vj0x" path="res://scene/Enemy/Kinoko/キノコ.png" id="2_2q1qg"]
 [ext_resource type="Script" path="res://scene/Enemy/Kinoko/kinoko.gd" id="2_yom8x"]
+[ext_resource type="AudioStream" uid="uid://ijgrhglovow3" path="res://scene/Enemy/Kinoko/spore_move2.wav" id="3_lrtfe"]
+[ext_resource type="AudioStream" uid="uid://cwocwqtpeqd8s" path="res://scene/Enemy/Kinoko/spore_attack.wav" id="4_d154f"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vlb4b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjcfr"]
 atlas = ExtResource("2_2q1qg")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bd2cn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bm6mw"]
 atlas = ExtResource("2_2q1qg")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_2svgl"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_332v2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vlb4b")
+"texture": SubResource("AtlasTexture_bjcfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bm6mw")
 }],
-"loop": true,
+"loop": false,
+"name": &"attack",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjcfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjcfr")
+}],
+"loop": false,
 "name": &"idle",
 "speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bd2cn")
+"texture": SubResource("AtlasTexture_bm6mw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vlb4b")
+"texture": SubResource("AtlasTexture_bjcfr")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk",
-"speed": 4.0
+"speed": 3.0
 }]
 
 [node name="Kinoko" instance=ExtResource("1_g7pxc")]
 script = ExtResource("2_yom8x")
+monster_name = "歩くキノコ"
 active = false
+move_sound = ExtResource("3_lrtfe")
+attack_sound = ExtResource("4_d154f")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
-sprite_frames = SubResource("SpriteFrames_2svgl")
+sprite_frames = SubResource("SpriteFrames_332v2")
+animation = &"walk"
+frame_progress = 0.0
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -47,9 +68,6 @@ metadata/_aseprite_wizard_config_ = {
 "o_name": "",
 "only_visible": true,
 "slice": "",
-"source": "res://scene/Kinoko/キノコ.aseprite"
+"source": "res://scene/Enemy/Kinoko/キノコ.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "8d1336e71818b57e0e4cbb93f0a8b4f1"
-
-[node name="Label" parent="." index="5"]
-text = "キノコ"
+metadata/_aseprite_wizard_source_file_hash_ = "034c1533265d980aabbbfa544c8b3558"

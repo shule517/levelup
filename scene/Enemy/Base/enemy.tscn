@@ -184,7 +184,7 @@ material = SubResource("ShaderMaterial_4ir5a")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_xe8dg")
 animation = &"idle"
-frame_progress = 0.0959202
+frame_progress = 0.728825
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -195,7 +195,9 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scene/Nezumi/ネズミ.aseprite"
 }
 metadata/_aseprite_wizard_interface_config_ = {
-"layer_section": true
+"layer_section": true,
+"output_section": false,
+"slice_section": false
 }
 metadata/_aseprite_wizard_source_file_hash_ = "c17a29f7b1d1f0e3b46472d89c68cbf8"
 
