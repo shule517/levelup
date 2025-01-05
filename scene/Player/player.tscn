@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=28 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/Player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/Player/se/attack/attack_short_sword.wav" id="2_1lcni"]
@@ -227,6 +227,26 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57l20"]
+bg_color = Color(0.301961, 0.301961, 0.301961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhncd"]
+bg_color = Color(0, 1, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_7typn")
@@ -324,6 +344,16 @@ metadata/_aseprite_wizard_source_file_hash_ = "0c194acce163aea2d82dd85c6643df01"
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": false
 }
+
+[node name="HpProgressBar" type="ProgressBar" parent="."]
+offset_left = -17.0
+offset_top = 4.0
+offset_right = 18.0
+offset_bottom = 8.0
+theme_override_styles/background = SubResource("StyleBoxFlat_57l20")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dhncd")
+value = 100.0
+show_percentage = false
 
 [connection signal="body_entered" from="ViewArea2D" to="." method="_on_view_area_2d_body_entered"]
 [connection signal="body_exited" from="ViewArea2D" to="." method="_on_view_area_2d_body_exited"]
