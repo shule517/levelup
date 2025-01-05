@@ -45,12 +45,13 @@ func _process(_delta: float) -> void:
 	if attack_target != null:
 		attack()
 
+	# 選択していることをEnemyに伝える
 	select_enemy()
 
 	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
 
 	# 移動したら、攻撃をキャンセルする
-	if not (value.x == 0 && value.y == 0):
+	if value != Vector2.ZERO:
 		attack_target = null
 		$WeaponSprite2D.visible = false
 
@@ -59,12 +60,13 @@ func _process(_delta: float) -> void:
 		if 20 < distance:
 			value = (attack_target.position - position).normalized()
 
-	if (value.x == 0 && value.y == 0):
+	if value == Vector2.ZERO:
 		sprite.play("idle")
 	else:
 		sprite.play("walk")
 		# TODO: play_sound_effect(walk_sound)
 		sprite.flip_h = value.x < 0
+		# TODO: ほんとは武器の向きも反転させたい
 		$WeaponSprite2D.visible = false
 
 	velocity = value * SPEED
