@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var hp: int = 250
 @export var monster_exp: int = 1
 @export var monster_atk: int = 1
+@export var monster_def: int = 1
 @export var move_speed: float = 30.0
 @export var attack_interval: float = 3.0
 @export var active: bool = true

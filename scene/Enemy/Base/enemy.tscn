@@ -161,6 +161,7 @@ collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_x18rc")
 monster_atk = null
+monster_def = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
 texture_filter = 1
@@ -168,7 +169,7 @@ material = SubResource("ShaderMaterial_4ir5a")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_xe8dg")
 animation = &"idle"
-frame_progress = 0.292686
+frame_progress = 0.649733
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",

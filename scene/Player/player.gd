@@ -7,6 +7,8 @@ extends CharacterBody2D
 @export var damage_sound: AudioStream
 @export var levelup_sound: AudioStream
 @export var walk_sound: AudioStream
+@export var critical_sound: AudioStream
+
 @export var player_max_hp: int = 28
 @export var player_hp: int = 28
 @export var player_atk: int = 11
@@ -81,10 +83,11 @@ func _process(_delta: float) -> void:
 	velocity = value * SPEED
 	move_and_slide()
 
-func play_sound_effect(sound_effect: AudioStream) -> void:
+func play_sound_effect(sound_effect: AudioStream, volume_db: float = 0.0) -> void:
 	# 現在のAudioStreamPlayerを取得し再生
 	var audio_player: AudioStreamPlayer = audio_players[current_player_index]
 	audio_player.stream = sound_effect
+	audio_player.volume_db = volume_db
 	audio_player.play()
 
 	# 次に使うAudioStreamPlayerを切り替え
@@ -106,17 +109,24 @@ func selected_enemy() -> Enemy:
 
 var attack_target: Enemy = null
 
-func calcurate_damege(enemy_atk: int, player_def: int) -> int:
+func calcurate_player_damege(enemy_atk: int, player_def: int) -> int:
 	if randi_range(0, 3) == 0: # 25%で空振り
 		return 0
 	var min_damage: int = max(enemy_atk - player_def, 1)
 	return randi_range(min_damage, min_damage + player_level)
 
+func calcurate_enemy_damege(player_atk: int, enemy_def: int) -> int:
+	var min_damage: int = max(player_atk - enemy_def, 1)
+	if randi_range(0, 2) == 0: # 33%でクリティカル
+		min_damage = ceil(min_damage * 2.0)
+		play_sound_effect(critical_sound)
+	return randi_range(min_damage, min_damage + player_level)
+
 var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 func damage(enemy_atk: int) -> void:
-	var damage: int = calcurate_damege(enemy_atk, player_def)
+	var damage: int = calcurate_player_damege(enemy_atk, player_def)
 	if damage != 0:
-		play_sound_effect(damage_sound)
+		play_sound_effect(damage_sound, -3.0)
 		# ダメージ受けた時の振動
 		Input.start_joy_vibration(0, 0, 0.8, 0.1)
 		player_hp -= damage
@@ -145,8 +155,7 @@ func attack() -> void:
 			play_sound_effect(attack_sound) # 攻撃
 			await get_tree().create_timer(0.2).timeout
 			if is_instance_valid(attack_target):
-				var attack_min: int = player_atk
-				attack_target.damage(randi_range(attack_min, attack_min + 5))
+				attack_target.damage(calcurate_enemy_damege(player_atk, attack_target.monster_def))
 				play_sound_effect(hit_sound) # 敵にHIT
 	else:
 		$WeaponSprite2D.visible = false

@@ -124,6 +124,7 @@ animations = [{
 monster_name = "スライム"
 hp = 60
 monster_atk = null
+monster_def = null
 move_speed = 20.0
 attack_interval = 2.0
 move_sound = ExtResource("2_rwsah")
