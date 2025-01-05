@@ -1,0 +1,1 @@
+extends "../Base/enemy.gd"

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://daja303jtgygs"
+path="res://.godot/imported/kuma.aseprite-9c1021973c0008e5e43ac7a1d258850a.res"
+
+[deps]
+
+source_file="res://scene/Enemy/_Kuma/kuma.aseprite"
+dest_files=["res://.godot/imported/kuma.aseprite-9c1021973c0008e5e43ac7a1d258850a.res"]
+
+[params]
+

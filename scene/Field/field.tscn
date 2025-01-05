@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://opi2a215jcf4"]
+[gd_scene load_steps=17 format=3 uid="uid://opi2a215jcf4"]
 
 [ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="1_oekny"]
 [ext_resource type="Texture2D" uid="uid://c2aisx6juln08" path="res://Assets/glasstown001.png" id="2_1uvk5"]
@@ -8,8 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://scene/WorldClock/world_clock.tscn" id="6_eiw5w"]
 [ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://scene/PlayerStatus/player_status.tscn" id="6_vyjou"]
 [ext_resource type="PackedScene" uid="uid://ckeor1b6bs7mr" path="res://scene/Enemy/Nezumi/nezumi.tscn" id="7_ng00h"]
+[ext_resource type="PackedScene" uid="uid://dhlpwbylh6hwc" path="res://scene/Enemy/Karasu/karasu.tscn" id="9_gynuo"]
 [ext_resource type="AudioStream" uid="uid://cdhygd4sgd112" path="res://scene/Enemy/Kinoko/spore_damage.wav" id="9_i6y0j"]
+[ext_resource type="PackedScene" uid="uid://hqjxy31sor5w" path="res://scene/Enemy/Mandoragora/mandoragora.tscn" id="10_rlmgr"]
 [ext_resource type="AudioStream" uid="uid://bxd6somy7bvnn" path="res://scene/Enemy/Kinoko/spore_die.wav" id="10_sg4sf"]
+[ext_resource type="PackedScene" uid="uid://c5emcx1nwkrqq" path="res://scene/Enemy/Kirikabu/kirikabu.tscn" id="13_suvgt"]
+[ext_resource type="PackedScene" uid="uid://0qmhn5wlmjrp" path="res://scene/Enemy/Kuma/kuma.tscn" id="14_58m4s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghbfk"]
 texture = ExtResource("2_1uvk5")
@@ -262,47 +266,30 @@ position = Vector2(2.08165e-12, 2.08165e-12)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 
-[node name="Suraimu" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-144, -138)
-
-[node name="Suraimu2" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-188, -83)
-
-[node name="Suraimu3" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-42, -101)
-
-[node name="Suraimu4" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-42, -158)
-
-[node name="Suraimu5" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-111, -32)
-
-[node name="Suraimu6" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-86, 38)
-
-[node name="Suraimu7" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-210, 16)
-
-[node name="Suraimu8" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-191, 77)
-
-[node name="Suraimu9" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-42, 80)
-
-[node name="Suraimu10" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(36, -80)
-
-[node name="Suraimu11" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-18, -5)
-
 [node name="Nezumi" parent="Objects" instance=ExtResource("7_ng00h")]
-position = Vector2(-184, -47)
+position = Vector2(-183, 46)
 
 [node name="Kinoko" parent="Objects" instance=ExtResource("6_bifwu")]
-position = Vector2(-264, -145)
+position = Vector2(-288, 73)
 active = true
 damage_sound = ExtResource("9_i6y0j")
 die_sound = ExtResource("10_sg4sf")
+
+[node name="Karasu" parent="Objects" instance=ExtResource("9_gynuo")]
+position = Vector2(-524, -195)
+attack_distance = 18.0
+
+[node name="Mandoragora" parent="Objects" instance=ExtResource("10_rlmgr")]
+position = Vector2(-142, -353)
+
+[node name="Suraimu12" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-405, -296)
+
+[node name="Kirikabu" parent="Objects" instance=ExtResource("13_suvgt")]
+position = Vector2(2, -115)
+
+[node name="Kuma" parent="Objects" instance=ExtResource("14_58m4s")]
+position = Vector2(-196, -60)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

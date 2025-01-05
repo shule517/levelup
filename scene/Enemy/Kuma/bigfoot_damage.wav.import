@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://imf5385udnfd"
-path="res://.godot/imported/bigfoot_damage.wav-69c4f7279679f4ff7ce062680578ad87.sample"
+path="res://.godot/imported/bigfoot_damage.wav-f1e6fc9c96e597604f760124e4f479f6.sample"
 
 [deps]
 
-source_file="res://scene/Enemy/_Kuma/bigfoot_damage.wav"
-dest_files=["res://.godot/imported/bigfoot_damage.wav-69c4f7279679f4ff7ce062680578ad87.sample"]
+source_file="res://scene/Enemy/Kuma/bigfoot_damage.wav"
+dest_files=["res://.godot/imported/bigfoot_damage.wav-f1e6fc9c96e597604f760124e4f479f6.sample"]
 
 [params]
 

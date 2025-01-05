@@ -11,7 +11,9 @@ var monster_hp: int = 250
 @export var monster_def: int = 1
 @export var move_speed: float = 30.0
 @export var attack_interval: float = 3.0
+@export var attack_distance: float = 18.0
 @export var active: bool = true
+@export var no_move: bool = false
 
 @export_category("SE")
 @export var idle_sound: AudioStream = null
@@ -33,6 +35,11 @@ var new_material := ShaderMaterial.new()
 
 # 初期化
 func _ready() -> void:
+	# 攻撃範囲を設定する
+	var shape := CircleShape2D.new()
+	shape.radius = attack_distance
+	$AttackArea2D/CollisionShape2D.shape = shape
+
 	monster_hp = monster_max_hp
 	attack_timer.wait_time = attack_interval
 	name_label.visible = false
@@ -66,7 +73,7 @@ func _physics_process(delta: float) -> void:
 
 	if is_hunting:
 		# 移動
-		if not can_attack:
+		if not can_attack and not no_move:
 			play_move_sound()
 			sprite.play("walk")
 			var direction: Vector2 = (player.global_position - global_position).normalized()
@@ -75,7 +82,6 @@ func _physics_process(delta: float) -> void:
 			move_and_slide()
 
 	if not sprite.is_playing():
-		print("idle")
 		sprite.play("idle")
 
 func set_is_selected(value: bool) -> void:

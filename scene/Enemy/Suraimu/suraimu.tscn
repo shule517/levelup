@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://csj0hwaue3oq1"]
+[gd_scene load_steps=23 format=3 uid="uid://csj0hwaue3oq1"]
 
 [ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://scene/Enemy/Base/enemy.tscn" id="1_c35nx"]
 [ext_resource type="Texture2D" uid="uid://c3ikuimxsunlg" path="res://scene/Enemy/Suraimu/suraimu.png" id="2_1k3mf"]
@@ -84,6 +84,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1t56e"]
+radius = 18.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6emo"]
 atlas = ExtResource("8_hasdr")
 region = Rect2(0, 0, 16, 16)
@@ -133,7 +136,7 @@ die_sound = ExtResource("4_irsp8")
 material = SubResource("ShaderMaterial_ut0is")
 position = Vector2(2.08165e-12, -6)
 sprite_frames = SubResource("SpriteFrames_2qub0")
-frame_progress = 0.785544
+frame_progress = 0.27789
 offset = Vector2(2.08165e-12, -7)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -145,6 +148,9 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scene/Enemy/Suraimu/suraimu.aseprite"
 }
 metadata/_aseprite_wizard_source_file_hash_ = "e19dc0ed217d8f84adfe5c17c92b77ab"
+
+[node name="CollisionShape2D" parent="AttackArea2D" index="0"]
+shape = SubResource("CircleShape2D_1t56e")
 
 [node name="CursorAnimatedSprite2D" parent="." index="7"]
 sprite_frames = SubResource("SpriteFrames_6fn24")
