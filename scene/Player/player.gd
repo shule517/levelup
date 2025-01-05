@@ -40,13 +40,12 @@ func _process(_delta: float) -> void:
 
 	if Input.is_action_just_pressed("button_a"):
 		attack_target = selected_enemy()
-		start_atack()
 
 	# 攻撃ターゲットがいる場合は、すぐに攻撃をはじめる
 	if attack_target != null:
-		start_atack()
+		attack()
 
-	select_target()
+	select_enemy()
 
 	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
 
@@ -80,25 +79,21 @@ func play_sound_effect(sound_effect: AudioStream) -> void:
 	# 次に使うAudioStreamPlayerを切り替え
 	current_player_index = (current_player_index + 1) % audio_players.size()
 
-func select_target() -> void:
+func select_enemy() -> void:
 	for i in visible_enemies:
 		i.set_is_selected(false)
 
-	if !visible_enemies.is_empty():
-		if selected_enemy() != null:
-			selected_enemy().set_is_selected(true)
+	if selected_enemy() != null:
+		selected_enemy().set_is_selected(true)
 
 func selected_enemy() -> Enemy:
 	visible_enemies = visible_enemies.filter(func(node: Node2D) -> bool: return node.is_alive())
-	if !visible_enemies.is_empty():
+	if not visible_enemies.is_empty():
 		return visible_enemies[target_index % visible_enemies.size()]
-	return null
+	else:
+		return null
 
 var attack_target: Enemy = null
-func start_atack() -> void:
-	if Time.get_unix_time_from_system() - before_attack_time > 1.4:
-		$WeaponSprite2D.visible = true
-		attack()
 
 var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 func damage(damage: int) -> void:
@@ -110,7 +105,11 @@ func damage(damage: int) -> void:
 	Input.start_joy_vibration(0, 0, 0.8, 0.1)
 
 func attack() -> void:
+	if Time.get_unix_time_from_system() - before_attack_time < 1.4:
+		return
+
 	if is_instance_valid(attack_target) && attack_target.is_alive():
+		$WeaponSprite2D.visible = true
 		var distance: float = position.distance_to(attack_target.position)
 		if distance <= 20:
 			before_attack_time = Time.get_unix_time_from_system()
