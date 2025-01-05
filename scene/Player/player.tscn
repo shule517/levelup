@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=26 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/Player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/Player/se/attack/attack_short_sword.wav" id="2_1lcni"]
@@ -46,6 +46,9 @@ height = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nldkh"]
 radius = 142.004
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_apxp6"]
+radius = 25.0799
 
 [sub_resource type="Animation" id="Animation_2ewc6"]
 length = 0.001
@@ -266,6 +269,11 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ViewArea2D"]
 shape = SubResource("CircleShape2D_nldkh")
 
+[node name="AttackArea2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
+shape = SubResource("CircleShape2D_apxp6")
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [node name="AtackTimer" type="Timer" parent="."]
@@ -319,4 +327,6 @@ metadata/_aseprite_wizard_interface_config_ = {
 
 [connection signal="body_entered" from="ViewArea2D" to="." method="_on_view_area_2d_body_entered"]
 [connection signal="body_exited" from="ViewArea2D" to="." method="_on_view_area_2d_body_exited"]
+[connection signal="body_entered" from="AttackArea2D" to="." method="_on_attack_area_2d_body_entered"]
+[connection signal="body_exited" from="AttackArea2D" to="." method="_on_attack_area_2d_body_exited"]
 [connection signal="timeout" from="AtackTimer" to="." method="_on_atack_timer_timeout"]

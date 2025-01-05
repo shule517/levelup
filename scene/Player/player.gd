@@ -73,6 +73,7 @@ func damage(damage: int) -> void:
 	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
 	floating_damage.init(damage, true)
 	add_child(floating_damage)
+	# ダメージ受けた時の振動
 	Input.start_joy_vibration(0, 0, 0.8, 0.1)
 
 func _process(_delta: float) -> void:
@@ -120,6 +121,7 @@ func attack() -> void:
 		if distance <= 20:
 			before_attack_time = Time.get_unix_time_from_system()
 
+			# 攻撃時の振動
 			Input.start_joy_vibration(0, 0.3, 0.3, 0.2)
 			$AtackTimer.stop()
 			$AtackTimer.start()
@@ -159,3 +161,9 @@ func next_exp() -> int:
 
 func _on_atack_timer_timeout() -> void:
 	attack()
+
+func _on_attack_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+func _on_attack_area_2d_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
