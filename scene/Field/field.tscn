@@ -259,47 +259,69 @@ position_smoothing_speed = 8.0
 
 [node name="Suraimu" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-144, -138)
+monster_max_hp = null
 monster_atk = 1
+monster_def = null
 
 [node name="Suraimu2" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-188, -83)
+monster_max_hp = null
 monster_atk = 1
+monster_def = null
 
 [node name="Suraimu3" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-42, -101)
+monster_max_hp = null
 monster_atk = 1
+monster_def = null
 
 [node name="Suraimu4" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-42, -158)
+monster_max_hp = null
 monster_atk = 1
+monster_def = null
 
 [node name="Suraimu5" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-111, -32)
+monster_max_hp = null
 monster_atk = 1
+monster_def = null
 
 [node name="Suraimu6" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-86, 38)
+monster_max_hp = null
 monster_atk = 1
+monster_def = null
 
 [node name="Suraimu7" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-210, 16)
+monster_max_hp = null
 monster_atk = 1
+monster_def = null
 
 [node name="Suraimu8" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-191, 77)
+monster_max_hp = null
 monster_atk = 1
+monster_def = null
 
 [node name="Suraimu9" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-42, 80)
+monster_max_hp = null
 monster_atk = 1
+monster_def = null
 
 [node name="Suraimu10" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(36, -80)
+monster_max_hp = null
 monster_atk = 1
+monster_def = null
 
 [node name="Suraimu11" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-18, -5)
+monster_max_hp = null
 monster_atk = 1
+monster_def = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://crx78tiy2lwrx"]
+[gd_scene load_steps=24 format=3 uid="uid://crx78tiy2lwrx"]
 
 [ext_resource type="Script" path="res://scene/Enemy/Base/enemy.gd" id="1_x18rc"]
 [ext_resource type="Shader" path="res://scene/Enemy/Nezumi/nezumi.gdshader" id="2_5lths"]
@@ -156,10 +156,28 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oera4"]
+bg_color = Color(0.162489, 0.184053, 0.275974, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0529844, 0.0712628, 0.180933, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46t1e"]
+bg_color = Color(1, 0, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.054902, 0.0705882, 0.180392, 1)
+
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_x18rc")
+monster_max_hp = null
 monster_atk = null
 monster_def = null
 
@@ -169,7 +187,7 @@ material = SubResource("ShaderMaterial_4ir5a")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_xe8dg")
 animation = &"idle"
-frame_progress = 0.649733
+frame_progress = 0.522097
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -219,9 +237,9 @@ libraries = {
 
 [node name="NameLabel" type="Label" parent="."]
 offset_left = -46.0
-offset_top = 3.0
+offset_top = 10.0
 offset_right = 45.0
-offset_bottom = 13.0
+offset_bottom = 20.0
 text = "ねずみ"
 label_settings = SubResource("LabelSettings_c8q5t")
 horizontal_alignment = 1
@@ -242,6 +260,16 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scene/Enemy/Base/taikiloop_icon/2460_2.aseprite"
 }
 metadata/_aseprite_wizard_source_file_hash_ = "d0f6194c4f8c6bef6ac93067f6982027"
+
+[node name="HpProgressBar" type="ProgressBar" parent="."]
+offset_left = -17.0
+offset_top = 4.0
+offset_right = 18.0
+offset_bottom = 8.0
+theme_override_styles/background = SubResource("StyleBoxFlat_oera4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_46t1e")
+value = 100.0
+show_percentage = false
 
 [connection signal="body_entered" from="ViewArea2D" to="." method="_on_view_area_2d_body_entered"]
 [connection signal="body_exited" from="ViewArea2D" to="." method="_on_view_area_2d_body_exited"]

@@ -4,7 +4,8 @@ extends CharacterBody2D
 
 @export_category("モンスターの基本情報")
 @export var monster_name: String = "モンスター"
-@export var hp: int = 250
+@export var monster_max_hp: int = 250
+var monster_hp: int = 250
 @export var monster_exp: int = 1
 @export var monster_atk: int = 1
 @export var monster_def: int = 1
@@ -23,6 +24,7 @@ extends CharacterBody2D
 @onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
 @onready var attack_timer: Timer = $AttackTimer
 @onready var name_label: Label = $NameLabel
+@onready var hp_progress_bar: ProgressBar = $HpProgressBar
 @onready var cursor_animated_sprite: AnimatedSprite2D = $CursorAnimatedSprite2D
 
 var is_hunting := false
@@ -31,10 +33,15 @@ var new_material := ShaderMaterial.new()
 
 # 初期化
 func _ready() -> void:
+	monster_hp = monster_max_hp
 	attack_timer.wait_time = attack_interval
 	name_label.visible = false
 	name_label.text = monster_name
 	name_label.z_index = 100
+	
+	hp_progress_bar.visible = false
+	hp_progress_bar.z_index = 100
+
 	new_material.shader = sprite.material.shader
 	sprite.material = new_material
 	new_material.set_shader_parameter("enabled", false) # TODO: shaderを殺す
@@ -53,6 +60,9 @@ func _physics_process(delta: float) -> void:
 	if not is_alive():
 		return
 
+	# HPバーの更新
+	hp_progress_bar.value = monster_hp * 100 / monster_max_hp
+
 	if active && is_hunting:
 		# 移動
 		if not can_attack:
@@ -68,6 +78,7 @@ func _physics_process(delta: float) -> void:
 
 func set_is_selected(value: bool) -> void:
 	name_label.visible = value
+	hp_progress_bar.visible = value
 	cursor_animated_sprite.visible = value
 	new_material.set_shader_parameter("is_selected", value)
 
@@ -93,11 +104,11 @@ func play_sound_effect(sound_effect: AudioStream, volume_db: float = 0.0) -> voi
 	current_player_index = (current_player_index + 1) % audio_players.size()
 
 func is_alive() -> bool:
-	return hp > 0
+	return monster_hp > 0
 
 var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 func damage(damage: int) -> void:
-	if hp <= 0:
+	if monster_hp <= 0:
 		return
 
 	# ダメージSE
@@ -108,10 +119,10 @@ func damage(damage: int) -> void:
 	floating_damage.init(damage, false)
 	add_child(floating_damage)
 
-	hp -= damage
+	monster_hp -= damage
 
 	# やっつけた
-	if hp <= 0:
+	if monster_hp <= 0:
 		# 経験値GET
 		player.receive_exp(monster_exp)
 

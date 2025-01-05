@@ -54,8 +54,9 @@ func _process(_delta: float) -> void:
 	if attack_target != null:
 		attack()
 
-
+	# HPバーの更新
 	$HpProgressBar.value = player_hp * 100 / player_max_hp
+
 	# 選択していることをEnemyに伝える
 	select_enemy()
 
