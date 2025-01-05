@@ -106,8 +106,15 @@ func selected_enemy() -> Enemy:
 
 var attack_target: Enemy = null
 
+func calcurate_damege(enemy_atk: int, player_def: int) -> int:
+	if randi_range(0, 3) == 0: # 25%で空振り
+		return 0
+	var min_damage: int = max(enemy_atk - player_def, 1)
+	return randi_range(min_damage, min_damage + player_level)
+
 var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
-func damage(damage: int) -> void:
+func damage(enemy_atk: int) -> void:
+	var damage: int = calcurate_damege(enemy_atk, player_def)
 	if damage != 0:
 		play_sound_effect(damage_sound)
 		# ダメージ受けた時の振動

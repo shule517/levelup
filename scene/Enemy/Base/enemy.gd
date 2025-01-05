@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var monster_name: String = "モンスター"
 @export var hp: int = 250
 @export var monster_exp: int = 1
+@export var monster_atk: int = 1
 @export var move_speed: float = 30.0
 @export var attack_interval: float = 3.0
 @export var active: bool = true
@@ -157,8 +158,4 @@ func attack() -> void:
 		play_sound_effect(attack_sound)
 		sprite.play("attack")
 		await get_tree().create_timer(0.3).timeout
-
-		if randi_range(0, 2): # 空振り判定
-			player.damage(0)
-		else:
-			player.damage(randi_range(4, 13))
+		player.damage(monster_atk)

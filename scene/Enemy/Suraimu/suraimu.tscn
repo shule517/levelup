@@ -123,6 +123,7 @@ animations = [{
 [node name="Suraimu" instance=ExtResource("1_c35nx")]
 monster_name = "スライム"
 hp = 60
+monster_atk = null
 move_speed = 20.0
 attack_interval = 2.0
 move_sound = ExtResource("2_rwsah")
@@ -134,7 +135,7 @@ die_sound = ExtResource("4_irsp8")
 material = SubResource("ShaderMaterial_ut0is")
 position = Vector2(2.08165e-12, -6)
 sprite_frames = SubResource("SpriteFrames_2qub0")
-frame_progress = 0.780636
+frame_progress = 0.99256
 offset = Vector2(2.08165e-12, -7)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",

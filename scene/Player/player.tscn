@@ -228,16 +228,13 @@ animations = [{
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57l20"]
-bg_color = Color(0.301961, 0.301961, 0.301961, 1)
+bg_color = Color(0.162489, 0.184053, 0.275974, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
+border_color = Color(0.0529844, 0.0712628, 0.180933, 1)
+corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhncd"]
 bg_color = Color(0, 1, 0, 1)
@@ -245,7 +242,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
+border_color = Color(0.054902, 0.0705882, 0.180392, 1)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
