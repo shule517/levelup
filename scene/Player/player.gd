@@ -21,6 +21,7 @@ var audio_players: Array[AudioStreamPlayer] = []
 var current_player_index: int = 0
 var before_attack_time: float = Time.get_unix_time_from_system()
 
+# 初期化
 func _ready() -> void:
 	$WeaponSprite2D.visible = false
 	# AudioStreamPlayerノードを作成し、配列に追加
@@ -29,53 +30,7 @@ func _ready() -> void:
 		add_child(player)
 		audio_players.append(player)
 
-func play_sound_effect(sound_effect: AudioStream) -> void:
-	# 現在のAudioStreamPlayerを取得し再生
-	var audio_player: AudioStreamPlayer = audio_players[current_player_index]
-	audio_player.stream = sound_effect
-	audio_player.play()
-
-	# 次に使うAudioStreamPlayerを切り替え
-	current_player_index = (current_player_index + 1) % audio_players.size()
-
-func select_target() -> void:
-	for i in overlapping_bodies:
-		i.set_is_selected(false)
-
-	if !overlapping_bodies.is_empty():
-		select_body() && select_body().set_is_selected(true)
-
-func select_body() -> Node2D:
-	overlapping_bodies = overlapping_bodies.filter(func(node: Node2D) -> bool: return node.is_alive())
-	if !overlapping_bodies.is_empty():
-		return overlapping_bodies[target_index % overlapping_bodies.size()]
-	return null
-
-func _on_view_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Enemy") && body.is_alive():
-		overlapping_bodies.append(body)
-
-func _on_view_area_2d_body_exited(body: Node2D) -> void:
-	if body.is_in_group("Enemy"):
-		overlapping_bodies.erase(body)
-		body.set_is_selected(false)
-
-var attack_target: Node2D = null
-func start_atack() -> void:
-	if Time.get_unix_time_from_system() - before_attack_time > 1.4:
-		attack_target = select_body()
-		$WeaponSprite2D.visible = true
-		attack()
-
-var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
-func damage(damage: int) -> void:
-	play_sound_effect(damage_sound)
-	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
-	floating_damage.init(damage, true)
-	add_child(floating_damage)
-	# ダメージ受けた時の振動
-	Input.start_joy_vibration(0, 0, 0.8, 0.1)
-
+# メインループ
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("button_left"):
 		target_index += 1
@@ -114,6 +69,44 @@ func _process(_delta: float) -> void:
 
 	velocity = value * SPEED
 	move_and_slide()
+
+func play_sound_effect(sound_effect: AudioStream) -> void:
+	# 現在のAudioStreamPlayerを取得し再生
+	var audio_player: AudioStreamPlayer = audio_players[current_player_index]
+	audio_player.stream = sound_effect
+	audio_player.play()
+
+	# 次に使うAudioStreamPlayerを切り替え
+	current_player_index = (current_player_index + 1) % audio_players.size()
+
+func select_target() -> void:
+	for i in overlapping_bodies:
+		i.set_is_selected(false)
+
+	if !overlapping_bodies.is_empty():
+		select_body() && select_body().set_is_selected(true)
+
+func select_body() -> Node2D:
+	overlapping_bodies = overlapping_bodies.filter(func(node: Node2D) -> bool: return node.is_alive())
+	if !overlapping_bodies.is_empty():
+		return overlapping_bodies[target_index % overlapping_bodies.size()]
+	return null
+
+var attack_target: Node2D = null
+func start_atack() -> void:
+	if Time.get_unix_time_from_system() - before_attack_time > 1.4:
+		attack_target = select_body()
+		$WeaponSprite2D.visible = true
+		attack()
+
+var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
+func damage(damage: int) -> void:
+	play_sound_effect(damage_sound)
+	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
+	floating_damage.init(damage, true)
+	add_child(floating_damage)
+	# ダメージ受けた時の振動
+	Input.start_joy_vibration(0, 0, 0.8, 0.1)
 
 func attack() -> void:
 	if is_instance_valid(attack_target) && attack_target.is_alive():
@@ -159,11 +152,25 @@ func can_levelup() -> bool:
 func next_exp() -> int:
 	return levelup_table[player_level - 1]
 
+# 攻撃タイミング
 func _on_atack_timer_timeout() -> void:
 	attack()
 
+# 敵が視野に入った
+func _on_view_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Enemy") && body.is_alive():
+		overlapping_bodies.append(body)
+
+# 敵が視野から出た
+func _on_view_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Enemy"):
+		overlapping_bodies.erase(body)
+		body.set_is_selected(false)
+
+# 敵が攻撃範囲に入った
 func _on_attack_area_2d_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
 
+# 敵が攻撃範囲から出た
 func _on_attack_area_2d_body_exited(body: Node2D) -> void:
 	pass # Replace with function body.
