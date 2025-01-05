@@ -27,7 +27,7 @@ gdscript/warnings/untyped_declaration=2
 
 window/size/viewport_width=2560
 window/size/viewport_height=1440
-window/stretch/scale=4.0
+window/stretch/scale=5.0
 window/stretch/scale_mode="integer"
 
 [editor_plugins]

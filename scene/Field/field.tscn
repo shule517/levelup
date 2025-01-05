@@ -258,21 +258,24 @@ position_smoothing_speed = 8.0
 
 [node name="Suraimu" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-144, -130)
-monster_exp = null
 
 [node name="Suraimu2" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-47, -14)
-monster_exp = null
 
 [node name="Suraimu3" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(65, -116)
-monster_exp = null
 
 [node name="Suraimu4" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(176, -123)
-monster_exp = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="WorldClock" parent="CanvasLayer" instance=ExtResource("6_eiw5w")]
-position = Vector2(206, 13)
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+
+[node name="WorldClock" parent="CanvasLayer/Control" instance=ExtResource("6_eiw5w")]
+position = Vector2(-94, 16)
