@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://crx78tiy2lwrx"]
+[gd_scene load_steps=22 format=3 uid="uid://crx78tiy2lwrx"]
 
 [ext_resource type="Script" path="res://scene/Enemy/Base/enemy.gd" id="1_x18rc"]
 [ext_resource type="Shader" path="res://scene/Enemy/Nezumi/nezumi.gdshader" id="2_5lths"]
@@ -48,6 +48,9 @@ height = 6.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i5gpt"]
 radius = 82.0244
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lj7oo"]
+radius = 18.0278
 
 [sub_resource type="Animation" id="Animation_ob4jj"]
 resource_name = "damaged"
@@ -162,7 +165,7 @@ material = SubResource("ShaderMaterial_4ir5a")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_xe8dg")
 animation = &"idle"
-frame_progress = 0.797105
+frame_progress = 0.487743
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -182,10 +185,15 @@ position = Vector2(-1, -1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_cq3dd")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="ViewArea2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ViewArea2D"]
 shape = SubResource("CircleShape2D_i5gpt")
+
+[node name="AttackArea2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
+shape = SubResource("CircleShape2D_lj7oo")
 
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 4.0
@@ -222,6 +230,8 @@ metadata/_aseprite_wizard_config_ = {
 }
 metadata/_aseprite_wizard_source_file_hash_ = "d0f6194c4f8c6bef6ac93067f6982027"
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="ViewArea2D" to="." method="_on_view_area_2d_body_entered"]
+[connection signal="body_exited" from="ViewArea2D" to="." method="_on_view_area_2d_body_exited"]
+[connection signal="body_entered" from="AttackArea2D" to="." method="_on_attack_area_2d_body_entered"]
+[connection signal="body_exited" from="AttackArea2D" to="." method="_on_attack_area_2d_body_exited"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

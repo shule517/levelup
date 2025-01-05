@@ -22,7 +22,7 @@ extends CharacterBody2D
 @onready var attack_timer: Timer = $AttackTimer
 @onready var name_label: Label = $NameLabel
 
-var walking: bool = false
+var is_hunting: bool = false
 var new_material := ShaderMaterial.new()
 
 func _ready() -> void:
@@ -47,7 +47,7 @@ func _physics_process(delta: float) -> void:
 	if not is_alive():
 		return
 
-	if active && walking:
+	if active && is_hunting:
 		# 移動
 		var distance: float = player.global_position.distance_to(global_position)
 
@@ -124,18 +124,29 @@ func damage(damage: int) -> void:
 func _destory() -> void:
 	queue_free()
 
-# プレイヤーが範囲に入った
-func _on_area_2d_body_entered(body: Node2D) -> void:
+# 追跡範囲に入った
+func _on_view_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		walking = true
+		is_hunting = true
 
-# プレイヤーが範囲から出た
-func _on_area_2d_body_exited(body: Node2D) -> void:
+# 追跡範囲から出た
+func _on_view_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		walking = false
+		is_hunting = false
+
+var can_attack := false
+# 攻撃範囲に入った
+func _on_attack_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		can_attack = true
+
+# 攻撃範囲から出た
+func _on_attack_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		can_attack = false
 
 func _on_attack_timer_timeout() -> void:
-	if walking && is_alive():
+	if is_hunting && is_alive() && can_attack:
 		play_sound_effect(attack_sound)
 		sprite.play("attack")
 		await get_tree().create_timer(0.3).timeout
