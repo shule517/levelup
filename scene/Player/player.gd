@@ -39,6 +39,7 @@ func _process(_delta: float) -> void:
 		target_index -= 1
 
 	if Input.is_action_just_pressed("button_a"):
+		attack_target = selected_enemy()
 		start_atack()
 
 	# 攻撃ターゲットがいる場合は、すぐに攻撃をはじめる
@@ -84,10 +85,10 @@ func select_target() -> void:
 		i.set_is_selected(false)
 
 	if !visible_enemies.is_empty():
-		if select_body() != null:
-			select_body().set_is_selected(true)
+		if selected_enemy() != null:
+			selected_enemy().set_is_selected(true)
 
-func select_body() -> Enemy:
+func selected_enemy() -> Enemy:
 	visible_enemies = visible_enemies.filter(func(node: Node2D) -> bool: return node.is_alive())
 	if !visible_enemies.is_empty():
 		return visible_enemies[target_index % visible_enemies.size()]
@@ -96,7 +97,6 @@ func select_body() -> Enemy:
 var attack_target: Enemy = null
 func start_atack() -> void:
 	if Time.get_unix_time_from_system() - before_attack_time > 1.4:
-		attack_target = select_body()
 		$WeaponSprite2D.visible = true
 		attack()
 
