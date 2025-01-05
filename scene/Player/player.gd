@@ -46,6 +46,9 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("button_plus"):
 		levelup()
 
+	if Input.is_action_just_pressed("button_minus"):
+		global.player_hp = 1
+
 	if Input.is_action_just_pressed("button_left"):
 		target_index += 1
 
@@ -140,6 +143,11 @@ func damage(enemy_atk: int) -> void:
 	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
 	floating_damage.init(damage, true)
 	add_child(floating_damage)
+
+	if global.player_hp <= 0:
+		await get_tree().create_timer(1.0).timeout
+		global.player_hp = global.player_max_hp
+		global.load_home_scene()
 
 func attack() -> void:
 	if Time.get_unix_time_from_system() - before_attack_time < 1.4:

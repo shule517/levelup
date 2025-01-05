@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="levelup"
-run/main_scene="res://scene/Field/field.tscn"
+run/main_scene="res://scene/Field/home.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
