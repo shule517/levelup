@@ -143,6 +143,8 @@ func levelup() -> void:
 	player_level += 1
 	player_exp = 0
 	play_sound_effect(levelup_sound)
+	$LevelupAnimatedSprite2D.z_index = 1000
+	$LevelupAnimatedSprite2D.play("default")
 	print("levelup!!!!!! %d levelになった!!" % player_level)
 
 func can_levelup() -> bool:
