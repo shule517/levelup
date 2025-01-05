@@ -22,9 +22,11 @@ extends CharacterBody2D
 @onready var attack_timer: Timer = $AttackTimer
 @onready var name_label: Label = $NameLabel
 
-var is_hunting: bool = false
+var is_hunting := false
+var can_attack := false
 var new_material := ShaderMaterial.new()
 
+# 初期化
 func _ready() -> void:
 	attack_timer.wait_time = attack_interval
 	name_label.visible = false
@@ -41,16 +43,14 @@ func _ready() -> void:
 		add_child(audip_player)
 		audio_players.append(audip_player)
 
+# メインループ
 func _physics_process(delta: float) -> void:
-	new_material.set_shader_parameter("modulate", modulate)
-
 	if not is_alive():
 		return
 
 	if active && is_hunting:
 		# 移動
 		var distance: float = player.global_position.distance_to(global_position)
-
 		if distance >= 15.0:
 			play_move_sound()
 			sprite.play("walk")
@@ -134,18 +134,22 @@ func _on_view_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		is_hunting = false
 
-var can_attack := false
 # 攻撃範囲に入った
 func _on_attack_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		can_attack = true
+		attack_timer.start()
 
 # 攻撃範囲から出た
 func _on_attack_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		can_attack = false
+		attack_timer.stop()
 
 func _on_attack_timer_timeout() -> void:
+	attack()
+
+func attack() -> void:
 	if is_hunting && is_alive() && can_attack:
 		play_sound_effect(attack_sound)
 		sprite.play("attack")

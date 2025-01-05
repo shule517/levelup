@@ -165,7 +165,7 @@ material = SubResource("ShaderMaterial_4ir5a")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_xe8dg")
 animation = &"idle"
-frame_progress = 0.487743
+frame_progress = 0.291015
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -197,7 +197,6 @@ shape = SubResource("CircleShape2D_lj7oo")
 
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 4.0
-autostart = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
