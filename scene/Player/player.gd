@@ -51,11 +51,11 @@ func select_body() -> Node2D:
 		return overlapping_bodies[target_index % overlapping_bodies.size()]
 	return null
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_view_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemy") && body.is_alive():
 		overlapping_bodies.append(body)
 
-func _on_area_2d_body_exited(body: Node2D) -> void:
+func _on_view_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Enemy"):
 		overlapping_bodies.erase(body)
 		body.set_is_selected(false)
