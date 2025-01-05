@@ -9,13 +9,15 @@ extends CharacterBody2D
 @export var walk_sound: AudioStream
 @export var critical_sound: AudioStream
 
-@export var player_max_hp: int = 28
-@export var player_hp: int = 28
-@export var player_atk: int = 11
-@export var player_def: int = 3
-@export var player_exp: int = 0
-@export var player_next_exp: int = 1
-@export var player_level: int = 1
+#@export var player_max_hp: int = 28
+#@export var player_hp: int = 28
+#@export var player_atk: int = 11
+#@export var player_def: int = 3
+#@export var player_exp: int = 0
+#@export var player_next_exp: int = 1
+#@export var player_level: int = 1
+
+@onready var global: GlobalAutoLoad = get_node("/root/Global")
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -55,7 +57,7 @@ func _process(_delta: float) -> void:
 		attack()
 
 	# HPバーの更新
-	$HpProgressBar.value = player_hp * 100 / player_max_hp
+	$HpProgressBar.value = global.player_hp * 100 / global.player_max_hp
 
 	# 選択していることをEnemyに伝える
 	select_enemy()
@@ -114,23 +116,23 @@ func calcurate_player_damege(enemy_atk: int, player_def: int) -> int:
 	if randi_range(0, 3) == 0: # 25%で空振り
 		return 0
 	var min_damage: int = max(enemy_atk - player_def, 1)
-	return randi_range(min_damage, min_damage + player_level)
+	return randi_range(min_damage, min_damage + global.player_level)
 
 func calcurate_enemy_damege(player_atk: int, enemy_def: int) -> int:
 	var min_damage: int = max(player_atk - enemy_def, 1)
 	if randi_range(0, 2) == 0: # 33%でクリティカル
 		min_damage = ceil(min_damage * 2.0)
 		play_sound_effect(critical_sound)
-	return randi_range(min_damage, min_damage + player_level)
+	return randi_range(min_damage, min_damage + global.player_level)
 
 var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 func damage(enemy_atk: int) -> void:
-	var damage: int = calcurate_player_damege(enemy_atk, player_def)
+	var damage: int = calcurate_player_damege(enemy_atk, global.player_def)
 	if damage != 0:
 		play_sound_effect(damage_sound, -3.0)
 		# ダメージ受けた時の振動
 		Input.start_joy_vibration(0, 0, 0.8, 0.1)
-		player_hp -= damage
+		global.player_hp -= damage
 
 	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
 	floating_damage.init(damage, true)
@@ -156,7 +158,7 @@ func attack() -> void:
 			play_sound_effect(attack_sound) # 攻撃
 			await get_tree().create_timer(0.2).timeout
 			if is_instance_valid(attack_target):
-				attack_target.damage(calcurate_enemy_damege(player_atk, attack_target.monster_def))
+				attack_target.damage(calcurate_enemy_damege(global.player_atk, attack_target.monster_def))
 				play_sound_effect(hit_sound) # 敵にHIT
 	else:
 		$WeaponSprite2D.visible = false
@@ -165,31 +167,31 @@ func attack() -> void:
 #var levelup_attack_table: Array[int] = [1, 3, 5, 8, 11, 14, 17, 20, 25, 32, 38, 44, 52, 60, 76, 86, 97, 109, 122]
 
 func receive_exp(monster_exp: int) -> void:
-	player_exp += monster_exp
-	print("経験値をGET: %d -> 現在のレベル: %d -> next: %d" % [monster_exp, player_level, next_exp() - player_exp])
+	global.player_exp += monster_exp
+	print("経験値をGET: %d -> 現在のレベル: %d -> next: %d" % [monster_exp, global.player_level, next_exp() - global.player_exp])
 	if can_levelup():
 		levelup()
 
 func levelup() -> void:
-	player_level += 1
+	global.player_level += 1
 	
-	player_max_hp = ceil(player_max_hp * 1.09)
-	player_hp = player_max_hp
-	player_atk = ceil(player_atk * 1.08)
-	player_def = ceil(player_def * 1.06)
-	player_next_exp = ceil(player_next_exp * 1.21)
-	player_exp = 0
+	global.player_max_hp = ceil(global.player_max_hp * 1.09)
+	global.player_hp = global.player_max_hp
+	global.player_atk = ceil(global.player_atk * 1.08)
+	global.player_def = ceil(global.player_def * 1.06)
+	global.player_next_exp = ceil(global.player_next_exp * 1.21)
+	global.player_exp = 0
 
 	play_sound_effect(levelup_sound)
 	$LevelupAnimatedSprite2D.z_index = 1000
 	$LevelupAnimatedSprite2D.play("default")
-	print("levelup!!!!!! %d levelになった!!" % player_level)
+	print("levelup!!!!!! %d levelになった!!" % global.player_level)
 
 func can_levelup() -> bool:
-	return next_exp() <= player_exp
+	return next_exp() <= global.player_exp
 
 func next_exp() -> int:
-	return player_next_exp
+	return global.player_next_exp
 
 # 攻撃タイミング
 func _on_atack_timer_timeout() -> void:

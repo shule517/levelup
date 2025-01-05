@@ -127,7 +127,6 @@ monster_atk = 1
 monster_def = 1
 move_speed = 20.0
 attack_interval = 2.0
-active = false
 move_sound = ExtResource("2_rwsah")
 attack_sound = ExtResource("3_7phjd")
 damage_sound = ExtResource("4_n4j6q")

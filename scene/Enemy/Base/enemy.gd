@@ -61,7 +61,8 @@ func _physics_process(delta: float) -> void:
 		return
 
 	# HPバーの更新
-	hp_progress_bar.value = monster_hp * 100 / monster_max_hp
+	if hp_progress_bar:
+		hp_progress_bar.value = int(monster_hp * 100 / monster_max_hp)
 
 	if is_hunting:
 		# 移動
