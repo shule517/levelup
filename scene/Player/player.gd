@@ -14,7 +14,7 @@ const SPEED: float    = 50.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var view_enemies: Array[Node2D] = []
+var visible_enemies: Array[Enemy] = []
 var target_index: int = 0
 
 var audio_players: Array[AudioStreamPlayer] = []
@@ -80,16 +80,17 @@ func play_sound_effect(sound_effect: AudioStream) -> void:
 	current_player_index = (current_player_index + 1) % audio_players.size()
 
 func select_target() -> void:
-	for i in view_enemies:
+	for i in visible_enemies:
 		i.set_is_selected(false)
 
-	if !view_enemies.is_empty():
-		select_body() && select_body().set_is_selected(true)
+	if !visible_enemies.is_empty():
+		if select_body() != null:
+			select_body().set_is_selected(true)
 
-func select_body() -> Node2D:
-	view_enemies = view_enemies.filter(func(node: Node2D) -> bool: return node.is_alive())
-	if !view_enemies.is_empty():
-		return view_enemies[target_index % view_enemies.size()]
+func select_body() -> Enemy:
+	visible_enemies = visible_enemies.filter(func(node: Node2D) -> bool: return node.is_alive())
+	if !visible_enemies.is_empty():
+		return visible_enemies[target_index % visible_enemies.size()]
 	return null
 
 var attack_target: Node2D = null
@@ -159,12 +160,12 @@ func _on_atack_timer_timeout() -> void:
 # 敵が視野に入った
 func _on_view_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemy") && body.is_alive():
-		view_enemies.append(body)
+		visible_enemies.append(body)
 
 # 敵が視野から出た
 func _on_view_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Enemy"):
-		view_enemies.erase(body)
+		visible_enemies.erase(body)
 		body.set_is_selected(false)
 
 # 敵が攻撃範囲に入った
