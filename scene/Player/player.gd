@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var hit_sound: AudioStream
 @export var damage_sound: AudioStream
 @export var levelup_sound: AudioStream
+@export var walk_sound: AudioStream
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -30,9 +31,9 @@ func _ready() -> void:
 
 func play_sound_effect(sound_effect: AudioStream) -> void:
 	# 現在のAudioStreamPlayerを取得し再生
-	var player: AudioStreamPlayer = audio_players[current_player_index]
-	player.stream = sound_effect
-	player.play()
+	var audio_player: AudioStreamPlayer = audio_players[current_player_index]
+	audio_player.stream = sound_effect
+	audio_player.play()
 
 	# 次に使うAudioStreamPlayerを切り替え
 	current_player_index = (current_player_index + 1) % audio_players.size()
@@ -72,6 +73,7 @@ func damage(damage: int) -> void:
 	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
 	floating_damage.init(damage, true)
 	add_child(floating_damage)
+	Input.start_joy_vibration(0, 0, 0.8, 0.1)
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("button_left"):
@@ -105,6 +107,7 @@ func _process(_delta: float) -> void:
 		sprite.play("idle")
 	else:
 		sprite.play("walk")
+		# TODO: play_sound_effect(walk_sound)
 		sprite.flip_h = value.x < 0
 		$WeaponSprite2D.visible = false
 
@@ -117,6 +120,7 @@ func attack() -> void:
 		if distance <= 20:
 			before_attack_time = Time.get_unix_time_from_system()
 
+			Input.start_joy_vibration(0, 0.3, 0.3, 0.2)
 			$AtackTimer.stop()
 			$AtackTimer.start()
 
