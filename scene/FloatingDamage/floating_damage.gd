@@ -10,7 +10,10 @@ const MASS: int = 100
 
 var damage: int:
 	set(value):
-		$Label.text = " ".join(str(value).split()) # 文字と文字の間にスペースを入れる
+		if value == 0:
+			$Label.text = "miss"
+		else:
+			$Label.text = " ".join(str(value).split()) # 文字と文字の間にスペースを入れる
 
 func set_font_color(color: Color) -> void:
 	var label_settings:LabelSettings = $Label.label_settings.duplicate()

@@ -99,12 +99,14 @@ var attack_target: Enemy = null
 
 var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
 func damage(damage: int) -> void:
-	play_sound_effect(damage_sound)
+	if damage != 0:
+		play_sound_effect(damage_sound)
+		# ダメージ受けた時の振動
+		Input.start_joy_vibration(0, 0, 0.8, 0.1)
+
 	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
 	floating_damage.init(damage, true)
 	add_child(floating_damage)
-	# ダメージ受けた時の振動
-	Input.start_joy_vibration(0, 0, 0.8, 0.1)
 
 func attack() -> void:
 	if Time.get_unix_time_from_system() - before_attack_time < 1.4:
@@ -126,12 +128,15 @@ func attack() -> void:
 			play_sound_effect(attack_sound) # 攻撃
 			await get_tree().create_timer(0.2).timeout
 			if is_instance_valid(attack_target):
-				attack_target.damage(randi_range(10, 99))
+				var attack_min: int = levelup_attack_table[player_level]
+				attack_target.damage(randi_range(attack_min, attack_min + 5))
 				play_sound_effect(hit_sound) # 敵にHIT
 	else:
 		$WeaponSprite2D.visible = false
 
 var levelup_table: Array[int] = [1, 3, 5, 8, 11, 14, 17, 20, 25, 32, 38, 44, 52, 60, 76, 86, 97, 109, 122]
+var levelup_attack_table: Array[int] = [1, 3, 5, 8, 11, 14, 17, 20, 25, 32, 38, 44, 52, 60, 76, 86, 97, 109, 122]
+
 var player_exp: int = 0
 var player_level: int = 1
 func receive_exp(monster_exp: int) -> void:

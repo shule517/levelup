@@ -269,6 +269,27 @@ position = Vector2(-42, -101)
 [node name="Suraimu4" parent="Objects" instance=ExtResource("4_vhx3v")]
 position = Vector2(-42, -158)
 
+[node name="Suraimu5" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-111, -32)
+
+[node name="Suraimu6" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-86, 38)
+
+[node name="Suraimu7" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-210, 16)
+
+[node name="Suraimu8" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-191, 77)
+
+[node name="Suraimu9" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-42, 80)
+
+[node name="Suraimu10" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(36, -80)
+
+[node name="Suraimu11" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-18, -5)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]

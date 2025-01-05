@@ -157,4 +157,8 @@ func attack() -> void:
 		play_sound_effect(attack_sound)
 		sprite.play("attack")
 		await get_tree().create_timer(0.3).timeout
-		player.damage(randi_range(0, 100))
+
+		if randi_range(0, 2): # 空振り判定
+			player.damage(0)
+		else:
+			player.damage(randi_range(4, 13))
