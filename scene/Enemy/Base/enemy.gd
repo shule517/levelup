@@ -32,6 +32,7 @@ func _ready() -> void:
 	name_label.z_index = 100
 	new_material.shader = sprite.material.shader
 	sprite.material = new_material
+	new_material.set_shader_parameter("enabled", false) # TODO: shaderを殺す
 	$CursorAnimatedSprite2D.play("idle")
 
 	# AudioStreamPlayerノードを作成し、配列に追加
@@ -43,7 +44,10 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	new_material.set_shader_parameter("modulate", modulate)
 
-	if active && walking && is_alive():
+	if not is_alive():
+		return
+
+	if active && walking:
 		# 移動
 		var distance: float = player.global_position.distance_to(global_position)
 
@@ -91,24 +95,31 @@ func damage(damage: int) -> void:
 	if hp <= 0:
 		return
 
-	$AnimationPlayer.play("damaged")
+	# ダメージSE
+	play_sound_effect(damage_sound)
+
+	# ダメージ表示
 	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
 	floating_damage.init(damage, false)
 	add_child(floating_damage)
 
 	hp -= damage
 
-	# ダメージSE
-	play_sound_effect(damage_sound)
-
-	# やっつけたSE
+	# やっつけた
 	if hp <= 0:
+		# 経験値GET
 		player.receive_exp(monster_exp)
+
+		# 死ぬアニメーション
+		sprite.stop()
 		play_sound_effect(die_sound)
 		var tween := get_tree().create_tween()
-		tween.tween_property(sprite, "scale", Vector2(0, 0), 2.0)
+		tween.tween_property(sprite, "scale", Vector2(0, 0), 3.0)
+		tween.parallel().tween_property(sprite, "modulate", Color(1, 1, 1, 0), 3.0)
 		tween.play()
 		tween.tween_callback(_destory)
+	else:
+		$AnimationPlayer.play("damaged")
 
 func _destory() -> void:
 	queue_free()

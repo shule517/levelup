@@ -11,58 +11,59 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ut0is"]
 shader = ExtResource("6_asera")
+shader_parameter/enabled = true
 shader_parameter/is_selected = false
 shader_parameter/modulate = null
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jexpq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdbdh"]
 atlas = ExtResource("2_1k3mf")
 region = Rect2(0, 28, 20, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iijy2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubwh7"]
 atlas = ExtResource("2_1k3mf")
 region = Rect2(20, 28, 20, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2hjpp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_08pm8"]
 atlas = ExtResource("2_1k3mf")
 region = Rect2(40, 28, 20, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_62cxm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsv1i"]
 atlas = ExtResource("2_1k3mf")
 region = Rect2(0, 0, 20, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7hhd8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnp7c"]
 atlas = ExtResource("2_1k3mf")
 region = Rect2(20, 0, 20, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ahbpj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wteph"]
 atlas = ExtResource("2_1k3mf")
 region = Rect2(40, 0, 20, 28)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_x1sck"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_2qub0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jexpq")
+"texture": SubResource("AtlasTexture_xdbdh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iijy2")
+"texture": SubResource("AtlasTexture_ubwh7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2hjpp")
+"texture": SubResource("AtlasTexture_08pm8")
 }],
 "loop": false,
 "name": &"attack",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_62cxm")
+"texture": SubResource("AtlasTexture_jsv1i")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7hhd8")
+"texture": SubResource("AtlasTexture_mnp7c")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ahbpj")
+"texture": SubResource("AtlasTexture_wteph")
 }],
 "loop": true,
 "name": &"idle",
@@ -70,49 +71,49 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_62cxm")
+"texture": SubResource("AtlasTexture_jsv1i")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7hhd8")
+"texture": SubResource("AtlasTexture_mnp7c")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ahbpj")
+"texture": SubResource("AtlasTexture_wteph")
 }],
 "loop": true,
 "name": &"walk",
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qdh8o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6emo"]
 atlas = ExtResource("8_hasdr")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i54f3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_x77ih"]
 atlas = ExtResource("8_hasdr")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6twq3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_krldd"]
 atlas = ExtResource("8_hasdr")
 region = Rect2(0, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yi1pq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e3w6"]
 atlas = ExtResource("8_hasdr")
 region = Rect2(16, 16, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_b0lfn"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_6fn24"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qdh8o")
+"texture": SubResource("AtlasTexture_l6emo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i54f3")
+"texture": SubResource("AtlasTexture_x77ih")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6twq3")
+"texture": SubResource("AtlasTexture_krldd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yi1pq")
+"texture": SubResource("AtlasTexture_6e3w6")
 }],
 "loop": true,
 "name": &"idle",
@@ -131,8 +132,8 @@ die_sound = ExtResource("4_irsp8")
 [node name="AnimatedSprite2D" parent="." index="0"]
 material = SubResource("ShaderMaterial_ut0is")
 position = Vector2(2.08165e-12, -6)
-sprite_frames = SubResource("SpriteFrames_x1sck")
-frame_progress = 0.575966
+sprite_frames = SubResource("SpriteFrames_2qub0")
+frame_progress = 0.411844
 offset = Vector2(2.08165e-12, -7)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -143,11 +144,7 @@ metadata/_aseprite_wizard_config_ = {
 "slice": "",
 "source": "res://scene/Enemy/Suraimu/suraimu.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "8d342541588d04ef5b5b73d5fabd16ef"
-
-[node name="Label" parent="." index="5"]
-visible = false
-text = "スライム"
+metadata/_aseprite_wizard_source_file_hash_ = "e19dc0ed217d8f84adfe5c17c92b77ab"
 
 [node name="CursorAnimatedSprite2D" parent="." index="6"]
-sprite_frames = SubResource("SpriteFrames_b0lfn")
+sprite_frames = SubResource("SpriteFrames_6fn24")

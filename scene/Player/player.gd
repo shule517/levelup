@@ -130,7 +130,7 @@ func attack() -> void:
 			await get_tree().create_timer(0.2).timeout
 			if is_instance_valid(attack_target):
 				attack_target.damage(randi_range(10, 99))
-			play_sound_effect(hit_sound) # 敵にHIT
+				play_sound_effect(hit_sound) # 敵にHIT
 	else:
 		$WeaponSprite2D.visible = false
 
