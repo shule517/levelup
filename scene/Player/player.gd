@@ -14,7 +14,7 @@ const SPEED: float    = 50.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var overlapping_bodies: Array[Node2D] = []
+var view_enemies: Array[Node2D] = []
 var target_index: int = 0
 
 var audio_players: Array[AudioStreamPlayer] = []
@@ -80,16 +80,16 @@ func play_sound_effect(sound_effect: AudioStream) -> void:
 	current_player_index = (current_player_index + 1) % audio_players.size()
 
 func select_target() -> void:
-	for i in overlapping_bodies:
+	for i in view_enemies:
 		i.set_is_selected(false)
 
-	if !overlapping_bodies.is_empty():
+	if !view_enemies.is_empty():
 		select_body() && select_body().set_is_selected(true)
 
 func select_body() -> Node2D:
-	overlapping_bodies = overlapping_bodies.filter(func(node: Node2D) -> bool: return node.is_alive())
-	if !overlapping_bodies.is_empty():
-		return overlapping_bodies[target_index % overlapping_bodies.size()]
+	view_enemies = view_enemies.filter(func(node: Node2D) -> bool: return node.is_alive())
+	if !view_enemies.is_empty():
+		return view_enemies[target_index % view_enemies.size()]
 	return null
 
 var attack_target: Node2D = null
@@ -159,12 +159,12 @@ func _on_atack_timer_timeout() -> void:
 # 敵が視野に入った
 func _on_view_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemy") && body.is_alive():
-		overlapping_bodies.append(body)
+		view_enemies.append(body)
 
 # 敵が視野から出た
 func _on_view_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Enemy"):
-		overlapping_bodies.erase(body)
+		view_enemies.erase(body)
 		body.set_is_selected(false)
 
 # 敵が攻撃範囲に入った
