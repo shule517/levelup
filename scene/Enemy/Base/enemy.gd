@@ -63,7 +63,7 @@ func _physics_process(delta: float) -> void:
 	# HPバーの更新
 	hp_progress_bar.value = monster_hp * 100 / monster_max_hp
 
-	if active && is_hunting:
+	if is_hunting:
 		# 移動
 		if not can_attack:
 			play_move_sound()
@@ -111,6 +111,9 @@ func damage(damage: int) -> void:
 	if monster_hp <= 0:
 		return
 
+	# 攻撃されたら追跡開始
+	is_hunting = true
+
 	# ダメージSE
 	play_sound_effect(damage_sound)
 
@@ -142,7 +145,7 @@ func _destory() -> void:
 
 # 追跡範囲に入った
 func _on_view_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
+	if active && body.is_in_group("Player"):
 		is_hunting = true
 
 # 追跡範囲から出た
