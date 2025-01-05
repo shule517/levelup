@@ -157,6 +157,8 @@ animations = [{
 }]
 
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_x18rc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
@@ -165,7 +167,7 @@ material = SubResource("ShaderMaterial_4ir5a")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_xe8dg")
 animation = &"idle"
-frame_progress = 0.405256
+frame_progress = 0.0129296
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -181,18 +183,28 @@ metadata/_aseprite_wizard_interface_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "c17a29f7b1d1f0e3b46472d89c68cbf8"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 0
+visibility_layer = 0
 position = Vector2(-1, -1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_cq3dd")
 
 [node name="ViewArea2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ViewArea2D"]
+light_mask = 0
+visibility_layer = 0
 shape = SubResource("CircleShape2D_i5gpt")
 
 [node name="AttackArea2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
+light_mask = 0
+visibility_layer = 0
 shape = SubResource("CircleShape2D_lj7oo")
 
 [node name="AttackTimer" type="Timer" parent="."]

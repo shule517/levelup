@@ -250,6 +250,7 @@ position = Vector2(113, 25)
 
 [node name="Player" parent="Objects" instance=ExtResource("1_oekny")]
 position = Vector2(-202, -146)
+collision_mask = 5
 
 [node name="Camera2D" type="Camera2D" parent="Objects/Player"]
 position = Vector2(2.08165e-12, 2.08165e-12)
@@ -257,16 +258,16 @@ position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 
 [node name="Suraimu" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-144, -130)
+position = Vector2(-144, -138)
 
 [node name="Suraimu2" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-47, -14)
+position = Vector2(-188, -83)
 
 [node name="Suraimu3" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(65, -116)
+position = Vector2(-42, -101)
 
 [node name="Suraimu4" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(176, -123)
+position = Vector2(-42, -158)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

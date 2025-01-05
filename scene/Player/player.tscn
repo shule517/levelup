@@ -225,6 +225,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 2
 script = ExtResource("1_7typn")
 attack_sound = ExtResource("2_1lcni")
 hit_sound = ExtResource("3_w4xvg")
