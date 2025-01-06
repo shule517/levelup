@@ -103,6 +103,10 @@ animations = [{
 [node name="Kuma" instance=ExtResource("1_u70pn")]
 script = ExtResource("2_n6gpq")
 monster_name = "べあ"
+monster_max_hp = 1387
+monster_exp = 101
+monster_atk = 75
+monster_def = 55
 move_sound = ExtResource("3_1roqs")
 attack_sound = ExtResource("4_60yrb")
 damage_sound = ExtResource("5_uo1fy")

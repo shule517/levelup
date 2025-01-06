@@ -78,11 +78,15 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_5mk1x"]
 radius = 200.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wkhfk"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_4w6g1"]
 radius = 100.0
 
 [node name="Mandoragora" instance=ExtResource("1_6s04b")]
 monster_name = "マンドラゴラ"
+monster_max_hp = 300
+monster_exp = 105
+monster_atk = 81
+monster_def = 13
 attack_interval = 1.0
 attack_distance = 100.0
 no_move = true
@@ -93,7 +97,7 @@ die_sound = ExtResource("4_euxox")
 [node name="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(2.08165e-12, -5)
 sprite_frames = SubResource("SpriteFrames_7uxvx")
-frame_progress = 0.405352
+frame_progress = 0.328966
 offset = Vector2(2.08165e-12, -8)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -110,7 +114,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "d38a34037c5ef2441d866a5e76eda8cf"
 shape = SubResource("CircleShape2D_5mk1x")
 
 [node name="CollisionShape2D" parent="AttackArea2D" index="0"]
-shape = SubResource("CircleShape2D_wkhfk")
+shape = SubResource("CircleShape2D_4w6g1")
 
 [node name="CursorAnimatedSprite2D" parent="." index="7"]
 position = Vector2(0, -29)

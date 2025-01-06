@@ -388,7 +388,7 @@ position_smoothing_speed = 8.0
 position = Vector2(-183, 46)
 
 [node name="Kinoko" parent="Objects" instance=ExtResource("6_bifwu")]
-position = Vector2(-288, 73)
+position = Vector2(27, -324)
 active = true
 damage_sound = ExtResource("9_i6y0j")
 die_sound = ExtResource("10_sg4sf")
@@ -399,15 +399,83 @@ attack_distance = 18.0
 
 [node name="Mandoragora" parent="Objects" instance=ExtResource("10_rlmgr")]
 position = Vector2(-142, -353)
+move_speed = 2.08165e-12
+no_move = false
 
 [node name="Suraimu12" parent="Objects" instance=ExtResource("4_vhx3v")]
-position = Vector2(-405, -296)
+position = Vector2(-125, -172)
 
 [node name="Kirikabu" parent="Objects" instance=ExtResource("13_suvgt")]
 position = Vector2(2, -115)
 
 [node name="Kuma" parent="Objects" instance=ExtResource("14_58m4s")]
-position = Vector2(-196, -60)
+position = Vector2(-440, -55)
+
+[node name="Kirikabu2" parent="Objects" instance=ExtResource("13_suvgt")]
+position = Vector2(26, -179)
+
+[node name="Kirikabu3" parent="Objects" instance=ExtResource("13_suvgt")]
+position = Vector2(77, -177)
+
+[node name="Kirikabu4" parent="Objects" instance=ExtResource("13_suvgt")]
+position = Vector2(52, -116)
+
+[node name="Kirikabu5" parent="Objects" instance=ExtResource("13_suvgt")]
+position = Vector2(76, -237)
+
+[node name="Kirikabu6" parent="Objects" instance=ExtResource("13_suvgt")]
+position = Vector2(111, -131)
+
+[node name="Kirikabu7" parent="Objects" instance=ExtResource("13_suvgt")]
+position = Vector2(130, -175)
+
+[node name="Kirikabu8" parent="Objects" instance=ExtResource("13_suvgt")]
+position = Vector2(120, -86)
+
+[node name="Kinoko2" parent="Objects" instance=ExtResource("6_bifwu")]
+position = Vector2(66, -325)
+
+[node name="Kinoko3" parent="Objects" instance=ExtResource("6_bifwu")]
+position = Vector2(3, -416)
+
+[node name="Kinoko4" parent="Objects" instance=ExtResource("6_bifwu")]
+position = Vector2(143, -386)
+
+[node name="Kinoko5" parent="Objects" instance=ExtResource("6_bifwu")]
+position = Vector2(86, -400)
+
+[node name="Kinoko6" parent="Objects" instance=ExtResource("6_bifwu")]
+position = Vector2(171, -355)
+
+[node name="Kinoko7" parent="Objects" instance=ExtResource("6_bifwu")]
+position = Vector2(113, -338)
+
+[node name="Kinoko8" parent="Objects" instance=ExtResource("6_bifwu")]
+position = Vector2(29, -383)
+
+[node name="Kinoko9" parent="Objects" instance=ExtResource("6_bifwu")]
+position = Vector2(206, -410)
+
+[node name="Suraimu" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-273, -110)
+
+[node name="Suraimu2" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-198, -87)
+
+[node name="Suraimu3" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-141, -91)
+
+[node name="Suraimu4" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-130, -150)
+
+[node name="Suraimu5" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-151, -201)
+
+[node name="Suraimu6" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-279, -190)
+
+[node name="Suraimu7" parent="Objects" instance=ExtResource("4_vhx3v")]
+position = Vector2(-240, -102)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

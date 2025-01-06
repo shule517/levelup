@@ -182,3 +182,6 @@ func attack() -> void:
 		sprite.play("attack")
 		await get_tree().create_timer(0.3).timeout
 		player.damage(monster_atk)
+
+func distance() -> float:
+	return position.distance_to(player.position)

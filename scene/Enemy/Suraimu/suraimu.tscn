@@ -84,7 +84,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1t56e"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_5pwrp"]
 radius = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6emo"]
@@ -125,8 +125,11 @@ animations = [{
 
 [node name="Suraimu" instance=ExtResource("1_c35nx")]
 monster_name = "スライム"
+monster_max_hp = 60
+monster_def = 2
 move_speed = 20.0
 attack_interval = 2.0
+active = false
 move_sound = ExtResource("2_rwsah")
 attack_sound = ExtResource("3_7phjd")
 damage_sound = ExtResource("4_n4j6q")
@@ -136,7 +139,7 @@ die_sound = ExtResource("4_irsp8")
 material = SubResource("ShaderMaterial_ut0is")
 position = Vector2(2.08165e-12, -6)
 sprite_frames = SubResource("SpriteFrames_2qub0")
-frame_progress = 0.27789
+frame_progress = 0.319216
 offset = Vector2(2.08165e-12, -7)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -150,7 +153,7 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "e19dc0ed217d8f84adfe5c17c92b77ab"
 
 [node name="CollisionShape2D" parent="AttackArea2D" index="0"]
-shape = SubResource("CircleShape2D_1t56e")
+shape = SubResource("CircleShape2D_5pwrp")
 
 [node name="CursorAnimatedSprite2D" parent="." index="7"]
 sprite_frames = SubResource("SpriteFrames_6fn24")

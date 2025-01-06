@@ -82,6 +82,11 @@ radius = 18.0
 [node name="Kirikabu" instance=ExtResource("1_ftfiq")]
 script = ExtResource("2_d3loa")
 monster_name = "きりかぶ"
+monster_max_hp = 231
+monster_exp = 6
+monster_atk = 4
+monster_def = 36
+active = false
 attack_sound = ExtResource("3_v7ghp")
 damage_sound = ExtResource("4_6qngc")
 die_sound = ExtResource("5_hr2jo")

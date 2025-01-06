@@ -188,7 +188,8 @@ func levelup() -> void:
 
 	global.player_max_hp = ceil(global.player_max_hp * 1.49)
 	global.player_hp = global.player_max_hp
-	global.player_atk = ceil(global.player_atk * 1.48)
+	#global.player_atk = ceil(global.player_atk * 1.48)
+	global.player_atk += 1
 	global.player_def = ceil(global.player_def * 1.46)
 	global.player_next_exp = ceil(global.player_next_exp * 1.21)
 	global.player_exp = 0
@@ -219,6 +220,7 @@ func _on_atack_timer_timeout() -> void:
 func _on_view_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemy") && body.is_alive():
 		visible_enemies.append(body)
+		visible_enemies.sort_custom(func(a:Enemy, b:Enemy) -> bool: return a.distance() > b.distance())
 
 # 敵が視野から出た
 func _on_view_area_2d_body_exited(body: Node2D) -> void:

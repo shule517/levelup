@@ -51,7 +51,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qu2dx"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ga854"]
 radius = 80.0
 
 [node name="Karasu" instance=ExtResource("1_d0eto")]
@@ -65,7 +65,7 @@ die_sound = ExtResource("4_3q8sa")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_alhpp")
-frame_progress = 0.544892
+frame_progress = 0.289268
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -78,4 +78,4 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "b1804dfb59c3c4769805d76dde66e995"
 
 [node name="CollisionShape2D" parent="AttackArea2D" index="0"]
-shape = SubResource("CircleShape2D_qu2dx")
+shape = SubResource("CircleShape2D_ga854")
