@@ -154,9 +154,9 @@ func attack() -> void:
 		return
 
 	if is_instance_valid(attack_target) && attack_target.is_alive():
-		$WeaponSprite2D.visible = true
 		var distance: float = position.distance_to(attack_target.position)
 		if distance <= 20:
+			$WeaponSprite2D.visible = true
 			before_attack_time = Time.get_unix_time_from_system()
 
 			# 攻撃時の振動
