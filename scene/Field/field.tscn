@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://opi2a215jcf4"]
+[gd_scene load_steps=17 format=3 uid="uid://opi2a215jcf4"]
 
 [ext_resource type="Texture2D" uid="uid://dm7xwleasigwo" path="res://scene/Field/Warp/houses_inside.png" id="1_npssn"]
 [ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="1_oekny"]
@@ -10,9 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://scene/PlayerStatus/player_status.tscn" id="6_vyjou"]
 [ext_resource type="PackedScene" uid="uid://ckeor1b6bs7mr" path="res://scene/Enemy/Nezumi/nezumi.tscn" id="7_ng00h"]
 [ext_resource type="PackedScene" uid="uid://dhlpwbylh6hwc" path="res://scene/Enemy/Karasu/karasu.tscn" id="9_gynuo"]
-[ext_resource type="AudioStream" uid="uid://cdhygd4sgd112" path="res://scene/Enemy/Kinoko/spore_damage.wav" id="9_i6y0j"]
 [ext_resource type="PackedScene" uid="uid://hqjxy31sor5w" path="res://scene/Enemy/Mandoragora/mandoragora.tscn" id="10_rlmgr"]
-[ext_resource type="AudioStream" uid="uid://bxd6somy7bvnn" path="res://scene/Enemy/Kinoko/spore_die.wav" id="10_sg4sf"]
 [ext_resource type="PackedScene" uid="uid://c5emcx1nwkrqq" path="res://scene/Enemy/Kirikabu/kirikabu.tscn" id="13_suvgt"]
 [ext_resource type="PackedScene" uid="uid://0qmhn5wlmjrp" path="res://scene/Enemy/Kuma/kuma.tscn" id="14_58m4s"]
 
@@ -386,12 +384,6 @@ position_smoothing_speed = 8.0
 
 [node name="Nezumi" parent="Objects" instance=ExtResource("7_ng00h")]
 position = Vector2(-183, 46)
-
-[node name="Kinoko" parent="Objects" instance=ExtResource("6_bifwu")]
-position = Vector2(27, -324)
-active = true
-damage_sound = ExtResource("9_i6y0j")
-die_sound = ExtResource("10_sg4sf")
 
 [node name="Karasu" parent="Objects" instance=ExtResource("9_gynuo")]
 position = Vector2(-524, -195)

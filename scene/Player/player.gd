@@ -26,7 +26,7 @@ const SPEED: float    = 50.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var visible_enemies: Array[Enemy] = []
-var target_index: int = 0
+var select_enemy_index: int = 0
 
 var audio_players: Array[AudioStreamPlayer] = []
 var current_player_index: int = 0
@@ -47,13 +47,13 @@ func _process(_delta: float) -> void:
 		levelup()
 
 	if Input.is_action_just_pressed("button_minus"):
-		global.player_hp = 1
+		global.load_home_scene()
 
 	if Input.is_action_just_pressed("button_left"):
-		target_index += 1
+		select_enemy_index -= 1
 
 	if Input.is_action_just_pressed("button_right"):
-		target_index -= 1
+		select_enemy_index += 1
 
 	if Input.is_action_just_pressed("button_a"):
 		attack_target = selected_enemy()
@@ -69,6 +69,12 @@ func _process(_delta: float) -> void:
 	select_enemy()
 
 	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
+
+	print("select_enemy_index: %d" % select_enemy_index)
+
+	# 移動したら、最寄りのモンスターを選択する
+	if value != Vector2.ZERO && attack_target == null:
+		select_enemy_index = 0
 
 	# 移動したら、攻撃をキャンセルする
 	if value != Vector2.ZERO:
@@ -110,9 +116,11 @@ func select_enemy() -> void:
 		selected_enemy().set_is_selected(true)
 
 func selected_enemy() -> Enemy:
+	# 距離でソートする
+	visible_enemies.sort_custom(func(a:Enemy, b:Enemy) -> bool: return a.distance() < b.distance())
 	visible_enemies = visible_enemies.filter(func(node: Node2D) -> bool: return node.is_alive())
 	if not visible_enemies.is_empty():
-		return visible_enemies[target_index % visible_enemies.size()]
+		return visible_enemies[select_enemy_index % visible_enemies.size()]
 	else:
 		return null
 
@@ -126,7 +134,7 @@ func calcurate_player_damege(enemy_atk: int, player_def: int) -> int:
 
 func calcurate_enemy_damege(player_atk: int, enemy_def: int) -> int:
 	var min_damage: int = max(player_atk - enemy_def, 1)
-	if randi_range(0, 2) == 0: # 33%でクリティカル
+	if randi_range(0, 9) == 0: # 10%でクリティカル
 		min_damage = ceil(min_damage * 2.0)
 		play_sound_effect(critical_sound)
 	return randi_range(min_damage, min_damage + global.player_level)
@@ -190,7 +198,8 @@ func levelup() -> void:
 	global.player_hp = global.player_max_hp
 	#global.player_atk = ceil(global.player_atk * 1.48)
 	global.player_atk += 1
-	global.player_def = ceil(global.player_def * 1.46)
+	#global.player_def = ceil(global.player_def * 1.46)
+	global.player_def += 1
 	global.player_next_exp = ceil(global.player_next_exp * 1.21)
 	global.player_exp = 0
 	
@@ -220,7 +229,6 @@ func _on_atack_timer_timeout() -> void:
 func _on_view_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemy") && body.is_alive():
 		visible_enemies.append(body)
-		visible_enemies.sort_custom(func(a:Enemy, b:Enemy) -> bool: return a.distance() > b.distance())
 
 # 敵が視野から出た
 func _on_view_area_2d_body_exited(body: Node2D) -> void:
