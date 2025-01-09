@@ -158,7 +158,7 @@ func damage(enemy_atk: int) -> void:
 		global.load_home_scene()
 
 func attack() -> void:
-	if Time.get_unix_time_from_system() - before_attack_time < 1.4:
+	if Time.get_unix_time_from_system() - before_attack_time < Global.player_atk_speed:
 		return
 
 	if is_instance_valid(attack_target) && attack_target.is_alive():
@@ -170,6 +170,7 @@ func attack() -> void:
 			# 攻撃時の振動
 			Input.start_joy_vibration(0, 0.3, 0.3, 0.2)
 			$AtackTimer.stop()
+			$AtackTimer.wait_time = Global.player_atk_speed
 			$AtackTimer.start()
 
 			$AnimationPlayer.stop()
@@ -198,6 +199,7 @@ func levelup() -> void:
 	global.player_hp = global.player_max_hp
 	#global.player_atk = ceil(global.player_atk * 1.48)
 	global.player_atk += 1
+	global.player_atk_speed *= 0.9
 	#global.player_def = ceil(global.player_def * 1.46)
 	global.player_def += 1
 	global.player_next_exp = ceil(global.player_next_exp * 1.21)

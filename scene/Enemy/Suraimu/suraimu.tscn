@@ -84,7 +84,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7cb2m"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_pi5s8"]
 radius = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6emo"]
@@ -154,7 +154,7 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "e19dc0ed217d8f84adfe5c17c92b77ab"
 
 [node name="CollisionShape2D" parent="AttackArea2D" index="0"]
-shape = SubResource("CircleShape2D_7cb2m")
+shape = SubResource("CircleShape2D_pi5s8")
 
 [node name="CursorAnimatedSprite2D" parent="." index="7"]
 sprite_frames = SubResource("SpriteFrames_6fn24")
