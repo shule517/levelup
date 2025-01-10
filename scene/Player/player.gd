@@ -70,7 +70,7 @@ func _process(_delta: float) -> void:
 
 	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
 
-	print("select_enemy_index: %d" % select_enemy_index)
+	#print("select_enemy_index: %d" % select_enemy_index)
 
 	# 移動したら、最寄りのモンスターを選択する
 	if value != Vector2.ZERO && attack_target == null:

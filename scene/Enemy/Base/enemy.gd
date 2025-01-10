@@ -28,13 +28,19 @@ var monster_hp: int = 250
 @onready var name_label: Label = $NameLabel
 @onready var hp_progress_bar: ProgressBar = $HpProgressBar
 @onready var cursor_animated_sprite: AnimatedSprite2D = $CursorAnimatedSprite2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var is_hunting := false
+var is_walking := false
+var walk_to_positon: Vector2 = Vector2.ZERO
 var can_attack := false
 var new_material := ShaderMaterial.new()
 
 # 初期化
 func _ready() -> void:
+	$WalkTimer.wait_time = randi_range(5, 50)
+	$WalkTimer.start()
+	
 	# 攻撃範囲を設定する
 	var shape := CircleShape2D.new()
 	shape.radius = attack_distance
@@ -56,12 +62,6 @@ func _ready() -> void:
 	cursor_animated_sprite.visible = false
 	cursor_animated_sprite.play("idle")
 
-	# AudioStreamPlayerノードを作成し、配列に追加
-	for i in range(10):
-		var audip_player := AudioStreamPlayer.new()
-		add_child(audip_player)
-		audio_players.append(audip_player)
-
 # メインループ
 func _physics_process(delta: float) -> void:
 	if not is_alive():
@@ -80,6 +80,15 @@ func _physics_process(delta: float) -> void:
 			velocity = direction * move_speed
 			sprite.flip_h = direction.x > 0 # キャラの向きをあわせる
 			move_and_slide()
+	elif is_walking:
+		play_move_sound()
+		sprite.play("walk")
+		var direction: Vector2 = (walk_to_positon - position).normalized()
+		velocity = direction * move_speed
+		sprite.flip_h = direction.x > 0 # キャラの向きをあわせる
+		move_and_slide()
+		if position.distance_to(walk_to_positon) < 1.0:
+			is_walking = false
 
 	if not sprite.is_playing():
 		sprite.play("idle")
@@ -99,17 +108,10 @@ func play_move_sound() -> void:
 		before_play_move_sound_time = Time.get_unix_time_from_system()
 
 # SEを再生する
-var audio_players: Array[AudioStreamPlayer] = []
-var current_player_index: int = 0
 func play_sound_effect(sound_effect: AudioStream, volume_db: float = 0.0) -> void:
-	# 現在のAudioStreamPlayerを取得し再生
-	var audio_player: AudioStreamPlayer = audio_players[current_player_index]
-	audio_player.stream = sound_effect
-	audio_player.volume_db = volume_db
-	audio_player.play()
-
-	# 次に使うAudioStreamPlayerを切り替え
-	current_player_index = (current_player_index + 1) % audio_players.size()
+	audio_stream_player_2d.stream = sound_effect
+	audio_stream_player_2d.volume_db = volume_db
+	audio_stream_player_2d.play()
 
 func is_alive() -> bool:
 	return monster_hp > 0
@@ -185,3 +187,8 @@ func attack() -> void:
 
 func distance() -> float:
 	return position.distance_to(player.position)
+
+func _on_walk_timer_timeout() -> void:
+	print("walking start!!")
+	is_walking = true
+	walk_to_positon = position + Vector2(randi_range(-50, 50), randi_range(-50, 50))
