@@ -9,7 +9,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	label.text = to_full_width_numbers("%02d%s%02d" % [time/60, ":" if (time % 2 == 0) else " ", time%60])
+	label.text = to_full_width_numbers("%02d%s%02d" % [time/60, ":", time%60])
 
 func _on_timer_timeout() -> void:
 	time += 1
