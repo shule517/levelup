@@ -517,3 +517,5 @@ offset_bottom = 40.0
 
 [node name="PlayerStatus" parent="CanvasLayer/左上Control" instance=ExtResource("6_vyjou")]
 position = Vector2(9, 10)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
