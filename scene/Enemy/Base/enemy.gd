@@ -38,9 +38,10 @@ var new_material := ShaderMaterial.new()
 
 # 初期化
 func _ready() -> void:
-	$WalkTimer.wait_time = randi_range(5, 50)
-	$WalkTimer.start()
-	
+	if not Engine.is_editor_hint():
+		$WalkTimer.wait_time = randi_range(5, 50)
+		$WalkTimer.start()
+
 	# 攻撃範囲を設定する
 	var shape := CircleShape2D.new()
 	shape.radius = attack_distance
@@ -189,6 +190,5 @@ func distance() -> float:
 	return position.distance_to(player.position)
 
 func _on_walk_timer_timeout() -> void:
-	print("walking start!!")
 	is_walking = true
 	walk_to_positon = position + Vector2(randi_range(-50, 50), randi_range(-50, 50))
