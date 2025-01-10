@@ -9,24 +9,26 @@ void vertex() {
 }
 
 void fragment() {
-    // UV座標を取得
-    float y_coord_uv = UV.y;
+	if (enabled) {
+	    // UV座標を取得
+	    float y_coord_uv = UV.y;
 
-    // スプライトのテクスチャサイズを取得 (ピクセル単位)
-    ivec2 texture_size = textureSize(TEXTURE, 0);
-    float y_coord_pixels = y_coord_uv * float(texture_size.y);
+	    // スプライトのテクスチャサイズを取得 (ピクセル単位)
+	    ivec2 texture_size = textureSize(TEXTURE, 0);
+	    float y_coord_pixels = y_coord_uv * float(texture_size.y);
 
-	// Y座標を整数値に変換
-    float y_coord_rounded = floor(y_coord_pixels);
+		// Y座標を整数値に変換
+	    float y_coord_rounded = floor(y_coord_pixels);
 
-    // 偶奇判定 (ピクセル座標が偶数か奇数かで切り替え)
-    if (mod(y_coord_rounded, 2.0) == 0.0) {
-        // 不透過 (元のテクスチャの色を表示)
-        COLOR = texture(TEXTURE, UV);
-    } else {
-        // 透過 (アルファ値を0に設定)
-        COLOR = vec4(0.0, 0.0, 0.0, 0.0);
-    }
+	    // 偶奇判定 (ピクセル座標が偶数か奇数かで切り替え)
+	    if (mod(y_coord_rounded, 2.0) == 0.0) {
+	        // 不透過 (元のテクスチャの色を表示)
+	        COLOR = texture(TEXTURE, UV);
+	    } else {
+	        // 透過 (アルファ値を0に設定)
+	        COLOR = vec4(0.0, 0.0, 0.0, 0.0);
+	    }
+	}
 
 	if (enabled) {
 		if (is_selected) {

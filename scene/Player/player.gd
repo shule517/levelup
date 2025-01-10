@@ -147,6 +147,10 @@ func damage(enemy_atk: int) -> void:
 		# ダメージ受けた時の振動
 		Input.start_joy_vibration(0, 0, 0.8, 0.1)
 		global.player_hp -= damage
+		# ↓ヒップストップを実装した
+		Engine.time_scale = 0
+		await get_tree().create_timer(0.15, true, false, true).timeout
+		Engine.time_scale = 1
 
 	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
 	floating_damage.init(damage, true)

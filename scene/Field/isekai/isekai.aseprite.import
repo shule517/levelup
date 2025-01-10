@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bnvj1wirdk1is"
+path="res://.godot/imported/isekai.aseprite-971f0f79afa4947ad1acf1b0a135f4cd.res"
+
+[deps]
+
+source_file="res://scene/Field/isekai/isekai.aseprite"
+dest_files=["res://.godot/imported/isekai.aseprite-971f0f79afa4947ad1acf1b0a135f4cd.res"]
+
+[params]
+
