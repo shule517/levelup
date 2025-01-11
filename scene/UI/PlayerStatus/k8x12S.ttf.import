@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c41ku45blkf1l"
-path="res://.godot/imported/DragonQuestFCIntact.ttf-f9028cc151d0e9961584f6a3c63e8c63.fontdata"
+uid="uid://gmet541s055h"
+path="res://.godot/imported/k8x12S.ttf-c5917c8c85ac04aa2b5a365b11f5c234.fontdata"
 
 [deps]
 
-source_file="res://scene/PlayerStatus/DragonQuestFCIntact.ttf"
-dest_files=["res://.godot/imported/DragonQuestFCIntact.ttf-f9028cc151d0e9961584f6a3c63e8c63.fontdata"]
+source_file="res://scene/UI/PlayerStatus/k8x12S.ttf"
+dest_files=["res://.godot/imported/k8x12S.ttf-c5917c8c85ac04aa2b5a365b11f5c234.fontdata"]
 
 [params]
 

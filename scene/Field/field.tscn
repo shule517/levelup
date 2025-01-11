@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://csj0hwaue3oq1" path="res://scene/Enemy/Suraimu/suraimu.tscn" id="4_vhx3v"]
 [ext_resource type="PackedScene" uid="uid://dyqxqqrjedcfm" path="res://scene/Enemy/Kinoko/Kinoko.tscn" id="6_bifwu"]
 [ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://scene/WorldClock/world_clock.tscn" id="6_eiw5w"]
-[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://scene/PlayerStatus/player_status.tscn" id="6_vyjou"]
+[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://scene/UI/PlayerStatus/player_status.tscn" id="6_vyjou"]
 [ext_resource type="PackedScene" uid="uid://ckeor1b6bs7mr" path="res://scene/Enemy/Nezumi/nezumi.tscn" id="7_ng00h"]
 [ext_resource type="PackedScene" uid="uid://dhlpwbylh6hwc" path="res://scene/Enemy/Karasu/karasu.tscn" id="9_gynuo"]
 [ext_resource type="PackedScene" uid="uid://hqjxy31sor5w" path="res://scene/Enemy/Mandoragora/mandoragora.tscn" id="10_rlmgr"]

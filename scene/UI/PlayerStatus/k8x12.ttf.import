@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cna6v1oqt7r8"
-path="res://.godot/imported/k8x12L.ttf-71aeb1cfec3360db069c5717c14b1a4b.fontdata"
+uid="uid://bwhe1r3myagkx"
+path="res://.godot/imported/k8x12.ttf-975f710d003035a00e81e4f79367cbde.fontdata"
 
 [deps]
 
-source_file="res://scene/PlayerStatus/k8x12L.ttf"
-dest_files=["res://.godot/imported/k8x12L.ttf-71aeb1cfec3360db069c5717c14b1a4b.fontdata"]
+source_file="res://scene/UI/PlayerStatus/k8x12.ttf"
+dest_files=["res://.godot/imported/k8x12.ttf-975f710d003035a00e81e4f79367cbde.fontdata"]
 
 [params]
 

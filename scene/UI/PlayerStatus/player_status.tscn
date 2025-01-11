@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://dffq1ep3cf1xw"]
+
+[ext_resource type="Script" path="res://scene/UI/PlayerStatus/player_status.gd" id="1_fxs86"]
+[ext_resource type="PackedScene" uid="uid://cgd0eevpbxgf4" path="res://scene/UI/Window/window.tscn" id="2_p2eil"]
+[ext_resource type="FontFile" uid="uid://dgpvge4lgervq" path="res://scene/UI/PlayerStatus/x10y12pxDonguriDuel.ttf" id="2_q7x2l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dafbs"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.662313, 0.682767, 0.80549, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxxof"]
+bg_color = Color(0.319436, 0.468835, 0.70366, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.662745, 0.682353, 0.803922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e5tk3"]
+line_spacing = 2.08165e-12
+font = ExtResource("2_q7x2l")
+font_size = 9
+font_color = Color(0, 0, 0, 1)
+
+[node name="PlayerStatus" type="Node2D"]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_fxs86")
+
+[node name="Window" parent="." instance=ExtResource("2_p2eil")]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 89.0
+offset_bottom = 81.0
+
+[node name="Control" type="Control" parent="Window"]
+layout_mode = 2
+
+[node name="ExpProgressBar" type="ProgressBar" parent="Window/Control"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 20.0
+offset_right = 75.0
+offset_bottom = 24.0
+theme_override_styles/background = SubResource("StyleBoxFlat_dafbs")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hxxof")
+value = 100.0
+show_percentage = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Window"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="StatusLabel" type="Label" parent="Window/MarginContainer"]
+layout_mode = 2
+text = "レベル：
+
+ＨＰ　： 34 / 12
+ちから：
+まもり：
+はやさ："
+label_settings = SubResource("LabelSettings_e5tk3")
