@@ -65,10 +65,12 @@ func _process(_delta: float) -> void:
 	# HPバーの更新
 	$HpProgressBar.value = global.player_hp * 100 / global.player_max_hp
 
-	# 選択していることをEnemyに伝える
-	select_enemy()
 
 	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
+
+	# 歩いたら、Enemyの選択を変える
+	if value != Vector2.ZERO:
+		select_enemy()
 
 	#print("select_enemy_index: %d" % select_enemy_index)
 
