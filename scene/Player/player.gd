@@ -51,11 +51,14 @@ func _process(_delta: float) -> void:
 
 	if Input.is_action_just_pressed("button_left"):
 		select_enemy_index -= 1
+		select_enemy()
 
 	if Input.is_action_just_pressed("button_right"):
 		select_enemy_index += 1
+		select_enemy()
 
 	if Input.is_action_just_pressed("button_a"):
+		select_enemy()
 		attack_target = selected_enemy()
 
 	# 攻撃ターゲットがいる場合は、すぐに攻撃をはじめる
@@ -150,9 +153,9 @@ func damage(enemy_atk: int) -> void:
 		Input.start_joy_vibration(0, 0, 0.8, 0.1)
 		global.player_hp -= damage
 		# ↓ヒップストップを実装した
-		Engine.time_scale = 0
-		await get_tree().create_timer(0.15, true, false, true).timeout
-		Engine.time_scale = 1
+		# Engine.time_scale = 0
+		# await get_tree().create_timer(0.15, true, false, true).timeout
+		# Engine.time_scale = 1
 
 	var floating_damage: FloatingDamage = floating_damage_scene.instantiate()
 	floating_damage.init(damage, true)
