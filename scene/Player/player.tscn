@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=37 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/Player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/Player/se/attack/attack_short_sword.wav" id="2_1lcni"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://bgn5wqlr5bx5m" path="res://scene/Player/se/土の上を歩く.mp3" id="6_g8c76"]
 [ext_resource type="AudioStream" uid="uid://btnq3nps38thy" path="res://scene/Player/se/中パンチ.mp3" id="7_ic2pr"]
 [ext_resource type="Texture2D" uid="uid://cav30l734le55" path="res://scene/Player/levelup.png" id="8_l85kp"]
+[ext_resource type="Texture2D" uid="uid://6h1qwakeb5b" path="res://scene/Player/goat.png" id="11_vdirr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d1p4v"]
 atlas = ExtResource("5_kk861")
@@ -39,6 +40,49 @@ animations = [{
 "loop": true,
 "name": &"walk",
 "speed": 7.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pasa8"]
+atlas = ExtResource("11_vdirr")
+region = Rect2(0, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37k8m"]
+atlas = ExtResource("11_vdirr")
+region = Rect2(26, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocnwg"]
+atlas = ExtResource("11_vdirr")
+region = Rect2(52, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2etw7"]
+atlas = ExtResource("11_vdirr")
+region = Rect2(78, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6n0b"]
+atlas = ExtResource("11_vdirr")
+region = Rect2(0, 26, 26, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ksjk3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pasa8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37k8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocnwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2etw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6n0b")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n7e4o"]
@@ -101,6 +145,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_xew11"]
 resource_name = "attack"
@@ -142,10 +198,28 @@ tracks/2/keys = {
 "values": [true, false]
 }
 
+[sub_resource type="Animation" id="Animation_8cnkb"]
+resource_name = "levelup"
+length = 1.58
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.79, 1.58),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(-1, 1), Vector2(1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yiffa"]
 _data = {
 "RESET": SubResource("Animation_2ewc6"),
-"attack": SubResource("Animation_xew11")
+"attack": SubResource("Animation_xew11"),
+"levelup": SubResource("Animation_8cnkb")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hp1bx"]
@@ -257,7 +331,7 @@ critical_sound = ExtResource("7_ic2pr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -15)
+position = Vector2(-2, -22)
 sprite_frames = SubResource("SpriteFrames_lwp2k")
 animation = &"walk"
 metadata/_aseprite_wizard_config_ = {
@@ -276,12 +350,33 @@ metadata/_aseprite_wizard_interface_config_ = {
 }
 metadata/_aseprite_wizard_source_file_hash_ = "e8851115fa8f34beb64c1750f3724660"
 
+[node name="GoatAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(2, -13)
+rotation = 3.14159
+scale = Vector2(1, -1)
+sprite_frames = SubResource("SpriteFrames_ksjk3")
+animation = &"walk"
+autoplay = "walk"
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://Assets/Tiny Wonder Farm Animals/animals/goat/goat.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "3a1dc65257ca0638139f7e46bc08cbf3"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_n7e4o")
 
 [node name="ViewArea2D" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 4
 
@@ -289,6 +384,7 @@ collision_mask = 4
 shape = SubResource("CircleShape2D_nldkh")
 
 [node name="AttackArea2D" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
 shape = SubResource("CircleShape2D_apxp6")
