@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://opi2a215jcf4"]
+[gd_scene load_steps=32 format=4 uid="uid://opi2a215jcf4"]
 
 [ext_resource type="Texture2D" uid="uid://buuefmdtpcoks" path="res://scene/Field/giant.png" id="1_0bmvf"]
 [ext_resource type="Texture2D" uid="uid://cm1876akwf2v6" path="res://scene/Field/winter.png" id="1_bmg3x"]
@@ -16,10 +16,25 @@
 [ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://scene/WorldClock/world_clock.tscn" id="6_eiw5w"]
 [ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://scene/UI/PlayerStatus/player_status.tscn" id="6_vyjou"]
 [ext_resource type="PackedScene" uid="uid://ckeor1b6bs7mr" path="res://scene/Enemy/Nezumi/nezumi.tscn" id="7_ng00h"]
+[ext_resource type="Texture2D" uid="uid://crx0viuw4vj0x" path="res://scene/Enemy/Kinoko/キノコ.png" id="8_rx2x6"]
 [ext_resource type="PackedScene" uid="uid://dhlpwbylh6hwc" path="res://scene/Enemy/Karasu/karasu.tscn" id="9_gynuo"]
 [ext_resource type="PackedScene" uid="uid://hqjxy31sor5w" path="res://scene/Enemy/Mandoragora/mandoragora.tscn" id="10_rlmgr"]
 [ext_resource type="PackedScene" uid="uid://c5emcx1nwkrqq" path="res://scene/Enemy/Kirikabu/kirikabu.tscn" id="13_suvgt"]
 [ext_resource type="PackedScene" uid="uid://0qmhn5wlmjrp" path="res://scene/Enemy/Kuma/kuma.tscn" id="14_58m4s"]
+[ext_resource type="Shader" path="res://scene/Field/iris_effect.gdshader" id="22_xa7g3"]
+[ext_resource type="Shader" path="res://scene/Field/mosaic.gdshader" id="23_bju26"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_2tag1"]
+scenes/1/scene = ExtResource("6_bifwu")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27ubv"]
+texture = ExtResource("8_rx2x6")
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_onye1"]
+sources/0 = SubResource("TileSetScenesCollectionSource_2tag1")
+sources/1 = SubResource("TileSetAtlasSource_27ubv")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a6qbk"]
 texture = ExtResource("1_npssn")
@@ -353,6 +368,15 @@ physics_layer_0/collision_mask = 2
 sources/1 = SubResource("TileSetAtlasSource_ghbfk")
 sources/0 = SubResource("TileSetAtlasSource_a6qbk")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n5ae1"]
+shader = ExtResource("22_xa7g3")
+shader_parameter/radius = 128.988
+shader_parameter/center = Vector2(128, 128)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ea25l"]
+shader = ExtResource("23_bju26")
+shader_parameter/cell_size = 10
+
 [node name="Field" type="Node2D"]
 position = Vector2(-240, 93)
 
@@ -372,6 +396,7 @@ position = Vector2(1262, -482)
 texture = ExtResource("1_et0ii")
 
 [node name="Winter" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-156, 1246)
 texture = ExtResource("1_bmg3x")
 
@@ -384,6 +409,11 @@ texture = ExtResource("1_o5hkd")
 visible = false
 position = Vector2(27, -1073)
 texture = ExtResource("2_33ych")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="."]
+position = Vector2(-400, -1000)
+tile_map_data = PackedByteArray("AAAZAAEAAAAAAAAAAQAZAAAAAAAAAAAAAQAZAP//AAAAAAAAAQAZAP7/AAAAAAAAAQAZAP3/AAAAAAAAAQAYAP3/AAAAAAAAAQAXAP3/AAAAAAAAAQAWAP3/AAAAAAAAAQAVAP3/AAAAAAAAAQAUAP3/AAAAAAAAAQAUAP7/AAAAAAAAAQAUAP//AAAAAAAAAQAUAAAAAAAAAAAAAQAUAAEAAAAAAAAAAQAUAAMAAAAAAAAAAQAVAAEAAAAAAAAAAQAVAAAAAAAAAAAAAQAVAP//AAAAAAAAAQAVAP7/AAAAAAAAAQAWAP7/AAAAAAAAAQAWAP//AAAAAAAAAQAWAAAAAAAAAAAAAQAWAAIAAAAAAAAAAQAWAAQAAAAAAAAAAQAWAAUAAAAAAAAAAQAXAAQAAAAAAAAAAQAXAAIAAAAAAAAAAQAXAAAAAAAAAAAAAQAXAP//AAAAAAAAAQAXAP7/AAAAAAAAAQAYAP7/AAAAAAAAAQAYAP//AAAAAAAAAQAYAAAAAAAAAAAAAQAYAAIAAAAAAAAAAQAYAAQAAAAAAAAAAQAZAAQAAAAAAAAAAQAZAAIAAAAAAAAAAQAaAAIAAAAAAAAAAQAaAAEAAAAAAAAAAQAaAAAAAAAAAAAAAQAaAP//AAAAAAAAAQAaAP7/AAAAAAAAAQAaAP3/AAAAAAAAAQAbAP3/AAAAAAAAAQAbAP7/AAAAAAAAAQAbAP//AAAAAAAAAQAbAAAAAAAAAAAAAQAbAAEAAAAAAAAAAQAbAAIAAAAAAAAAAQAaAAQAAAAAAAAAAQAcAAIAAAAAAAAAAQAcAAEAAAAAAAAAAQAcAAAAAAAAAAAAAQAcAP//AAAAAAAAAQAcAP7/AAAAAAAAAQAcAP3/AAAAAAAAAQAYAAEAAAAAAAAAAQAXAAEAAAAAAAAAAQAWAAEAAAAAAAAAAQAVAAIAAAAAAAAAAQAUAAIAAAAAAAAAAQAUAAQAAAAAAAAAAQAVAAMAAAAAAAAAAQAWAAMAAAAAAAAAAQAXAAMAAAAAAAAAAQAYAAMAAAAAAAAAAQAZAAMAAAAAAAAAAQAaAAMAAAAAAAAAAQAbAAMAAAAAAAAAAQAcAAMAAAAAAAAAAQAVAAUAAAAAAAAAAQAUAAUAAAAAAAAAAQAVAAQAAAAAAAAAAQA=")
+tile_set = SubResource("TileSet_onye1")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 visible = false
@@ -545,6 +575,12 @@ velocity = Vector2(0, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_n5ae1")
+offset_right = 423.0
+offset_bottom = 423.0
+color = Color(0, 0, 0, 1)
+
 [node name="右上Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 1
@@ -564,8 +600,13 @@ offset_bottom = 40.0
 [node name="PlayerStatus" parent="CanvasLayer/左上Control" instance=ExtResource("6_vyjou")]
 position = Vector2(9, 10)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-position = Vector2(-152, -69)
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
+modulate = Color(0.425325, 0.265808, 0.265808, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_ea25l")
+offset_right = 363.0
+offset_bottom = 279.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-52, 31)
