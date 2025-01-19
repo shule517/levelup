@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dq2s7w1q244y2"
-path="res://.godot/imported/housedoor_01.png-09e19a1b18ef0b0ec04e073c66542dc2.ctex"
+path="res://.godot/imported/housedoor_01.png-a54df3e17fa4a371d134aae6bf796498.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LittleTown_assetpack 2/props/housedoor_01.png"
-dest_files=["res://.godot/imported/housedoor_01.png-09e19a1b18ef0b0ec04e073c66542dc2.ctex"]
+source_file="res://Assets/LittleTown_assetpack/props/housedoor_01.png"
+dest_files=["res://.godot/imported/housedoor_01.png-a54df3e17fa4a371d134aae6bf796498.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3rs6qh2es27w"
-path="res://.godot/imported/houses_inside.png-03f9bc1ddc2fecd8c13d983bb97f2311.ctex"
+path="res://.godot/imported/houses_inside.png-0e3b8e01539bd83a76d2c98e494550d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LittleTown_assetpack 2/props/houses_inside.png"
-dest_files=["res://.godot/imported/houses_inside.png-03f9bc1ddc2fecd8c13d983bb97f2311.ctex"]
+source_file="res://Assets/LittleTown_assetpack/props/houses_inside.png"
+dest_files=["res://.godot/imported/houses_inside.png-0e3b8e01539bd83a76d2c98e494550d2.ctex"]
 
 [params]
 

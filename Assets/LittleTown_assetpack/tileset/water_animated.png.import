@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c07fvde844xs4"
-path="res://.godot/imported/water_animated.png-48c7a3145e2cbe04d9cbfbd260760b5b.ctex"
+path="res://.godot/imported/water_animated.png-a25c173c1438c8e737a5d62daec01a7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LittleTown_assetpack 2/tileset/water_animated.png"
-dest_files=["res://.godot/imported/water_animated.png-48c7a3145e2cbe04d9cbfbd260760b5b.ctex"]
+source_file="res://Assets/LittleTown_assetpack/tileset/water_animated.png"
+dest_files=["res://.godot/imported/water_animated.png-a25c173c1438c8e737a5d62daec01a7c.ctex"]
 
 [params]
 

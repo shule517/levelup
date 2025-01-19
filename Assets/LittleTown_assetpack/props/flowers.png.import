@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bia8r078t0y0j"
-path="res://.godot/imported/flowers.png-d50bdb4887369f59bbab5d3440bec5d7.ctex"
+path="res://.godot/imported/flowers.png-b2ac51e63e8f206cd67bf0f6317bd57e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LittleTown_assetpack 2/props/flowers.png"
-dest_files=["res://.godot/imported/flowers.png-d50bdb4887369f59bbab5d3440bec5d7.ctex"]
+source_file="res://Assets/LittleTown_assetpack/props/flowers.png"
+dest_files=["res://.godot/imported/flowers.png-b2ac51e63e8f206cd67bf0f6317bd57e.ctex"]
 
 [params]
 

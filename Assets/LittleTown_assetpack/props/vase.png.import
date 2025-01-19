@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d28jcxc7ubbps"
-path="res://.godot/imported/vase.png-c94000da61ffb2d25e84c98f6b4b4fe1.ctex"
+path="res://.godot/imported/vase.png-b6bc4a737947e8d624f58815682caed6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LittleTown_assetpack 2/props/vase.png"
-dest_files=["res://.godot/imported/vase.png-c94000da61ffb2d25e84c98f6b4b4fe1.ctex"]
+source_file="res://Assets/LittleTown_assetpack/props/vase.png"
+dest_files=["res://.godot/imported/vase.png-b6bc4a737947e8d624f58815682caed6.ctex"]
 
 [params]
 
