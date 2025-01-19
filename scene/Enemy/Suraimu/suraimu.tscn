@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://b82ndrleq1m7v" path="res://scene/Enemy/Base/poring_attack.wav" id="3_7phjd"]
 [ext_resource type="AudioStream" uid="uid://g54r3jxhbl3o" path="res://scene/Enemy/Suraimu/poring_die.wav" id="4_irsp8"]
 [ext_resource type="AudioStream" uid="uid://pgokwekydarh" path="res://scene/Enemy/Suraimu/poring_damage.wav" id="4_n4j6q"]
-[ext_resource type="Shader" path="res://scene/Enemy/Nezumi/nezumi.gdshader" id="6_asera"]
+[ext_resource type="Shader" path="res://shader/outline.gdshader" id="6_asera"]
 [ext_resource type="Texture2D" uid="uid://ccopvtdej6qwp" path="res://scene/Enemy/Suraimu/2460_2.png" id="8_hasdr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ut0is"]

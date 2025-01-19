@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://crx78tiy2lwrx"]
 
 [ext_resource type="Script" path="res://scene/Enemy/Base/enemy.gd" id="1_x18rc"]
-[ext_resource type="Shader" path="res://scene/Enemy/Nezumi/nezumi.gdshader" id="2_5lths"]
+[ext_resource type="Shader" path="res://shader/outline.gdshader" id="2_5lths"]
 [ext_resource type="Texture2D" uid="uid://8kpn12hha50p" path="res://scene/Enemy/Base/ネズミ.png" id="3_j5gtb"]
 [ext_resource type="FontFile" uid="uid://b533rou4k6drt" path="res://scene/WorldClock/x12y16pxMaruMonica.ttf" id="3_lgtxu"]
 [ext_resource type="Texture2D" uid="uid://b3rp4ks6m4mf1" path="res://scene/Enemy/Base/2460_2.png" id="5_88es7"]

@@ -21,8 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://hqjxy31sor5w" path="res://scene/Enemy/Mandoragora/mandoragora.tscn" id="10_rlmgr"]
 [ext_resource type="PackedScene" uid="uid://c5emcx1nwkrqq" path="res://scene/Enemy/Kirikabu/kirikabu.tscn" id="13_suvgt"]
 [ext_resource type="PackedScene" uid="uid://0qmhn5wlmjrp" path="res://scene/Enemy/Kuma/kuma.tscn" id="14_58m4s"]
-[ext_resource type="Shader" path="res://scene/Field/iris_effect.gdshader" id="22_xa7g3"]
-[ext_resource type="Shader" path="res://scene/Field/mosaic.gdshader" id="23_bju26"]
+[ext_resource type="Shader" path="res://shader/iris_effect.gdshader" id="22_xa7g3"]
+[ext_resource type="Shader" path="res://shader/mosaic.gdshader" id="23_bju26"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_2tag1"]
 scenes/1/scene = ExtResource("6_bifwu")
