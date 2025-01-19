@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byhps06vc7y5a"
-path="res://.godot/imported/goat.png-220c70849d57cf6fbdf8be3685346706.ctex"
+uid="uid://buuefmdtpcoks"
+path="res://.godot/imported/giant.png-4c35b8b8e78c8f0f2e4178147468bcc5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Field/goat.png"
-dest_files=["res://.godot/imported/goat.png-220c70849d57cf6fbdf8be3685346706.ctex"]
+source_file="res://Field/giant.png"
+dest_files=["res://.godot/imported/giant.png-4c35b8b8e78c8f0f2e4178147468bcc5.ctex"]
 
 [params]
 

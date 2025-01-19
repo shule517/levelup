@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm1876akwf2v6"
-path="res://.godot/imported/winter.png-a95760076e38f7e7834fb5221e088e5c.ctex"
+uid="uid://dm7xwleasigwo"
+path="res://.godot/imported/houses_inside.png-ad4ca15ef1840e80f7bed8ff3c6825d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Field/winter.png"
-dest_files=["res://.godot/imported/winter.png-a95760076e38f7e7834fb5221e088e5c.ctex"]
+source_file="res://Field/Warp/houses_inside.png"
+dest_files=["res://.godot/imported/houses_inside.png-ad4ca15ef1840e80f7bed8ff3c6825d9.ctex"]
 
 [params]
 

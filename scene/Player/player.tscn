@@ -12,6 +12,86 @@
 [ext_resource type="Texture2D" uid="uid://cav30l734le55" path="res://scene/Player/levelup.png" id="8_l85kp"]
 [ext_resource type="Texture2D" uid="uid://6h1qwakeb5b" path="res://scene/Player/goat.png" id="11_vdirr"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp1bx"]
+atlas = ExtResource("8_l85kp")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1csij"]
+atlas = ExtResource("8_l85kp")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4yxg"]
+atlas = ExtResource("8_l85kp")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8j3jd"]
+atlas = ExtResource("8_l85kp")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up8ml"]
+atlas = ExtResource("8_l85kp")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0cnw"]
+atlas = ExtResource("8_l85kp")
+region = Rect2(192, 96, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wepq5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp1bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1csij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp1bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1csij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp1bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1csij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp1bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1csij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp1bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1csij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp1bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1csij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4yxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8j3jd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up8ml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0cnw")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_d1p4v"]
 atlas = ExtResource("5_kk861")
 region = Rect2(16, 0, 16, 32)
@@ -222,86 +302,6 @@ _data = {
 "levelup": SubResource("Animation_8cnkb")
 }
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hp1bx"]
-atlas = ExtResource("8_l85kp")
-region = Rect2(0, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1csij"]
-atlas = ExtResource("8_l85kp")
-region = Rect2(96, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c4yxg"]
-atlas = ExtResource("8_l85kp")
-region = Rect2(192, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8j3jd"]
-atlas = ExtResource("8_l85kp")
-region = Rect2(0, 96, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_up8ml"]
-atlas = ExtResource("8_l85kp")
-region = Rect2(96, 96, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r0cnw"]
-atlas = ExtResource("8_l85kp")
-region = Rect2(192, 96, 96, 96)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_wepq5"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hp1bx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1csij")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hp1bx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1csij")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hp1bx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1csij")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hp1bx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1csij")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hp1bx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1csij")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hp1bx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1csij")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c4yxg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8j3jd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_up8ml")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r0cnw")
-}],
-"loop": false,
-"name": &"default",
-"speed": 10.0
-}]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57l20"]
 bg_color = Color(0.162489, 0.184053, 0.275974, 1)
 border_width_left = 1
@@ -329,9 +329,29 @@ levelup_sound = ExtResource("5_2jmae")
 walk_sound = ExtResource("6_g8c76")
 critical_sound = ExtResource("7_ic2pr")
 
+[node name="LevelupAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -19)
+sprite_frames = SubResource("SpriteFrames_wepq5")
+frame = 15
+frame_progress = 1.0
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://scene/Player/levelup.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "0c194acce163aea2d82dd85c6643df01"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false
+}
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-2, -22)
+position = Vector2(0, -15)
 sprite_frames = SubResource("SpriteFrames_lwp2k")
 animation = &"walk"
 metadata/_aseprite_wizard_config_ = {
@@ -418,26 +438,6 @@ metadata/_aseprite_wizard_source_file_hash_ = "e0e1ca0fc1d5dc453c79f2fc7b10b4e5"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_yiffa")
-}
-
-[node name="LevelupAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(0, -19)
-sprite_frames = SubResource("SpriteFrames_wepq5")
-frame = 15
-frame_progress = 1.0
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://scene/Player/levelup.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "0c194acce163aea2d82dd85c6643df01"
-metadata/_aseprite_wizard_interface_config_ = {
-"layer_section": false
 }
 
 [node name="HpProgressBar" type="ProgressBar" parent="."]

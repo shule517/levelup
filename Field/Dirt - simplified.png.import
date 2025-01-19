@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cab177sjcwehr"
-path="res://.godot/imported/grape.png-d71722fe655eb4288c8e17f3315ded37.ctex"
+uid="uid://ejjch5vs8fx2"
+path="res://.godot/imported/Dirt - simplified.png-975fdba8726cbcd4dabc52e90550db15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Field/grape.png"
-dest_files=["res://.godot/imported/grape.png-d71722fe655eb4288c8e17f3315ded37.ctex"]
+source_file="res://Field/Dirt - simplified.png"
+dest_files=["res://.godot/imported/Dirt - simplified.png-975fdba8726cbcd4dabc52e90550db15.ctex"]
 
 [params]
 

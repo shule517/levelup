@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lkdayohtpu0n"
-path="res://.godot/imported/houses_inside.png-9b2bf905d2360bc0974fc2f3af1881bf.ctex"
+uid="uid://dw3dann5mhagc"
+path="res://.godot/imported/baby white goat sheet.png-7c31f74dc52d2467929f2216d377beed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Field/houses_inside.png"
-dest_files=["res://.godot/imported/houses_inside.png-9b2bf905d2360bc0974fc2f3af1881bf.ctex"]
+source_file="res://Field/baby white goat sheet.png"
+dest_files=["res://.godot/imported/baby white goat sheet.png-7c31f74dc52d2467929f2216d377beed.ctex"]
 
 [params]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://c6qa8rodu1nk1"]
 
-[ext_resource type="Texture2D" uid="uid://lkdayohtpu0n" path="res://scene/Field/houses_inside.png" id="1_nhqms"]
+[ext_resource type="Texture2D" uid="uid://lkdayohtpu0n" path="res://Field/houses_inside.png" id="1_nhqms"]
 [ext_resource type="PackedScene" uid="uid://bux57ckmy2stp" path="res://scene/Nupu/nupu.tscn" id="2_2ysjx"]
 [ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="3_e6sie"]
-[ext_resource type="PackedScene" uid="uid://opi2a215jcf4" path="res://scene/Field/field.tscn" id="5_i8jr5"]
-[ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://scene/Field/Warp/warp.tscn" id="6_4igme"]
+[ext_resource type="PackedScene" uid="uid://opi2a215jcf4" path="res://Field/field.tscn" id="5_i8jr5"]
+[ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://Field/Warp/warp.tscn" id="6_4igme"]
 [ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://scene/WorldClock/world_clock.tscn" id="13_1ho28"]
 [ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://scene/UI/PlayerStatus/player_status.tscn" id="14_vejo6"]
 

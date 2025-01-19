@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ceo73qbbxxnr2"]
 
-[ext_resource type="Script" path="res://scene/Field/Warp/warp.gd" id="1_qhvf3"]
+[ext_resource type="Script" path="res://Field/Warp/warp.gd" id="1_qhvf3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bqva7"]
 radius = 2.0

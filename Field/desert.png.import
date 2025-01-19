@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1jtfgbj48ag0"
-path="res://.godot/imported/Spring - simplified.png-9dd67908ee7409106c8f14d8cbabb1bd.ctex"
+uid="uid://dhy24giarenr3"
+path="res://.godot/imported/desert.png-e1ce7f2a923382dd67d4ebb862854ad2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Field/Spring - simplified.png"
-dest_files=["res://.godot/imported/Spring - simplified.png-9dd67908ee7409106c8f14d8cbabb1bd.ctex"]
+source_file="res://Field/desert.png"
+dest_files=["res://.godot/imported/desert.png-e1ce7f2a923382dd67d4ebb862854ad2.ctex"]
 
 [params]
 

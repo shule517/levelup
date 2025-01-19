@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qf6xpx40b8e7"
-path="res://.godot/imported/happy.png-a48a7c3681721250c12b5cd6721510db.ctex"
+uid="uid://lkdayohtpu0n"
+path="res://.godot/imported/houses_inside.png-33e4266e16a8d6e449171fb12c7bc508.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Field/happy.png"
-dest_files=["res://.godot/imported/happy.png-a48a7c3681721250c12b5cd6721510db.ctex"]
+source_file="res://Field/houses_inside.png"
+dest_files=["res://.godot/imported/houses_inside.png-33e4266e16a8d6e449171fb12c7bc508.ctex"]
 
 [params]
 

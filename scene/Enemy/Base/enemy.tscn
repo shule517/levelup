@@ -61,7 +61,7 @@ height = 6.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_i5gpt"]
 radius = 80.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_75fl2"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_fbebj"]
 radius = 18.0
 
 [sub_resource type="Animation" id="Animation_huxbd"]
@@ -186,7 +186,7 @@ border_width_bottom = 1
 border_color = Color(0.054902, 0.0705882, 0.180392, 1)
 
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
-position = Vector2(330.273, 1067.58)
+position = Vector2(2.08165e-12, 2.08165e-12)
 collision_layer = 4
 collision_mask = 3
 velocity = Vector2(-22.0421, -20.3505)
@@ -198,7 +198,7 @@ material = SubResource("ShaderMaterial_4ir5a")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_2jmly")
 animation = &"idle"
-frame_progress = 0.414199
+frame_progress = 0.945674
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -238,7 +238,7 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
 light_mask = 0
 visibility_layer = 0
-shape = SubResource("CircleShape2D_75fl2")
+shape = SubResource("CircleShape2D_fbebj")
 
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 4.0

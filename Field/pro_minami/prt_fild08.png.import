@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm7xwleasigwo"
-path="res://.godot/imported/houses_inside.png-1873b03235fda0b6fbc8624ce4c069e3.ctex"
+uid="uid://fxu7kfocfte3"
+path="res://.godot/imported/prt_fild08.png-667748278081f4473af711fe1957c545.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Field/Warp/houses_inside.png"
-dest_files=["res://.godot/imported/houses_inside.png-1873b03235fda0b6fbc8624ce4c069e3.ctex"]
+source_file="res://Field/pro_minami/prt_fild08.png"
+dest_files=["res://.godot/imported/prt_fild08.png-667748278081f4473af711fe1957c545.ctex"]
 
 [params]
 

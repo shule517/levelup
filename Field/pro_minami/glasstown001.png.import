@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buuefmdtpcoks"
-path="res://.godot/imported/giant.png-f938bfafb89c3f35a3d7c6edcbd45734.ctex"
+uid="uid://c013iblmndljc"
+path="res://.godot/imported/glasstown001.png-aae1e0c1051ea52a6afd3bf02d3df2dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Field/giant.png"
-dest_files=["res://.godot/imported/giant.png-f938bfafb89c3f35a3d7c6edcbd45734.ctex"]
+source_file="res://Field/pro_minami/glasstown001.png"
+dest_files=["res://.godot/imported/glasstown001.png-aae1e0c1051ea52a6afd3bf02d3df2dd.ctex"]
 
 [params]
 

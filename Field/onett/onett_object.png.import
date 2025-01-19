@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ejjch5vs8fx2"
-path="res://.godot/imported/Dirt - simplified.png-0c1cf2949abbb47d46ac2ee24a215495.ctex"
+uid="uid://ca1mh32iexueu"
+path="res://.godot/imported/onett_object.png-4e101cf060ea87e138841b736c509e92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Field/Dirt - simplified.png"
-dest_files=["res://.godot/imported/Dirt - simplified.png-0c1cf2949abbb47d46ac2ee24a215495.ctex"]
+source_file="res://Field/onett/onett_object.png"
+dest_files=["res://.godot/imported/onett_object.png-4e101cf060ea87e138841b736c509e92.ctex"]
 
 [params]
 

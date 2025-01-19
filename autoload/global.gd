@@ -11,7 +11,7 @@ var player_next_exp: int = 1
 var player_level: int = 1
 
 
-var home_scene: PackedScene = preload("res://scene/Field/home.tscn")
+var home_scene: PackedScene = preload("res://Field/home.tscn")
 
 # Mainシーンに切り替え
 func load_home_scene() -> void:
