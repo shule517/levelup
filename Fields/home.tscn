@@ -1,0 +1,190 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6qa8rodu1nk1"]
+
+[ext_resource type="Texture2D" uid="uid://lkdayohtpu0n" path="res://Fields/houses_inside.png" id="1_nhqms"]
+[ext_resource type="PackedScene" uid="uid://bux57ckmy2stp" path="res://scene/Nupu/nupu.tscn" id="2_2ysjx"]
+[ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="3_e6sie"]
+[ext_resource type="PackedScene" uid="uid://opi2a215jcf4" path="res://Fields/field.tscn" id="5_i8jr5"]
+[ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://Fields/Warp/warp.tscn" id="6_4igme"]
+[ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://scene/WorldClock/world_clock.tscn" id="13_1ho28"]
+[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://scene/UI/PlayerStatus/player_status.tscn" id="14_vejo6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nn4d4"]
+texture = ExtResource("1_nhqms")
+texture_region_size = Vector2i(32, 32)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+9:2/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:5/0 = 0
+8:6/0 = 0
+8:7/0 = 0
+8:8/0 = 0
+9:1/0 = 0
+9:3/0 = 0
+9:4/0 = 0
+9:5/0 = 0
+9:6/0 = 0
+9:7/0 = 0
+9:8/0 = 0
+10:1/0 = 0
+10:2/0 = 0
+10:4/0 = 0
+10:5/0 = 0
+10:6/0 = 0
+10:7/0 = 0
+10:8/0 = 0
+11:1/0 = 0
+11:2/0 = 0
+11:4/0 = 0
+11:5/0 = 0
+11:6/0 = 0
+11:7/0 = 0
+11:8/0 = 0
+12:1/0 = 0
+12:2/0 = 0
+12:3/0 = 0
+12:5/0 = 0
+12:6/0 = 0
+12:7/0 = 0
+12:8/0 = 0
+13:1/0 = 0
+13:2/0 = 0
+13:3/0 = 0
+13:6/0 = 0
+13:7/0 = 0
+13:8/0 = 0
+14:1/0 = 0
+14:2/0 = 0
+14:3/0 = 0
+14:4/0 = 0
+14:7/0 = 0
+14:8/0 = 0
+15:1/0 = 0
+15:2/0 = 0
+15:3/0 = 0
+15:4/0 = 0
+15:5/0 = 0
+15:7/0 = 0
+15:8/0 = 0
+16:1/0 = 0
+16:2/0 = 0
+16:3/0 = 0
+16:4/0 = 0
+16:5/0 = 0
+16:6/0 = 0
+16:7/0 = 0
+16:8/0 = 0
+17:1/0 = 0
+17:2/0 = 0
+17:3/0 = 0
+17:4/0 = 0
+17:5/0 = 0
+17:6/0 = 0
+17:7/0 = 0
+17:8/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:3/0 = 0
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:2/0 = 0
+3:3/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:4/0 = 0
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:0/0 = 0
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_f3vfl"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_nn4d4")
+
+[node name="Home" type="Node2D"]
+position = Vector2(-240, 93)
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_f3vfl")
+format = 2
+layer_0/name = "Building"
+layer_0/tile_data = PackedInt32Array(65531, 262144, 0, 131067, 262144, 1, 196603, 262144, 2, 65532, 327680, 0, 131068, 327680, 1, 196604, 327680, 2, 65533, 393216, 0, 131069, 393216, 1, 196605, 393216, 2, 65534, 458752, 0, 131070, 458752, 1, 196606, 458752, 2, 65535, 524288, 0, 131071, 524288, 1, 196607, 524288, 2, 262139, 262144, 3, 327675, 262144, 4, 262140, 327680, 3, 327676, 327680, 4, 262141, 393216, 3, 327677, 393216, 4, 262142, 458752, 3, 327678, 458752, 4, 262143, 524288, 3, 327679, 524288, 4)
+
+[node name="Objects" type="Node2D" parent="."]
+y_sort_enabled = true
+position = Vector2(30, 83)
+
+[node name="Nupu" parent="Objects" instance=ExtResource("2_2ysjx")]
+position = Vector2(-87, -22)
+
+[node name="Player" parent="Objects" instance=ExtResource("3_e6sie")]
+position = Vector2(-108, 15)
+
+[node name="Camera2D" type="Camera2D" parent="Objects/Player"]
+
+[node name="Warp" parent="Objects" instance=ExtResource("6_4igme")]
+position = Vector2(-111, 54)
+scene = ExtResource("5_i8jr5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="右上Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+
+[node name="WorldClock" parent="CanvasLayer/右上Control" instance=ExtResource("13_1ho28")]
+position = Vector2(-94, 16)
+
+[node name="左上Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerStatus" parent="CanvasLayer/左上Control" instance=ExtResource("14_vejo6")]
+position = Vector2(9, 10)

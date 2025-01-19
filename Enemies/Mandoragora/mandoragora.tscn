@@ -1,0 +1,120 @@
+[gd_scene load_steps=15 format=3 uid="uid://hqjxy31sor5w"]
+
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://Enemies/Base/enemy.tscn" id="1_6s04b"]
+[ext_resource type="Texture2D" uid="uid://bxni4rvrgf717" path="res://Enemies/Mandoragora/mandoragora.png" id="2_6wy37"]
+[ext_resource type="AudioStream" uid="uid://ddcs8iqq3swth" path="res://Enemies/Mandoragora/mandragora_attack.wav" id="2_j2fae"]
+[ext_resource type="AudioStream" uid="uid://ckpfviinyojcd" path="res://Enemies/Mandoragora/mandragora_damage.wav" id="3_2mlmc"]
+[ext_resource type="AudioStream" uid="uid://gi0rifypi7j5" path="res://Enemies/Mandoragora/mandragora_die.wav" id="4_euxox"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkbtd"]
+atlas = ExtResource("2_6wy37")
+region = Rect2(0, 28, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axqpc"]
+atlas = ExtResource("2_6wy37")
+region = Rect2(20, 28, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6exh"]
+atlas = ExtResource("2_6wy37")
+region = Rect2(40, 28, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tiueo"]
+atlas = ExtResource("2_6wy37")
+region = Rect2(0, 0, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh7w7"]
+atlas = ExtResource("2_6wy37")
+region = Rect2(20, 0, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecagd"]
+atlas = ExtResource("2_6wy37")
+region = Rect2(40, 0, 20, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7uxvx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkbtd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axqpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6exh")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tiueo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh7w7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecagd")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tiueo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh7w7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecagd")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5mk1x"]
+radius = 200.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q2dvi"]
+radius = 100.0
+
+[node name="Mandoragora" instance=ExtResource("1_6s04b")]
+monster_name = "マンドラゴラ"
+monster_max_hp = 300
+monster_exp = 105
+monster_atk = 86
+monster_def = 13
+attack_interval = 1.0
+attack_distance = 100.0
+no_move = true
+attack_sound = ExtResource("2_j2fae")
+damage_sound = ExtResource("3_2mlmc")
+die_sound = ExtResource("4_euxox")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(2.08165e-12, -5)
+sprite_frames = SubResource("SpriteFrames_7uxvx")
+frame_progress = 0.212608
+offset = Vector2(2.08165e-12, -8)
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/Enemy/Mandoragora/mandoragora.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "d38a34037c5ef2441d866a5e76eda8cf"
+
+[node name="CollisionShape2D" parent="ViewArea2D" index="0"]
+shape = SubResource("CircleShape2D_5mk1x")
+
+[node name="CollisionShape2D" parent="AttackArea2D" index="0"]
+shape = SubResource("CircleShape2D_q2dvi")
+
+[node name="CursorAnimatedSprite2D" parent="." index="7"]
+position = Vector2(0, -29)

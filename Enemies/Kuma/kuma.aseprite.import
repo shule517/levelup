@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://c24ack86v52oo"
+path="res://.godot/imported/kuma.aseprite-10a445cd6e5b0195b2222b4d7801c678.res"
+
+[deps]
+
+source_file="res://Enemies/Kuma/kuma.aseprite"
+dest_files=["res://.godot/imported/kuma.aseprite-10a445cd6e5b0195b2222b4d7801c678.res"]
+
+[params]
+

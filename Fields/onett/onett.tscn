@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlupimod1id1k"]
+
+[ext_resource type="Texture2D" uid="uid://br76b88u5ou4m" path="res://Fields/onett/onett.png" id="1_vrscx"]
+[ext_resource type="Texture2D" uid="uid://ca1mh32iexueu" path="res://Fields/onett/onett_object.png" id="2_jcqjj"]
+[ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="3_dg0pa"]
+
+[node name="Onett" type="Node2D"]
+
+[node name="Onett" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("1_vrscx")
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://scene/Field/onett/onett.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "69804b203af4a4c62fbb942a562a935a"
+
+[node name="OnettObject" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("2_jcqjj")
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://scene/Field/onett/onett_object.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "62e150f31fb680829ce46d04be9a0eb3"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true
+}
+
+[node name="Player" parent="." instance=ExtResource("3_dg0pa")]
+position = Vector2(1116, -1307)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]

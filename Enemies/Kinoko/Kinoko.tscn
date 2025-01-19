@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://dyqxqqrjedcfm"]
+
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://Enemies/Base/enemy.tscn" id="1_g7pxc"]
+[ext_resource type="Texture2D" uid="uid://crx0viuw4vj0x" path="res://Enemies/Kinoko/キノコ.png" id="2_2q1qg"]
+[ext_resource type="Script" path="res://Enemies/Kinoko/kinoko.gd" id="2_yom8x"]
+[ext_resource type="AudioStream" uid="uid://ijgrhglovow3" path="res://Enemies/Kinoko/spore_move2.wav" id="3_lrtfe"]
+[ext_resource type="AudioStream" uid="uid://cwocwqtpeqd8s" path="res://Enemies/Kinoko/spore_attack.wav" id="4_d154f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjcfr"]
+atlas = ExtResource("2_2q1qg")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bm6mw"]
+atlas = ExtResource("2_2q1qg")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_332v2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjcfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bm6mw")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjcfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjcfr")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bm6mw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjcfr")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[node name="Kinoko" instance=ExtResource("1_g7pxc")]
+script = ExtResource("2_yom8x")
+monster_name = "歩くキノコ"
+monster_max_hp = 467
+monster_exp = 18
+monster_atk = 32
+monster_def = 12
+active = false
+move_sound = ExtResource("3_lrtfe")
+attack_sound = ExtResource("4_d154f")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_332v2")
+animation = &"walk"
+frame_progress = 0.0
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/Enemy/Kinoko/キノコ.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "034c1533265d980aabbbfa544c8b3558"

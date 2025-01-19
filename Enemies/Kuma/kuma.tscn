@@ -1,0 +1,137 @@
+[gd_scene load_steps=20 format=3 uid="uid://0qmhn5wlmjrp"]
+
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://Enemies/Base/enemy.tscn" id="1_u70pn"]
+[ext_resource type="Script" path="res://Enemies/Kuma/kuma.gd" id="2_n6gpq"]
+[ext_resource type="AudioStream" uid="uid://dsjwjuxqe7pma" path="res://Enemies/Kuma/bigfoot_step1.wav" id="3_1roqs"]
+[ext_resource type="Texture2D" uid="uid://b1u6cyj6cu53i" path="res://Enemies/Kuma/kuma.png" id="3_as70h"]
+[ext_resource type="AudioStream" uid="uid://dmjkefdol2msp" path="res://Enemies/Kuma/bigfoot_attack.wav" id="4_60yrb"]
+[ext_resource type="Texture2D" uid="uid://c5eumbrg7gufu" path="res://Enemies/Kuma/2460_2.png" id="4_opiq6"]
+[ext_resource type="AudioStream" uid="uid://imf5385udnfd" path="res://Enemies/Kuma/bigfoot_damage.wav" id="5_uo1fy"]
+[ext_resource type="AudioStream" uid="uid://dfbv76ynj61o3" path="res://Enemies/Kuma/bigfoot_die.wav" id="6_sst7g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvcpt"]
+atlas = ExtResource("3_as70h")
+region = Rect2(62, 0, 31, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ocv0"]
+atlas = ExtResource("3_as70h")
+region = Rect2(0, 33, 31, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tl3g"]
+atlas = ExtResource("3_as70h")
+region = Rect2(0, 0, 31, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3g61"]
+atlas = ExtResource("3_as70h")
+region = Rect2(31, 0, 31, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lhs2a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvcpt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ocv0")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tl3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3g61")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tl3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3g61")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vso81"]
+radius = 18.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icy0s"]
+atlas = ExtResource("4_opiq6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o1m1"]
+atlas = ExtResource("4_opiq6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nl8n7"]
+atlas = ExtResource("4_opiq6")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d13c7"]
+atlas = ExtResource("4_opiq6")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cgaiw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icy0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0o1m1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nl8n7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d13c7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[node name="Kuma" instance=ExtResource("1_u70pn")]
+script = ExtResource("2_n6gpq")
+monster_name = "べあ"
+monster_max_hp = 1387
+monster_exp = 101
+monster_atk = 103
+monster_def = 55
+move_sound = ExtResource("3_1roqs")
+attack_sound = ExtResource("4_60yrb")
+damage_sound = ExtResource("5_uo1fy")
+die_sound = ExtResource("6_sst7g")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(2.08165e-12, -9)
+sprite_frames = SubResource("SpriteFrames_lhs2a")
+animation = &"walk"
+frame_progress = 0.0
+offset = Vector2(2.08165e-12, -8)
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/Enemy/Kuma/kuma.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5da2942c2fb408564ce2748b199f0eb0"
+
+[node name="CollisionShape2D" parent="AttackArea2D" index="0"]
+shape = SubResource("CircleShape2D_vso81")
+
+[node name="CursorAnimatedSprite2D" parent="." index="7"]
+position = Vector2(0, -44)
+sprite_frames = SubResource("SpriteFrames_cgaiw")

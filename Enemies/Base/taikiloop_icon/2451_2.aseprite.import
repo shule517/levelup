@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://itbyscc0e7p6"
+path="res://.godot/imported/2451_2.aseprite-39f3e53608ba16c452f8b182d3c17e26.res"
+
+[deps]
+
+source_file="res://Enemies/Base/taikiloop_icon/2451_2.aseprite"
+dest_files=["res://.godot/imported/2451_2.aseprite-39f3e53608ba16c452f8b182d3c17e26.res"]
+
+[params]
+
