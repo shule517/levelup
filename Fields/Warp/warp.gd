@@ -22,7 +22,6 @@ func _ready() -> void:
 	label.text = "to %s" % _get_enum_as_string(field)
 
 func _on_body_entered(body: Node2D) -> void:
-	print("body: $body")
 	if body is Player:
 		FieldSwitcher.switch(field)
 
