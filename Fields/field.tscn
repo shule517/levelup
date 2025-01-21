@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cm1876akwf2v6" path="res://Fields/winter.png" id="1_bmg3x"]
 [ext_resource type="Texture2D" uid="uid://dhy24giarenr3" path="res://Fields/desert.png" id="1_et0ii"]
 [ext_resource type="Texture2D" uid="uid://biq8h11kk07js" path="res://Fields/moon.png" id="1_fxxdk"]
-[ext_resource type="Texture2D" uid="uid://dm7xwleasigwo" path="res://Fields/Warp/houses_inside.png" id="1_npssn"]
 [ext_resource type="Texture2D" uid="uid://qf6xpx40b8e7" path="res://Fields/happy.png" id="1_o5hkd"]
 [ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="1_oekny"]
 [ext_resource type="TileSet" uid="uid://drfos65v7d1ii" path="res://Fields/tileset.tres" id="1_ov358"]
@@ -36,8 +35,10 @@ texture = ExtResource("8_rx2x6")
 sources/0 = SubResource("TileSetScenesCollectionSource_2tag1")
 sources/1 = SubResource("TileSetAtlasSource_27ubv")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fkqbx"]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a6qbk"]
-texture = ExtResource("1_npssn")
+texture = SubResource("CompressedTexture2D_fkqbx")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -454,7 +455,7 @@ position = Vector2(113, 25)
 position = Vector2(-202, -146)
 collision_mask = 5
 
-[node name="Camera2D" type="Camera2D" parent="Objects/Player" groups=["Camera"]]
+[node name="Camera2D2" type="Camera2D" parent="Objects/Player" groups=["Camera"]]
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 

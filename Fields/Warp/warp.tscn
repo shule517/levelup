@@ -1,17 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://ceo73qbbxxnr2"]
+[gd_scene load_steps=5 format=3 uid="uid://ceo73qbbxxnr2"]
 
 [ext_resource type="Script" path="res://Fields/Warp/warp.gd" id="1_qhvf3"]
+[ext_resource type="FontFile" uid="uid://dgpvge4lgervq" path="res://scene/UI/PlayerStatus/x10y12pxDonguriDuel.ttf" id="2_xshct"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bqva7"]
-radius = 2.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q13gx"]
+size = Vector2(16, 16)
 
-[node name="Warp" type="Node2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_gosil"]
+font = ExtResource("2_xshct")
+font_size = 9
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Warp" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_qhvf3")
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_mask = 2
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_q13gx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_bqva7")
+[node name="SpawnMarker2D" type="Marker2D" parent="."]
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "spring"
+label_settings = SubResource("LabelSettings_gosil")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=4 uid="uid://dmuhhrjetfcar"]
+
+[ext_resource type="Texture2D" uid="uid://dampm7q6amh07" path="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Sand/Sand1.png" id="1_j8p61"]
+[ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="2_2mx4j"]
+[ext_resource type="Texture2D" uid="uid://bpajhqrko0bpy" path="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Winter/Winter1.png" id="2_ws2q8"]
+[ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://Fields/Warp/warp.tscn" id="4_uhntb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0qcm"]
+texture = ExtResource("1_j8p61")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v2uws"]
+texture = ExtResource("2_ws2q8")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ao3b8"]
+sources/0 = SubResource("TileSetAtlasSource_q0qcm")
+sources/1 = SubResource("TileSetAtlasSource_v2uws")
+
+[node name="FieldWinter" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD8//z/AQAAAAAAAAD8//3/AQAAAAEAAAD9//z/AQABAAAAAAD9//3/AQABAAEAAAD8//7/AQAAAAEAAAD8////AQAAAAEAAAD8/wAAAQAAAAEAAAD8/wEAAQAAAAEAAAD8/wIAAQAAAAEAAAD8/wMAAQAAAAEAAAD8/wQAAQAAAAIAAAD9/wQAAQABAAIAAAD+/wQAAQABAAIAAAD//wQAAQABAAIAAAAAAAQAAQABAAIAAAABAAQAAQABAAIAAAACAAQAAQABAAIAAAADAAQAAQABAAIAAAAEAAQAAQABAAIAAAAFAAQAAQABAAIAAAAGAAQAAQACAAIAAAAGAAMAAQACAAEAAAAGAAIAAQACAAEAAAAGAAEAAQACAAEAAAAGAAAAAQACAAEAAAAGAP//AQACAAEAAAAGAP7/AQABAAEAAAAGAP3/AQACAAEAAAAGAPz/AQACAAAAAAD+//z/AQABAAAAAAD///z/AQABAAAAAAAAAPz/AQABAAAAAAABAPz/AQABAAAAAAACAPz/AQABAAAAAAADAPz/AQABAAAAAAAEAPz/AQABAAAAAAAFAPz/AQABAAAAAAABAAEAAQABAAEAAAABAAAAAQABAAEAAAABAP//AQABAAEAAAABAP7/AQABAAEAAAABAP3/AQABAAEAAAAAAP3/AQABAAEAAAD///3/AQABAAEAAAD+//3/AQABAAEAAAD+//7/AQABAAEAAAD9//7/AQABAAEAAAD9////AQABAAEAAAD9/wAAAQABAAEAAAD9/wEAAQABAAEAAAD9/wIAAQABAAEAAAD9/wMAAQABAAEAAAD+/wMAAQABAAEAAAD+/wIAAQABAAEAAAD+/wEAAQABAAEAAAD+/wAAAQABAAEAAAD+////AQABAAEAAAD/////AQABAAEAAAD///7/AQABAAEAAAAAAP7/AQABAAEAAAAAAP//AQABAAEAAAAAAAAAAQABAAEAAAD//wAAAQABAAEAAAD//wEAAQABAAEAAAD//wIAAQABAAEAAAD//wMAAQABAAEAAAAAAAMAAQABAAEAAAAAAAIAAQABAAEAAAAAAAEAAQABAAEAAAABAAIAAQABAAEAAAABAAMAAQABAAEAAAACAAMAAQABAAEAAAACAAIAAQABAAEAAAACAAEAAQABAAEAAAACAAAAAQABAAEAAAACAP//AQABAAEAAAACAP7/AQABAAEAAAACAP3/AQABAAEAAAADAP3/AQABAAEAAAADAP7/AQABAAEAAAADAP//AQABAAEAAAADAAAAAQABAAEAAAADAAEAAQABAAEAAAADAAIAAQABAAEAAAADAAMAAQABAAEAAAAEAAMAAQABAAEAAAAEAAIAAQABAAEAAAAEAAEAAQABAAEAAAAEAAAAAQABAAEAAAAEAP//AQABAAEAAAAEAP7/AQABAAEAAAAEAP3/AQABAAEAAAAFAP3/AQABAAEAAAAFAP7/AQABAAEAAAAFAP//AQABAAEAAAAFAAAAAQABAAEAAAAFAAEAAQABAAEAAAAFAAIAAQABAAEAAAAFAAMAAQABAAEAAAAHAP7/AQACAAEAAAA=")
+tile_set = SubResource("TileSet_ao3b8")
+
+[node name="Player" parent="." instance=ExtResource("2_2mx4j")]
+position = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="Warp" parent="." instance=ExtResource("4_uhntb")]
+position = Vector2(117, -24)

@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6qa8rodu1nk1"]
+[gd_scene load_steps=9 format=3 uid="uid://c6qa8rodu1nk1"]
 
 [ext_resource type="Texture2D" uid="uid://lkdayohtpu0n" path="res://Fields/home/houses_inside.png" id="1_w38up"]
 [ext_resource type="PackedScene" uid="uid://bux57ckmy2stp" path="res://scene/Nupu/nupu.tscn" id="2_lbwjr"]
 [ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="3_d4h1s"]
 [ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://Fields/Warp/warp.tscn" id="4_2yg5u"]
-[ext_resource type="PackedScene" uid="uid://opi2a215jcf4" path="res://Fields/field.tscn" id="5_rji7b"]
 [ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://scene/WorldClock/world_clock.tscn" id="6_qgo6x"]
 [ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://scene/UI/PlayerStatus/player_status.tscn" id="7_pum0v"]
 
@@ -162,11 +161,8 @@ position = Vector2(-87, -22)
 [node name="Player" parent="Objects" instance=ExtResource("3_d4h1s")]
 position = Vector2(-108, 15)
 
-[node name="Camera2D" type="Camera2D" parent="Objects/Player"]
-
 [node name="Warp" parent="Objects" instance=ExtResource("4_2yg5u")]
 position = Vector2(-111, 54)
-scene = ExtResource("5_rji7b")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

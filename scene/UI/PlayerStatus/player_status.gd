@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var global: GlobalAutoLoad = get_node("/root/Global")
+@onready var global := $/root/Global
 
 func _ready() -> void:
 	pass

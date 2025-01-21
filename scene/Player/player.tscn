@@ -450,6 +450,8 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_dhncd")
 value = 100.0
 show_percentage = false
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [connection signal="body_entered" from="ViewArea2D" to="." method="_on_view_area_2d_body_entered"]
 [connection signal="body_exited" from="ViewArea2D" to="." method="_on_view_area_2d_body_exited"]
 [connection signal="body_entered" from="AttackArea2D" to="." method="_on_attack_area_2d_body_entered"]

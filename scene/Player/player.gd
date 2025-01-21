@@ -17,7 +17,7 @@ extends CharacterBody2D
 #@export var player_next_exp: int = 1
 #@export var player_level: int = 1
 
-@onready var global: GlobalAutoLoad = get_node("/root/Global")
+@onready var global := $/root/Global
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -46,8 +46,8 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("button_plus"):
 		levelup()
 
-	if Input.is_action_just_pressed("button_minus"):
-		global.load_home_scene()
+	#if Input.is_action_just_pressed("button_minus"):
+		#global.load_home_scene()
 
 	if Input.is_action_just_pressed("button_left"):
 		select_enemy_index -= 1
