@@ -1,5 +1,4 @@
 extends Node
-class_name GlobalAutoLoad
 
 var player_max_hp: int = 28
 var player_hp: int = 28

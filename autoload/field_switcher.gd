@@ -6,3 +6,4 @@ func switch(field: Enums.Field) -> void:
 
 func get_scene_path(field: Enums.Field) -> String:
 	return "res://Fields/field_%s.tscn" % Enums.field_to_string(field)
+# TODO: HOMEにも対応する
