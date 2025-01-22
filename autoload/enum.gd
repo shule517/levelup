@@ -1,5 +1,5 @@
 extends Object
-class_name Enums
+class_name Enum # class_nameを設定しないと、Enum.Directionとかが定義元にジャンプできない
 
 enum Direction {
 	UP,
@@ -15,4 +15,4 @@ enum Field {
 }
 
 static func field_to_string(enum_value: int) -> String:
-	return Enums.Field.keys()[enum_value]
+	return Enum.Field.keys()[enum_value]

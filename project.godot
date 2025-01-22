@@ -23,7 +23,7 @@ aseprite_executable_path="/Users/pixel_hal/Applications/Aseprite.app/Contents/Ma
 
 Global="*res://autoload/global.gd"
 FieldSwitcher="*res://autoload/field_switcher.gd"
-Enum="*res://autoload/enum.gd"
+EnumAutoload="*res://autoload/enum.gd"
 
 [debug]
 
