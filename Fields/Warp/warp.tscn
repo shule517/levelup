@@ -21,6 +21,7 @@ script = ExtResource("1_qhvf3")
 shape = SubResource("RectangleShape2D_q13gx")
 
 [node name="SpawnMarker2D" type="Marker2D" parent="."]
+position = Vector2(-19, 0)
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0

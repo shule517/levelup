@@ -9,14 +9,6 @@ extends CharacterBody2D
 @export var walk_sound: AudioStream
 @export var critical_sound: AudioStream
 
-#@export var player_max_hp: int = 28
-#@export var player_hp: int = 28
-#@export var player_atk: int = 11
-#@export var player_def: int = 3
-#@export var player_exp: int = 0
-#@export var player_next_exp: int = 1
-#@export var player_level: int = 1
-
 @onready var global := $/root/Global
 
 # しきい値を設定してスティックの感度を調整
@@ -40,6 +32,11 @@ func _ready() -> void:
 		var player := AudioStreamPlayer.new()
 		add_child(player)
 		audio_players.append(player)
+
+	FieldSwitcher.on_trigger_player_spawn.connect(_on_spawn)
+
+func _on_spawn(position: Vector2, direction: Enum.Direction) -> void:
+	global_position = position
 
 # メインループ
 func _process(_delta: float) -> void:
