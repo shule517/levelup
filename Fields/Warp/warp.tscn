@@ -25,7 +25,7 @@ shape = SubResource("RectangleShape2D_q13gx")
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
-text = "spring"
+text = "to SPRING"
 label_settings = SubResource("LabelSettings_gosil")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
