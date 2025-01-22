@@ -11,6 +11,33 @@ extends Area2D
 func _ready() -> void:
 	label.text = "to %s" % Enum.field_to_string(field)
 
+	if Engine.is_editor_hint():
+		if not is_valid_field(field):
+			label.text = "error:【 %s 】 が みつかりません!" % Enum.field_to_string(field)
+
+# TODO: ↓クラス化する
+func get_scene_path(field: Enum.Field) -> String:
+	return "res://Fields/field_%s.tscn" % Enum.field_to_string(field)
+# TODO: HOMEにも対応する
+
+# TODO: ↓クラス化する
+func is_valid_field(field: Enum.Field) -> bool:
+	var scene_path := get_scene_path(field)
+	var scene_resource: Resource = ResourceLoader.load(scene_path)
+	print(scene_resource)
+
+	# シーンが正しくロードされたかを確認
+	return scene_resource and scene_resource is PackedScene
+
+	## シーンが正しくロードされたかを確認
+	#if scene_resource and scene_resource is PackedScene:
+		## シーンをインスタンス化
+		#return scene_resource.instantiate()
+	#else:
+		## ロードに失敗した場合のエラー処理
+		#print("Failed to load scene at path: ", path)
+		#return null
+
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		FieldSwitcher.switch(field)
