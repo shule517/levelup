@@ -9,11 +9,13 @@ extends Area2D
 @onready var label: Label = $Label
 
 func _ready() -> void:
-	label.text = "to %s" % Enum.field_to_string(field)
-
 	if Engine.is_editor_hint():
 		if not is_valid_field(field):
 			label.text = "error:【 %s 】 が みつかりません!" % Enum.field_to_string(field)
+			label.label_settings.font_color = Color.RED
+		else:
+			label.text = "to %s" % Enum.field_to_string(field)
+			label.label_settings.font_color = Color.WHITE
 
 # TODO: ↓クラス化する
 func get_scene_path(field: Enum.Field) -> String:
