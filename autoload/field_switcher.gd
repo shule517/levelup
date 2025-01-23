@@ -3,6 +3,10 @@ extends Node
 signal on_trigger_player_spawn
 
 func switch(field: Enum.Field) -> void:
+	# 画面切り替え
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
+
 	var scene_path := get_scene_path(field)
 	get_tree().change_scene_to_file(scene_path)
 
