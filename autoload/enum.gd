@@ -9,6 +9,7 @@ enum Direction {
 }
 
 enum Field {
+	HOME,
 	SPRING,
 	SAND,
 	WINTER

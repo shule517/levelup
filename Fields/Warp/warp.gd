@@ -9,24 +9,22 @@ extends Area2D
 @onready var label: Label = $Label
 
 func _ready() -> void:
-	if Engine.is_editor_hint():
-		if not is_valid_field(field):
-			label.text = "error:【 %s 】 が みつかりません!" % Enum.field_to_string(field)
-			label.label_settings.font_color = Color.RED
-		else:
-			label.text = "to %s" % Enum.field_to_string(field)
-			label.label_settings.font_color = Color.WHITE
+	if not is_valid_field(field):
+		label.text = "error:【 %s 】 が みつかりません!" % Enum.field_to_string(field)
+		label.label_settings.font_color = Color.RED
+	else:
+		label.text = "to %s" % Enum.field_to_string(field)
+		label.label_settings.font_color = Color.WHITE
 
 # TODO: ↓クラス化する
 func get_scene_path(field: Enum.Field) -> String:
-	return "res://Fields/field_%s.tscn" % Enum.field_to_string(field)
+	return "res://Fields/%s/%s.tscn" % [Enum.field_to_string(field), Enum.field_to_string(field)]
 # TODO: HOMEにも対応する
 
 # TODO: ↓クラス化する
 func is_valid_field(field: Enum.Field) -> bool:
 	var scene_path := get_scene_path(field)
 	var scene_resource: Resource = ResourceLoader.load(scene_path)
-	print(scene_resource)
 
 	# シーンが正しくロードされたかを確認
 	return scene_resource and scene_resource is PackedScene
