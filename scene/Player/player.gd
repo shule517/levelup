@@ -35,8 +35,11 @@ func _ready() -> void:
 
 	FieldSwitcher.on_trigger_player_spawn.connect(_on_spawn)
 
+# フィールド移動した時の位置・向きを設定
 func _on_spawn(position: Vector2, direction: Enum.Direction) -> void:
 	global_position = position
+	if direction == Enum.Direction.LEFT:
+		sprite.flip_h = true
 
 # メインループ
 func _process(_delta: float) -> void:
