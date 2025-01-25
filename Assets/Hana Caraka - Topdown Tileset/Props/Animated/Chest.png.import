@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkh7gi0bfwmts"
-path="res://.godot/imported/Chest.png-1dc7ac6a92a960897f5b371748c60a6b.ctex"
+path="res://.godot/imported/Chest.png-67dbfa388447e353d0fa723c752d0851.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Props/Animated/Chest.png"
-dest_files=["res://.godot/imported/Chest.png-1dc7ac6a92a960897f5b371748c60a6b.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Props/Animated/Chest.png"
+dest_files=["res://.godot/imported/Chest.png-67dbfa388447e353d0fa723c752d0851.ctex"]
 
 [params]
 

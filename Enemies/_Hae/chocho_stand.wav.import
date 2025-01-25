@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://delylhpqsu5fq"
-path="res://.godot/imported/chocho_stand.wav-3f4500f13f0719e6c7ad991167114e41.sample"
+path="res://.godot/imported/chocho_stand.wav-580331ad98163dc2e931adff2e6d6593.sample"
 
 [deps]
 
-source_file="res://Enemies/_Hae/chocho_stand.wav"
-dest_files=["res://.godot/imported/chocho_stand.wav-3f4500f13f0719e6c7ad991167114e41.sample"]
+source_file="res://enemies/_Hae/chocho_stand.wav"
+dest_files=["res://.godot/imported/chocho_stand.wav-580331ad98163dc2e931adff2e6d6593.sample"]
 
 [params]
 

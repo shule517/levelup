@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brd5gedl6u1vm"
-path="res://.godot/imported/478_ハムキノコ.png-613bb0d934957e360629eb6f071f47d1.ctex"
+path="res://.godot/imported/478_ハムキノコ.png-7fde9ed16436ef0dfa7488eab45d1cc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/478_ハムキノコ.png"
-dest_files=["res://.godot/imported/478_ハムキノコ.png-613bb0d934957e360629eb6f071f47d1.ctex"]
+source_file="res://assets/QVMob/478_ハムキノコ.png"
+dest_files=["res://.godot/imported/478_ハムキノコ.png-7fde9ed16436ef0dfa7488eab45d1cc1.ctex"]
 
 [params]
 

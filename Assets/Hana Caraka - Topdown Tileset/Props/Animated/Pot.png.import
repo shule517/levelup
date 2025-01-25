@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs51j74bqvtsy"
-path="res://.godot/imported/Pot.png-81fdd3c78110bd3e821abe052fd401bb.ctex"
+path="res://.godot/imported/Pot.png-53a0c7272d19396806b72a19f6bb2a1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Props/Animated/Pot.png"
-dest_files=["res://.godot/imported/Pot.png-81fdd3c78110bd3e821abe052fd401bb.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Props/Animated/Pot.png"
+dest_files=["res://.godot/imported/Pot.png-53a0c7272d19396806b72a19f6bb2a1c.ctex"]
 
 [params]
 

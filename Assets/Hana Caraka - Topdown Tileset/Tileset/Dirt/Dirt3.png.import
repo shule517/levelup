@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://164t0332w43b"
-path="res://.godot/imported/Dirt3.png-cdd1dd4bda226e22371f556a27b4e471.ctex"
+path="res://.godot/imported/Dirt3.png-df77ed4ef799a996f1e3caabca520768.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Dirt/Dirt3.png"
-dest_files=["res://.godot/imported/Dirt3.png-cdd1dd4bda226e22371f556a27b4e471.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Tileset/Dirt/Dirt3.png"
+dest_files=["res://.godot/imported/Dirt3.png-df77ed4ef799a996f1e3caabca520768.ctex"]
 
 [params]
 

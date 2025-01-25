@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://br76b88u5ou4m"
-path="res://.godot/imported/onett.png-9c9a02317a50b72a042cba70b21bea45.ctex"
+path="res://.godot/imported/onett.png-5b5db47ddc4c8f3f3e0c964f2c99b2d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fields/onett/onett.png"
-dest_files=["res://.godot/imported/onett.png-9c9a02317a50b72a042cba70b21bea45.ctex"]
+source_file="res://fields/onett/onett.png"
+dest_files=["res://.godot/imported/onett.png-5b5db47ddc4c8f3f3e0c964f2c99b2d7.ctex"]
 
 [params]
 

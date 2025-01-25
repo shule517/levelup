@@ -1,13 +1,13 @@
 [gd_scene load_steps=20 format=3 uid="uid://0qmhn5wlmjrp"]
 
-[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://Enemies/Base/enemy.tscn" id="1_u70pn"]
-[ext_resource type="Script" path="res://Enemies/Kuma/kuma.gd" id="2_n6gpq"]
-[ext_resource type="AudioStream" uid="uid://dsjwjuxqe7pma" path="res://Enemies/Kuma/bigfoot_step1.wav" id="3_1roqs"]
-[ext_resource type="Texture2D" uid="uid://b1u6cyj6cu53i" path="res://Enemies/Kuma/kuma.png" id="3_as70h"]
-[ext_resource type="AudioStream" uid="uid://dmjkefdol2msp" path="res://Enemies/Kuma/bigfoot_attack.wav" id="4_60yrb"]
-[ext_resource type="Texture2D" uid="uid://c5eumbrg7gufu" path="res://Enemies/Kuma/2460_2.png" id="4_opiq6"]
-[ext_resource type="AudioStream" uid="uid://imf5385udnfd" path="res://Enemies/Kuma/bigfoot_damage.wav" id="5_uo1fy"]
-[ext_resource type="AudioStream" uid="uid://dfbv76ynj61o3" path="res://Enemies/Kuma/bigfoot_die.wav" id="6_sst7g"]
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://enemies/Base/enemy.tscn" id="1_u70pn"]
+[ext_resource type="Script" path="res://enemies/Kuma/kuma.gd" id="2_n6gpq"]
+[ext_resource type="AudioStream" uid="uid://dsjwjuxqe7pma" path="res://enemies/Kuma/bigfoot_step1.wav" id="3_1roqs"]
+[ext_resource type="Texture2D" uid="uid://b1u6cyj6cu53i" path="res://enemies/Kuma/kuma.png" id="3_as70h"]
+[ext_resource type="AudioStream" uid="uid://dmjkefdol2msp" path="res://enemies/Kuma/bigfoot_attack.wav" id="4_60yrb"]
+[ext_resource type="Texture2D" uid="uid://c5eumbrg7gufu" path="res://enemies/Kuma/2460_2.png" id="4_opiq6"]
+[ext_resource type="AudioStream" uid="uid://imf5385udnfd" path="res://enemies/Kuma/bigfoot_damage.wav" id="5_uo1fy"]
+[ext_resource type="AudioStream" uid="uid://dfbv76ynj61o3" path="res://enemies/Kuma/bigfoot_die.wav" id="6_sst7g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rvcpt"]
 atlas = ExtResource("3_as70h")

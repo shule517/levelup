@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dhb3y1t411pic"
-path="res://.godot/imported/pupa_die.wav-129f4bcc2a288f2f678994fb361fe897.sample"
+path="res://.godot/imported/pupa_die.wav-3e3543a82c83ffef8222219fdcb212f2.sample"
 
 [deps]
 
-source_file="res://Enemies/pupa_die.wav"
-dest_files=["res://.godot/imported/pupa_die.wav-129f4bcc2a288f2f678994fb361fe897.sample"]
+source_file="res://enemies/pupa_die.wav"
+dest_files=["res://.godot/imported/pupa_die.wav-3e3543a82c83ffef8222219fdcb212f2.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dxyiks6edgv6i"
-path="res://.godot/imported/attack_whip.wav-ab8879fbe2a9b5e38627c0fcfe0ad6dd.sample"
+path="res://.godot/imported/attack_whip.wav-983c65287df570e75a281ff34ffaf32e.sample"
 
 [deps]
 
-source_file="res://Enemies/attack_whip.wav"
-dest_files=["res://.godot/imported/attack_whip.wav-ab8879fbe2a9b5e38627c0fcfe0ad6dd.sample"]
+source_file="res://enemies/attack_whip.wav"
+dest_files=["res://.godot/imported/attack_whip.wav-983c65287df570e75a281ff34ffaf32e.sample"]
 
 [params]
 

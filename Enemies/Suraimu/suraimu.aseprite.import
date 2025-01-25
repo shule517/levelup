@@ -3,12 +3,12 @@
 importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
 uid="uid://bbpututrb5u3b"
-path="res://.godot/imported/suraimu.aseprite-fb0b05b2b55f5a8eb8ae7741d298eb38.res"
+path="res://.godot/imported/suraimu.aseprite-2580a58ae69c4c8bd5fec93687a3c7c6.res"
 
 [deps]
 
-source_file="res://Enemies/Suraimu/suraimu.aseprite"
-dest_files=["res://.godot/imported/suraimu.aseprite-fb0b05b2b55f5a8eb8ae7741d298eb38.res"]
+source_file="res://enemies/Suraimu/suraimu.aseprite"
+dest_files=["res://.godot/imported/suraimu.aseprite-2580a58ae69c4c8bd5fec93687a3c7c6.res"]
 
 [params]
 

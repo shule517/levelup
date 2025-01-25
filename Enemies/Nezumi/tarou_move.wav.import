@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c0ier8b2rgwkp"
-path="res://.godot/imported/tarou_move.wav-f20822e332b48b087d8238eb70501f46.sample"
+path="res://.godot/imported/tarou_move.wav-6209f1c5526733098861743f06438843.sample"
 
 [deps]
 
-source_file="res://Enemies/Nezumi/tarou_move.wav"
-dest_files=["res://.godot/imported/tarou_move.wav-f20822e332b48b087d8238eb70501f46.sample"]
+source_file="res://enemies/Nezumi/tarou_move.wav"
+dest_files=["res://.godot/imported/tarou_move.wav-6209f1c5526733098861743f06438843.sample"]
 
 [params]
 

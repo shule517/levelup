@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c27a0jvy1gfo"
-path="res://.godot/imported/Flies_anim.png-dd7a20213564a10db752754b1344f80c.ctex"
+path="res://.godot/imported/Flies_anim.png-44b3fd74730972a4e37278d17cb8704e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cute_Fantasy_Desert/Props/Flies_anim.png"
-dest_files=["res://.godot/imported/Flies_anim.png-dd7a20213564a10db752754b1344f80c.ctex"]
+source_file="res://assets/Cute_Fantasy_Desert/Props/Flies_anim.png"
+dest_files=["res://.godot/imported/Flies_anim.png-44b3fd74730972a4e37278d17cb8704e.ctex"]
 
 [params]
 

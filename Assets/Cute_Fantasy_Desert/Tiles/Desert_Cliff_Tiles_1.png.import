@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5m2eesncxnr3"
-path="res://.godot/imported/Desert_Cliff_Tiles_1.png-51feaebc2ae5c26760ef8c481f967334.ctex"
+path="res://.godot/imported/Desert_Cliff_Tiles_1.png-0f944abb0aeabb8fcc01b12a7e690638.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cute_Fantasy_Desert/Tiles/Desert_Cliff_Tiles_1.png"
-dest_files=["res://.godot/imported/Desert_Cliff_Tiles_1.png-51feaebc2ae5c26760ef8c481f967334.ctex"]
+source_file="res://assets/Cute_Fantasy_Desert/Tiles/Desert_Cliff_Tiles_1.png"
+dest_files=["res://.godot/imported/Desert_Cliff_Tiles_1.png-0f944abb0aeabb8fcc01b12a7e690638.ctex"]
 
 [params]
 

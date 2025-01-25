@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cjw724q0aldhf"
-path="res://.godot/imported/skel_archer_die.wav-b63e9da3e2883debecf089871599bed4.sample"
+path="res://.godot/imported/skel_archer_die.wav-ade33f894c17d1b9b1d09bd291610e03.sample"
 
 [deps]
 
-source_file="res://Enemies/skel_archer_die.wav"
-dest_files=["res://.godot/imported/skel_archer_die.wav-b63e9da3e2883debecf089871599bed4.sample"]
+source_file="res://enemies/skel_archer_die.wav"
+dest_files=["res://.godot/imported/skel_archer_die.wav-ade33f894c17d1b9b1d09bd291610e03.sample"]
 
 [params]
 

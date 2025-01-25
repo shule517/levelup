@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1a123o43biem"
-path="res://.godot/imported/Summer3.png-4e4c8f2ae6da46a8736786be24069d4b.ctex"
+path="res://.godot/imported/Summer3.png-4e6e38f2473851e489a9a743a34aa4b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Summer/Summer3.png"
-dest_files=["res://.godot/imported/Summer3.png-4e4c8f2ae6da46a8736786be24069d4b.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Tileset/Summer/Summer3.png"
+dest_files=["res://.godot/imported/Summer3.png-4e6e38f2473851e489a9a743a34aa4b9.ctex"]
 
 [params]
 

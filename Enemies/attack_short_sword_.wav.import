@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bpc073xs8oqnn"
-path="res://.godot/imported/attack_short_sword_.wav-48d3c5b96b2bd4989f9acf8c81fb3dc0.sample"
+path="res://.godot/imported/attack_short_sword_.wav-d4564819fb5184bf24353774409c54ea.sample"
 
 [deps]
 
-source_file="res://Enemies/attack_short_sword_.wav"
-dest_files=["res://.godot/imported/attack_short_sword_.wav-48d3c5b96b2bd4989f9acf8c81fb3dc0.sample"]
+source_file="res://enemies/attack_short_sword_.wav"
+dest_files=["res://.godot/imported/attack_short_sword_.wav-d4564819fb5184bf24353774409c54ea.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://crx2lbepuk75h"
-path="res://.godot/imported/roda_frog_attack1.wav-5b665dc05966c6ed6f65347ffd3dada0.sample"
+path="res://.godot/imported/roda_frog_attack1.wav-e30a9cb86fe366b649746aff5c200db2.sample"
 
 [deps]
 
-source_file="res://Enemies/roda_frog_attack1.wav"
-dest_files=["res://.godot/imported/roda_frog_attack1.wav-5b665dc05966c6ed6f65347ffd3dada0.sample"]
+source_file="res://enemies/roda_frog_attack1.wav"
+dest_files=["res://.godot/imported/roda_frog_attack1.wav-e30a9cb86fe366b649746aff5c200db2.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b8ku80inhdtat"
-path="res://.godot/imported/wolf_stand.wav-a2ba6628d4a5b2f4583566a03855f6ba.sample"
+path="res://.godot/imported/wolf_stand.wav-a08d3fdbaae27dcd384fab9ea4fa6423.sample"
 
 [deps]
 
-source_file="res://Enemies/wolf_stand.wav"
-dest_files=["res://.godot/imported/wolf_stand.wav-a2ba6628d4a5b2f4583566a03855f6ba.sample"]
+source_file="res://enemies/wolf_stand.wav"
+dest_files=["res://.godot/imported/wolf_stand.wav-a08d3fdbaae27dcd384fab9ea4fa6423.sample"]
 
 [params]
 

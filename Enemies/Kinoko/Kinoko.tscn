@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://dyqxqqrjedcfm"]
 
-[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://Enemies/Base/enemy.tscn" id="1_g7pxc"]
-[ext_resource type="Texture2D" uid="uid://crx0viuw4vj0x" path="res://Enemies/Kinoko/キノコ.png" id="2_2q1qg"]
-[ext_resource type="Script" path="res://Enemies/Kinoko/kinoko.gd" id="2_yom8x"]
-[ext_resource type="AudioStream" uid="uid://ijgrhglovow3" path="res://Enemies/Kinoko/spore_move2.wav" id="3_lrtfe"]
-[ext_resource type="AudioStream" uid="uid://cwocwqtpeqd8s" path="res://Enemies/Kinoko/spore_attack.wav" id="4_d154f"]
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://enemies/Base/enemy.tscn" id="1_g7pxc"]
+[ext_resource type="Texture2D" uid="uid://crx0viuw4vj0x" path="res://enemies/Kinoko/キノコ.png" id="2_2q1qg"]
+[ext_resource type="Script" path="res://enemies/Kinoko/kinoko.gd" id="2_yom8x"]
+[ext_resource type="AudioStream" uid="uid://ijgrhglovow3" path="res://enemies/Kinoko/spore_move2.wav" id="3_lrtfe"]
+[ext_resource type="AudioStream" uid="uid://cwocwqtpeqd8s" path="res://enemies/Kinoko/spore_attack.wav" id="4_d154f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjcfr"]
 atlas = ExtResource("2_2q1qg")

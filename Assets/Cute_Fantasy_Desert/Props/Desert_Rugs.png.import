@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drirrjnc0hh6"
-path="res://.godot/imported/Desert_Rugs.png-4b21a9d0e17c5667081c3cbcec842f89.ctex"
+path="res://.godot/imported/Desert_Rugs.png-106a24d50e5228321bf4e559b915f065.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cute_Fantasy_Desert/Props/Desert_Rugs.png"
-dest_files=["res://.godot/imported/Desert_Rugs.png-4b21a9d0e17c5667081c3cbcec842f89.ctex"]
+source_file="res://assets/Cute_Fantasy_Desert/Props/Desert_Rugs.png"
+dest_files=["res://.godot/imported/Desert_Rugs.png-106a24d50e5228321bf4e559b915f065.ctex"]
 
 [params]
 

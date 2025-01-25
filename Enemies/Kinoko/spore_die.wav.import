@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bxd6somy7bvnn"
-path="res://.godot/imported/spore_die.wav-d5132c4f4cf42de60982e03ea85d265f.sample"
+path="res://.godot/imported/spore_die.wav-c99e5a8e04d4adc57fe95184f9d03bd2.sample"
 
 [deps]
 
-source_file="res://Enemies/Kinoko/spore_die.wav"
-dest_files=["res://.godot/imported/spore_die.wav-d5132c4f4cf42de60982e03ea85d265f.sample"]
+source_file="res://enemies/Kinoko/spore_die.wav"
+dest_files=["res://.godot/imported/spore_die.wav-c99e5a8e04d4adc57fe95184f9d03bd2.sample"]
 
 [params]
 

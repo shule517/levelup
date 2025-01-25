@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dw7t48dnashbj"
-path="res://.godot/imported/condor_die.wav-cbcee2700addb7e4e85ba0ebc370273f.sample"
+path="res://.godot/imported/condor_die.wav-78117b6861733fe428684539a0e74e8b.sample"
 
 [deps]
 
-source_file="res://Enemies/Karasu/condor_die.wav"
-dest_files=["res://.godot/imported/condor_die.wav-cbcee2700addb7e4e85ba0ebc370273f.sample"]
+source_file="res://enemies/Karasu/condor_die.wav"
+dest_files=["res://.godot/imported/condor_die.wav-78117b6861733fe428684539a0e74e8b.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv21wl212eo5y"
-path="res://.godot/imported/451_スライム.png-91a0851e42dd5d2300f9b9c63f651aff.ctex"
+path="res://.godot/imported/451_スライム.png-31690209a7f740c20740dd6d291e38d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/451_スライム.png"
-dest_files=["res://.godot/imported/451_スライム.png-91a0851e42dd5d2300f9b9c63f651aff.ctex"]
+source_file="res://assets/QVMob/451_スライム.png"
+dest_files=["res://.godot/imported/451_スライム.png-31690209a7f740c20740dd6d291e38d7.ctex"]
 
 [params]
 

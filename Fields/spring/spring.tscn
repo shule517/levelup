@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=4 uid="uid://cyknr7jttda31"]
 
-[ext_resource type="Script" path="res://Fields/base/field.gd" id="1_017ow"]
-[ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
-[ext_resource type="Texture2D" uid="uid://bpajhqrko0bpy" path="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Winter/Winter1.png" id="3_cm3ci"]
-[ext_resource type="Texture2D" uid="uid://dampm7q6amh07" path="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Sand/Sand1.png" id="4_oyqoj"]
+[ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
+[ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
+[ext_resource type="Texture2D" uid="uid://bpajhqrko0bpy" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Winter/Winter1.png" id="3_cm3ci"]
+[ext_resource type="Texture2D" uid="uid://dampm7q6amh07" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Sand/Sand1.png" id="4_oyqoj"]
 [ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="5_lhf5p"]
-[ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://Fields/Warp/warp.tscn" id="6_2xrom"]
-[ext_resource type="PackedScene" uid="uid://csj0hwaue3oq1" path="res://Enemies/Suraimu/suraimu.tscn" id="7_ho58m"]
+[ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://fields/Warp/warp.tscn" id="6_2xrom"]
+[ext_resource type="PackedScene" uid="uid://csj0hwaue3oq1" path="res://enemies/Suraimu/suraimu.tscn" id="7_ho58m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5gqc"]
 texture = ExtResource("2_746s0")

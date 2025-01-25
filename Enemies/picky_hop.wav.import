@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bjeu3lm60mgfr"
-path="res://.godot/imported/picky_hop.wav-08ad083af1ddcc10ff8cd912dee42bc4.sample"
+path="res://.godot/imported/picky_hop.wav-4e29c25100dcdf812c97cf1f886817ab.sample"
 
 [deps]
 
-source_file="res://Enemies/picky_hop.wav"
-dest_files=["res://.godot/imported/picky_hop.wav-08ad083af1ddcc10ff8cd912dee42bc4.sample"]
+source_file="res://enemies/picky_hop.wav"
+dest_files=["res://.godot/imported/picky_hop.wav-4e29c25100dcdf812c97cf1f886817ab.sample"]
 
 [params]
 

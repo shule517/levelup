@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b0q81hwb8tjag"
-path="res://.godot/imported/minorous_attack.wav-835d2b10aa7bb9f6673bbf6fc379ea2f.sample"
+path="res://.godot/imported/minorous_attack.wav-01d38c846ebc9e2171abd3c0ee6507a9.sample"
 
 [deps]
 
-source_file="res://Enemies/_Minotauros/minorous_attack.wav"
-dest_files=["res://.godot/imported/minorous_attack.wav-835d2b10aa7bb9f6673bbf6fc379ea2f.sample"]
+source_file="res://enemies/_Minotauros/minorous_attack.wav"
+dest_files=["res://.godot/imported/minorous_attack.wav-01d38c846ebc9e2171abd3c0ee6507a9.sample"]
 
 [params]
 

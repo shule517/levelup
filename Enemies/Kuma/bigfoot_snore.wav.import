@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bfdt7j32fgn2r"
-path="res://.godot/imported/bigfoot_snore.wav-17a5134b3bd7ee5b41af03673462c444.sample"
+path="res://.godot/imported/bigfoot_snore.wav-e495b740f13f0439a46672f60a336e2d.sample"
 
 [deps]
 
-source_file="res://Enemies/Kuma/bigfoot_snore.wav"
-dest_files=["res://.godot/imported/bigfoot_snore.wav-17a5134b3bd7ee5b41af03673462c444.sample"]
+source_file="res://enemies/Kuma/bigfoot_snore.wav"
+dest_files=["res://.godot/imported/bigfoot_snore.wav-e495b740f13f0439a46672f60a336e2d.sample"]
 
 [params]
 

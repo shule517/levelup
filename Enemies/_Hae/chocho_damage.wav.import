@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dxf3uou2h66o6"
-path="res://.godot/imported/chocho_damage.wav-6ee1b7de491b2714a3ffd803d5ff469c.sample"
+path="res://.godot/imported/chocho_damage.wav-a34be5f23f866fdcb240c25c53b572b0.sample"
 
 [deps]
 
-source_file="res://Enemies/_Hae/chocho_damage.wav"
-dest_files=["res://.godot/imported/chocho_damage.wav-6ee1b7de491b2714a3ffd803d5ff469c.sample"]
+source_file="res://enemies/_Hae/chocho_damage.wav"
+dest_files=["res://.godot/imported/chocho_damage.wav-a34be5f23f866fdcb240c25c53b572b0.sample"]
 
 [params]
 

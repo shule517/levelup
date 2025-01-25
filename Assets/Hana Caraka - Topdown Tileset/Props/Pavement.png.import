@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b886837e31fhq"
-path="res://.godot/imported/Pavement.png-211159082b70a1346cfc00b08c1745b1.ctex"
+path="res://.godot/imported/Pavement.png-95bf7a2ddc518952b0a14f68275957fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Props/Pavement.png"
-dest_files=["res://.godot/imported/Pavement.png-211159082b70a1346cfc00b08c1745b1.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Props/Pavement.png"
+dest_files=["res://.godot/imported/Pavement.png-95bf7a2ddc518952b0a14f68275957fa.ctex"]
 
 [params]
 

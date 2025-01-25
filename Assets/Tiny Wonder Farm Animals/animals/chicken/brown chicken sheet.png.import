@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5thts3jo3slj"
-path="res://.godot/imported/brown chicken sheet.png-d2f447d11aaba8822456768b9c42afcf.ctex"
+path="res://.godot/imported/brown chicken sheet.png-15ac976c54415563593a741a381e0957.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiny Wonder Farm Animals/animals/chicken/brown chicken sheet.png"
-dest_files=["res://.godot/imported/brown chicken sheet.png-d2f447d11aaba8822456768b9c42afcf.ctex"]
+source_file="res://assets/Tiny Wonder Farm Animals/animals/chicken/brown chicken sheet.png"
+dest_files=["res://.godot/imported/brown chicken sheet.png-15ac976c54415563593a741a381e0957.ctex"]
 
 [params]
 

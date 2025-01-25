@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccnevklrdmm03"
-path="res://.godot/imported/Vulture_1.png-5f084184f552c6ad4c4074f3a0af3fd5.ctex"
+path="res://.godot/imported/Vulture_1.png-553fe91118c407c1c4af40ea79f2a39d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cute_Fantasy_Desert/Animals/Vulture/Vulture_1.png"
-dest_files=["res://.godot/imported/Vulture_1.png-5f084184f552c6ad4c4074f3a0af3fd5.ctex"]
+source_file="res://assets/Cute_Fantasy_Desert/Animals/Vulture/Vulture_1.png"
+dest_files=["res://.godot/imported/Vulture_1.png-553fe91118c407c1c4af40ea79f2a39d.ctex"]
 
 [params]
 

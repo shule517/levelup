@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbei3qefsykjr"
-path="res://.godot/imported/bridge_animated.png-d90dd0f85aad8e4b6c36205b62d149b6.ctex"
+path="res://.godot/imported/bridge_animated.png-c547293f71907e465d24dbc507eaf1fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LittleTown_assetpack/tileset/bridge_animated.png"
-dest_files=["res://.godot/imported/bridge_animated.png-d90dd0f85aad8e4b6c36205b62d149b6.ctex"]
+source_file="res://assets/LittleTown_assetpack/tileset/bridge_animated.png"
+dest_files=["res://.godot/imported/bridge_animated.png-c547293f71907e465d24dbc507eaf1fb.ctex"]
 
 [params]
 

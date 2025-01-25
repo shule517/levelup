@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bubfttloexpfa"
-path="res://.godot/imported/poring_attack.wav-174efb662010c8ed2ff9f2883f050e12.sample"
+path="res://.godot/imported/poring_attack.wav-7e30084ff0afe23d0c7a5b4c74d2f022.sample"
 
 [deps]
 
-source_file="res://Enemies/Suraimu/poring_attack.wav"
-dest_files=["res://.godot/imported/poring_attack.wav-174efb662010c8ed2ff9f2883f050e12.sample"]
+source_file="res://enemies/Suraimu/poring_attack.wav"
+dest_files=["res://.godot/imported/poring_attack.wav-7e30084ff0afe23d0c7a5b4c74d2f022.sample"]
 
 [params]
 

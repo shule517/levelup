@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://onj4n1tvb0g8"
-path="res://.godot/imported/skel_archer_attack.wav-4ff0ed6e3f6b011218d2e8bed0937be4.sample"
+path="res://.godot/imported/skel_archer_attack.wav-9e14d736614c8258ff554befc61acc96.sample"
 
 [deps]
 
-source_file="res://Enemies/skel_archer_attack.wav"
-dest_files=["res://.godot/imported/skel_archer_attack.wav-4ff0ed6e3f6b011218d2e8bed0937be4.sample"]
+source_file="res://enemies/skel_archer_attack.wav"
+dest_files=["res://.godot/imported/skel_archer_attack.wav-9e14d736614c8258ff554befc61acc96.sample"]
 
 [params]
 

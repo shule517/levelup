@@ -3,12 +3,12 @@
 importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
 uid="uid://0w3vs1sxe0hs"
-path="res://.godot/imported/ravosu.aseprite-9cafbc9678f3da16cd8b530afbeef398.res"
+path="res://.godot/imported/ravosu.aseprite-d985ddf9a021441ae6b58c932c379976.res"
 
 [deps]
 
-source_file="res://Enemies/Ravosu/ravosu.aseprite"
-dest_files=["res://.godot/imported/ravosu.aseprite-9cafbc9678f3da16cd8b530afbeef398.res"]
+source_file="res://enemies/Ravosu/ravosu.aseprite"
+dest_files=["res://.godot/imported/ravosu.aseprite-d985ddf9a021441ae6b58c932c379976.res"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://borlf5fcdn4ih"
-path="res://.godot/imported/black cow sheet.png-f2343e442be9c63c9494838b4014db2b.ctex"
+path="res://.godot/imported/black cow sheet.png-54c2409c1a68b0b0713377ae2e6a373f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiny Wonder Farm Animals/animals/cow/black cow sheet.png"
-dest_files=["res://.godot/imported/black cow sheet.png-f2343e442be9c63c9494838b4014db2b.ctex"]
+source_file="res://assets/Tiny Wonder Farm Animals/animals/cow/black cow sheet.png"
+dest_files=["res://.godot/imported/black cow sheet.png-54c2409c1a68b0b0713377ae2e6a373f.ctex"]
 
 [params]
 

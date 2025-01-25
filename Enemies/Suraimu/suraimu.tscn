@@ -1,13 +1,13 @@
 [gd_scene load_steps=23 format=3 uid="uid://csj0hwaue3oq1"]
 
-[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://Enemies/Base/enemy.tscn" id="1_c35nx"]
-[ext_resource type="Texture2D" uid="uid://c3ikuimxsunlg" path="res://Enemies/Suraimu/suraimu.png" id="2_1k3mf"]
-[ext_resource type="AudioStream" uid="uid://4ur1h21drcmo" path="res://Enemies/Suraimu/poring_move.wav" id="2_rwsah"]
-[ext_resource type="AudioStream" uid="uid://b82ndrleq1m7v" path="res://Enemies/Base/poring_attack.wav" id="3_7phjd"]
-[ext_resource type="AudioStream" uid="uid://g54r3jxhbl3o" path="res://Enemies/Suraimu/poring_die.wav" id="4_irsp8"]
-[ext_resource type="AudioStream" uid="uid://pgokwekydarh" path="res://Enemies/Suraimu/poring_damage.wav" id="4_n4j6q"]
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://enemies/Base/enemy.tscn" id="1_c35nx"]
+[ext_resource type="Texture2D" uid="uid://c3ikuimxsunlg" path="res://enemies/Suraimu/suraimu.png" id="2_1k3mf"]
+[ext_resource type="AudioStream" uid="uid://4ur1h21drcmo" path="res://enemies/Suraimu/poring_move.wav" id="2_rwsah"]
+[ext_resource type="AudioStream" uid="uid://b82ndrleq1m7v" path="res://enemies/Base/poring_attack.wav" id="3_7phjd"]
+[ext_resource type="AudioStream" uid="uid://g54r3jxhbl3o" path="res://enemies/Suraimu/poring_die.wav" id="4_irsp8"]
+[ext_resource type="AudioStream" uid="uid://pgokwekydarh" path="res://enemies/Suraimu/poring_damage.wav" id="4_n4j6q"]
 [ext_resource type="Shader" path="res://shader/outline.gdshader" id="6_asera"]
-[ext_resource type="Texture2D" uid="uid://ccopvtdej6qwp" path="res://Enemies/Suraimu/2460_2.png" id="8_hasdr"]
+[ext_resource type="Texture2D" uid="uid://ccopvtdej6qwp" path="res://enemies/Suraimu/2460_2.png" id="8_hasdr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ut0is"]
 shader = ExtResource("6_asera")

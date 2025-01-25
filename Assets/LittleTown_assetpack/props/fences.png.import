@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbnky3v15v4dj"
-path="res://.godot/imported/fences.png-32f799b36889cfa3ce47ab3a12f93173.ctex"
+path="res://.godot/imported/fences.png-10a27dc0aa85a4f02ed3e481e1a56461.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LittleTown_assetpack/props/fences.png"
-dest_files=["res://.godot/imported/fences.png-32f799b36889cfa3ce47ab3a12f93173.ctex"]
+source_file="res://assets/LittleTown_assetpack/props/fences.png"
+dest_files=["res://.godot/imported/fences.png-10a27dc0aa85a4f02ed3e481e1a56461.ctex"]
 
 [params]
 

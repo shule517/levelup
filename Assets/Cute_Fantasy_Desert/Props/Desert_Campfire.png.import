@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xjhrkeswnaje"
-path="res://.godot/imported/Desert_Campfire.png-137847493b91a4a73acbfa118ff626a5.ctex"
+path="res://.godot/imported/Desert_Campfire.png-39d2ef3edd4db30794065f5d8ed56a3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cute_Fantasy_Desert/Props/Desert_Campfire.png"
-dest_files=["res://.godot/imported/Desert_Campfire.png-137847493b91a4a73acbfa118ff626a5.ctex"]
+source_file="res://assets/Cute_Fantasy_Desert/Props/Desert_Campfire.png"
+dest_files=["res://.godot/imported/Desert_Campfire.png-39d2ef3edd4db30794065f5d8ed56a3d.ctex"]
 
 [params]
 

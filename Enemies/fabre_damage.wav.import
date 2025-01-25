@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://m0tkyid7kxv4"
-path="res://.godot/imported/fabre_damage.wav-21d338e6e4418d99092a2f1b40812fba.sample"
+path="res://.godot/imported/fabre_damage.wav-9215df672fd6334a19c7e4e89409779b.sample"
 
 [deps]
 
-source_file="res://Enemies/fabre_damage.wav"
-dest_files=["res://.godot/imported/fabre_damage.wav-21d338e6e4418d99092a2f1b40812fba.sample"]
+source_file="res://enemies/fabre_damage.wav"
+dest_files=["res://.godot/imported/fabre_damage.wav-9215df672fd6334a19c7e4e89409779b.sample"]
 
 [params]
 

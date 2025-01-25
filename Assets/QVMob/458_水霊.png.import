@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mpalmngcomqi"
-path="res://.godot/imported/458_水霊.png-f9380f03100d961984f2317779d30679.ctex"
+path="res://.godot/imported/458_水霊.png-f94b086bad61f94c925675e8616f6797.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/458_水霊.png"
-dest_files=["res://.godot/imported/458_水霊.png-f9380f03100d961984f2317779d30679.ctex"]
+source_file="res://assets/QVMob/458_水霊.png"
+dest_files=["res://.godot/imported/458_水霊.png-f94b086bad61f94c925675e8616f6797.ctex"]
 
 [params]
 

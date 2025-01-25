@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cshhba7n86sk"
-path="res://.godot/imported/482_賞味期限の切れた箱.png-c67f8ea88d277067c85616be2fb123e1.ctex"
+path="res://.godot/imported/482_賞味期限の切れた箱.png-571ccc4f6ae3404192839c740ca869b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/482_賞味期限の切れた箱.png"
-dest_files=["res://.godot/imported/482_賞味期限の切れた箱.png-c67f8ea88d277067c85616be2fb123e1.ctex"]
+source_file="res://assets/QVMob/482_賞味期限の切れた箱.png"
+dest_files=["res://.godot/imported/482_賞味期限の切れた箱.png-571ccc4f6ae3404192839c740ca869b6.ctex"]
 
 [params]
 

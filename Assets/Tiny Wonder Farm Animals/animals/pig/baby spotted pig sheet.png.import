@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dovhpguaef24a"
-path="res://.godot/imported/baby spotted pig sheet.png-d7f69edc88dbdb0dc3fce3a2f45e95e4.ctex"
+path="res://.godot/imported/baby spotted pig sheet.png-fd865b0901bec7a89d4391ecb27c85ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiny Wonder Farm Animals/animals/pig/baby spotted pig sheet.png"
-dest_files=["res://.godot/imported/baby spotted pig sheet.png-d7f69edc88dbdb0dc3fce3a2f45e95e4.ctex"]
+source_file="res://assets/Tiny Wonder Farm Animals/animals/pig/baby spotted pig sheet.png"
+dest_files=["res://.godot/imported/baby spotted pig sheet.png-fd865b0901bec7a89d4391ecb27c85ce.ctex"]
 
 [params]
 

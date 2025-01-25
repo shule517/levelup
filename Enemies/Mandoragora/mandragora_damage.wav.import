@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ckpfviinyojcd"
-path="res://.godot/imported/mandragora_damage.wav-02aaabe78f755847999927f8a17780ce.sample"
+path="res://.godot/imported/mandragora_damage.wav-27076912035be37dc0f7800e7296e388.sample"
 
 [deps]
 
-source_file="res://Enemies/Mandoragora/mandragora_damage.wav"
-dest_files=["res://.godot/imported/mandragora_damage.wav-02aaabe78f755847999927f8a17780ce.sample"]
+source_file="res://enemies/Mandoragora/mandragora_damage.wav"
+dest_files=["res://.godot/imported/mandragora_damage.wav-27076912035be37dc0f7800e7296e388.sample"]
 
 [params]
 

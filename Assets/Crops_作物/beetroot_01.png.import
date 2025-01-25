@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0iasv83tgwns"
-path="res://.godot/imported/beetroot_01.png-1210725d7cd960071c4026580faca1e3.ctex"
+path="res://.godot/imported/beetroot_01.png-2aaaacff9bf5445189ad6372abef495f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Crops_作物/beetroot_01.png"
-dest_files=["res://.godot/imported/beetroot_01.png-1210725d7cd960071c4026580faca1e3.ctex"]
+source_file="res://assets/Crops_作物/beetroot_01.png"
+dest_files=["res://.godot/imported/beetroot_01.png-2aaaacff9bf5445189ad6372abef495f.ctex"]
 
 [params]
 

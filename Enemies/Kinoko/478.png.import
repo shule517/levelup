@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb27h1jk403g1"
-path="res://.godot/imported/478.png-9d05dc20228b9893189a38af642744e5.ctex"
+path="res://.godot/imported/478.png-cba8e52f0efc52f2c4fd0f10acc1c1a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Kinoko/478.png"
-dest_files=["res://.godot/imported/478.png-9d05dc20228b9893189a38af642744e5.ctex"]
+source_file="res://enemies/Kinoko/478.png"
+dest_files=["res://.godot/imported/478.png-cba8e52f0efc52f2c4fd0f10acc1c1a6.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2haodhlxphop"
-path="res://.godot/imported/472.png-92e924832ec6dbde4370838d1269379d.ctex"
+path="res://.godot/imported/472.png-c168557772aa0f0f2b4329e1233d4a2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Mandoragora/472.png"
-dest_files=["res://.godot/imported/472.png-92e924832ec6dbde4370838d1269379d.ctex"]
+source_file="res://enemies/Mandoragora/472.png"
+dest_files=["res://.godot/imported/472.png-c168557772aa0f0f2b4329e1233d4a2d.ctex"]
 
 [params]
 

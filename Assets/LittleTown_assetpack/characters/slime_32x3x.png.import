@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dei6ubxijs2h2"
-path="res://.godot/imported/slime_32x3x.png-047cbaa9eca86c47e4221f0c9b440371.ctex"
+path="res://.godot/imported/slime_32x3x.png-de3032228ef8e6ac15a4faadcdd746ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LittleTown_assetpack/characters/slime_32x3x.png"
-dest_files=["res://.godot/imported/slime_32x3x.png-047cbaa9eca86c47e4221f0c9b440371.ctex"]
+source_file="res://assets/LittleTown_assetpack/characters/slime_32x3x.png"
+dest_files=["res://.godot/imported/slime_32x3x.png-de3032228ef8e6ac15a4faadcdd746ec.ctex"]
 
 [params]
 

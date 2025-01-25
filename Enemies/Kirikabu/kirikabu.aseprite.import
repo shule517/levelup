@@ -3,12 +3,12 @@
 importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
 uid="uid://b38vuvk57oe1k"
-path="res://.godot/imported/kirikabu.aseprite-50ad4b4f860fef297427db443ea6ebe7.res"
+path="res://.godot/imported/kirikabu.aseprite-4b840724447989bb57efe2a01d383b82.res"
 
 [deps]
 
-source_file="res://Enemies/Kirikabu/kirikabu.aseprite"
-dest_files=["res://.godot/imported/kirikabu.aseprite-50ad4b4f860fef297427db443ea6ebe7.res"]
+source_file="res://enemies/Kirikabu/kirikabu.aseprite"
+dest_files=["res://.godot/imported/kirikabu.aseprite-4b840724447989bb57efe2a01d383b82.res"]
 
 [params]
 

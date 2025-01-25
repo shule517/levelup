@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cjhb5ilsryx40"
-path="res://.godot/imported/attck_axe.wav-42d9aff8797ab210845aebc09355539e.sample"
+path="res://.godot/imported/attck_axe.wav-bda0f5ea1d643c723d93bc62a4f3c50f.sample"
 
 [deps]
 
-source_file="res://Enemies/attck_axe.wav"
-dest_files=["res://.godot/imported/attck_axe.wav-42d9aff8797ab210845aebc09355539e.sample"]
+source_file="res://enemies/attck_axe.wav"
+dest_files=["res://.godot/imported/attck_axe.wav-bda0f5ea1d643c723d93bc62a4f3c50f.sample"]
 
 [params]
 

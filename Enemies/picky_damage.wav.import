@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://drhcv2iov2d4j"
-path="res://.godot/imported/picky_damage.wav-68dc7c3a1f0ed5947e4d675d75dbb8f9.sample"
+path="res://.godot/imported/picky_damage.wav-c7309d54dcdc05634afb1dcb04bc55fe.sample"
 
 [deps]
 
-source_file="res://Enemies/picky_damage.wav"
-dest_files=["res://.godot/imported/picky_damage.wav-68dc7c3a1f0ed5947e4d675d75dbb8f9.sample"]
+source_file="res://enemies/picky_damage.wav"
+dest_files=["res://.godot/imported/picky_damage.wav-c7309d54dcdc05634afb1dcb04bc55fe.sample"]
 
 [params]
 

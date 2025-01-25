@@ -3,12 +3,12 @@
 importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
 uid="uid://bnvj1wirdk1is"
-path="res://.godot/imported/isekai.aseprite-0422a85716ec6910e40d2fa70ee3e115.res"
+path="res://.godot/imported/isekai.aseprite-76d2d9ce1a1d2af02db78e5741844fcc.res"
 
 [deps]
 
-source_file="res://Fields/isekai/isekai.aseprite"
-dest_files=["res://.godot/imported/isekai.aseprite-0422a85716ec6910e40d2fa70ee3e115.res"]
+source_file="res://fields/isekai/isekai.aseprite"
+dest_files=["res://.godot/imported/isekai.aseprite-76d2d9ce1a1d2af02db78e5741844fcc.res"]
 
 [params]
 

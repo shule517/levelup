@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b8rt14k38oxvu"]
 
-[ext_resource type="Script" path="res://Enemies/MonsterSpawn/monster_spawn.gd" id="1_gg8lr"]
+[ext_resource type="Script" path="res://enemies/MonsterSpawn/monster_spawn.gd" id="1_gg8lr"]
 
 [node name="MonsterSpawn" type="Node2D"]
 script = ExtResource("1_gg8lr")

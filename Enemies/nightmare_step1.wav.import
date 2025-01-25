@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dlushswairsu5"
-path="res://.godot/imported/nightmare_step1.wav-f686362467c63f6819e4dab6a878bf33.sample"
+path="res://.godot/imported/nightmare_step1.wav-f5bbcf9fbc04a67470ce672058ba1527.sample"
 
 [deps]
 
-source_file="res://Enemies/nightmare_step1.wav"
-dest_files=["res://.godot/imported/nightmare_step1.wav-f686362467c63f6819e4dab6a878bf33.sample"]
+source_file="res://enemies/nightmare_step1.wav"
+dest_files=["res://.godot/imported/nightmare_step1.wav-f5bbcf9fbc04a67470ce672058ba1527.sample"]
 
 [params]
 

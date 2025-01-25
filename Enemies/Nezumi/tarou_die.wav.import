@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cf47tpmsxrtnq"
-path="res://.godot/imported/tarou_die.wav-7ef063579188ddaee93d6ab628eb1000.sample"
+path="res://.godot/imported/tarou_die.wav-6ac6c5afca67da96b2fc49ad021c601e.sample"
 
 [deps]
 
-source_file="res://Enemies/Nezumi/tarou_die.wav"
-dest_files=["res://.godot/imported/tarou_die.wav-7ef063579188ddaee93d6ab628eb1000.sample"]
+source_file="res://enemies/Nezumi/tarou_die.wav"
+dest_files=["res://.godot/imported/tarou_die.wav-6ac6c5afca67da96b2fc49ad021c601e.sample"]
 
 [params]
 

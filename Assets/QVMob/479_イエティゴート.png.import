@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://da5j7u1y7xfmf"
-path="res://.godot/imported/479_イエティゴート.png-d06f0f0e350531cd2a70b268d7e5f15f.ctex"
+path="res://.godot/imported/479_イエティゴート.png-f452aa7769b22a44e0bdab65896b0cac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/479_イエティゴート.png"
-dest_files=["res://.godot/imported/479_イエティゴート.png-d06f0f0e350531cd2a70b268d7e5f15f.ctex"]
+source_file="res://assets/QVMob/479_イエティゴート.png"
+dest_files=["res://.godot/imported/479_イエティゴート.png-f452aa7769b22a44e0bdab65896b0cac.ctex"]
 
 [params]
 

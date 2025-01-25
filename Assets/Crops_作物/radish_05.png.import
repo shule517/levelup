@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xbxfhp7kefie"
-path="res://.godot/imported/radish_05.png-4a0f8ae80b58070e2812c66ba8729c02.ctex"
+path="res://.godot/imported/radish_05.png-3e6adeaebcc729100dc37f7750c84baa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Crops_作物/radish_05.png"
-dest_files=["res://.godot/imported/radish_05.png-4a0f8ae80b58070e2812c66ba8729c02.ctex"]
+source_file="res://assets/Crops_作物/radish_05.png"
+dest_files=["res://.godot/imported/radish_05.png-3e6adeaebcc729100dc37f7750c84baa.ctex"]
 
 [params]
 

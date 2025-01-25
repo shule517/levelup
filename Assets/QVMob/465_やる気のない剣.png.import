@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b322ym0x058gq"
-path="res://.godot/imported/465_やる気のない剣.png-c24f5611b3de95877b5f98766d0c8b89.ctex"
+path="res://.godot/imported/465_やる気のない剣.png-5e8e4526046df24f2254aea674489bde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/465_やる気のない剣.png"
-dest_files=["res://.godot/imported/465_やる気のない剣.png-c24f5611b3de95877b5f98766d0c8b89.ctex"]
+source_file="res://assets/QVMob/465_やる気のない剣.png"
+dest_files=["res://.godot/imported/465_やる気のない剣.png-5e8e4526046df24f2254aea674489bde.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btk66stjl3kps"
-path="res://.godot/imported/kirikabu.png-f83a6f7f7653a439a35859ebed33310d.ctex"
+path="res://.godot/imported/kirikabu.png-997435655de2854555b7d14302122985.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Kirikabu/kirikabu.png"
-dest_files=["res://.godot/imported/kirikabu.png-f83a6f7f7653a439a35859ebed33310d.ctex"]
+source_file="res://enemies/Kirikabu/kirikabu.png"
+dest_files=["res://.godot/imported/kirikabu.png-997435655de2854555b7d14302122985.ctex"]
 
 [params]
 

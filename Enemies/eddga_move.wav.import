@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://jbxtf8paw8f1"
-path="res://.godot/imported/eddga_move.wav-22ef3516a36d9441ef5c6ee7afd4f1db.sample"
+path="res://.godot/imported/eddga_move.wav-58b8e3f45a6f9aef95f637b641960900.sample"
 
 [deps]
 
-source_file="res://Enemies/eddga_move.wav"
-dest_files=["res://.godot/imported/eddga_move.wav-22ef3516a36d9441ef5c6ee7afd4f1db.sample"]
+source_file="res://enemies/eddga_move.wav"
+dest_files=["res://.godot/imported/eddga_move.wav-58b8e3f45a6f9aef95f637b641960900.sample"]
 
 [params]
 

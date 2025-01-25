@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fw3x1yc0heq2"
-path="res://.godot/imported/紹介用画像.png-c9e7322f595593dd3f0da6f8172db079.ctex"
+path="res://.godot/imported/紹介用画像.png-e0aad1d25c3f1f4d9ac15964297828ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/紹介用画像.png"
-dest_files=["res://.godot/imported/紹介用画像.png-c9e7322f595593dd3f0da6f8172db079.ctex"]
+source_file="res://assets/QVMob/紹介用画像.png"
+dest_files=["res://.godot/imported/紹介用画像.png-e0aad1d25c3f1f4d9ac15964297828ac.ctex"]
 
 [params]
 

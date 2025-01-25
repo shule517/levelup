@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://vdakvf0xj1tf"
-path="res://.godot/imported/ork_warrior_attack1.wav-3af782798c7f120a056090245538d685.sample"
+path="res://.godot/imported/ork_warrior_attack1.wav-659481279c682a78453bd54a425fcae6.sample"
 
 [deps]
 
-source_file="res://Enemies/ork_warrior_attack1.wav"
-dest_files=["res://.godot/imported/ork_warrior_attack1.wav-3af782798c7f120a056090245538d685.sample"]
+source_file="res://enemies/ork_warrior_attack1.wav"
+dest_files=["res://.godot/imported/ork_warrior_attack1.wav-659481279c682a78453bd54a425fcae6.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dmefe5xdjfdht"
-path="res://.godot/imported/fabre_die.wav-055a763f45bec586404e3aa92331ad04.sample"
+path="res://.godot/imported/fabre_die.wav-5cf904ce2f5fb0b89dd9249302c6b1ff.sample"
 
 [deps]
 
-source_file="res://Enemies/fabre_die.wav"
-dest_files=["res://.godot/imported/fabre_die.wav-055a763f45bec586404e3aa92331ad04.sample"]
+source_file="res://enemies/fabre_die.wav"
+dest_files=["res://.godot/imported/fabre_die.wav-5cf904ce2f5fb0b89dd9249302c6b1ff.sample"]
 
 [params]
 

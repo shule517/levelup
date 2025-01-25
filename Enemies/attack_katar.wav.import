@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ck2scip6wtr6o"
-path="res://.godot/imported/attack_katar.wav-d29608879527a5d31897e20a903fdb60.sample"
+path="res://.godot/imported/attack_katar.wav-898cad0e48e046f083075ec4f474dbcf.sample"
 
 [deps]
 
-source_file="res://Enemies/attack_katar.wav"
-dest_files=["res://.godot/imported/attack_katar.wav-d29608879527a5d31897e20a903fdb60.sample"]
+source_file="res://enemies/attack_katar.wav"
+dest_files=["res://.godot/imported/attack_katar.wav-898cad0e48e046f083075ec4f474dbcf.sample"]
 
 [params]
 

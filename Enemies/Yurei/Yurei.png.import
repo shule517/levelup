@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://braxo1kl53kk2"
-path="res://.godot/imported/Yurei.png-c9f561b5c6e7b2bd42557013d8cdeeee.ctex"
+path="res://.godot/imported/Yurei.png-f33c73b7e78317d3372a8ff335fae8b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Yurei/Yurei.png"
-dest_files=["res://.godot/imported/Yurei.png-c9f561b5c6e7b2bd42557013d8cdeeee.ctex"]
+source_file="res://enemies/Yurei/Yurei.png"
+dest_files=["res://.godot/imported/Yurei.png-f33c73b7e78317d3372a8ff335fae8b4.ctex"]
 
 [params]
 

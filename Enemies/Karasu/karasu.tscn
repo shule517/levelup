@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://dhlpwbylh6hwc"]
 
-[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://Enemies/Base/enemy.tscn" id="1_d0eto"]
-[ext_resource type="AudioStream" uid="uid://cqmnston07t8u" path="res://Enemies/Karasu/condor_stand.wav" id="2_7qiik"]
-[ext_resource type="AudioStream" uid="uid://57ol4ngjyevp" path="res://Enemies/Karasu/condor_attack.wav" id="3_igfl5"]
-[ext_resource type="AudioStream" uid="uid://cdc4xemiy5j3s" path="res://Enemies/Karasu/condor_damage.wav" id="4_3q8sa"]
-[ext_resource type="AudioStream" uid="uid://dw7t48dnashbj" path="res://Enemies/Karasu/condor_die.wav" id="5_dkmg0"]
-[ext_resource type="Texture2D" uid="uid://bts4io0ad4yog" path="res://Enemies/Karasu/カラス.png" id="6_i0ukp"]
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://enemies/Base/enemy.tscn" id="1_d0eto"]
+[ext_resource type="AudioStream" uid="uid://cqmnston07t8u" path="res://enemies/Karasu/condor_stand.wav" id="2_7qiik"]
+[ext_resource type="AudioStream" uid="uid://57ol4ngjyevp" path="res://enemies/Karasu/condor_attack.wav" id="3_igfl5"]
+[ext_resource type="AudioStream" uid="uid://cdc4xemiy5j3s" path="res://enemies/Karasu/condor_damage.wav" id="4_3q8sa"]
+[ext_resource type="AudioStream" uid="uid://dw7t48dnashbj" path="res://enemies/Karasu/condor_die.wav" id="5_dkmg0"]
+[ext_resource type="Texture2D" uid="uid://bts4io0ad4yog" path="res://enemies/Karasu/カラス.png" id="6_i0ukp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_07ajq"]
 atlas = ExtResource("6_i0ukp")

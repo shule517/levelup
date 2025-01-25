@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://di6pjd5a0bfk0"
-path="res://.godot/imported/459_火霊.png-9ce22b0b790fae8b151e4f80f1f4be7c.ctex"
+path="res://.godot/imported/459_火霊.png-255fc6b46b40bf2403edd8d8f89a502d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/459_火霊.png"
-dest_files=["res://.godot/imported/459_火霊.png-9ce22b0b790fae8b151e4f80f1f4be7c.ctex"]
+source_file="res://assets/QVMob/459_火霊.png"
+dest_files=["res://.godot/imported/459_火霊.png-255fc6b46b40bf2403edd8d8f89a502d.ctex"]
 
 [params]
 

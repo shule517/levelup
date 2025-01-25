@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://pecvppuj5af2"
-path="res://.godot/imported/yoyo_die.wav-f368587120c8f280ffbabd67efbb62f6.sample"
+path="res://.godot/imported/yoyo_die.wav-07fa809b3f74c064dc2f0ffcc30788f3.sample"
 
 [deps]
 
-source_file="res://Enemies/yoyo_die.wav"
-dest_files=["res://.godot/imported/yoyo_die.wav-f368587120c8f280ffbabd67efbb62f6.sample"]
+source_file="res://enemies/yoyo_die.wav"
+dest_files=["res://.godot/imported/yoyo_die.wav-07fa809b3f74c064dc2f0ffcc30788f3.sample"]
 
 [params]
 

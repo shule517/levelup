@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dotvp5nnr44hx"
-path="res://.godot/imported/Waterfall - c3.png-ddc2fb2ce5cb3b5ddd4aba0ea294bfd4.ctex"
+path="res://.godot/imported/Waterfall - c3.png-652d2f53c0b2e54bcf9003fa05cc46fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Water/Waterfall/Waterfall - c3.png"
-dest_files=["res://.godot/imported/Waterfall - c3.png-ddc2fb2ce5cb3b5ddd4aba0ea294bfd4.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Water/Waterfall/Waterfall - c3.png"
+dest_files=["res://.godot/imported/Waterfall - c3.png-652d2f53c0b2e54bcf9003fa05cc46fd.ctex"]
 
 [params]
 

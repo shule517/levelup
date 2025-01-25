@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://da58h04eh6oqw"
-path="res://.godot/imported/Crate.png-14d904d74974122f8a86199d2e6eb27b.ctex"
+path="res://.godot/imported/Crate.png-15ae311ed9892f41fe6275502062cf50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Props/Animated/Crate.png"
-dest_files=["res://.godot/imported/Crate.png-14d904d74974122f8a86199d2e6eb27b.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Props/Animated/Crate.png"
+dest_files=["res://.godot/imported/Crate.png-15ae311ed9892f41fe6275502062cf50.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://chjgo6cxy3ouu"
-path="res://.godot/imported/anacondaq_attack.wav-a62ded439e16cfcb47a8eb78e9d7e432.sample"
+path="res://.godot/imported/anacondaq_attack.wav-4d1ac5ec6a4703f71186b55fbc7edc96.sample"
 
 [deps]
 
-source_file="res://Enemies/_Hebi/anacondaq_attack.wav"
-dest_files=["res://.godot/imported/anacondaq_attack.wav-a62ded439e16cfcb47a8eb78e9d7e432.sample"]
+source_file="res://enemies/_Hebi/anacondaq_attack.wav"
+dest_files=["res://.godot/imported/anacondaq_attack.wav-4d1ac5ec6a4703f71186b55fbc7edc96.sample"]
 
 [params]
 

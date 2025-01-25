@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gm2mwtgnxt0w"
-path="res://.godot/imported/fluffy white sheep sheet.png-5989633c18ed8631ee98ad2b788f179f.ctex"
+path="res://.godot/imported/fluffy white sheep sheet.png-db4b2e0674fe2123b50d11f6515e4ade.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiny Wonder Farm Animals/animals/sheep/fluffy white sheep sheet.png"
-dest_files=["res://.godot/imported/fluffy white sheep sheet.png-5989633c18ed8631ee98ad2b788f179f.ctex"]
+source_file="res://assets/Tiny Wonder Farm Animals/animals/sheep/fluffy white sheep sheet.png"
+dest_files=["res://.godot/imported/fluffy white sheep sheet.png-db4b2e0674fe2123b50d11f6515e4ade.ctex"]
 
 [params]
 

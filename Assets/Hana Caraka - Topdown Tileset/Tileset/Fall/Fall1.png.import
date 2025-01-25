@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqfidlomm8c5q"
-path="res://.godot/imported/Fall1.png-2b60d3e1874d6c3d499d49601fa33219.ctex"
+path="res://.godot/imported/Fall1.png-74b597fafb1265a834270662e671386d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Fall/Fall1.png"
-dest_files=["res://.godot/imported/Fall1.png-2b60d3e1874d6c3d499d49601fa33219.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Tileset/Fall/Fall1.png"
+dest_files=["res://.godot/imported/Fall1.png-74b597fafb1265a834270662e671386d.ctex"]
 
 [params]
 

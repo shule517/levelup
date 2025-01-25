@@ -3,12 +3,12 @@
 importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
 uid="uid://bi42hc16u1uxh"
-path="res://.godot/imported/mandoragora.aseprite-3771aac753b424575e457951c708acd5.res"
+path="res://.godot/imported/mandoragora.aseprite-a1a12e48827fd2385bbeba2dbe18bb74.res"
 
 [deps]
 
-source_file="res://Enemies/Mandoragora/mandoragora.aseprite"
-dest_files=["res://.godot/imported/mandoragora.aseprite-3771aac753b424575e457951c708acd5.res"]
+source_file="res://enemies/Mandoragora/mandoragora.aseprite"
+dest_files=["res://.godot/imported/mandoragora.aseprite-a1a12e48827fd2385bbeba2dbe18bb74.res"]
 
 [params]
 

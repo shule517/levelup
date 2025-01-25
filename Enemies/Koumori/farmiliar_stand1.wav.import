@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dku8667nul2ar"
-path="res://.godot/imported/farmiliar_stand1.wav-45c2c9f6d2ce2acc08efeda493111407.sample"
+path="res://.godot/imported/farmiliar_stand1.wav-ace31fb040cfe1f810e29dd0821786a5.sample"
 
 [deps]
 
-source_file="res://Enemies/Koumori/farmiliar_stand1.wav"
-dest_files=["res://.godot/imported/farmiliar_stand1.wav-45c2c9f6d2ce2acc08efeda493111407.sample"]
+source_file="res://enemies/Koumori/farmiliar_stand1.wav"
+dest_files=["res://.godot/imported/farmiliar_stand1.wav-ace31fb040cfe1f810e29dd0821786a5.sample"]
 
 [params]
 

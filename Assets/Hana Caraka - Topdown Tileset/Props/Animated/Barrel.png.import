@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u27ldnqvte1h"
-path="res://.godot/imported/Barrel.png-b0d5e592fcde0f6d11061dc27c7d40c5.ctex"
+path="res://.godot/imported/Barrel.png-2a6d09abb49377498cfd04820da50402.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Props/Animated/Barrel.png"
-dest_files=["res://.godot/imported/Barrel.png-b0d5e592fcde0f6d11061dc27c7d40c5.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Props/Animated/Barrel.png"
+dest_files=["res://.godot/imported/Barrel.png-2a6d09abb49377498cfd04820da50402.ctex"]
 
 [params]
 

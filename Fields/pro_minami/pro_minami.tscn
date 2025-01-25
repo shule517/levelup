@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=4 uid="uid://cpjxne48mtpy5"]
 
-[ext_resource type="Script" path="res://Fields/pro_minami/pro_minami.gd" id="1_nhss6"]
-[ext_resource type="Texture2D" uid="uid://c013iblmndljc" path="res://Fields/pro_minami/glasstown001.png" id="1_pmtx3"]
-[ext_resource type="PackedScene" uid="uid://csj0hwaue3oq1" path="res://Enemies/Suraimu/suraimu.tscn" id="2_fdnqp"]
+[ext_resource type="Script" path="res://fields/pro_minami/pro_minami.gd" id="1_nhss6"]
+[ext_resource type="Texture2D" uid="uid://c013iblmndljc" path="res://fields/pro_minami/glasstown001.png" id="1_pmtx3"]
+[ext_resource type="PackedScene" uid="uid://csj0hwaue3oq1" path="res://enemies/Suraimu/suraimu.tscn" id="2_fdnqp"]
 [ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="2_w02pd"]
-[ext_resource type="Texture2D" uid="uid://fxu7kfocfte3" path="res://Fields/pro_minami/prt_fild08.png" id="5_4po4n"]
+[ext_resource type="Texture2D" uid="uid://fxu7kfocfte3" path="res://fields/pro_minami/prt_fild08.png" id="5_4po4n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w1cdn"]
 texture = ExtResource("1_pmtx3")

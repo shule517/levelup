@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cau7g23j3awfy"
-path="res://.godot/imported/water 4-2-5.png-511eaf93707ea72dbe4930899c3acaa4.ctex"
+path="res://.godot/imported/water 4-2-5.png-42b1125e4d5f714eceb84758d8796a73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Water/Water 4/Color 2/water 4-2-5.png"
-dest_files=["res://.godot/imported/water 4-2-5.png-511eaf93707ea72dbe4930899c3acaa4.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Water/Water 4/Color 2/water 4-2-5.png"
+dest_files=["res://.godot/imported/water 4-2-5.png-42b1125e4d5f714eceb84758d8796a73.ctex"]
 
 [params]
 

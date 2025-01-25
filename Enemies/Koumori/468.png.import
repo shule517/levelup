@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1csapn65b4b7"
-path="res://.godot/imported/468.png-5ef7fbdd1274fb56bf7d1448a64646f6.ctex"
+path="res://.godot/imported/468.png-bdcf007f60e863f012716176179d4e51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Koumori/468.png"
-dest_files=["res://.godot/imported/468.png-5ef7fbdd1274fb56bf7d1448a64646f6.ctex"]
+source_file="res://enemies/Koumori/468.png"
+dest_files=["res://.godot/imported/468.png-bdcf007f60e863f012716176179d4e51.ctex"]
 
 [params]
 

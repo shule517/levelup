@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chgqfj1wl2xb8"
-path="res://.godot/imported/Water_Sack_On_Stick.png-70a6a0004d65592dd0d24a8b157b757c.ctex"
+path="res://.godot/imported/Water_Sack_On_Stick.png-8219900f5727ac1824ac753f9c3313a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cute_Fantasy_Desert/Props/Water_Sack_On_Stick.png"
-dest_files=["res://.godot/imported/Water_Sack_On_Stick.png-70a6a0004d65592dd0d24a8b157b757c.ctex"]
+source_file="res://assets/Cute_Fantasy_Desert/Props/Water_Sack_On_Stick.png"
+dest_files=["res://.godot/imported/Water_Sack_On_Stick.png-8219900f5727ac1824ac753f9c3313a4.ctex"]
 
 [params]
 

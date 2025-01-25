@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ckeor1b6bs7mr"]
 
-[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://Enemies/Base/enemy.tscn" id="1_rvsqy"]
-[ext_resource type="Script" path="res://Enemies/Nezumi/nezumi.gd" id="1_x18rc"]
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://enemies/Base/enemy.tscn" id="1_rvsqy"]
+[ext_resource type="Script" path="res://enemies/Nezumi/nezumi.gd" id="1_x18rc"]
 
 [node name="Nezumi" instance=ExtResource("1_rvsqy")]
 script = ExtResource("1_x18rc")

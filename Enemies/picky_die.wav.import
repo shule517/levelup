@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://djbuywrdppsa3"
-path="res://.godot/imported/picky_die.wav-e87df90369a004f3c455dd020660f71d.sample"
+path="res://.godot/imported/picky_die.wav-ddf05803a6e1e87ee8bc82e448078176.sample"
 
 [deps]
 
-source_file="res://Enemies/picky_die.wav"
-dest_files=["res://.godot/imported/picky_die.wav-e87df90369a004f3c455dd020660f71d.sample"]
+source_file="res://enemies/picky_die.wav"
+dest_files=["res://.godot/imported/picky_die.wav-ddf05803a6e1e87ee8bc82e448078176.sample"]
 
 [params]
 

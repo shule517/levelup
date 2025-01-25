@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://hqjxy31sor5w"]
 
-[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://Enemies/Base/enemy.tscn" id="1_6s04b"]
-[ext_resource type="Texture2D" uid="uid://bxni4rvrgf717" path="res://Enemies/Mandoragora/mandoragora.png" id="2_6wy37"]
-[ext_resource type="AudioStream" uid="uid://ddcs8iqq3swth" path="res://Enemies/Mandoragora/mandragora_attack.wav" id="2_j2fae"]
-[ext_resource type="AudioStream" uid="uid://ckpfviinyojcd" path="res://Enemies/Mandoragora/mandragora_damage.wav" id="3_2mlmc"]
-[ext_resource type="AudioStream" uid="uid://gi0rifypi7j5" path="res://Enemies/Mandoragora/mandragora_die.wav" id="4_euxox"]
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://enemies/Base/enemy.tscn" id="1_6s04b"]
+[ext_resource type="Texture2D" uid="uid://bxni4rvrgf717" path="res://enemies/Mandoragora/mandoragora.png" id="2_6wy37"]
+[ext_resource type="AudioStream" uid="uid://ddcs8iqq3swth" path="res://enemies/Mandoragora/mandragora_attack.wav" id="2_j2fae"]
+[ext_resource type="AudioStream" uid="uid://ckpfviinyojcd" path="res://enemies/Mandoragora/mandragora_damage.wav" id="3_2mlmc"]
+[ext_resource type="AudioStream" uid="uid://gi0rifypi7j5" path="res://enemies/Mandoragora/mandragora_die.wav" id="4_euxox"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hkbtd"]
 atlas = ExtResource("2_6wy37")

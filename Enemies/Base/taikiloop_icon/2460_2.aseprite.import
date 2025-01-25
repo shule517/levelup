@@ -3,12 +3,12 @@
 importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
 uid="uid://d10uj4lrjg7sa"
-path="res://.godot/imported/2460_2.aseprite-d18a0a5ce811fea8c2547bcbb6a88ce5.res"
+path="res://.godot/imported/2460_2.aseprite-f2d5d7ab1259168fb5b624956fa5d4ed.res"
 
 [deps]
 
-source_file="res://Enemies/Base/taikiloop_icon/2460_2.aseprite"
-dest_files=["res://.godot/imported/2460_2.aseprite-d18a0a5ce811fea8c2547bcbb6a88ce5.res"]
+source_file="res://enemies/Base/taikiloop_icon/2460_2.aseprite"
+dest_files=["res://.godot/imported/2460_2.aseprite-f2d5d7ab1259168fb5b624956fa5d4ed.res"]
 
 [params]
 

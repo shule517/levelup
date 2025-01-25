@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfcudy2e125m2"
-path="res://.godot/imported/474_メタルスピリット.png-61426da69ef6da1c2d9bf6d9327b7cab.ctex"
+path="res://.godot/imported/474_メタルスピリット.png-642d467056af62dfa16f35a7717aeaeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/474_メタルスピリット.png"
-dest_files=["res://.godot/imported/474_メタルスピリット.png-61426da69ef6da1c2d9bf6d9327b7cab.ctex"]
+source_file="res://assets/QVMob/474_メタルスピリット.png"
+dest_files=["res://.godot/imported/474_メタルスピリット.png-642d467056af62dfa16f35a7717aeaeb.ctex"]
 
 [params]
 

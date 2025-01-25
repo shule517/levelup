@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5cx002fdacu3"
-path="res://.godot/imported/467.png-4391918583529e6e9f7fda7d0f5678e5.ctex"
+path="res://.godot/imported/467.png-18f8e70ca1ecfeeabb21d99ef97dd93d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Suraimu/467.png"
-dest_files=["res://.godot/imported/467.png-4391918583529e6e9f7fda7d0f5678e5.ctex"]
+source_file="res://enemies/Suraimu/467.png"
+dest_files=["res://.godot/imported/467.png-18f8e70ca1ecfeeabb21d99ef97dd93d.ctex"]
 
 [params]
 

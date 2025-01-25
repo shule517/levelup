@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://drpfsqha1j15e"
-path="res://.godot/imported/elder_wilow_die.wav-c4edf3680d18975385386757ad387a04.sample"
+path="res://.godot/imported/elder_wilow_die.wav-b1c811b1a0ca0d71e4dbabed51cf3e92.sample"
 
 [deps]
 
-source_file="res://Enemies/Kirikabu/elder_wilow_die.wav"
-dest_files=["res://.godot/imported/elder_wilow_die.wav-c4edf3680d18975385386757ad387a04.sample"]
+source_file="res://enemies/Kirikabu/elder_wilow_die.wav"
+dest_files=["res://.godot/imported/elder_wilow_die.wav-b1c811b1a0ca0d71e4dbabed51cf3e92.sample"]
 
 [params]
 

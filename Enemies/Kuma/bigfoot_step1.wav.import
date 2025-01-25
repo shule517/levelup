@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dsjwjuxqe7pma"
-path="res://.godot/imported/bigfoot_step1.wav-4872a197654b698d41a360a4d5151d73.sample"
+path="res://.godot/imported/bigfoot_step1.wav-0c72228bda02f1ae6253b85dcb589c9c.sample"
 
 [deps]
 
-source_file="res://Enemies/Kuma/bigfoot_step1.wav"
-dest_files=["res://.godot/imported/bigfoot_step1.wav-4872a197654b698d41a360a4d5151d73.sample"]
+source_file="res://enemies/Kuma/bigfoot_step1.wav"
+dest_files=["res://.godot/imported/bigfoot_step1.wav-0c72228bda02f1ae6253b85dcb589c9c.sample"]
 
 [params]
 

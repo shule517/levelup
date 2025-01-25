@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d1miml2siwrir"
-path="res://.godot/imported/eddga_attack2.wav-4f242622a9676ee2c1a01a40588d9f82.sample"
+path="res://.godot/imported/eddga_attack2.wav-8902508f5ebaf2acf71845bcd50bec0e.sample"
 
 [deps]
 
-source_file="res://Enemies/eddga_attack2.wav"
-dest_files=["res://.godot/imported/eddga_attack2.wav-4f242622a9676ee2c1a01a40588d9f82.sample"]
+source_file="res://enemies/eddga_attack2.wav"
+dest_files=["res://.godot/imported/eddga_attack2.wav-8902508f5ebaf2acf71845bcd50bec0e.sample"]
 
 [params]
 

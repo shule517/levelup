@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbyhc7gup06r2"
-path="res://.godot/imported/Mummy.png-e633febec847c4937857b0008b0f11e6.ctex"
+path="res://.godot/imported/Mummy.png-dbd816ea92d4c8fb7867c04174618652.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cute_Fantasy_Desert/enemies/Mummy.png"
-dest_files=["res://.godot/imported/Mummy.png-e633febec847c4937857b0008b0f11e6.ctex"]
+source_file="res://assets/Cute_Fantasy_Desert/enemies/Mummy.png"
+dest_files=["res://.godot/imported/Mummy.png-dbd816ea92d4c8fb7867c04174618652.ctex"]
 
 [params]
 

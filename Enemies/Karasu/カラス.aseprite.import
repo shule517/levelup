@@ -3,12 +3,12 @@
 importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
 uid="uid://ces1trfo186r7"
-path="res://.godot/imported/カラス.aseprite-dc4266134e42db21c18b44a2476e2d75.res"
+path="res://.godot/imported/カラス.aseprite-69fdbe29da82d60a29f5b152c40f9898.res"
 
 [deps]
 
-source_file="res://Enemies/Karasu/カラス.aseprite"
-dest_files=["res://.godot/imported/カラス.aseprite-dc4266134e42db21c18b44a2476e2d75.res"]
+source_file="res://enemies/Karasu/カラス.aseprite"
+dest_files=["res://.godot/imported/カラス.aseprite-69fdbe29da82d60a29f5b152c40f9898.res"]
 
 [params]
 

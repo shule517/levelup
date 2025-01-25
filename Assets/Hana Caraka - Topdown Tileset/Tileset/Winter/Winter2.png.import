@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://elj70267lulk"
-path="res://.godot/imported/Winter2.png-218ad8f06dd7c0e5ae5a1c7cfa967c1e.ctex"
+path="res://.godot/imported/Winter2.png-f030eb4eeec99a29c38e6ec5328e4eaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Winter/Winter2.png"
-dest_files=["res://.godot/imported/Winter2.png-218ad8f06dd7c0e5ae5a1c7cfa967c1e.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Tileset/Winter/Winter2.png"
+dest_files=["res://.godot/imported/Winter2.png-f030eb4eeec99a29c38e6ec5328e4eaf.ctex"]
 
 [params]
 

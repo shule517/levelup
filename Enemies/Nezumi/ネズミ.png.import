@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3ns77ik7o866"
-path="res://.godot/imported/ネズミ.png-358f4113eaf732657f219c0150afa9d3.ctex"
+path="res://.godot/imported/ネズミ.png-7372f280a2c7d7ffebd736b008a806c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Nezumi/ネズミ.png"
-dest_files=["res://.godot/imported/ネズミ.png-358f4113eaf732657f219c0150afa9d3.ctex"]
+source_file="res://enemies/Nezumi/ネズミ.png"
+dest_files=["res://.godot/imported/ネズミ.png-7372f280a2c7d7ffebd736b008a806c9.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dto335c22bonr"
-path="res://.godot/imported/yoyo_damage.wav-8ad9c9237511662ec3c8c49a54948529.sample"
+path="res://.godot/imported/yoyo_damage.wav-6a49a2729b038128670b47a1546444a1.sample"
 
 [deps]
 
-source_file="res://Enemies/yoyo_damage.wav"
-dest_files=["res://.godot/imported/yoyo_damage.wav-8ad9c9237511662ec3c8c49a54948529.sample"]
+source_file="res://enemies/yoyo_damage.wav"
+dest_files=["res://.godot/imported/yoyo_damage.wav-6a49a2729b038128670b47a1546444a1.sample"]
 
 [params]
 

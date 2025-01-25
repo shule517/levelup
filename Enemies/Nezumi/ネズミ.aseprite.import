@@ -3,12 +3,12 @@
 importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
 uid="uid://v44aiakk6f2s"
-path="res://.godot/imported/ネズミ.aseprite-2407a2fde1df9dae6e9636d2110c10f4.res"
+path="res://.godot/imported/ネズミ.aseprite-2c03e2da61ea2c290572227a03ea95ad.res"
 
 [deps]
 
-source_file="res://Enemies/Nezumi/ネズミ.aseprite"
-dest_files=["res://.godot/imported/ネズミ.aseprite-2407a2fde1df9dae6e9636d2110c10f4.res"]
+source_file="res://enemies/Nezumi/ネズミ.aseprite"
+dest_files=["res://.godot/imported/ネズミ.aseprite-2c03e2da61ea2c290572227a03ea95ad.res"]
 
 [params]
 

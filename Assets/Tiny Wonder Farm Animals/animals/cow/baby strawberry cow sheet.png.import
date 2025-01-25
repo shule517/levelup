@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gyqiy1yg0c8v"
-path="res://.godot/imported/baby strawberry cow sheet.png-b01dcc1a46328de6ce6e84a553a16026.ctex"
+path="res://.godot/imported/baby strawberry cow sheet.png-8d042edf636d08e738408335756f0ece.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiny Wonder Farm Animals/animals/cow/baby strawberry cow sheet.png"
-dest_files=["res://.godot/imported/baby strawberry cow sheet.png-b01dcc1a46328de6ce6e84a553a16026.ctex"]
+source_file="res://assets/Tiny Wonder Farm Animals/animals/cow/baby strawberry cow sheet.png"
+dest_files=["res://.godot/imported/baby strawberry cow sheet.png-8d042edf636d08e738408335756f0ece.ctex"]
 
 [params]
 

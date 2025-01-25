@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://57ol4ngjyevp"
-path="res://.godot/imported/condor_attack.wav-54058e9b9a55a724d26f94301cb7e54a.sample"
+path="res://.godot/imported/condor_attack.wav-fd5926fa5695e95b8bece2e378209b5d.sample"
 
 [deps]
 
-source_file="res://Enemies/Karasu/condor_attack.wav"
-dest_files=["res://.godot/imported/condor_attack.wav-54058e9b9a55a724d26f94301cb7e54a.sample"]
+source_file="res://enemies/Karasu/condor_attack.wav"
+dest_files=["res://.godot/imported/condor_attack.wav-fd5926fa5695e95b8bece2e378209b5d.sample"]
 
 [params]
 

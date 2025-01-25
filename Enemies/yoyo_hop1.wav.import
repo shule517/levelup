@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dta7bp61u3xpk"
-path="res://.godot/imported/yoyo_hop1.wav-025efb15cd5e6cf680e60afad8de14b5.sample"
+path="res://.godot/imported/yoyo_hop1.wav-14e3b5306cb9a20d8a9984a321657df2.sample"
 
 [deps]
 
-source_file="res://Enemies/yoyo_hop1.wav"
-dest_files=["res://.godot/imported/yoyo_hop1.wav-025efb15cd5e6cf680e60afad8de14b5.sample"]
+source_file="res://enemies/yoyo_hop1.wav"
+dest_files=["res://.godot/imported/yoyo_hop1.wav-14e3b5306cb9a20d8a9984a321657df2.sample"]
 
 [params]
 

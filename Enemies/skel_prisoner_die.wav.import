@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dx5l8s7vindga"
-path="res://.godot/imported/skel_prisoner_die.wav-24f1dadfdfc23690ca9449d0beb72abf.sample"
+path="res://.godot/imported/skel_prisoner_die.wav-f14a70f5bcdba5f25a15e97dafdd1486.sample"
 
 [deps]
 
-source_file="res://Enemies/skel_prisoner_die.wav"
-dest_files=["res://.godot/imported/skel_prisoner_die.wav-24f1dadfdfc23690ca9449d0beb72abf.sample"]
+source_file="res://enemies/skel_prisoner_die.wav"
+dest_files=["res://.godot/imported/skel_prisoner_die.wav-f14a70f5bcdba5f25a15e97dafdd1486.sample"]
 
 [params]
 

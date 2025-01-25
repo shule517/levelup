@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cilscbv5c5eu1"
-path="res://.godot/imported/Props-All.png-695312f1843f07311a816abcece4f14f.ctex"
+path="res://.godot/imported/Props-All.png-2926a324ad5e3dad6ef55513fbf362c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Props/Props-All.png"
-dest_files=["res://.godot/imported/Props-All.png-695312f1843f07311a816abcece4f14f.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Props/Props-All.png"
+dest_files=["res://.godot/imported/Props-All.png-2926a324ad5e3dad6ef55513fbf362c2.ctex"]
 
 [params]
 

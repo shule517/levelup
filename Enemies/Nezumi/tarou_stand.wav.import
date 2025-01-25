@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bage5qqdfl0d"
-path="res://.godot/imported/tarou_stand.wav-aafdce886430f2ced5e8f84b1cb18742.sample"
+path="res://.godot/imported/tarou_stand.wav-471038b8a858e943185ba47cd6b69eed.sample"
 
 [deps]
 
-source_file="res://Enemies/Nezumi/tarou_stand.wav"
-dest_files=["res://.godot/imported/tarou_stand.wav-aafdce886430f2ced5e8f84b1cb18742.sample"]
+source_file="res://enemies/Nezumi/tarou_stand.wav"
+dest_files=["res://.godot/imported/tarou_stand.wav-471038b8a858e943185ba47cd6b69eed.sample"]
 
 [params]
 

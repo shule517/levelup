@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgkfndl6iuwmj"
-path="res://.godot/imported/470_オールドゴーレム.png-c5b00d939c3b909c7f5a3bc653aa58dc.ctex"
+path="res://.godot/imported/470_オールドゴーレム.png-ebc69dc641ca1b17d39f49d5cf839e4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/470_オールドゴーレム.png"
-dest_files=["res://.godot/imported/470_オールドゴーレム.png-c5b00d939c3b909c7f5a3bc653aa58dc.ctex"]
+source_file="res://assets/QVMob/470_オールドゴーレム.png"
+dest_files=["res://.godot/imported/470_オールドゴーレム.png-ebc69dc641ca1b17d39f49d5cf839e4d.ctex"]
 
 [params]
 

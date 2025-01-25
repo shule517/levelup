@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://br7j5eh4clwqi"
-path="res://.godot/imported/Desert_Grass.png-c1c3792e29b8bb5010e18750b8d9887e.ctex"
+path="res://.godot/imported/Desert_Grass.png-799043ef1d4251d0e3a36b475dac628a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cute_Fantasy_Desert/Tiles/Desert_Grass.png"
-dest_files=["res://.godot/imported/Desert_Grass.png-c1c3792e29b8bb5010e18750b8d9887e.ctex"]
+source_file="res://assets/Cute_Fantasy_Desert/Tiles/Desert_Grass.png"
+dest_files=["res://.godot/imported/Desert_Grass.png-799043ef1d4251d0e3a36b475dac628a.ctex"]
 
 [params]
 

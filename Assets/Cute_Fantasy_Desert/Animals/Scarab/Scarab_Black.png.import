@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxfuvq1tejrli"
-path="res://.godot/imported/Scarab_Black.png-637f1cd866c9e5af4f2a6c043651aea7.ctex"
+path="res://.godot/imported/Scarab_Black.png-300bf3460e165fa5e41f35d5273fb95e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cute_Fantasy_Desert/Animals/Scarab/Scarab_Black.png"
-dest_files=["res://.godot/imported/Scarab_Black.png-637f1cd866c9e5af4f2a6c043651aea7.ctex"]
+source_file="res://assets/Cute_Fantasy_Desert/Animals/Scarab/Scarab_Black.png"
+dest_files=["res://.godot/imported/Scarab_Black.png-300bf3460e165fa5e41f35d5273fb95e.ctex"]
 
 [params]
 

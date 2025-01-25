@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjfwmjfb6rmpe"
-path="res://.godot/imported/land.png-04e7963d1eee21e1ffffa10f8217332a.ctex"
+path="res://.godot/imported/land.png-5ea8fe6a4af7b061e57bf2724f31b62e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LittleTown_assetpack/tileset/land.png"
-dest_files=["res://.godot/imported/land.png-04e7963d1eee21e1ffffa10f8217332a.ctex"]
+source_file="res://assets/LittleTown_assetpack/tileset/land.png"
+dest_files=["res://.godot/imported/land.png-5ea8fe6a4af7b061e57bf2724f31b62e.ctex"]
 
 [params]
 

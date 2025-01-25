@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://carmcfi28l255"
-path="res://.godot/imported/skel_worker_attack.wav-4dce1c1a658bebf0dd7efea6c28f91cd.sample"
+path="res://.godot/imported/skel_worker_attack.wav-f90dc61c46318a45b245a8d1e31a9a48.sample"
 
 [deps]
 
-source_file="res://Enemies/skel_worker_attack.wav"
-dest_files=["res://.godot/imported/skel_worker_attack.wav-4dce1c1a658bebf0dd7efea6c28f91cd.sample"]
+source_file="res://enemies/skel_worker_attack.wav"
+dest_files=["res://.godot/imported/skel_worker_attack.wav-f90dc61c46318a45b245a8d1e31a9a48.sample"]
 
 [params]
 

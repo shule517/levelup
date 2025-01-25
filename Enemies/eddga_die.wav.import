@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c7tobbg5dhxrq"
-path="res://.godot/imported/eddga_die.wav-a22c7dcdd18866de1ffc2c8d46add997.sample"
+path="res://.godot/imported/eddga_die.wav-428b0138ed3d05943e10b75b1c5a4016.sample"
 
 [deps]
 
-source_file="res://Enemies/eddga_die.wav"
-dest_files=["res://.godot/imported/eddga_die.wav-a22c7dcdd18866de1ffc2c8d46add997.sample"]
+source_file="res://enemies/eddga_die.wav"
+dest_files=["res://.godot/imported/eddga_die.wav-428b0138ed3d05943e10b75b1c5a4016.sample"]
 
 [params]
 

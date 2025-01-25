@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1dehm1bhu7te"
-path="res://.godot/imported/464_しにがみ.png-83df7f79bdb758d0d801c144a6f144f2.ctex"
+path="res://.godot/imported/464_しにがみ.png-f41fe16b2d807dc55a8b42508c87c8da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/464_しにがみ.png"
-dest_files=["res://.godot/imported/464_しにがみ.png-83df7f79bdb758d0d801c144a6f144f2.ctex"]
+source_file="res://assets/QVMob/464_しにがみ.png"
+dest_files=["res://.godot/imported/464_しにがみ.png-f41fe16b2d807dc55a8b42508c87c8da.ctex"]
 
 [params]
 

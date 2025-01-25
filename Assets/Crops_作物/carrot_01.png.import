@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd1ej31pj3kgr"
-path="res://.godot/imported/carrot_01.png-52936aec95fabe71aa2c31fe560b27d5.ctex"
+path="res://.godot/imported/carrot_01.png-2f68a4d66bd1bd630a355f385cfb1598.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Crops_作物/carrot_01.png"
-dest_files=["res://.godot/imported/carrot_01.png-52936aec95fabe71aa2c31fe560b27d5.ctex"]
+source_file="res://assets/Crops_作物/carrot_01.png"
+dest_files=["res://.godot/imported/carrot_01.png-2f68a4d66bd1bd630a355f385cfb1598.ctex"]
 
 [params]
 

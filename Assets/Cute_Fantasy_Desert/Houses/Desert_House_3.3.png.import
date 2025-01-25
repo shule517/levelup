@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dr01a3stgnwxl"
-path="res://.godot/imported/Desert_House_3.3.png-e3047754047849cf8e3d58dc52aa7e6b.ctex"
+path="res://.godot/imported/Desert_House_3.3.png-be7a52be711203c6b506e690f9f12e4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cute_Fantasy_Desert/Houses/Desert_House_3.3.png"
-dest_files=["res://.godot/imported/Desert_House_3.3.png-e3047754047849cf8e3d58dc52aa7e6b.ctex"]
+source_file="res://assets/Cute_Fantasy_Desert/Houses/Desert_House_3.3.png"
+dest_files=["res://.godot/imported/Desert_House_3.3.png-be7a52be711203c6b506e690f9f12e4e.ctex"]
 
 [params]
 

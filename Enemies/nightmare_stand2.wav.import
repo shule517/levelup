@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dfh2hganxfu5e"
-path="res://.godot/imported/nightmare_stand2.wav-4bca2bb349906436f6087f1b3d084997.sample"
+path="res://.godot/imported/nightmare_stand2.wav-fb8e42da7c83dfe1d89dbd7c5b1e1185.sample"
 
 [deps]
 
-source_file="res://Enemies/nightmare_stand2.wav"
-dest_files=["res://.godot/imported/nightmare_stand2.wav-4bca2bb349906436f6087f1b3d084997.sample"]
+source_file="res://enemies/nightmare_stand2.wav"
+dest_files=["res://.godot/imported/nightmare_stand2.wav-fb8e42da7c83dfe1d89dbd7c5b1e1185.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb56a26312mil"
-path="res://.godot/imported/Stairs.png-87e9af755707fd81ae7895e9834385e7.ctex"
+path="res://.godot/imported/Stairs.png-a60dfdcce14d711ec82e3ff2f4bca8f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Extras/Stairs.png"
-dest_files=["res://.godot/imported/Stairs.png-87e9af755707fd81ae7895e9834385e7.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Tileset/Extras/Stairs.png"
+dest_files=["res://.godot/imported/Stairs.png-a60dfdcce14d711ec82e3ff2f4bca8f7.ctex"]
 
 [params]
 

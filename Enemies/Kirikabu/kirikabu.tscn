@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://c5emcx1nwkrqq"]
 
-[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://Enemies/Base/enemy.tscn" id="1_ftfiq"]
-[ext_resource type="Script" path="res://Enemies/Kirikabu/kirikabu.gd" id="2_d3loa"]
-[ext_resource type="Texture2D" uid="uid://btk66stjl3kps" path="res://Enemies/Kirikabu/kirikabu.png" id="3_op1kl"]
-[ext_resource type="AudioStream" uid="uid://cfynwop3oil1x" path="res://Enemies/Kirikabu/elder_wilow_attack.wav" id="3_v7ghp"]
-[ext_resource type="AudioStream" uid="uid://cldydui26ct4d" path="res://Enemies/Kirikabu/elder_wilow_damage.wav" id="4_6qngc"]
-[ext_resource type="AudioStream" uid="uid://drpfsqha1j15e" path="res://Enemies/Kirikabu/elder_wilow_die.wav" id="5_hr2jo"]
+[ext_resource type="PackedScene" uid="uid://crx78tiy2lwrx" path="res://enemies/Base/enemy.tscn" id="1_ftfiq"]
+[ext_resource type="Script" path="res://enemies/Kirikabu/kirikabu.gd" id="2_d3loa"]
+[ext_resource type="Texture2D" uid="uid://btk66stjl3kps" path="res://enemies/Kirikabu/kirikabu.png" id="3_op1kl"]
+[ext_resource type="AudioStream" uid="uid://cfynwop3oil1x" path="res://enemies/Kirikabu/elder_wilow_attack.wav" id="3_v7ghp"]
+[ext_resource type="AudioStream" uid="uid://cldydui26ct4d" path="res://enemies/Kirikabu/elder_wilow_damage.wav" id="4_6qngc"]
+[ext_resource type="AudioStream" uid="uid://drpfsqha1j15e" path="res://enemies/Kirikabu/elder_wilow_die.wav" id="5_hr2jo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t3o06"]
 atlas = ExtResource("3_op1kl")

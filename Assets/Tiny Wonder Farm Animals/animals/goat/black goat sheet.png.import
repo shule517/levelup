@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://diqlh1sq62bxi"
-path="res://.godot/imported/black goat sheet.png-3a4072f7c33fdcd8b5059b18ba58a181.ctex"
+path="res://.godot/imported/black goat sheet.png-63a8e29b12e9df77b7ad1eb12a5f5a58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiny Wonder Farm Animals/animals/goat/black goat sheet.png"
-dest_files=["res://.godot/imported/black goat sheet.png-3a4072f7c33fdcd8b5059b18ba58a181.ctex"]
+source_file="res://assets/Tiny Wonder Farm Animals/animals/goat/black goat sheet.png"
+dest_files=["res://.godot/imported/black goat sheet.png-63a8e29b12e9df77b7ad1eb12a5f5a58.ctex"]
 
 [params]
 

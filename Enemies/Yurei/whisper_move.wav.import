@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bkr0kwm31sddm"
-path="res://.godot/imported/whisper_move.wav-b360b319e0641edeb689eeca59eb5c21.sample"
+path="res://.godot/imported/whisper_move.wav-ff1406bf08a9893fcd5e9f7ada86a070.sample"
 
 [deps]
 
-source_file="res://Enemies/Yurei/whisper_move.wav"
-dest_files=["res://.godot/imported/whisper_move.wav-b360b319e0641edeb689eeca59eb5c21.sample"]
+source_file="res://enemies/Yurei/whisper_move.wav"
+dest_files=["res://.godot/imported/whisper_move.wav-ff1406bf08a9893fcd5e9f7ada86a070.sample"]
 
 [params]
 

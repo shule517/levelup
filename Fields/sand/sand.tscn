@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=4 uid="uid://ddrykwtn4sleb"]
 
-[ext_resource type="Script" path="res://Fields/base/field.gd" id="1_42wd7"]
-[ext_resource type="Texture2D" uid="uid://dampm7q6amh07" path="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Sand/Sand1.png" id="2_ok42y"]
+[ext_resource type="Script" path="res://fields/base/field.gd" id="1_42wd7"]
+[ext_resource type="Texture2D" uid="uid://dampm7q6amh07" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Sand/Sand1.png" id="2_ok42y"]
 [ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="3_yp2fx"]
-[ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://Fields/Warp/warp.tscn" id="4_t4xkx"]
+[ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://fields/Warp/warp.tscn" id="4_t4xkx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0qcm"]
 texture = ExtResource("2_ok42y")

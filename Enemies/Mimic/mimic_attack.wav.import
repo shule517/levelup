@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://f60y3w53f4yo"
-path="res://.godot/imported/mimic_attack.wav-a8e042f8c1e5c152512c033c0c427527.sample"
+path="res://.godot/imported/mimic_attack.wav-24ef4a2aa8c0cbf0edbaf107953299bc.sample"
 
 [deps]
 
-source_file="res://Enemies/Mimic/mimic_attack.wav"
-dest_files=["res://.godot/imported/mimic_attack.wav-a8e042f8c1e5c152512c033c0c427527.sample"]
+source_file="res://enemies/Mimic/mimic_attack.wav"
+dest_files=["res://.godot/imported/mimic_attack.wav-24ef4a2aa8c0cbf0edbaf107953299bc.sample"]
 
 [params]
 

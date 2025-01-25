@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eeh0pi6eyel6"
-path="res://.godot/imported/cabbage_04.png-1b45f530aaa5a32dc24b95b58477d1cc.ctex"
+path="res://.godot/imported/cabbage_04.png-4a77e1d3d89ef7ff7aa40560d45d7edc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Crops_作物/cabbage_04.png"
-dest_files=["res://.godot/imported/cabbage_04.png-1b45f530aaa5a32dc24b95b58477d1cc.ctex"]
+source_file="res://assets/Crops_作物/cabbage_04.png"
+dest_files=["res://.godot/imported/cabbage_04.png-4a77e1d3d89ef7ff7aa40560d45d7edc.ctex"]
 
 [params]
 

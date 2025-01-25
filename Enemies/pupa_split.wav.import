@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bhrjmhld521hx"
-path="res://.godot/imported/pupa_split.wav-26846d3b9bf9dadf063843ab2b5f6508.sample"
+path="res://.godot/imported/pupa_split.wav-b6d8a822638be846463de8b71a46e250.sample"
 
 [deps]
 
-source_file="res://Enemies/pupa_split.wav"
-dest_files=["res://.godot/imported/pupa_split.wav-26846d3b9bf9dadf063843ab2b5f6508.sample"]
+source_file="res://enemies/pupa_split.wav"
+dest_files=["res://.godot/imported/pupa_split.wav-b6d8a822638be846463de8b71a46e250.sample"]
 
 [params]
 

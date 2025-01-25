@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj7eopfn6ylma"
-path="res://.godot/imported/467_ミミスライム.png-9ae8e82dacf8141d2328815c939c6b44.ctex"
+path="res://.godot/imported/467_ミミスライム.png-c73dbec2ff6b50831bedea1032e8d5c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/QVMob/467_ミミスライム.png"
-dest_files=["res://.godot/imported/467_ミミスライム.png-9ae8e82dacf8141d2328815c939c6b44.ctex"]
+source_file="res://assets/QVMob/467_ミミスライム.png"
+dest_files=["res://.godot/imported/467_ミミスライム.png-c73dbec2ff6b50831bedea1032e8d5c6.ctex"]
 
 [params]
 

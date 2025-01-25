@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cba864q8c047f"
-path="res://.godot/imported/orc_skeleton_die.wav-9fc43980cf37b5dd31652c0765323127.sample"
+path="res://.godot/imported/orc_skeleton_die.wav-d8b8859c69fbd2241d0f8317e5c06e72.sample"
 
 [deps]
 
-source_file="res://Enemies/orc_skeleton_die.wav"
-dest_files=["res://.godot/imported/orc_skeleton_die.wav-9fc43980cf37b5dd31652c0765323127.sample"]
+source_file="res://enemies/orc_skeleton_die.wav"
+dest_files=["res://.godot/imported/orc_skeleton_die.wav-d8b8859c69fbd2241d0f8317e5c06e72.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://84hsg7uby807"
-path="res://.godot/imported/attack_spear.wav-f90f4a3228a385ffadb259474eb1dee5.sample"
+path="res://.godot/imported/attack_spear.wav-cdf227fa72ec2f516f2f2fb057b90727.sample"
 
 [deps]
 
-source_file="res://Enemies/attack_spear.wav"
-dest_files=["res://.godot/imported/attack_spear.wav-f90f4a3228a385ffadb259474eb1dee5.sample"]
+source_file="res://enemies/attack_spear.wav"
+dest_files=["res://.godot/imported/attack_spear.wav-cdf227fa72ec2f516f2f2fb057b90727.sample"]
 
 [params]
 

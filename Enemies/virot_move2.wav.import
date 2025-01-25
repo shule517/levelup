@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bp30iggfwlymx"
-path="res://.godot/imported/virot_move2.wav-ca596ec22ce272c231c28f797c475a4b.sample"
+path="res://.godot/imported/virot_move2.wav-13a99240a77d53a560b8df7334802fba.sample"
 
 [deps]
 
-source_file="res://Enemies/virot_move2.wav"
-dest_files=["res://.godot/imported/virot_move2.wav-ca596ec22ce272c231c28f797c475a4b.sample"]
+source_file="res://enemies/virot_move2.wav"
+dest_files=["res://.godot/imported/virot_move2.wav-13a99240a77d53a560b8df7334802fba.sample"]
 
 [params]
 

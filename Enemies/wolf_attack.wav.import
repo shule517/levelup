@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://uldr8ul6jbx6"
-path="res://.godot/imported/wolf_attack.wav-942882651bdcfbc9935a3c42d22338cf.sample"
+path="res://.godot/imported/wolf_attack.wav-9e9ff65ddd09a10bf422e843feaff7d0.sample"
 
 [deps]
 
-source_file="res://Enemies/wolf_attack.wav"
-dest_files=["res://.godot/imported/wolf_attack.wav-942882651bdcfbc9935a3c42d22338cf.sample"]
+source_file="res://enemies/wolf_attack.wav"
+dest_files=["res://.godot/imported/wolf_attack.wav-9e9ff65ddd09a10bf422e843feaff7d0.sample"]
 
 [params]
 

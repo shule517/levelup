@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cqmnston07t8u"
-path="res://.godot/imported/condor_stand.wav-abe675964db7d97e116ebfbf8fd6c07b.sample"
+path="res://.godot/imported/condor_stand.wav-47052b4b4ca45ddfef8d2ea28e5d2125.sample"
 
 [deps]
 
-source_file="res://Enemies/Karasu/condor_stand.wav"
-dest_files=["res://.godot/imported/condor_stand.wav-abe675964db7d97e116ebfbf8fd6c07b.sample"]
+source_file="res://enemies/Karasu/condor_stand.wav"
+dest_files=["res://.godot/imported/condor_stand.wav-47052b4b4ca45ddfef8d2ea28e5d2125.sample"]
 
 [params]
 

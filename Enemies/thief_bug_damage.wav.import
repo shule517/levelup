@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bdnxvu516trpt"
-path="res://.godot/imported/thief_bug_damage.wav-9c3fedcac5f69a930b672c1a9a7e6f52.sample"
+path="res://.godot/imported/thief_bug_damage.wav-ae2398d9ee10316710355d3ef997e658.sample"
 
 [deps]
 
-source_file="res://Enemies/thief_bug_damage.wav"
-dest_files=["res://.godot/imported/thief_bug_damage.wav-9c3fedcac5f69a930b672c1a9a7e6f52.sample"]
+source_file="res://enemies/thief_bug_damage.wav"
+dest_files=["res://.godot/imported/thief_bug_damage.wav-ae2398d9ee10316710355d3ef997e658.sample"]
 
 [params]
 

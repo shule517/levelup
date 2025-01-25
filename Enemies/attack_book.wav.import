@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cden67ef7nddc"
-path="res://.godot/imported/attack_book.wav-45cc9a123b26d2f0633a71a91c9b9cac.sample"
+path="res://.godot/imported/attack_book.wav-f707b8b9adbf0978f0735bc2a63483e7.sample"
 
 [deps]
 
-source_file="res://Enemies/attack_book.wav"
-dest_files=["res://.godot/imported/attack_book.wav-45cc9a123b26d2f0633a71a91c9b9cac.sample"]
+source_file="res://enemies/attack_book.wav"
+dest_files=["res://.godot/imported/attack_book.wav-f707b8b9adbf0978f0735bc2a63483e7.sample"]
 
 [params]
 

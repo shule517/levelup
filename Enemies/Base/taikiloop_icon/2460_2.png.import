@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clg6c1wcpssdr"
-path="res://.godot/imported/2460_2.png-53f5d6e1730ad52e3e0171382ab9b45d.ctex"
+path="res://.godot/imported/2460_2.png-f7a4d03fa39e7f0ee1f4590617d31d83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Base/taikiloop_icon/2460_2.png"
-dest_files=["res://.godot/imported/2460_2.png-53f5d6e1730ad52e3e0171382ab9b45d.ctex"]
+source_file="res://enemies/Base/taikiloop_icon/2460_2.png"
+dest_files=["res://.godot/imported/2460_2.png-f7a4d03fa39e7f0ee1f4590617d31d83.ctex"]
 
 [params]
 

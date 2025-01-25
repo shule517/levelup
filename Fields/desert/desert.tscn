@@ -1,13 +1,13 @@
 [gd_scene load_steps=16 format=4 uid="uid://b8j1rvuo8dg3w"]
 
-[ext_resource type="Texture2D" uid="uid://c5m2eesncxnr3" path="res://Assets/Cute_Fantasy_Desert/Tiles/Desert_Cliff_Tiles_1.png" id="1_vddlk"]
-[ext_resource type="Texture2D" uid="uid://ht1wy3m7104i" path="res://Assets/Cute_Fantasy_Desert/Tiles/Desert_Cliff_Tiles_3.png" id="2_akdlu"]
-[ext_resource type="Texture2D" uid="uid://d3sbtntux6kdm" path="res://Assets/Cute_Fantasy_Desert/Houses/Desert_House_1.1.png" id="3_s3lgn"]
-[ext_resource type="Texture2D" uid="uid://cb6e1y0do5hmu" path="res://Assets/Cute_Fantasy_Desert/Houses/Desert_House_4.3.png" id="4_wvct8"]
-[ext_resource type="Texture2D" uid="uid://btuqeun07c2t8" path="res://Assets/Cute_Fantasy_Desert/Houses/Desert_House_2.1.png" id="5_eep06"]
+[ext_resource type="Texture2D" uid="uid://c5m2eesncxnr3" path="res://assets/Cute_Fantasy_Desert/Tiles/Desert_Cliff_Tiles_1.png" id="1_u0kb3"]
+[ext_resource type="Texture2D" uid="uid://ht1wy3m7104i" path="res://assets/Cute_Fantasy_Desert/Tiles/Desert_Cliff_Tiles_3.png" id="2_7je5n"]
+[ext_resource type="Texture2D" uid="uid://d3sbtntux6kdm" path="res://assets/Cute_Fantasy_Desert/Houses/Desert_House_1.1.png" id="3_d1jah"]
+[ext_resource type="Texture2D" uid="uid://cb6e1y0do5hmu" path="res://assets/Cute_Fantasy_Desert/Houses/Desert_House_4.3.png" id="4_1686p"]
+[ext_resource type="Texture2D" uid="uid://btuqeun07c2t8" path="res://assets/Cute_Fantasy_Desert/Houses/Desert_House_2.1.png" id="5_jy6t8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tdidy"]
-texture = ExtResource("1_vddlk")
+texture = ExtResource("1_u0kb3")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -90,7 +90,7 @@ texture = ExtResource("1_vddlk")
 sources/0 = SubResource("TileSetAtlasSource_tdidy")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ovigx"]
-texture = ExtResource("2_akdlu")
+texture = ExtResource("2_7je5n")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -171,7 +171,7 @@ texture = ExtResource("2_akdlu")
 sources/0 = SubResource("TileSetAtlasSource_ovigx")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpywj"]
-texture = ExtResource("1_vddlk")
+texture = ExtResource("1_u0kb3")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -254,7 +254,7 @@ texture = ExtResource("1_vddlk")
 sources/0 = SubResource("TileSetAtlasSource_bpywj")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ku2mq"]
-texture = ExtResource("3_s3lgn")
+texture = ExtResource("3_d1jah")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -282,7 +282,7 @@ texture = ExtResource("3_s3lgn")
 4:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f455g"]
-texture = ExtResource("4_wvct8")
+texture = ExtResource("4_1686p")
 4:0/0 = 0
 5:0/0 = 0
 6:0/0 = 0
@@ -342,7 +342,7 @@ texture = ExtResource("4_wvct8")
 8:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x4e07"]
-texture = ExtResource("5_eep06")
+texture = ExtResource("5_jy6t8")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d0cyqq67n2r28"
-path="res://.godot/imported/farmiliar_die.wav-2071ff11e9dd9f87a8473ba3d6388807.sample"
+path="res://.godot/imported/farmiliar_die.wav-ac9b165d03db7cd74db7e6fc5de09ba0.sample"
 
 [deps]
 
-source_file="res://Enemies/Koumori/farmiliar_die.wav"
-dest_files=["res://.godot/imported/farmiliar_die.wav-2071ff11e9dd9f87a8473ba3d6388807.sample"]
+source_file="res://enemies/Koumori/farmiliar_die.wav"
+dest_files=["res://.godot/imported/farmiliar_die.wav-ac9b165d03db7cd74db7e6fc5de09ba0.sample"]
 
 [params]
 

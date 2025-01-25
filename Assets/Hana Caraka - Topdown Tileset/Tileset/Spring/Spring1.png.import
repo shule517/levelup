@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwfskfhnmdfho"
-path="res://.godot/imported/Spring1.png-733867dec4806ee43933d2a77e8b7d96.ctex"
+path="res://.godot/imported/Spring1.png-a0654e38bb535b4f3e02346e3c1859e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png"
-dest_files=["res://.godot/imported/Spring1.png-733867dec4806ee43933d2a77e8b7d96.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png"
+dest_files=["res://.godot/imported/Spring1.png-a0654e38bb535b4f3e02346e3c1859e4.ctex"]
 
 [params]
 

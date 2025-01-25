@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://5v6fxrktx3cq"
-path="res://.godot/imported/fabre_attack.wav-10292cfcd024f2c5df264ef1deb6a4fd.sample"
+path="res://.godot/imported/fabre_attack.wav-305aaaf02279e2371e4ade10e127a51c.sample"
 
 [deps]
 
-source_file="res://Enemies/fabre_attack.wav"
-dest_files=["res://.godot/imported/fabre_attack.wav-10292cfcd024f2c5df264ef1deb6a4fd.sample"]
+source_file="res://enemies/fabre_attack.wav"
+dest_files=["res://.godot/imported/fabre_attack.wav-305aaaf02279e2371e4ade10e127a51c.sample"]
 
 [params]
 

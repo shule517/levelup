@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwt1axxr70nma"
-path="res://.godot/imported/crate_base.png-6748e172c881bc1bec2e818c23e40a2c.ctex"
+path="res://.godot/imported/crate_base.png-97494a57e4f689addf8b9855936bc7b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Crops_作物/crate_base.png"
-dest_files=["res://.godot/imported/crate_base.png-6748e172c881bc1bec2e818c23e40a2c.ctex"]
+source_file="res://assets/Crops_作物/crate_base.png"
+dest_files=["res://.godot/imported/crate_base.png-97494a57e4f689addf8b9855936bc7b8.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dp14yovreoaq1"
-path="res://.godot/imported/skel_worker_move.wav-8c716c59eaedc4f224e6dc16909e60dd.sample"
+path="res://.godot/imported/skel_worker_move.wav-cef533396fadd99a13ccd8e30b0f2089.sample"
 
 [deps]
 
-source_file="res://Enemies/skel_worker_move.wav"
-dest_files=["res://.godot/imported/skel_worker_move.wav-8c716c59eaedc4f224e6dc16909e60dd.sample"]
+source_file="res://enemies/skel_worker_move.wav"
+dest_files=["res://.godot/imported/skel_worker_move.wav-cef533396fadd99a13ccd8e30b0f2089.sample"]
 
 [params]
 

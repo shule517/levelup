@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuv66n2e2rg7c"
-path="res://.godot/imported/autotiles rules.png-dc599e59450011577fdbfa5861b182bf.ctex"
+path="res://.godot/imported/autotiles rules.png-d418eaa62cbc142b7ace869261480d28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hana Caraka - Topdown Tileset/Tileset/autotiles rules.png"
-dest_files=["res://.godot/imported/autotiles rules.png-dc599e59450011577fdbfa5861b182bf.ctex"]
+source_file="res://assets/Hana Caraka - Topdown Tileset/Tileset/autotiles rules.png"
+dest_files=["res://.godot/imported/autotiles rules.png-d418eaa62cbc142b7ace869261480d28.ctex"]
 
 [params]
 
