@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfckg6kntqvfa"
-path="res://.godot/imported/nupu.png-958d0b27cdb8ce101f7064a862fc2560.ctex"
+path="res://.godot/imported/nupu.png-c5f572809459bb7f1f05c8aa8e831069.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Nupu/nupu.png"
-dest_files=["res://.godot/imported/nupu.png-958d0b27cdb8ce101f7064a862fc2560.ctex"]
+source_file="res://scene/nupu/nupu.png"
+dest_files=["res://.godot/imported/nupu.png-c5f572809459bb7f1f05c8aa8e831069.ctex"]
 
 [params]
 

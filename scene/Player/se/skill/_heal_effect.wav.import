@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bhctucgajcqh0"
-path="res://.godot/imported/_heal_effect.wav-8ca85265b1769c1d64e964e42b941667.sample"
+path="res://.godot/imported/_heal_effect.wav-cb5611dbf7d109871d601cd234a09b8c.sample"
 
 [deps]
 
-source_file="res://scene/Player/se/skill/_heal_effect.wav"
-dest_files=["res://.godot/imported/_heal_effect.wav-8ca85265b1769c1d64e964e42b941667.sample"]
+source_file="res://scene/player/se/skill/_heal_effect.wav"
+dest_files=["res://.godot/imported/_heal_effect.wav-cb5611dbf7d109871d601cd234a09b8c.sample"]
 
 [params]
 

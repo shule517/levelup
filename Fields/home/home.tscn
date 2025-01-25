@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://c6qa8rodu1nk1"]
 
 [ext_resource type="Texture2D" uid="uid://lkdayohtpu0n" path="res://fields/home/houses_inside.png" id="1_w38up"]
-[ext_resource type="PackedScene" uid="uid://bux57ckmy2stp" path="res://scene/Nupu/nupu.tscn" id="2_lbwjr"]
-[ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="3_d4h1s"]
-[ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://fields/Warp/warp.tscn" id="4_2yg5u"]
-[ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://scene/WorldClock/world_clock.tscn" id="6_qgo6x"]
-[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://scene/UI/PlayerStatus/player_status.tscn" id="7_pum0v"]
+[ext_resource type="PackedScene" uid="uid://bux57ckmy2stp" path="res://scene/nupu/nupu.tscn" id="2_lbwjr"]
+[ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/player/player.tscn" id="3_d4h1s"]
+[ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://fields/warp/warp.tscn" id="4_2yg5u"]
+[ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://scene/world_clock/world_clock.tscn" id="6_qgo6x"]
+[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://scene/ui/player_status/player_status.tscn" id="7_pum0v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nn4d4"]
 texture = ExtResource("1_w38up")

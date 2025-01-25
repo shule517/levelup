@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b742e7hbos007"
-path="res://.godot/imported/attack_rod.wav-3054644888006f023c64c9e7f65c6a5f.sample"
+path="res://.godot/imported/attack_rod.wav-b2f4655d24b288358087919e86bc166c.sample"
 
 [deps]
 
-source_file="res://scene/Player/se/attack/attack_rod.wav"
-dest_files=["res://.godot/imported/attack_rod.wav-3054644888006f023c64c9e7f65c6a5f.sample"]
+source_file="res://scene/player/se/attack/attack_rod.wav"
+dest_files=["res://.godot/imported/attack_rod.wav-b2f4655d24b288358087919e86bc166c.sample"]
 
 [params]
 

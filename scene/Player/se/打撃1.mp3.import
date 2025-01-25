@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cqsyapw4v7squ"
-path="res://.godot/imported/打撃1.mp3-327b3022f13b5bcc1b161c762ae0b7ad.mp3str"
+path="res://.godot/imported/打撃1.mp3-de7aea462025f7473df3521555a6fa61.mp3str"
 
 [deps]
 
-source_file="res://scene/Player/se/打撃1.mp3"
-dest_files=["res://.godot/imported/打撃1.mp3-327b3022f13b5bcc1b161c762ae0b7ad.mp3str"]
+source_file="res://scene/player/se/打撃1.mp3"
+dest_files=["res://.godot/imported/打撃1.mp3-de7aea462025f7473df3521555a6fa61.mp3str"]
 
 [params]
 

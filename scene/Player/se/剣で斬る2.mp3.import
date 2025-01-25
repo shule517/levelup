@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cmls6majbwfd4"
-path="res://.godot/imported/剣で斬る2.mp3-a882333a790951669d575f6b790121e9.mp3str"
+path="res://.godot/imported/剣で斬る2.mp3-640d38a6669626b29bf0e868216075c4.mp3str"
 
 [deps]
 
-source_file="res://scene/Player/se/剣で斬る2.mp3"
-dest_files=["res://.godot/imported/剣で斬る2.mp3-a882333a790951669d575f6b790121e9.mp3str"]
+source_file="res://scene/player/se/剣で斬る2.mp3"
+dest_files=["res://.godot/imported/剣で斬る2.mp3-640d38a6669626b29bf0e868216075c4.mp3str"]
 
 [params]
 

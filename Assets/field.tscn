@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2hlxsycc067s"]
 
-[ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="1_oekny"]
+[ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/player/player.tscn" id="1_oekny"]
 [ext_resource type="Texture2D" uid="uid://c2aisx6juln08" path="res://assets/glasstown001.png" id="2_1uvk5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghbfk"]

@@ -3,12 +3,12 @@
 importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
 uid="uid://bpbkf6xsd7e2q"
-path="res://.godot/imported/levelup.aseprite-5761025fe0056d4adcbad757714bd49c.res"
+path="res://.godot/imported/levelup.aseprite-a9a398a25961d25655ffc23c55e8d2fd.res"
 
 [deps]
 
-source_file="res://scene/Player/levelup.aseprite"
-dest_files=["res://.godot/imported/levelup.aseprite-5761025fe0056d4adcbad757714bd49c.res"]
+source_file="res://scene/player/levelup.aseprite"
+dest_files=["res://.godot/imported/levelup.aseprite-a9a398a25961d25655ffc23c55e8d2fd.res"]
 
 [params]
 

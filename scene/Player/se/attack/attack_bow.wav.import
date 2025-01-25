@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bpim1yjl43r2y"
-path="res://.godot/imported/attack_bow.wav-011d546ff8e7569272a101cf754ce015.sample"
+path="res://.godot/imported/attack_bow.wav-ff8bd8e4f4c2b92ea05fa52562796ff8.sample"
 
 [deps]
 
-source_file="res://scene/Player/se/attack/attack_bow.wav"
-dest_files=["res://.godot/imported/attack_bow.wav-011d546ff8e7569272a101cf754ce015.sample"]
+source_file="res://scene/player/se/attack/attack_bow.wav"
+dest_files=["res://.godot/imported/attack_bow.wav-ff8bd8e4f4c2b92ea05fa52562796ff8.sample"]
 
 [params]
 

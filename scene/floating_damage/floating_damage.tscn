@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbc1c61kno6jb"]
+
+[ext_resource type="Script" path="res://scene/floating_damage/floating_damage.gd" id="1_w0fi8"]
+[ext_resource type="FontFile" uid="uid://bpfamxmhx0i66" path="res://scene/floating_damage/x14y20pxScoreDozer.ttf" id="2_lcdoq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_48m4v"]
+font = ExtResource("2_lcdoq")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.690196)
+
+[node name="FloatingDamage" type="Marker2D"]
+script = ExtResource("1_w0fi8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -12.0
+offset_top = -24.0
+offset_right = 28.0
+offset_bottom = -1.0
+text = "1234"
+label_settings = SubResource("LabelSettings_48m4v")

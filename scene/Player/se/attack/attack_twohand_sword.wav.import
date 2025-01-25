@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dnbop3dbf437l"
-path="res://.godot/imported/attack_twohand_sword.wav-0c8767389ac550151f778d97304a90c9.sample"
+path="res://.godot/imported/attack_twohand_sword.wav-01ce0ab42ecf6932e5bd86f195727fb9.sample"
 
 [deps]
 
-source_file="res://scene/Player/se/attack/attack_twohand_sword.wav"
-dest_files=["res://.godot/imported/attack_twohand_sword.wav-0c8767389ac550151f778d97304a90c9.sample"]
+source_file="res://scene/player/se/attack/attack_twohand_sword.wav"
+dest_files=["res://.godot/imported/attack_twohand_sword.wav-01ce0ab42ecf6932e5bd86f195727fb9.sample"]
 
 [params]
 

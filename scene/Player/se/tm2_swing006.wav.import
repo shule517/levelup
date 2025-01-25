@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ckapl37peuk1r"
-path="res://.godot/imported/tm2_swing006.wav-93cef66449a0307b5a1c13039d64bde8.sample"
+path="res://.godot/imported/tm2_swing006.wav-476e7e3d181f52d7b960e6ddb75751df.sample"
 
 [deps]
 
-source_file="res://scene/Player/se/tm2_swing006.wav"
-dest_files=["res://.godot/imported/tm2_swing006.wav-93cef66449a0307b5a1c13039d64bde8.sample"]
+source_file="res://scene/player/se/tm2_swing006.wav"
+dest_files=["res://.godot/imported/tm2_swing006.wav-476e7e3d181f52d7b960e6ddb75751df.sample"]
 
 [params]
 

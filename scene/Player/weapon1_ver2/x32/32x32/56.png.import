@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bq5tnk0b3f1h8"
-path="res://.godot/imported/56.png-76c4b4642111caf1596bdec8786255da.ctex"
+path="res://.godot/imported/56.png-c246fe891bdf1f66e40d1baca81a681a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/Player/weapon1_ver2/x32/32x32/56.png"
-dest_files=["res://.godot/imported/56.png-76c4b4642111caf1596bdec8786255da.ctex"]
+source_file="res://scene/player/weapon1_ver2/x32/32x32/56.png"
+dest_files=["res://.godot/imported/56.png-c246fe891bdf1f66e40d1baca81a681a.ctex"]
 
 [params]
 

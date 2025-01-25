@@ -144,7 +144,7 @@ func calcurate_enemy_damege(player_atk: int, enemy_def: int) -> int:
 		play_sound_effect(critical_sound)
 	return randi_range(min_damage, min_damage + global.player_level)
 
-var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
+var floating_damage_scene: PackedScene = preload("res://scene/floating_damage/floating_damage.tscn")
 func damage(enemy_atk: int) -> void:
 	var damage: int = calcurate_player_damege(enemy_atk, global.player_def)
 	if damage != 0:

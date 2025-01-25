@@ -19,8 +19,8 @@ var monster_hp: int = 250
 @export var idle_sound: AudioStream = null
 @export var move_sound: AudioStream = null
 @export var attack_sound: AudioStream = null
-@export var damage_sound: AudioStream = preload("res://Enemies/Nezumi/やられた声/voice028.wav")
-@export var die_sound: AudioStream = preload("res://Enemies/Nezumi/やられた声/voice017.wav")
+@export var damage_sound: AudioStream = preload("res://enemies/nezumi/やられた声/voice028.wav")
+@export var die_sound: AudioStream = preload("res://enemies/nezumi/やられた声/voice017.wav")
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
@@ -117,7 +117,7 @@ func play_sound_effect(sound_effect: AudioStream, volume_db: float = 0.0) -> voi
 func is_alive() -> bool:
 	return monster_hp > 0
 
-var floating_damage_scene: PackedScene = preload("res://scene/FloatingDamage/floating_damage.tscn")
+var floating_damage_scene: PackedScene = preload("res://scene/floating_damage/floating_damage.tscn")
 func damage(damage: int) -> void:
 	if monster_hp <= 0:
 		return

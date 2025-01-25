@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bmqs244ql364t"
-path="res://.godot/imported/_hit_rod.wav-dfefe4ca85b853c3e4a94b2611aeb014.sample"
+path="res://.godot/imported/_hit_rod.wav-1c35c1ea490b8072322e9bbc1745d501.sample"
 
 [deps]
 
-source_file="res://scene/Player/se/hit/_hit_rod.wav"
-dest_files=["res://.godot/imported/_hit_rod.wav-dfefe4ca85b853c3e4a94b2611aeb014.sample"]
+source_file="res://scene/player/se/hit/_hit_rod.wav"
+dest_files=["res://.godot/imported/_hit_rod.wav-1c35c1ea490b8072322e9bbc1745d501.sample"]
 
 [params]
 

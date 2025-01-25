@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ceo73qbbxxnr2"]
 
-[ext_resource type="Script" path="res://fields/Warp/warp.gd" id="1_qhvf3"]
-[ext_resource type="FontFile" uid="uid://dgpvge4lgervq" path="res://scene/UI/PlayerStatus/x10y12pxDonguriDuel.ttf" id="2_xshct"]
+[ext_resource type="Script" path="res://fields/warp/warp.gd" id="1_qhvf3"]
+[ext_resource type="FontFile" uid="uid://dgpvge4lgervq" path="res://scene/ui/player_status/x10y12pxDonguriDuel.ttf" id="2_xshct"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q13gx"]
 size = Vector2(16, 16)

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d2w4neyea4eq2"
-path="res://.godot/imported/attck_axe.wav-ad03cc3185cdf4e3bdf79593907bcc8f.sample"
+path="res://.godot/imported/attck_axe.wav-4c95b930966b8b40a931134a69b1722d.sample"
 
 [deps]
 
-source_file="res://scene/Player/se/attack/attck_axe.wav"
-dest_files=["res://.godot/imported/attck_axe.wav-ad03cc3185cdf4e3bdf79593907bcc8f.sample"]
+source_file="res://scene/player/se/attack/attck_axe.wav"
+dest_files=["res://.godot/imported/attck_axe.wav-4c95b930966b8b40a931134a69b1722d.sample"]
 
 [params]
 

@@ -18,7 +18,7 @@ func _ready() -> void:
 
 # TODO: ↓クラス化する
 func get_scene_path(field: Enum.Field) -> String:
-	return "res://Fields/%s/%s.tscn" % [Enum.field_to_string(field), Enum.field_to_string(field)]
+	return "res://fields/%s/%s.tscn" % [Enum.field_to_string(field), Enum.field_to_string(field)]
 # TODO: HOMEにも対応する
 
 # TODO: ↓クラス化する

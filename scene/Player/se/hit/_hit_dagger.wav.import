@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bldo56sf6ttc0"
-path="res://.godot/imported/_hit_dagger.wav-b121b3a86f2d1a21f2d1efc40cf7bfb2.sample"
+path="res://.godot/imported/_hit_dagger.wav-4af24d066e980089fa2760bcc456aef9.sample"
 
 [deps]
 
-source_file="res://scene/Player/se/hit/_hit_dagger.wav"
-dest_files=["res://.godot/imported/_hit_dagger.wav-b121b3a86f2d1a21f2d1efc40cf7bfb2.sample"]
+source_file="res://scene/player/se/hit/_hit_dagger.wav"
+dest_files=["res://.godot/imported/_hit_dagger.wav-4af24d066e980089fa2760bcc456aef9.sample"]
 
 [params]
 

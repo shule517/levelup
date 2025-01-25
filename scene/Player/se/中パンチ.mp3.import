@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://btnq3nps38thy"
-path="res://.godot/imported/中パンチ.mp3-01c91b08dd767ac2e1e9eeb1dc55e2cd.mp3str"
+path="res://.godot/imported/中パンチ.mp3-92153cee09b4832963be5c901408d060.mp3str"
 
 [deps]
 
-source_file="res://scene/Player/se/中パンチ.mp3"
-dest_files=["res://.godot/imported/中パンチ.mp3-01c91b08dd767ac2e1e9eeb1dc55e2cd.mp3str"]
+source_file="res://scene/player/se/中パンチ.mp3"
+dest_files=["res://.godot/imported/中パンチ.mp3-92153cee09b4832963be5c901408d060.mp3str"]
 
 [params]
 

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://enemies/Base/enemy.gd" id="1_x18rc"]
 [ext_resource type="Shader" path="res://shader/outline.gdshader" id="2_5lths"]
 [ext_resource type="Texture2D" uid="uid://8kpn12hha50p" path="res://enemies/Base/ネズミ.png" id="3_j5gtb"]
-[ext_resource type="FontFile" uid="uid://b533rou4k6drt" path="res://scene/WorldClock/x12y16pxMaruMonica.ttf" id="3_lgtxu"]
+[ext_resource type="FontFile" uid="uid://b533rou4k6drt" path="res://scene/world_clock/x12y16pxMaruMonica.ttf" id="3_lgtxu"]
 [ext_resource type="Texture2D" uid="uid://b3rp4ks6m4mf1" path="res://enemies/Base/2460_2.png" id="5_88es7"]
 [ext_resource type="AudioStream" uid="uid://4ur1h21drcmo" path="res://enemies/Suraimu/poring_move.wav" id="6_56apl"]
 

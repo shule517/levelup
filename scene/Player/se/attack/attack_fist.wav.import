@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ckwv8xn6323mi"
-path="res://.godot/imported/attack_fist.wav-d3bd2f69af8d9816c26a0904c4f1be39.sample"
+path="res://.godot/imported/attack_fist.wav-7526aefbbab0ec6a2e910a9716239aa5.sample"
 
 [deps]
 
-source_file="res://scene/Player/se/attack/attack_fist.wav"
-dest_files=["res://.godot/imported/attack_fist.wav-d3bd2f69af8d9816c26a0904c4f1be39.sample"]
+source_file="res://scene/player/se/attack/attack_fist.wav"
+dest_files=["res://.godot/imported/attack_fist.wav-7526aefbbab0ec6a2e910a9716239aa5.sample"]
 
 [params]
 

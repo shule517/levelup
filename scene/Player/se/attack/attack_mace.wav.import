@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c4dsetniwrghn"
-path="res://.godot/imported/attack_mace.wav-a052625029664bb218ae17272a2c6134.sample"
+path="res://.godot/imported/attack_mace.wav-e84004dec34475b014713056a75c3b4b.sample"
 
 [deps]
 
-source_file="res://scene/Player/se/attack/attack_mace.wav"
-dest_files=["res://.godot/imported/attack_mace.wav-a052625029664bb218ae17272a2c6134.sample"]
+source_file="res://scene/player/se/attack/attack_mace.wav"
+dest_files=["res://.godot/imported/attack_mace.wav-e84004dec34475b014713056a75c3b4b.sample"]
 
 [params]
 

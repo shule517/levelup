@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://0w5mpdo3flam"
-path="res://.godot/imported/_hit_axe.wav-bf7f2b8d4d6fe7865b4c240dde958f13.sample"
+path="res://.godot/imported/_hit_axe.wav-03f63a0ac1f562811561045be7cc0014.sample"
 
 [deps]
 
-source_file="res://scene/Player/se/hit/_hit_axe.wav"
-dest_files=["res://.godot/imported/_hit_axe.wav-bf7f2b8d4d6fe7865b4c240dde958f13.sample"]
+source_file="res://scene/player/se/hit/_hit_axe.wav"
+dest_files=["res://.godot/imported/_hit_axe.wav-03f63a0ac1f562811561045be7cc0014.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://ce6jnepfphdl8"
-path="res://.godot/imported/決定ボタンを押す44.mp3-85b1c44aa66797092abce2a0ca4c8254.mp3str"
+path="res://.godot/imported/決定ボタンを押す44.mp3-5c1f5d32d846c5b481de1316836d5a94.mp3str"
 
 [deps]
 
-source_file="res://scene/Player/se/決定ボタンを押す44.mp3"
-dest_files=["res://.godot/imported/決定ボタンを押す44.mp3-85b1c44aa66797092abce2a0ca4c8254.mp3str"]
+source_file="res://scene/player/se/決定ボタンを押す44.mp3"
+dest_files=["res://.godot/imported/決定ボタンを押す44.mp3-5c1f5d32d846c5b481de1316836d5a94.mp3str"]
 
 [params]
 

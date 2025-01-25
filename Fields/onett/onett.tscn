@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://br76b88u5ou4m" path="res://fields/onett/onett.png" id="1_vrscx"]
 [ext_resource type="Texture2D" uid="uid://ca1mh32iexueu" path="res://fields/onett/onett_object.png" id="2_jcqjj"]
-[ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/Player/player.tscn" id="3_dg0pa"]
+[ext_resource type="PackedScene" uid="uid://w4kjvj6j2l7u" path="res://scene/player/player.tscn" id="3_dg0pa"]
 
 [node name="Onett" type="Node2D"]
 

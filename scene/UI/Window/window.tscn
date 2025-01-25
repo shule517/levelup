@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cgd0eevpbxgf4"]
 
-[ext_resource type="Texture2D" uid="uid://mstp8438hw3u" path="res://scene/UI/Window/window.png" id="1_m2ujy"]
+[ext_resource type="Texture2D" uid="uid://mstp8438hw3u" path="res://scene/ui/window/window.png" id="1_m2ujy"]
 
 [node name="Window" type="MarginContainer"]
 offset_right = 33.0
