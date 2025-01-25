@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bwhe1r3myagkx"
-path="res://.godot/imported/k8x12.ttf-0af2f1d772ba0a771f127e9330452a94.fontdata"
+uid="uid://b533rou4k6drt"
+path="res://.godot/imported/x12y16pxMaruMonica.ttf-fd2382f21ca769a7252fe4fe9da55245.fontdata"
 
 [deps]
 
-source_file="res://scene/ui/player_status/k8x12.ttf"
-dest_files=["res://.godot/imported/k8x12.ttf-0af2f1d772ba0a771f127e9330452a94.fontdata"]
+source_file="res://ui/world_clock/x12y16pxMaruMonica.ttf"
+dest_files=["res://.godot/imported/x12y16pxMaruMonica.ttf-fd2382f21ca769a7252fe4fe9da55245.fontdata"]
 
 [params]
 

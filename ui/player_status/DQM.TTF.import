@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bvay4i1em7ftp"
-path="res://.godot/imported/lanapixel.ttf-8368bd221191d7a23ef6d9612ad947ce.fontdata"
+uid="uid://drfjcdfcgcwt0"
+path="res://.godot/imported/DQM.TTF-fa0b6a1a85216f268ca06e44c1a3d0a4.fontdata"
 
 [deps]
 
-source_file="res://scene/ui/player_status/lanapixel.ttf"
-dest_files=["res://.godot/imported/lanapixel.ttf-8368bd221191d7a23ef6d9612ad947ce.fontdata"]
+source_file="res://ui/player_status/DQM.TTF"
+dest_files=["res://.godot/imported/DQM.TTF-fa0b6a1a85216f268ca06e44c1a3d0a4.fontdata"]
 
 [params]
 

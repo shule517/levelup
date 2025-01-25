@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dffq1ep3cf1xw"]
 
-[ext_resource type="Script" path="res://scene/ui/player_status/player_status.gd" id="1_fxs86"]
-[ext_resource type="PackedScene" uid="uid://cgd0eevpbxgf4" path="res://scene/ui/window/window.tscn" id="2_p2eil"]
-[ext_resource type="FontFile" uid="uid://dgpvge4lgervq" path="res://scene/ui/player_status/x10y12pxDonguriDuel.ttf" id="2_q7x2l"]
+[ext_resource type="Script" path="res://ui/player_status/player_status.gd" id="1_fxs86"]
+[ext_resource type="PackedScene" uid="uid://cgd0eevpbxgf4" path="res://ui/window/window.tscn" id="2_p2eil"]
+[ext_resource type="FontFile" uid="uid://dgpvge4lgervq" path="res://ui/player_status/x10y12pxDonguriDuel.ttf" id="2_q7x2l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dafbs"]
 bg_color = Color(1, 1, 1, 1)

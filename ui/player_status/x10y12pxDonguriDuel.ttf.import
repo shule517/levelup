@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dgpvge4lgervq"
-path="res://.godot/imported/x10y12pxDonguriDuel.ttf-69d269777dd2221c03d4c3c5daee4b5d.fontdata"
+path="res://.godot/imported/x10y12pxDonguriDuel.ttf-1224e38ee8e0f698ce0e0c5cc7a65328.fontdata"
 
 [deps]
 
-source_file="res://scene/ui/player_status/x10y12pxDonguriDuel.ttf"
-dest_files=["res://.godot/imported/x10y12pxDonguriDuel.ttf-69d269777dd2221c03d4c3c5daee4b5d.fontdata"]
+source_file="res://ui/player_status/x10y12pxDonguriDuel.ttf"
+dest_files=["res://.godot/imported/x10y12pxDonguriDuel.ttf-1224e38ee8e0f698ce0e0c5cc7a65328.fontdata"]
 
 [params]
 

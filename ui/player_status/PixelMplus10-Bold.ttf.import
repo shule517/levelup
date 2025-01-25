@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://drfjcdfcgcwt0"
-path="res://.godot/imported/DQM.TTF-3cf75f0c0f8bb0bc7295eb57fbf12296.fontdata"
+uid="uid://ds4l31djxvs62"
+path="res://.godot/imported/PixelMplus10-Bold.ttf-e9a2ac59aaee1738b8b879a88abadb04.fontdata"
 
 [deps]
 
-source_file="res://scene/ui/player_status/DQM.TTF"
-dest_files=["res://.godot/imported/DQM.TTF-3cf75f0c0f8bb0bc7295eb57fbf12296.fontdata"]
+source_file="res://ui/player_status/PixelMplus10-Bold.ttf"
+dest_files=["res://.godot/imported/PixelMplus10-Bold.ttf-e9a2ac59aaee1738b8b879a88abadb04.fontdata"]
 
 [params]
 

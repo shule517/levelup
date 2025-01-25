@@ -24,7 +24,7 @@ aseprite_executable_path="/Users/pixel_hal/Applications/Aseprite.app/Contents/Ma
 Global="*res://autoload/global.gd"
 FieldSwitcher="*res://autoload/field_switcher.gd"
 EnumAutoload="*res://autoload/enum.gd"
-TransitionScreen="*res://scene/ui/transition_screen/transition_screen.tscn"
+TransitionScreen="*res://ui/transition_screen/transition_screen.tscn"
 
 [debug]
 

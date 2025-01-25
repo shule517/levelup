@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cna6v1oqt7r8"
-path="res://.godot/imported/k8x12L.ttf-342642531d3b72473a8fc4531be4ebe1.fontdata"
+uid="uid://cd1al8giqq4v8"
+path="res://.godot/imported/PixelMplus12-Regular.ttf-89ef1502261fcbfca3f3d4b1a604aa94.fontdata"
 
 [deps]
 
-source_file="res://scene/ui/player_status/k8x12L.ttf"
-dest_files=["res://.godot/imported/k8x12L.ttf-342642531d3b72473a8fc4531be4ebe1.fontdata"]
+source_file="res://ui/player_status/PixelMplus12-Regular.ttf"
+dest_files=["res://.godot/imported/PixelMplus12-Regular.ttf-89ef1502261fcbfca3f3d4b1a604aa94.fontdata"]
 
 [params]
 

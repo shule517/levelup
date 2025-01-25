@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b533rou4k6drt"
-path="res://.godot/imported/x12y16pxMaruMonica.ttf-b8c60f4cc331c9e58225fa0b9c96dd90.fontdata"
+uid="uid://f6e1c27t7cv"
+path="res://.godot/imported/DragonQuestFC.ttf-661c728dc462aa8546737dec31ba6763.fontdata"
 
 [deps]
 
-source_file="res://scene/world_clock/x12y16pxMaruMonica.ttf"
-dest_files=["res://.godot/imported/x12y16pxMaruMonica.ttf-b8c60f4cc331c9e58225fa0b9c96dd90.fontdata"]
+source_file="res://ui/player_status/DragonQuestFC.ttf"
+dest_files=["res://.godot/imported/DragonQuestFC.ttf-661c728dc462aa8546737dec31ba6763.fontdata"]
 
 [params]
 

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bedqlss5l4d5x"
-path="res://.godot/imported/PixelMplus12-Bold.ttf-52f095eaaaf0e5909b020b25ea43487f.fontdata"
+uid="uid://bmv2868bcw4dt"
+path="res://.godot/imported/x12y12pxMaruMinyaM.ttf-787f9e7042938fba0320738c7f700837.fontdata"
 
 [deps]
 
-source_file="res://scene/ui/player_status/PixelMplus12-Bold.ttf"
-dest_files=["res://.godot/imported/PixelMplus12-Bold.ttf-52f095eaaaf0e5909b020b25ea43487f.fontdata"]
+source_file="res://ui/world_clock/x12y12pxMaruMinyaM.ttf"
+dest_files=["res://.godot/imported/x12y12pxMaruMinyaM.ttf-787f9e7042938fba0320738c7f700837.fontdata"]
 
 [params]
 
