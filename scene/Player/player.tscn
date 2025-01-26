@@ -351,9 +351,9 @@ metadata/_aseprite_wizard_interface_config_ = {
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -15)
 sprite_frames = SubResource("SpriteFrames_lwp2k")
 animation = &"walk"
+offset = Vector2(0, -14)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -441,6 +441,7 @@ libraries = {
 }
 
 [node name="HpProgressBar" type="ProgressBar" parent="."]
+visible = false
 offset_left = -17.0
 offset_top = 4.0
 offset_right = 18.0
