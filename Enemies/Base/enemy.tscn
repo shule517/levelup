@@ -61,7 +61,7 @@ height = 6.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_i5gpt"]
 radius = 80.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lcli8"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1aq07"]
 radius = 18.0
 
 [sub_resource type="Animation" id="Animation_huxbd"]
@@ -198,7 +198,7 @@ material = SubResource("ShaderMaterial_4ir5a")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_2jmly")
 animation = &"idle"
-frame_progress = 0.945674
+frame_progress = 0.678983
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -238,7 +238,7 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
 light_mask = 0
 visibility_layer = 0
-shape = SubResource("CircleShape2D_lcli8")
+shape = SubResource("CircleShape2D_1aq07")
 
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 4.0
