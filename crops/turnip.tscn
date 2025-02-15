@@ -1,69 +1,35 @@
-[gd_scene load_steps=11 format=3 uid="uid://c4cbde7hcnqcd"]
+[gd_scene load_steps=9 format=3 uid="uid://c4cbde7hcnqcd"]
 
 [ext_resource type="Texture2D" uid="uid://cl1001ptnn7e4" path="res://crops/turnip.png" id="1_6wxt8"]
 [ext_resource type="Script" path="res://crops/turnip.gd" id="1_qvich"]
 [ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/吸盤.mp3" id="2_k5hka"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2sq2s"]
-atlas = ExtResource("1_6wxt8")
-region = Rect2(32, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ovdij"]
-atlas = ExtResource("1_6wxt8")
-region = Rect2(0, 32, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3k4t0"]
-atlas = ExtResource("1_6wxt8")
-region = Rect2(16, 32, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_426jr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_abwah"]
 atlas = ExtResource("1_6wxt8")
 region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8m0ns"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c00bv"]
 atlas = ExtResource("1_6wxt8")
 region = Rect2(16, 0, 16, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_e8kj8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx50q"]
+atlas = ExtResource("1_6wxt8")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uipve"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2sq2s")
-}],
-"loop": true,
-"name": &"0",
-"speed": 10.0
+"texture": SubResource("AtlasTexture_abwah")
 }, {
-"frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ovdij")
-}],
-"loop": true,
-"name": &"1",
-"speed": 10.0
+"texture": SubResource("AtlasTexture_c00bv")
 }, {
-"frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3k4t0")
+"texture": SubResource("AtlasTexture_rx50q")
 }],
 "loop": true,
-"name": &"2",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_426jr")
-}],
-"loop": true,
-"name": &"icon",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8m0ns")
-}],
-"loop": true,
-"name": &"item",
+"name": &"default",
 "speed": 10.0
 }]
 
@@ -76,9 +42,7 @@ sound = ExtResource("2_k5hka")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -9)
-sprite_frames = SubResource("SpriteFrames_e8kj8")
-animation = &"2"
-frame_progress = 0.891816
+sprite_frames = SubResource("SpriteFrames_uipve")
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -88,7 +52,7 @@ metadata/_aseprite_wizard_config_ = {
 "slice": "",
 "source": "res://crops/turnip.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "99cbc6113fc3ead2f697bd97b051ec1c"
+metadata/_aseprite_wizard_source_file_hash_ = "a62c6f89e99ce444fa75251d5d7523ca"
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "slice_section": true
@@ -102,4 +66,9 @@ shape = SubResource("CircleShape2D_uqv8v")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
