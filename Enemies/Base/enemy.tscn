@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b3rp4ks6m4mf1" path="res://enemies/Base/2460_2.png" id="5_88es7"]
 [ext_resource type="AudioStream" uid="uid://4ur1h21drcmo" path="res://enemies/Suraimu/poring_move.wav" id="6_56apl"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4ir5a"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ytrkk"]
 shader = ExtResource("2_5lths")
 shader_parameter/enabled = false
 shader_parameter/is_selected = false
@@ -61,7 +61,7 @@ height = 6.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_i5gpt"]
 radius = 80.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1aq07"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_wdn4r"]
 radius = 18.0
 
 [sub_resource type="Animation" id="Animation_huxbd"]
@@ -194,11 +194,11 @@ script = ExtResource("1_x18rc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
 texture_filter = 1
-material = SubResource("ShaderMaterial_4ir5a")
+material = SubResource("ShaderMaterial_ytrkk")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_2jmly")
 animation = &"idle"
-frame_progress = 0.875369
+frame_progress = 0.167774
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -238,10 +238,10 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
 light_mask = 0
 visibility_layer = 0
-shape = SubResource("CircleShape2D_1aq07")
+shape = SubResource("CircleShape2D_wdn4r")
 
 [node name="AttackTimer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 3.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -249,20 +249,24 @@ libraries = {
 }
 
 [node name="NameLabel" type="Label" parent="."]
+visible = false
+z_index = 100
 offset_left = -46.0
 offset_top = 10.0
 offset_right = 45.0
 offset_bottom = 20.0
-text = "ねずみ"
+text = "モンスター"
 label_settings = SubResource("LabelSettings_c8q5t")
 horizontal_alignment = 1
 
 [node name="CursorAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(0, -23)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_jtrxe")
 animation = &"idle"
+frame_progress = 0.608218
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -275,6 +279,8 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "d0f6194c4f8c6bef6ac93067f6982027"
 
 [node name="HpProgressBar" type="ProgressBar" parent="."]
+visible = false
+z_index = 100
 offset_left = -17.0
 offset_top = 4.0
 offset_right = 18.0

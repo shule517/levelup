@@ -9,9 +9,9 @@
 [ext_resource type="Shader" path="res://shader/outline.gdshader" id="6_asera"]
 [ext_resource type="Texture2D" uid="uid://ccopvtdej6qwp" path="res://enemies/Suraimu/2460_2.png" id="8_hasdr"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ut0is"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3rmu6"]
 shader = ExtResource("6_asera")
-shader_parameter/enabled = true
+shader_parameter/enabled = false
 shader_parameter/is_selected = false
 shader_parameter/modulate = null
 
@@ -84,7 +84,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xhjlw"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_fkh2r"]
 radius = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6emo"]
@@ -138,10 +138,10 @@ damage_sound = ExtResource("4_n4j6q")
 die_sound = ExtResource("4_irsp8")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
-material = SubResource("ShaderMaterial_ut0is")
+material = SubResource("ShaderMaterial_3rmu6")
 position = Vector2(2.08165e-12, -6)
 sprite_frames = SubResource("SpriteFrames_2qub0")
-frame_progress = 0.170716
+frame_progress = 0.775609
 offset = Vector2(2.08165e-12, -7)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -155,7 +155,14 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "e19dc0ed217d8f84adfe5c17c92b77ab"
 
 [node name="CollisionShape2D" parent="AttackArea2D" index="0"]
-shape = SubResource("CircleShape2D_xhjlw")
+shape = SubResource("CircleShape2D_fkh2r")
+
+[node name="AttackTimer" parent="." index="4"]
+wait_time = 2.0
+
+[node name="NameLabel" parent="." index="6"]
+text = "スライム"
 
 [node name="CursorAnimatedSprite2D" parent="." index="7"]
 sprite_frames = SubResource("SpriteFrames_6fn24")
+frame_progress = 0.379463

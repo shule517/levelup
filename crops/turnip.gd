@@ -4,22 +4,27 @@ extends Node2D
 @export var sound: AudioStream
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
 
 func _ready() -> void:
 	sprite.frame = 0
 	audio_stream_player_2d.finished.connect(_on_finished)
 
+# メインループ
+func _process(_delta: float) -> void:
+	pass
+
 func _on_finished() -> void:
 	queue_free()
 
 # 収穫可能か？
-func is_harvestable() -> bool:
+func can_harvest() -> bool:
 	# 最大フレームまでいったか？
 	return sprite.frame == (sprite.sprite_frames.get_frame_count(sprite.animation) - 1)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		if 	is_harvestable() and Input.is_action_pressed("button_a"):
+	if body.is_in_group("Player") and Input.is_action_pressed("button_a"):
+		if can_harvest():
 			visible = false
 			play_sound_effect(sound, randf_range(0.8, 1.5))
 
