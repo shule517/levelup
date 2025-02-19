@@ -37,17 +37,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			Audio.play_sound_effect(sound, self, randf_range(0.8, 1.5))
 			queue_free()
 
-# TODO: SEを再生する仕組みをAutoloadでやりたい
-# TODO: Autoloadですると、このオブジェクトの位置から音を再生。ができなくなるので、
-#       音声再生用のNodeをposition付きで生成したほうがよいのでは？
-# SEを再生する
-func play_sound_effect(sound_effect: AudioStream, pitch_scale: float = 1.0, volume_db: float = 0.0) -> void:
-	audio_stream_player_2d.stream = sound_effect
-	audio_stream_player_2d.pitch_scale = pitch_scale
-	audio_stream_player_2d.volume_db = volume_db
-	audio_stream_player_2d.play()
-	await audio_stream_player_2d.finished
-
 func _on_timer_timeout() -> void:
 	if seed_sprite.visible:
 		seed_sprite.visible = false
