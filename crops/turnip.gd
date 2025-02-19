@@ -31,11 +31,13 @@ func can_harvest() -> bool:
 	return crop_sprite.frame == (crop_sprite.sprite_frames.get_frame_count(crop_sprite.animation) - 1)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	# TODO: 収穫処理はここで書くのがいいのか？ Playerからキックしたほうがいい？
 	if body.is_in_group("Player") and Input.is_action_pressed("button_a"):
 		if can_harvest():
 			visible = false
 			play_sound_effect(sound, randf_range(0.8, 1.5))
 
+# TODO: SEを再生する仕組みをAutoroadでやりたい
 # SEを再生する
 func play_sound_effect(sound_effect: AudioStream, pitch_scale: float = 1.0, volume_db: float = 0.0) -> void:
 	audio_stream_player_2d.stream = sound_effect
