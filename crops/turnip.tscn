@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://c4cbde7hcnqcd"]
+[gd_scene load_steps=17 format=3 uid="uid://c4cbde7hcnqcd"]
 
 [ext_resource type="Texture2D" uid="uid://cl1001ptnn7e4" path="res://crops/turnip.png" id="1_6wxt8"]
 [ext_resource type="Script" path="res://crops/turnip.gd" id="1_qvich"]
 [ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/吸盤.mp3" id="2_k5hka"]
+[ext_resource type="Shader" path="res://shader/outline.gdshader" id="4_0n42n"]
 [ext_resource type="Texture2D" uid="uid://jdwqgkdyry0t" path="res://crops/seed.png" id="4_hwna2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lsysm"]
@@ -41,29 +42,34 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_abwah"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e06t7"]
+shader = ExtResource("4_0n42n")
+shader_parameter/enabled = false
+shader_parameter/is_selected = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqgyt"]
 atlas = ExtResource("1_6wxt8")
 region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c00bv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_aiv65"]
 atlas = ExtResource("1_6wxt8")
 region = Rect2(16, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rx50q"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uq61"]
 atlas = ExtResource("1_6wxt8")
 region = Rect2(0, 32, 16, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_uipve"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ckxp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_abwah")
+"texture": SubResource("AtlasTexture_kqgyt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c00bv")
+"texture": SubResource("AtlasTexture_aiv65")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rx50q")
+"texture": SubResource("AtlasTexture_8uq61")
 }],
 "loop": true,
 "name": &"default",
@@ -79,6 +85,7 @@ sound = ExtResource("2_k5hka")
 [node name="SeedAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_86cvv")
+frame = 1
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -92,8 +99,9 @@ metadata/_aseprite_wizard_source_file_hash_ = "7ca928754d72b0ac5217b3caa66cfa64"
 
 [node name="CropAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_e06t7")
 position = Vector2(0, -9)
-sprite_frames = SubResource("SpriteFrames_uipve")
+sprite_frames = SubResource("SpriteFrames_4ckxp")
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -103,7 +111,7 @@ metadata/_aseprite_wizard_config_ = {
 "slice": "",
 "source": "res://crops/turnip.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "a62c6f89e99ce444fa75251d5d7523ca"
+metadata/_aseprite_wizard_source_file_hash_ = "e7324d27b52b1de59d5c9ec548472cc8"
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "slice_section": true
