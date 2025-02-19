@@ -10,37 +10,32 @@ extends Node2D
 
 func _ready() -> void:
 	seed_sprite.visible = true
-	seed_sprite.frame = randi_range(0, 3)
+	seed_sprite.frame = randi_range(0, 3) # 種4種類ランダム
 	crop_sprite.visible = false
-	audio_stream_player_2d.finished.connect(_on_finished)
-
-func level() -> int:
-	return crop_sprite.frame
-
-# メインループ
-func _process(_delta: float) -> void:
-	pass
-
-func _on_finished() -> void:
-	get_parent().remove_child(self) # queue_freeだけしても、参照が残ってしまうため
-	queue_free()
 
 # 収穫可能か？
 func can_harvest() -> bool:
 	# 最大フレームまでいったか？
 	return crop_sprite.frame == (crop_sprite.sprite_frames.get_frame_count(crop_sprite.animation) - 1)
 
+# 収穫する
+func harvest() -> void:
+	Audio.play_sound_effect(sound, self, randf_range(0.8, 1.5))
+	queue_free()
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	# TODO: 収穫処理はここで書くのがいいのか？ Playerからキックしたほうがいい？
 	if body.is_in_group("Player") and Input.is_action_pressed("button_a"):
 		if can_harvest():
-			Audio.play_sound_effect(sound, self, randf_range(0.8, 1.5))
-			queue_free()
+			harvest()
 
+# 植物の成長
 func _on_timer_timeout() -> void:
 	if seed_sprite.visible:
+		# 種から芽が生えた
 		seed_sprite.visible = false
 		crop_sprite.visible = true
 		crop_sprite.frame = 0
 	else:
+		# 芽が成長
 		crop_sprite.frame += 1
