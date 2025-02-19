@@ -10,6 +10,7 @@ extends CharacterBody2D
 @export var critical_sound: AudioStream
 
 @onready var global := $/root/Global
+@onready var crops_tile_map_layer: CropsTileMapPlayer = get_tree().get_root().find_child("CropsTileMapLayer", true, false)
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -57,9 +58,14 @@ func _process(_delta: float) -> void:
 		select_enemy_index += 1
 		select_enemy()
 
-	if Input.is_action_just_pressed("button_a"):
+	# 攻撃
+	if Input.is_action_just_pressed("button_x"):
 		select_enemy()
 		attack_target = selected_enemy()
+
+	# 種をまく
+	if Input.is_action_pressed("button_y"):
+		crops_tile_map_layer.plant_crop(position)
 
 	# 攻撃ターゲットがいる場合は、すぐに攻撃をはじめる
 	if attack_target != null:

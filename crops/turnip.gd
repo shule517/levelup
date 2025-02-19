@@ -1,4 +1,5 @@
 @tool
+class_name Turnip
 extends Node2D
 
 @export var sound: AudioStream
@@ -10,11 +11,15 @@ func _ready() -> void:
 	sprite.frame = 0
 	audio_stream_player_2d.finished.connect(_on_finished)
 
+func level() -> int:
+	return sprite.frame
+
 # メインループ
 func _process(_delta: float) -> void:
 	pass
 
 func _on_finished() -> void:
+	get_parent().remove_child(self) # queue_freeだけしても、参照が残ってしまうため
 	queue_free()
 
 # 収穫可能か？
