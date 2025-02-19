@@ -3,16 +3,19 @@ class_name Turnip
 extends Node2D
 
 @export var sound: AudioStream
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var seed_sprite: AnimatedSprite2D = $SeedAnimatedSprite2D
+@onready var crop_sprite: AnimatedSprite2D = $CropAnimatedSprite2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
 
 func _ready() -> void:
-	sprite.frame = 0
+	seed_sprite.visible = true
+	seed_sprite.frame = randi_range(0, 3)
+	crop_sprite.visible = false
 	audio_stream_player_2d.finished.connect(_on_finished)
 
 func level() -> int:
-	return sprite.frame
+	return crop_sprite.frame
 
 # メインループ
 func _process(_delta: float) -> void:
@@ -25,7 +28,7 @@ func _on_finished() -> void:
 # 収穫可能か？
 func can_harvest() -> bool:
 	# 最大フレームまでいったか？
-	return sprite.frame == (sprite.sprite_frames.get_frame_count(sprite.animation) - 1)
+	return crop_sprite.frame == (crop_sprite.sprite_frames.get_frame_count(crop_sprite.animation) - 1)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player") and Input.is_action_pressed("button_a"):
@@ -42,4 +45,9 @@ func play_sound_effect(sound_effect: AudioStream, pitch_scale: float = 1.0, volu
 	await audio_stream_player_2d.finished
 
 func _on_timer_timeout() -> void:
-	sprite.frame += 1
+	if seed_sprite.visible:
+		seed_sprite.visible = false
+		crop_sprite.visible = true
+		crop_sprite.frame = 0
+	else:
+		crop_sprite.frame += 1

@@ -1,8 +1,45 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4cbde7hcnqcd"]
+[gd_scene load_steps=15 format=3 uid="uid://c4cbde7hcnqcd"]
 
 [ext_resource type="Texture2D" uid="uid://cl1001ptnn7e4" path="res://crops/turnip.png" id="1_6wxt8"]
 [ext_resource type="Script" path="res://crops/turnip.gd" id="1_qvich"]
 [ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/吸盤.mp3" id="2_k5hka"]
+[ext_resource type="Texture2D" uid="uid://jdwqgkdyry0t" path="res://crops/seed.png" id="4_hwna2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsysm"]
+atlas = ExtResource("4_hwna2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84ggp"]
+atlas = ExtResource("4_hwna2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1tuj"]
+atlas = ExtResource("4_hwna2")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee6w7"]
+atlas = ExtResource("4_hwna2")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_86cvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsysm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84ggp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1tuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee6w7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_abwah"]
 atlas = ExtResource("1_6wxt8")
@@ -39,7 +76,21 @@ animations = [{
 script = ExtResource("1_qvich")
 sound = ExtResource("2_k5hka")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="SeedAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_86cvv")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://crops/seed.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "7ca928754d72b0ac5217b3caa66cfa64"
+
+[node name="CropAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_uipve")
