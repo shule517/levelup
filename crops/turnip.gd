@@ -34,10 +34,12 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	# TODO: 収穫処理はここで書くのがいいのか？ Playerからキックしたほうがいい？
 	if body.is_in_group("Player") and Input.is_action_pressed("button_a"):
 		if can_harvest():
-			visible = false
-			play_sound_effect(sound, randf_range(0.8, 1.5))
+			Audio.play_sound_effect(sound, self, randf_range(0.8, 1.5))
+			queue_free()
 
-# TODO: SEを再生する仕組みをAutoroadでやりたい
+# TODO: SEを再生する仕組みをAutoloadでやりたい
+# TODO: Autoloadですると、このオブジェクトの位置から音を再生。ができなくなるので、
+#       音声再生用のNodeをposition付きで生成したほうがよいのでは？
 # SEを再生する
 func play_sound_effect(sound_effect: AudioStream, pitch_scale: float = 1.0, volume_db: float = 0.0) -> void:
 	audio_stream_player_2d.stream = sound_effect

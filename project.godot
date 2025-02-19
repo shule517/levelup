@@ -25,6 +25,7 @@ Global="*res://autoload/global.gd"
 FieldSwitcher="*res://autoload/field_switcher.gd"
 EnumAutoload="*res://autoload/enum.gd"
 TransitionScreen="*res://ui/transition_screen/transition_screen.tscn"
+Audio="*res://autoload/audio.gd"
 
 [debug]
 
