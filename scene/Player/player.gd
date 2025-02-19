@@ -11,6 +11,7 @@ extends CharacterBody2D
 
 @onready var global := $/root/Global
 @onready var crops_tile_map_layer: CropsTileMapPlayer = get_tree().get_root().find_child("CropsTileMapLayer", true, false)
+@onready var cell_animated_sprite_2d: AnimatedSprite2D = $CellAnimatedSprite2D
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -65,7 +66,10 @@ func _process(_delta: float) -> void:
 
 	# 種をまく
 	if Input.is_action_pressed("button_y"):
-		crops_tile_map_layer.plant_crop(position)
+		crops_tile_map_layer.plant_crop(Vector2(position.x, position.y + 16))
+
+	# 種をまくセルのガイド表示
+	cell_animated_sprite_2d.global_position = Vector2(int(global_position.x / 16) * 16 + 8, int(global_position.y / 16) * 16 + 8)
 
 	# 攻撃ターゲットがいる場合は、すぐに攻撃をはじめる
 	if attack_target != null:

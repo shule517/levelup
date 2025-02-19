@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=40 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/player/se/attack/attack_short_sword.wav" id="2_1lcni"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://btnq3nps38thy" path="res://scene/player/se/中パンチ.mp3" id="7_ic2pr"]
 [ext_resource type="Texture2D" uid="uid://cav30l734le55" path="res://scene/player/levelup.png" id="8_l85kp"]
 [ext_resource type="Texture2D" uid="uid://6h1qwakeb5b" path="res://scene/player/goat.png" id="11_vdirr"]
+[ext_resource type="Texture2D" uid="uid://b7hyacdb54pls" path="res://scene/player/cell.png" id="12_idnck"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hp1bx"]
 atlas = ExtResource("8_l85kp")
@@ -88,6 +89,21 @@ animations = [{
 "texture": SubResource("AtlasTexture_r0cnw")
 }],
 "loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng2kv"]
+atlas = ExtResource("12_idnck")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qvuh2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng2kv")
+}],
+"loop": true,
 "name": &"default",
 "speed": 10.0
 }]
@@ -348,6 +364,20 @@ metadata/_aseprite_wizard_source_file_hash_ = "0c194acce163aea2d82dd85c6643df01"
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": false
 }
+
+[node name="CellAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_qvuh2")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://scene/player/cell.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "a746a5577bb4fd559eadb1d8b15b23d6"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
