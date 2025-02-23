@@ -33,6 +33,7 @@ func can_harvest() -> bool:
 
 # 収穫する
 func harvest() -> void:
+	Global.tunip_count += 1
 	Audio.play_sound_effect(sound, self, randf_range(0.8, 1.5))
 	queue_free()
 

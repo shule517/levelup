@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://mscchko3imj3"
+path="res://.godot/imported/shortitem_bg.aseprite-8039afbfd9b62fa0b771ff59acbd0494.res"
+
+[deps]
+
+source_file="res://ui/item_bar/shortitem_bg.aseprite"
+dest_files=["res://.godot/imported/shortitem_bg.aseprite-8039afbfd9b62fa0b771ff59acbd0494.res"]
+
+[params]
+

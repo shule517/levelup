@@ -1,0 +1,149 @@
+[gd_scene load_steps=14 format=3 uid="uid://dffq1ep3cf1xw"]
+
+[ext_resource type="Script" path="res://ui/item_bar/item_bar.gd" id="1_v8hm5"]
+[ext_resource type="Texture2D" uid="uid://vut0wskmsva7" path="res://ui/item_bar/item_turnip.png" id="3_8s4vo"]
+[ext_resource type="Texture2D" uid="uid://bmfsnnevk5vyc" path="res://ui/item_bar/shortitem_bg.png" id="3_tor2f"]
+[ext_resource type="FontFile" uid="uid://hoe6a4uttksq" path="res://ui/player_status/PixelMplus10-Regular.ttf" id="4_b2tgu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lfxu"]
+atlas = ExtResource("3_tor2f")
+region = Rect2(0, 0, 265, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgndv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lfxu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or1ly"]
+atlas = ExtResource("3_8s4vo")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vryr5"]
+atlas = ExtResource("3_8s4vo")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_558ot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or1ly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vryr5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i22aa"]
+atlas = ExtResource("3_8s4vo")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i58da"]
+atlas = ExtResource("3_8s4vo")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kd3t7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i22aa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i58da")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_phacw"]
+font = ExtResource("4_b2tgu")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[node name="ItemBar" type="Node2D"]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_v8hm5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 18)
+sprite_frames = SubResource("SpriteFrames_fgndv")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://ui/item_bar/shortitem_bg.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "d005a47d586894d3b51168b5025fb027"
+
+[node name="Item1AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-116.25, 17.5)
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_558ot")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://ui/item_bar/item_turnip.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"slice_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "cb63a679a6e578ee0110a3ab28eddfa1"
+
+[node name="Item2AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-86.25, 17.5)
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_kd3t7")
+frame = 1
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://ui/item_bar/item_turnip.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"slice_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "cb63a679a6e578ee0110a3ab28eddfa1"
+
+[node name="Item1CountLabel" type="Label" parent="."]
+offset_left = -141.25
+offset_top = 22.5
+offset_right = -101.25
+offset_bottom = 45.5
+text = "16"
+label_settings = SubResource("LabelSettings_phacw")
+horizontal_alignment = 2
+
+[node name="Item2CountLabel" type="Label" parent="."]
+offset_left = -112.5
+offset_top = 22.5
+offset_right = -72.5
+offset_bottom = 45.5
+text = "16"
+label_settings = SubResource("LabelSettings_phacw")
+horizontal_alignment = 2

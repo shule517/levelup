@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://csj0hwaue3oq1" path="res://enemies/Suraimu/suraimu.tscn" id="4_vhx3v"]
 [ext_resource type="PackedScene" uid="uid://dyqxqqrjedcfm" path="res://enemies/Kinoko/Kinoko.tscn" id="6_bifwu"]
 [ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://ui/world_clock/world_clock.tscn" id="6_eiw5w"]
-[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/player_status/player_status.tscn" id="6_vyjou"]
+[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/item_bar/item_bar.tscn" id="6_vyjou"]
 [ext_resource type="PackedScene" uid="uid://ckeor1b6bs7mr" path="res://enemies/Nezumi/nezumi.tscn" id="7_ng00h"]
 [ext_resource type="Texture2D" uid="uid://crx0viuw4vj0x" path="res://enemies/Kinoko/キノコ.png" id="8_rx2x6"]
 [ext_resource type="PackedScene" uid="uid://dhlpwbylh6hwc" path="res://enemies/Karasu/karasu.tscn" id="9_gynuo"]

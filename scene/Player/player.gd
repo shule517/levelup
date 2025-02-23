@@ -65,7 +65,7 @@ func _process(_delta: float) -> void:
 		attack_target = selected_enemy()
 
 	# 種をまく
-	if Input.is_action_pressed("button_y"):
+	if Input.is_action_pressed("button_y") and crops_tile_map_layer:
 		crops_tile_map_layer.plant_crop(Vector2(position.x, position.y + 16))
 
 	# 種をまくセルのガイド表示
