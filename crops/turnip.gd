@@ -4,13 +4,17 @@ extends Node2D
 
 # TODO: Cropを継承したい
 
-@export var sound: AudioStream
+@export var harvest_sound: AudioStream
+@export var water_sound: AudioStream
 @onready var seed_sprite: AnimatedSprite2D = $SeedAnimatedSprite2D
 @onready var crop_sprite: AnimatedSprite2D = $CropAnimatedSprite2D
+@onready var need_water_sprite: AnimatedSprite2D = $NeetWaterAnimatedSprite2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var timer: Timer = $Timer
 @onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
 
 var is_selected: bool = false
+var has_water: bool = false
 
 func _ready() -> void:
 	seed_sprite.visible = true
@@ -22,9 +26,14 @@ func _ready() -> void:
 	crop_sprite.material = new_material
 
 func _process(delta: float) -> void:
-	if is_selected && can_harvest():
-		if Input.is_action_pressed("button_a"):
+	need_water_sprite.visible = need_water()
+
+	if is_selected && Input.is_action_pressed("button_a"):
+		print("is_selected && Input.is_action_pressed(button_a")
+		if can_harvest():
 			harvest()
+		elif need_water():
+			water_crops()
 
 # 収穫可能か？
 func can_harvest() -> bool:
@@ -34,8 +43,17 @@ func can_harvest() -> bool:
 # 収穫する
 func harvest() -> void:
 	Global.tunip_count += 1
-	Audio.play_sound_effect(sound, self, randf_range(0.8, 1.5))
+	Audio.play_sound_effect(harvest_sound, self, randf_range(0.8, 1.5))
 	queue_free()
+
+func need_water() -> bool:
+	return not can_harvest() and not has_water
+
+# 水を上げる
+func water_crops() -> void:
+	Audio.play_sound_effect(water_sound, self, randf_range(0.8, 1.1))
+	has_water = true
+	timer.start()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	# TODO: 収穫処理はここで書くのがいいのか？ Playerからキックしたほうがいい？
@@ -53,6 +71,8 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 # 植物の成長
 func _on_timer_timeout() -> void:
+	timer.stop()
+	has_water = false
 	if seed_sprite.visible:
 		# 種から芽が生えた
 		seed_sprite.visible = false
