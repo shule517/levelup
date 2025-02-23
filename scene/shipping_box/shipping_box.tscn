@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=3 uid="uid://2foqjj2jstxh"]
+
+[ext_resource type="Script" path="res://scene/shipping_box/shipping_box.gd" id="1_s4x2y"]
+[ext_resource type="Texture2D" uid="uid://bmpr10jr1vs7p" path="res://scene/shipping_box/chest.png" id="1_xaehj"]
+[ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/吸盤.mp3" id="2_rlrx5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dnn2"]
+atlas = ExtResource("1_xaehj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idapf"]
+atlas = ExtResource("1_xaehj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6daj1"]
+atlas = ExtResource("1_xaehj")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l21p0"]
+atlas = ExtResource("1_xaehj")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lhrt7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dnn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idapf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6daj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l21p0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6daj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6daj1")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bigh3"]
+radius = 20.0
+
+[node name="ShippingBox" type="Node2D"]
+script = ExtResource("1_s4x2y")
+sound = ExtResource("2_rlrx5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_lhrt7")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://scene/shipping_box/chest.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f25a89cd91c765f9ce9b8a21f22cafbf"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_bigh3")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
