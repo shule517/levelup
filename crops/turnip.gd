@@ -6,6 +6,7 @@ extends Node2D
 
 @export var harvest_sound: AudioStream
 @export var water_sound: AudioStream
+@onready var ground_sprite: AnimatedSprite2D = $GroundAnimatedSprite2D
 @onready var seed_sprite: AnimatedSprite2D = $SeedAnimatedSprite2D
 @onready var crop_sprite: AnimatedSprite2D = $CropAnimatedSprite2D
 @onready var need_water_sprite: AnimatedSprite2D = $NeetWaterAnimatedSprite2D
@@ -21,9 +22,10 @@ func _ready() -> void:
 	seed_sprite.frame = randi_range(0, 3) # 種4種類ランダム
 	crop_sprite.visible = false
 
-	# 作物をランダムに設定する
-	var animation_names := crop_sprite.sprite_frames.get_animation_names()
-	crop_sprite.play(animation_names[randi_range(0, animation_names.size() - 1)], 0)
+	# TODO: 作物をランダムに設定する
+	#var animation_names := crop_sprite.sprite_frames.get_animation_names()
+	#crop_sprite.play(animation_names[randi_range(0, animation_names.size() - 1)], 0)
+	crop_sprite.play("turnip", 0)
 
 	var new_material := ShaderMaterial.new()
 	new_material.shader = crop_sprite.material.shader
@@ -35,12 +37,13 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	need_water_sprite.visible = need_water()
+	ground_sprite.frame = 2 if has_water else 1
 
 	if can_harvest():
-		if is_selected && Input.is_action_just_pressed("button_a"):
+		if is_selected && Input.is_action_pressed("button_a"):
 			harvest()
 	elif need_water():
-		if is_selected && Input.is_action_just_pressed("button_a"):
+		if is_selected && Input.is_action_pressed("button_a"):
 			water_crops()
 
 # 収穫可能か？
