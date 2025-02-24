@@ -12,6 +12,7 @@ extends CharacterBody2D
 @onready var global := $/root/Global
 @onready var crops_tile_map_layer: CropsTileMapPlayer = get_tree().get_root().find_child("CropsTileMapLayer", true, false)
 @onready var cell_animated_sprite_2d: AnimatedSprite2D = $CellAnimatedSprite2D
+@onready var weapon_sprite_2d: Sprite2D = $WeaponSprite2D
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -28,7 +29,7 @@ var before_attack_time: float = Time.get_unix_time_from_system()
 
 # 初期化
 func _ready() -> void:
-	$WeaponSprite2D.visible = false
+	weapon_sprite_2d.visible = false
 	# AudioStreamPlayerノードを作成し、配列に追加
 	for i in range(10):
 		var player := AudioStreamPlayer.new()
@@ -94,7 +95,7 @@ func _process(_delta: float) -> void:
 	# 移動したら、攻撃をキャンセルする
 	if value != Vector2.ZERO:
 		attack_target = null
-		$WeaponSprite2D.visible = false
+		weapon_sprite_2d.visible = false
 
 	if is_instance_valid(attack_target):
 		var distance: float = attack_target.position.distance_to(position)
@@ -108,7 +109,7 @@ func _process(_delta: float) -> void:
 		# TODO: play_sound_effect(walk_sound)
 		sprite.flip_h = value.x < 0
 		# TODO: ほんとは武器の向きも反転させたい
-		$WeaponSprite2D.visible = false
+		weapon_sprite_2d.visible = false
 
 	velocity = value * SPEED
 	move_and_slide()
@@ -183,7 +184,7 @@ func attack() -> void:
 	if is_instance_valid(attack_target) && attack_target.is_alive():
 		var distance: float = position.distance_to(attack_target.position)
 		if distance <= 20:
-			$WeaponSprite2D.visible = true
+			weapon_sprite_2d.visible = true
 			before_attack_time = Time.get_unix_time_from_system()
 
 			# 攻撃時の振動
@@ -200,7 +201,7 @@ func attack() -> void:
 				attack_target.damage(calcurate_enemy_damege(global.player_atk, attack_target.monster_def))
 				play_sound_effect(hit_sound) # 敵にHIT
 	else:
-		$WeaponSprite2D.visible = false
+		weapon_sprite_2d.visible = false
 
 #var levelup_table: Array[int] = [1, 3, 5, 8, 11, 14, 17, 20, 25, 32, 38, 44, 52, 60, 76, 86, 97, 109, 122]
 #var levelup_attack_table: Array[int] = [1, 3, 5, 8, 11, 14, 17, 20, 25, 32, 38, 44, 52, 60, 76, 86, 97, 109, 122]
