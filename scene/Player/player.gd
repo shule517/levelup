@@ -13,6 +13,7 @@ extends CharacterBody2D
 @onready var crops_tile_map_layer: CropsTileMapPlayer = get_tree().get_root().find_child("CropsTileMapLayer", true, false)
 @onready var cell_animated_sprite_2d: AnimatedSprite2D = $CellAnimatedSprite2D
 @onready var weapon_sprite_2d: Sprite2D = $WeaponSprite2D
+@onready var hp_progress_bar: ProgressBar = $HpProgressBar
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -77,7 +78,7 @@ func _process(_delta: float) -> void:
 		attack()
 
 	# HPバーの更新
-	$HpProgressBar.value = global.player_hp * 100 / global.player_max_hp
+	hp_progress_bar.value = global.player_hp * 100 / global.player_max_hp
 
 
 	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
