@@ -15,7 +15,8 @@ extends CharacterBody2D
 @onready var weapon_sprite_2d: Sprite2D = $WeaponSprite2D
 @onready var hp_progress_bar: ProgressBar = $HpProgressBar
 @onready var attack_timer: Timer = $AtackTimer
-
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var levelup_animated_sprite_2d: AnimatedSprite2D = $LevelupAnimatedSprite2D
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -196,8 +197,8 @@ func attack() -> void:
 			attack_timer.wait_time = Global.player_atk_speed
 			attack_timer.start()
 
-			$AnimationPlayer.stop()
-			$AnimationPlayer.play("attack")
+			animation_player.stop()
+			animation_player.play("attack")
 			play_sound_effect(attack_sound) # 攻撃
 			await get_tree().create_timer(0.2).timeout
 			if is_instance_valid(attack_target):
@@ -236,8 +237,8 @@ func levelup() -> void:
 	#global.player_exp = 0
 
 	play_sound_effect(levelup_sound)
-	$LevelupAnimatedSprite2D.z_index = 1000
-	$LevelupAnimatedSprite2D.play("default")
+	levelup_animated_sprite_2d.z_index = 1000
+	levelup_animated_sprite_2d.play("default")
 	print("levelup!!!!!! %d levelになった!!" % global.player_level)
 
 func can_levelup() -> bool:
