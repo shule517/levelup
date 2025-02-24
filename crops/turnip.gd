@@ -36,7 +36,8 @@ func _ready() -> void:
 	seed_sprite.material = new_seed_material
 
 func _process(delta: float) -> void:
-	need_water_sprite.visible = need_water()
+	need_water_sprite.visible = false
+	# TODO: 水マーク need_water_sprite.visible = need_water()
 	ground_sprite.frame = 2 if has_water else 1
 
 	if can_harvest():

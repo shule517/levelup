@@ -52,7 +52,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_gfkep"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pn8kn"]
 shader = ExtResource("4_0n42n")
 shader_parameter/enabled = true
 shader_parameter/is_selected = false
@@ -93,9 +93,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_e06t7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7ir3n"]
 shader = ExtResource("4_0n42n")
-shader_parameter/enabled = false
+shader_parameter/enabled = true
 shader_parameter/is_selected = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wwik6"]
@@ -417,6 +417,7 @@ water_sound = ExtResource("3_evjyu")
 z_index = -1
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_til2p")
+frame = 1
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -433,8 +434,9 @@ metadata/_aseprite_wizard_interface_config_ = {
 
 [node name="SeedAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-material = SubResource("ShaderMaterial_gfkep")
+material = SubResource("ShaderMaterial_pn8kn")
 sprite_frames = SubResource("SpriteFrames_86cvv")
+frame = 2
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -447,11 +449,12 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "7ca928754d72b0ac5217b3caa66cfa64"
 
 [node name="CropAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
-material = SubResource("ShaderMaterial_e06t7")
+material = SubResource("ShaderMaterial_7ir3n")
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_5vv0t")
-animation = &"asparagus"
+animation = &"turnip"
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -479,6 +482,7 @@ shape = SubResource("CircleShape2D_uqv8v")
 wait_time = 4.0
 
 [node name="NeetWaterAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(1, -11)
 sprite_frames = SubResource("SpriteFrames_chfxd")
