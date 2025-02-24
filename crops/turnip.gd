@@ -21,6 +21,10 @@ func _ready() -> void:
 	seed_sprite.frame = randi_range(0, 3) # 種4種類ランダム
 	crop_sprite.visible = false
 
+	# 作物をランダムに設定する
+	var animation_names := crop_sprite.sprite_frames.get_animation_names()
+	crop_sprite.play(animation_names[randi_range(0, animation_names.size() - 1)], 0)
+
 	var new_material := ShaderMaterial.new()
 	new_material.shader = crop_sprite.material.shader
 	crop_sprite.material = new_material
@@ -33,7 +37,7 @@ func _process(delta: float) -> void:
 	need_water_sprite.visible = need_water()
 
 	if can_harvest():
-		if is_selected && Input.is_action_pressed("button_a"):
+		if is_selected && Input.is_action_just_pressed("button_a"):
 			harvest()
 	elif need_water():
 		if is_selected && Input.is_action_just_pressed("button_a"):
