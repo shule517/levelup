@@ -14,6 +14,8 @@ extends CharacterBody2D
 @onready var cell_animated_sprite_2d: AnimatedSprite2D = $CellAnimatedSprite2D
 @onready var weapon_sprite_2d: Sprite2D = $WeaponSprite2D
 @onready var hp_progress_bar: ProgressBar = $HpProgressBar
+@onready var attack_timer: Timer = $AtackTimer
+
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -190,9 +192,9 @@ func attack() -> void:
 
 			# 攻撃時の振動
 			Input.start_joy_vibration(0, 0.3, 0.3, 0.2)
-			$AtackTimer.stop()
-			$AtackTimer.wait_time = Global.player_atk_speed
-			$AtackTimer.start()
+			attack_timer.stop()
+			attack_timer.wait_time = Global.player_atk_speed
+			attack_timer.start()
 
 			$AnimationPlayer.stop()
 			$AnimationPlayer.play("attack")
