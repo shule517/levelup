@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://btwn1v6dbtcsm"
+path="res://.godot/imported/crops.aseprite-75e25e105a0550b8d0826946094d9b03.res"
+
+[deps]
+
+source_file="res://crops/crops.aseprite"
+dest_files=["res://.godot/imported/crops.aseprite-75e25e105a0550b8d0826946094d9b03.res"]
+
+[params]
+

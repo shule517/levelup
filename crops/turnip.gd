@@ -25,14 +25,18 @@ func _ready() -> void:
 	new_material.shader = crop_sprite.material.shader
 	crop_sprite.material = new_material
 
+	var new_seed_material := ShaderMaterial.new()
+	new_seed_material.shader = seed_sprite.material.shader
+	seed_sprite.material = new_seed_material
+
 func _process(delta: float) -> void:
 	need_water_sprite.visible = need_water()
 
-	if is_selected && Input.is_action_pressed("button_a"):
-		print("is_selected && Input.is_action_pressed(button_a")
-		if can_harvest():
+	if can_harvest():
+		if is_selected && Input.is_action_pressed("button_a"):
 			harvest()
-		elif need_water():
+	elif need_water():
+		if is_selected && Input.is_action_just_pressed("button_a"):
 			water_crops()
 
 # 収穫可能か？
@@ -53,21 +57,30 @@ func need_water() -> bool:
 func water_crops() -> void:
 	Audio.play_sound_effect(water_sound, self, randf_range(0.8, 1.1))
 	has_water = true
+
+	crop_sprite.material.set_shader_parameter("enabled", false)
+	crop_sprite.material.set_shader_parameter("is_selected", false)
+	seed_sprite.material.set_shader_parameter("enabled", false)
+	seed_sprite.material.set_shader_parameter("is_selected", false)
 	timer.start()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	# TODO: 収穫処理はここで書くのがいいのか？ Playerからキックしたほうがいい？
 	if body.is_in_group("Player"):
 		is_selected = true
-		if can_harvest():
+		if can_harvest() or need_water():
 			crop_sprite.material.set_shader_parameter("enabled", true)
 			crop_sprite.material.set_shader_parameter("is_selected", true)
+			seed_sprite.material.set_shader_parameter("enabled", true)
+			seed_sprite.material.set_shader_parameter("is_selected", true)
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		is_selected = false
 		crop_sprite.material.set_shader_parameter("enabled", false)
 		crop_sprite.material.set_shader_parameter("is_selected", false)
+		seed_sprite.material.set_shader_parameter("enabled", false)
+		seed_sprite.material.set_shader_parameter("is_selected", false)
 
 # 植物の成長
 func _on_timer_timeout() -> void:

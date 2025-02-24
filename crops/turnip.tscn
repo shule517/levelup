@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c4cbde7hcnqcd"]
+[gd_scene load_steps=22 format=3 uid="uid://c4cbde7hcnqcd"]
 
 [ext_resource type="Texture2D" uid="uid://cl1001ptnn7e4" path="res://crops/turnip.png" id="1_6wxt8"]
 [ext_resource type="Script" path="res://crops/turnip.gd" id="1_qvich"]
@@ -7,6 +7,11 @@
 [ext_resource type="Shader" path="res://shader/outline.gdshader" id="4_0n42n"]
 [ext_resource type="Texture2D" uid="uid://jdwqgkdyry0t" path="res://crops/seed.png" id="4_hwna2"]
 [ext_resource type="Texture2D" uid="uid://407b3p3tan0m" path="res://crops/water.png" id="7_53m72"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gfkep"]
+shader = ExtResource("4_0n42n")
+shader_parameter/enabled = true
+shader_parameter/is_selected = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lsysm"]
 atlas = ExtResource("4_hwna2")
@@ -102,8 +107,8 @@ water_sound = ExtResource("3_a20nm")
 
 [node name="SeedAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_gfkep")
 sprite_frames = SubResource("SpriteFrames_86cvv")
-frame = 1
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
