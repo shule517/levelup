@@ -2,14 +2,65 @@ class_name Player
 extends CharacterBody2D
 
 @onready var player_battle: Node = $PlayerBattle
-@onready var right_ray_cast: RayCast2D = $RightRayCast2D
+@onready var ray_cast: RayCast2D = $RayCast2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collision_shape: CollisionShape2D = $CellArea2D/CollisionShape2D
+var colliding_nodes: Array[Turnip] = []
 
-func _physics_process(delta: float) -> void:
-	if right_ray_cast.is_colliding():
-		print(right_ray_cast.get_collider()) # TODO: 
+const SPEED: float    = 50.0
+
+var select_crop: Turnip
+var is_watering: bool = false  # 水やり中かどうかを判定するフラグ
+
+func _process(delta: float) -> void:
+	if is_watering:
+		return  # 水やり中は何もしない（プレイヤーが硬直）
+
+	if select_crop and select_crop.need_water() and Input.is_action_just_pressed("button_a"):
+		select_crop.water_crops()
+		is_watering = true
+		sprite.play("water")
+		await get_tree().create_timer(1.0).timeout
+		is_watering = false  # 操作を再開
+
+	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
+
+	if value == Vector2.ZERO:
+		sprite.play("idle")
+	else:
+		sprite.play("walk")
+		# TODO: play_sound_effect(walk_sound)
+		sprite.flip_h = value.x < 0
+		# TODO: ほんとは武器の向きも反転させたい
+		#weapon_sprite_2d.visible = false
+		collision_shape.scale.y = -1 if value.x < 0 else 1
+
+	velocity = value * SPEED
+	move_and_slide()
+
+
+#func _physics_process(delta: float) -> void:
+	#if ray_cast.is_colliding():
+		#var colider := ray_cast.get_collider()
+		#if colider is Turnip:
+			#colider.select()
+			#print(ray_cast.get_collider()) # TODO: 
 
 func damage(enemy_atk: int) -> void:
 	player_battle.damage(enemy_atk)
 
 func receive_exp(monster_exp: int) -> void:
 	player_battle.receive_exp(monster_exp)
+
+func _on_cell_area_2d_body_entered(body: Node2D) -> void:
+	if body is Turnip:
+		if body.need_water():
+			body.select()
+			if select_crop:
+				select_crop.unselect()
+			select_crop = body
+
+func _on_cell_area_2d_body_exited(body: Node2D) -> void:
+	if body is Turnip:
+		select_crop = null
+		body.unselect()

@@ -6,7 +6,6 @@ extends Node2D
 
 @export var harvest_sound: AudioStream
 @export var water_sound: AudioStream
-@onready var ground_sprite: AnimatedSprite2D = $GroundAnimatedSprite2D
 @onready var seed_sprite: AnimatedSprite2D = $SeedAnimatedSprite2D
 @onready var crop_sprite: AnimatedSprite2D = $CropAnimatedSprite2D
 @onready var need_water_sprite: AnimatedSprite2D = $NeetWaterAnimatedSprite2D
@@ -39,14 +38,26 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	# TODO: 水マーク need_water_sprite.visible = need_water()
-	ground_sprite.frame = 2 if has_water else 1
+	$GroundAnimatedSprite2D.frame = 2 if has_water else 1
 
-	if can_harvest():
-		if is_selected && Input.is_action_pressed("button_a"):
-			harvest()
-	elif need_water():
-		if is_selected && Input.is_action_pressed("button_a"):
-			water_crops()
+	#if can_harvest():
+		#if is_selected && Input.is_action_pressed("button_a"):
+			#harvest()
+	#elif need_water():
+		#if is_selected && Input.is_action_pressed("button_a"):
+			#water_crops()
+
+func select() -> void:
+	crop_sprite.material.set_shader_parameter("enabled", true)
+	crop_sprite.material.set_shader_parameter("is_selected", true)
+	seed_sprite.material.set_shader_parameter("enabled", true)
+	seed_sprite.material.set_shader_parameter("is_selected", true)
+
+func unselect() -> void:
+	crop_sprite.material.set_shader_parameter("enabled", false)
+	crop_sprite.material.set_shader_parameter("is_selected", false)
+	seed_sprite.material.set_shader_parameter("enabled", false)
+	seed_sprite.material.set_shader_parameter("is_selected", false)
 
 # 収穫可能か？
 func can_harvest() -> bool:
@@ -73,23 +84,23 @@ func water_crops() -> void:
 	seed_sprite.material.set_shader_parameter("is_selected", false)
 	timer.start()
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	# TODO: 収穫処理はここで書くのがいいのか？ Playerからキックしたほうがいい？
-	if body.is_in_group("Player"):
-		is_selected = true
-		if can_harvest() or need_water():
-			crop_sprite.material.set_shader_parameter("enabled", true)
-			crop_sprite.material.set_shader_parameter("is_selected", true)
-			seed_sprite.material.set_shader_parameter("enabled", true)
-			seed_sprite.material.set_shader_parameter("is_selected", true)
-
-func _on_area_2d_body_exited(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		is_selected = false
-		crop_sprite.material.set_shader_parameter("enabled", false)
-		crop_sprite.material.set_shader_parameter("is_selected", false)
-		seed_sprite.material.set_shader_parameter("enabled", false)
-		seed_sprite.material.set_shader_parameter("is_selected", false)
+#func _on_area_2d_body_entered(body: Node2D) -> void:
+	## TODO: 収穫処理はここで書くのがいいのか？ Playerからキックしたほうがいい？
+	#if body.is_in_group("Player"):
+		#is_selected = true
+		#if can_harvest() or need_water():
+			#crop_sprite.material.set_shader_parameter("enabled", true)
+			#crop_sprite.material.set_shader_parameter("is_selected", true)
+			#seed_sprite.material.set_shader_parameter("enabled", true)
+			#seed_sprite.material.set_shader_parameter("is_selected", true)
+#
+#func _on_area_2d_body_exited(body: Node2D) -> void:
+	#if body.is_in_group("Player"):
+		#is_selected = false
+		#crop_sprite.material.set_shader_parameter("enabled", false)
+		#crop_sprite.material.set_shader_parameter("is_selected", false)
+		#seed_sprite.material.set_shader_parameter("enabled", false)
+		#seed_sprite.material.set_shader_parameter("is_selected", false)
 
 # 植物の成長
 func _on_timer_timeout() -> void:

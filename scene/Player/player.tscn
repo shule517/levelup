@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=43 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/player/se/attack/attack_short_sword.wav" id="2_1lcni"]
@@ -6,10 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://cp62sk7i6x5pv" path="res://scene/player/se/hit/_hit_sword.wav" id="3_w4xvg"]
 [ext_resource type="AudioStream" uid="uid://cscilg37eqv0j" path="res://scene/player/se/hit/_enemy_hit1.wav" id="4_8cmc2"]
 [ext_resource type="AudioStream" uid="uid://cmlsvmo8834i1" path="res://scene/player/se/levelup.wav" id="5_2jmae"]
-[ext_resource type="Texture2D" uid="uid://c2f5o6wcrkfx5" path="res://scene/player/player.png" id="5_kk861"]
 [ext_resource type="AudioStream" uid="uid://bgn5wqlr5bx5m" path="res://scene/player/se/土の上を歩く.mp3" id="6_g8c76"]
 [ext_resource type="AudioStream" uid="uid://btnq3nps38thy" path="res://scene/player/se/中パンチ.mp3" id="7_ic2pr"]
 [ext_resource type="Texture2D" uid="uid://cav30l734le55" path="res://scene/player/levelup.png" id="8_l85kp"]
+[ext_resource type="Texture2D" uid="uid://c2f5o6wcrkfx5" path="res://scene/Player/player.png" id="10_h7o86"]
 [ext_resource type="Texture2D" uid="uid://6h1qwakeb5b" path="res://scene/player/goat.png" id="11_vdirr"]
 [ext_resource type="Texture2D" uid="uid://b7hyacdb54pls" path="res://scene/player/cell.png" id="12_idnck"]
 
@@ -34,6 +34,7 @@ extends Node
 @onready var animation_player: AnimationPlayer = owner.get_node(\"AnimationPlayer\")
 @onready var levelup_animated_sprite_2d: AnimatedSprite2D = owner.get_node(\"LevelupAnimatedSprite2D\")
 @onready var sprite: AnimatedSprite2D = owner.get_node(\"AnimatedSprite2D\")
+@onready var collision_shape: CollisionShape2D = owner.get_node(\"Celloarea2D/llisionShape2D\")
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -88,8 +89,8 @@ func _process(_delta: float) -> void:
 	if Input.is_action_pressed(\"button_a\") and crops_tile_map_layer:
 		crops_tile_map_layer.plant_crop(Vector2(owner.position.x, owner.position.y + 16))
 
-	# 種をまくセルのガイド表示
-	cell_animated_sprite_2d.global_position = Vector2(int(owner.global_position.x / 16) * 16 + 8, int(owner.global_position.y / 16) * 16 + 8)
+	# TODO: 種をまくセルのガイド表示
+	#cell_animated_sprite_2d.global_position = Vector2(int(owner.global_position.x / 16) * 16 + 8, int(owner.global_position.y / 16) * 16 + 8)
 
 	# 攻撃ターゲットがいる場合は、すぐに攻撃をはじめる
 	if attack_target != null:
@@ -121,17 +122,18 @@ func _process(_delta: float) -> void:
 		if 20 < distance:
 			value = (attack_target.position - owner.position).normalized()
 
-	if value == Vector2.ZERO:
-		sprite.play(\"idle\")
-	else:
-		sprite.play(\"walk\")
-		# TODO: play_sound_effect(walk_sound)
-		sprite.flip_h = value.x < 0
-		# TODO: ほんとは武器の向きも反転させたい
-		weapon_sprite_2d.visible = false
-
-	owner.velocity = value * SPEED
-	owner.move_and_slide()
+	#if value == Vector2.ZERO:
+		#sprite.play(\"idle\")
+	#else:
+		#sprite.play(\"walk\")
+		## TODO: play_sound_effect(walk_sound)
+		#sprite.flip_h = value.x < 0
+		## TODO: ほんとは武器の向きも反転させたい
+		#weapon_sprite_2d.visible = false
+		##collision_shape.scale.y = -1 if value.x < 0 else 1
+#
+	#owner.velocity = value * SPEED
+	#owner.move_and_slide()
 
 func play_sound_effect(sound_effect: AudioStream, volume_db: float = 0.0) -> void:
 	# 現在のAudioStreamPlayerを取得し再生
@@ -381,19 +383,23 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d1p4v"]
-atlas = ExtResource("5_kk861")
-region = Rect2(16, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yb2h"]
+atlas = ExtResource("10_h7o86")
+region = Rect2(48, 0, 48, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s8bkn"]
-atlas = ExtResource("5_kk861")
-region = Rect2(0, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuj0b"]
+atlas = ExtResource("10_h7o86")
+region = Rect2(0, 0, 48, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_lwp2k"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pdkk"]
+atlas = ExtResource("10_h7o86")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_45w7j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d1p4v")
+"texture": SubResource("AtlasTexture_8yb2h")
 }],
 "loop": true,
 "name": &"idle",
@@ -401,14 +407,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s8bkn")
+"texture": SubResource("AtlasTexture_cuj0b")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d1p4v")
+"texture": SubResource("AtlasTexture_8yb2h")
 }],
 "loop": true,
 "name": &"walk",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pdkk")
+}],
+"loop": true,
+"name": &"water",
+"speed": 1000.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pasa8"]
@@ -608,6 +622,9 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.054902, 0.0705882, 0.180392, 1)
 
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_rl64b"]
+length = 16.0
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_7typn")
@@ -657,7 +674,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "a746a5577bb4fd559eadb1d8b15b23d6"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_lwp2k")
+sprite_frames = SubResource("SpriteFrames_45w7j")
 animation = &"walk"
 offset = Vector2(0, -14)
 metadata/_aseprite_wizard_config_ = {
@@ -674,7 +691,7 @@ metadata/_aseprite_wizard_interface_config_ = {
 "output_section": true,
 "slice_section": true
 }
-metadata/_aseprite_wizard_source_file_hash_ = "e8851115fa8f34beb64c1750f3724660"
+metadata/_aseprite_wizard_source_file_hash_ = "40ae126b533980c18b61f7cb26d1524a"
 
 [node name="GoatAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -759,13 +776,21 @@ show_percentage = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="RightRayCast2D" type="RayCast2D" parent="."]
-position = Vector2(8, 0)
-target_position = Vector2(8, 0)
+[node name="CellArea2D" type="Area2D" parent="."]
+position = Vector2(0, -6)
+scale = Vector2(1, -1)
+collision_layer = 2
 collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CellArea2D"]
+position = Vector2(0, -2)
+rotation = -1.5708
+shape = SubResource("SeparationRayShape2D_rl64b")
 
 [connection signal="body_entered" from="ViewArea2D" to="PlayerBattle" method="_on_view_area_2d_body_entered"]
 [connection signal="body_exited" from="ViewArea2D" to="PlayerBattle" method="_on_view_area_2d_body_exited"]
 [connection signal="body_entered" from="AttackArea2D" to="." method="_on_attack_area_2d_body_entered"]
 [connection signal="body_exited" from="AttackArea2D" to="." method="_on_attack_area_2d_body_exited"]
 [connection signal="timeout" from="AtackTimer" to="." method="_on_atack_timer_timeout"]
+[connection signal="body_entered" from="CellArea2D" to="." method="_on_cell_area_2d_body_entered"]
+[connection signal="body_exited" from="CellArea2D" to="." method="_on_cell_area_2d_body_exited"]
