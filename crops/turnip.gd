@@ -21,6 +21,8 @@ func _ready() -> void:
 	seed_sprite.visible = true
 	seed_sprite.frame = randi_range(0, 3) # 種4種類ランダム
 	crop_sprite.visible = false
+	
+	need_water_sprite.visible = false # TODO: 水がほしいを消す
 
 	# TODO: 作物をランダムに設定する
 	#var animation_names := crop_sprite.sprite_frames.get_animation_names()
@@ -36,7 +38,6 @@ func _ready() -> void:
 	seed_sprite.material = new_seed_material
 
 func _process(delta: float) -> void:
-	need_water_sprite.visible = false
 	# TODO: 水マーク need_water_sprite.visible = need_water()
 	ground_sprite.frame = 2 if has_water else 1
 

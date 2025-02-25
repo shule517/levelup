@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://c4cbde7hcnqcd"]
+[gd_scene load_steps=62 format=3 uid="uid://c4cbde7hcnqcd"]
 
 [ext_resource type="Script" path="res://crops/turnip.gd" id="1_qvich"]
 [ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/吸盤.mp3" id="2_k5hka"]
@@ -408,7 +408,12 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Turnip" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_va101"]
+size = Vector2(16, 16)
+
+[node name="Turnip" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 0
 script = ExtResource("1_qvich")
 harvest_sound = ExtResource("2_k5hka")
 water_sound = ExtResource("3_evjyu")
@@ -496,6 +501,9 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://crops/water.aseprite"
 }
 metadata/_aseprite_wizard_source_file_hash_ = "5644f7557d8babffa1b8fbdea7a3585d"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_va101")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
