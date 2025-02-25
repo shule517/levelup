@@ -8,7 +8,7 @@ extends Node2D
 @export var water_sound: AudioStream
 @onready var seed_sprite: AnimatedSprite2D = $SeedAnimatedSprite2D
 @onready var crop_sprite: AnimatedSprite2D = $CropAnimatedSprite2D
-@onready var need_water_sprite: AnimatedSprite2D = $NeetWaterAnimatedSprite2D
+@onready var need_water_sprite: AnimatedSprite2D = $NeedWaterAnimatedSprite2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var timer: Timer = $Timer
 @onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
@@ -52,12 +52,14 @@ func select() -> void:
 	crop_sprite.material.set_shader_parameter("is_selected", true)
 	seed_sprite.material.set_shader_parameter("enabled", true)
 	seed_sprite.material.set_shader_parameter("is_selected", true)
+	need_water_sprite.visible = need_water()
 
 func unselect() -> void:
 	crop_sprite.material.set_shader_parameter("enabled", false)
 	crop_sprite.material.set_shader_parameter("is_selected", false)
 	seed_sprite.material.set_shader_parameter("enabled", false)
 	seed_sprite.material.set_shader_parameter("is_selected", false)
+	need_water_sprite.visible = false
 
 # 収穫可能か？
 func can_harvest() -> bool:
@@ -78,10 +80,7 @@ func water_crops() -> void:
 	Audio.play_sound_effect(water_sound, self, randf_range(0.8, 1.1))
 	has_water = true
 
-	crop_sprite.material.set_shader_parameter("enabled", false)
-	crop_sprite.material.set_shader_parameter("is_selected", false)
-	seed_sprite.material.set_shader_parameter("enabled", false)
-	seed_sprite.material.set_shader_parameter("is_selected", false)
+	unselect()
 	timer.start()
 
 #func _on_area_2d_body_entered(body: Node2D) -> void:

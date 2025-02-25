@@ -486,10 +486,9 @@ shape = SubResource("CircleShape2D_uqv8v")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
 
-[node name="NeetWaterAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
+[node name="NeedWaterAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1, -11)
+position = Vector2(0.5, -14)
 sprite_frames = SubResource("SpriteFrames_chfxd")
 metadata/_aseprite_wizard_config_ = {
 "layer": "",

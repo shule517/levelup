@@ -383,27 +383,27 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vj4nk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmv6a"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(48, 0, 48, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_etinx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dttrg"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(0, 0, 48, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2vqrd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqmf1"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(0, 32, 48, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ksqfv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wg5n2"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(48, 32, 48, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_dhbr0"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_mrn2m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vj4nk")
+"texture": SubResource("AtlasTexture_gmv6a")
 }],
 "loop": true,
 "name": &"idle",
@@ -411,21 +411,21 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_etinx")
+"texture": SubResource("AtlasTexture_dttrg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vj4nk")
+"texture": SubResource("AtlasTexture_gmv6a")
 }],
 "loop": true,
 "name": &"walk",
 "speed": 7.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2vqrd")
+"duration": 1.06667,
+"texture": SubResource("AtlasTexture_sqmf1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ksqfv")
+"texture": SubResource("AtlasTexture_wg5n2")
 }],
 "loop": false,
 "name": &"water",
@@ -681,7 +681,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "a746a5577bb4fd559eadb1d8b15b23d6"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_dhbr0")
+sprite_frames = SubResource("SpriteFrames_mrn2m")
 animation = &"water"
 offset = Vector2(0, -14)
 metadata/_aseprite_wizard_config_ = {
@@ -698,7 +698,7 @@ metadata/_aseprite_wizard_interface_config_ = {
 "output_section": true,
 "slice_section": true
 }
-metadata/_aseprite_wizard_source_file_hash_ = "3c0eb406f72324d25254d3c9da41e0c2"
+metadata/_aseprite_wizard_source_file_hash_ = "6f3b10f838f628166b3f1b0b0903ed81"
 
 [node name="GoatAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
