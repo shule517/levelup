@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=44 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/player/se/attack/attack_short_sword.wav" id="2_1lcni"]
@@ -383,23 +383,27 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8yb2h"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj4nk"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(48, 0, 48, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cuj0b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_etinx"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(0, 0, 48, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3pdkk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vqrd"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(0, 32, 48, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_45w7j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksqfv"]
+atlas = ExtResource("10_h7o86")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dhbr0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8yb2h")
+"texture": SubResource("AtlasTexture_vj4nk")
 }],
 "loop": true,
 "name": &"idle",
@@ -407,10 +411,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cuj0b")
+"texture": SubResource("AtlasTexture_etinx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8yb2h")
+"texture": SubResource("AtlasTexture_vj4nk")
 }],
 "loop": true,
 "name": &"walk",
@@ -418,11 +422,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3pdkk")
+"texture": SubResource("AtlasTexture_2vqrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksqfv")
 }],
-"loop": true,
+"loop": false,
 "name": &"water",
-"speed": 1000.0
+"speed": 7.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pasa8"]
@@ -674,8 +681,8 @@ metadata/_aseprite_wizard_source_file_hash_ = "a746a5577bb4fd559eadb1d8b15b23d6"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_45w7j")
-animation = &"walk"
+sprite_frames = SubResource("SpriteFrames_dhbr0")
+animation = &"water"
 offset = Vector2(0, -14)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -691,7 +698,7 @@ metadata/_aseprite_wizard_interface_config_ = {
 "output_section": true,
 "slice_section": true
 }
-metadata/_aseprite_wizard_source_file_hash_ = "40ae126b533980c18b61f7cb26d1524a"
+metadata/_aseprite_wizard_source_file_hash_ = "3c0eb406f72324d25254d3c9da41e0c2"
 
 [node name="GoatAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
