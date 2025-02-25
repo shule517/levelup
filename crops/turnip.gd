@@ -21,7 +21,7 @@ func _ready() -> void:
 	seed_sprite.frame = randi_range(0, 3) # 種4種類ランダム
 	crop_sprite.visible = false
 	
-	need_water_sprite.visible = false # TODO: 水がほしいを消す
+	need_water_sprite.visible = false # 水がほしいを消す
 
 	# TODO: 作物をランダムに設定する
 	#var animation_names := crop_sprite.sprite_frames.get_animation_names()
@@ -37,8 +37,16 @@ func _ready() -> void:
 	seed_sprite.material = new_seed_material
 
 func _process(delta: float) -> void:
-	# TODO: 水マーク need_water_sprite.visible = need_water()
+	# 土の水分状態を更新
 	$GroundAnimatedSprite2D.frame = 2 if has_water else 1
+
+	## 水マークの更新
+	if is_selected and need_water():
+		set_chader_selected(true)
+		need_water_sprite.visible = true
+	else:
+		set_chader_selected(false)
+		need_water_sprite.visible = false
 
 	#if can_harvest():
 		#if is_selected && Input.is_action_pressed("button_a"):
@@ -48,18 +56,17 @@ func _process(delta: float) -> void:
 			#water_crops()
 
 func select() -> void:
-	crop_sprite.material.set_shader_parameter("enabled", true)
-	crop_sprite.material.set_shader_parameter("is_selected", true)
-	seed_sprite.material.set_shader_parameter("enabled", true)
-	seed_sprite.material.set_shader_parameter("is_selected", true)
-	need_water_sprite.visible = need_water()
+	is_selected = true
 
 func unselect() -> void:
-	crop_sprite.material.set_shader_parameter("enabled", false)
-	crop_sprite.material.set_shader_parameter("is_selected", false)
-	seed_sprite.material.set_shader_parameter("enabled", false)
-	seed_sprite.material.set_shader_parameter("is_selected", false)
-	need_water_sprite.visible = false
+	set_chader_selected(false)
+	is_selected = false
+
+func set_chader_selected(enabled: bool) -> void:
+	crop_sprite.material.set_shader_parameter("enabled", enabled)
+	crop_sprite.material.set_shader_parameter("is_selected", enabled)
+	seed_sprite.material.set_shader_parameter("enabled", enabled)
+	seed_sprite.material.set_shader_parameter("is_selected", enabled)
 
 # 収穫可能か？
 func can_harvest() -> bool:

@@ -5,23 +5,31 @@ extends CharacterBody2D
 @onready var ray_cast: RayCast2D = $RayCast2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CellArea2D/CollisionShape2D
-var colliding_nodes: Array[Turnip] = []
 
 const SPEED: float    = 50.0
 
-var select_crop: Turnip
+var crops: Array[Turnip] = []
 var is_watering: bool = false  # 水やり中かどうかを判定するフラグ
 
 func _process(delta: float) -> void:
 	if is_watering:
-		return  # 水やり中は何もしない（プレイヤーが硬直）
+		return  # 水やり中はフリーズ
 
-	if select_crop and select_crop.need_water() and Input.is_action_just_pressed("button_a"):
-		select_crop.water_crops()
-		is_watering = true
-		sprite.play("water")
-		await get_tree().create_timer(1.0).timeout
-		is_watering = false  # 操作を再開
+	if crops:
+		var select_crop := crops[0]
+		select_crop.select()
+
+		for crop in crops:
+			if crop != select_crop:
+				crop.unselect()
+
+		if select_crop.need_water():
+			if Input.is_action_just_pressed("button_a"):
+				select_crop.water_crops()
+				is_watering = true # 操作をフリーズ
+				sprite.play("water")
+				await get_tree().create_timer(1.0).timeout
+				is_watering = false # 操作を再開
 
 	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
 
@@ -46,21 +54,18 @@ func _process(delta: float) -> void:
 			#colider.select()
 			#print(ray_cast.get_collider()) # TODO: 
 
+func _on_cell_area_2d_body_entered(body: Node2D) -> void:
+	if body is Turnip:
+		crops.append(body)
+
+func _on_cell_area_2d_body_exited(body: Node2D) -> void:
+	if body is Turnip:
+		body.unselect()
+		crops.erase(body)
+
+# public
 func damage(enemy_atk: int) -> void:
 	player_battle.damage(enemy_atk)
 
 func receive_exp(monster_exp: int) -> void:
 	player_battle.receive_exp(monster_exp)
-
-func _on_cell_area_2d_body_entered(body: Node2D) -> void:
-	if body is Turnip:
-		if body.need_water():
-			body.select()
-			if select_crop:
-				select_crop.unselect()
-			select_crop = body
-
-func _on_cell_area_2d_body_exited(body: Node2D) -> void:
-	if body is Turnip:
-		select_crop = null
-		body.unselect()

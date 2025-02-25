@@ -92,7 +92,6 @@ metadata/_aseprite_wizard_source_file_hash_ = "d005a47d586894d3b51168b5025fb027"
 [node name="Item1AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-116.25, 17.5)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_558ot")
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -112,7 +111,6 @@ metadata/_aseprite_wizard_source_file_hash_ = "cb63a679a6e578ee0110a3ab28eddfa1"
 [node name="Item2AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-86.25, 17.5)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_kd3t7")
 frame = 1
 metadata/_aseprite_wizard_config_ = {
