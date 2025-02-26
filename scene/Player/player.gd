@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var hal_sprite: AnimatedSprite2D = $HalAnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CellArea2D/CollisionShape2D
 @onready var crops_tile_map_layer: CropsTileMapPlayer = get_tree().get_root().find_child("CropsTileMapLayer", true, false)
+@onready var ground_tile_map_layer: GroundTileMapPlayer = get_tree().get_root().find_child("GroundTileMapLayer", true, false)
 
 const SPEED: float    = 50.0
 
@@ -18,6 +19,9 @@ func _process(delta: float) -> void:
 
 	# 種をまく
 	if Input.is_action_pressed("button_a") and crops_tile_map_layer:
+		# 耕す
+		ground_tile_map_layer.till_soil(Vector2(position.x, position.y + 16))
+		# 種を植える
 		crops_tile_map_layer.plant_crop(Vector2(position.x, position.y + 16))
 
 	# TODO: 種をまくセルのガイド表示
