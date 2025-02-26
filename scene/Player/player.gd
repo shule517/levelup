@@ -21,7 +21,8 @@ func _process(delta: float) -> void:
 		return  # 水やり中はフリーズ
 
 	var ray_shape := collision_shape.shape as SeparationRayShape2D
-	var local_tip_position := Vector2(position.x + ray_shape.length, position.y)
+	var ray_shape_length := ray_shape.length if (not hal_sprite.flip_h) else ray_shape.length * -1
+	var local_tip_position := Vector2(position.x + ray_shape_length, position.y)
 
 	# TODO: 該当セルの状態を確認する。耕されているか
 
@@ -65,19 +66,19 @@ func _process(delta: float) -> void:
 				await get_tree().create_timer(1.0).timeout
 				is_watering = false # 操作を再開
 
-	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
+	var left_stick_vector :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
 
-	if value == Vector2.ZERO:
+	if left_stick_vector == Vector2.ZERO:
 		hal_sprite.play("idle")
 	else:
 		hal_sprite.play("walk")
 		# TODO: play_sound_effect(walk_sound)
-		hal_sprite.flip_h = value.x < 0
+		hal_sprite.flip_h = left_stick_vector.x < 0
 		# TODO: ほんとは武器の向きも反転させたい
 		#weapon_sprite_2d.visible = false
-		collision_shape.scale.y = -1 if value.x < 0 else 1
+		collision_shape.scale.y = -1 if left_stick_vector.x < 0 else 1
 
-	velocity = value * SPEED
+	velocity = left_stick_vector * SPEED
 	move_and_slide()
 
 
