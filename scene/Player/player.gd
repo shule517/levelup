@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @onready var player_battle: Node = $PlayerBattle
 @onready var ray_cast: RayCast2D = $RayCast2D
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var hal_sprite: AnimatedSprite2D = $HalAnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CellArea2D/CollisionShape2D
 @onready var crops_tile_map_layer: CropsTileMapPlayer = get_tree().get_root().find_child("CropsTileMapLayer", true, false)
 
@@ -36,24 +36,28 @@ func _process(delta: float) -> void:
 		if select_crop.can_harvest():
 			if Input.is_action_pressed("button_a"):
 				select_crop.harvest()
+				is_watering = true # 操作をフリーズ
+				hal_sprite.play("harvest")
+				await get_tree().create_timer(0.3).timeout
+				is_watering = false # 操作を再開
 
 		# 水やり
 		elif select_crop.need_water():
 			if Input.is_action_just_pressed("button_a"):
 				select_crop.water_crops()
 				is_watering = true # 操作をフリーズ
-				sprite.play("water")
+				hal_sprite.play("water")
 				await get_tree().create_timer(1.0).timeout
 				is_watering = false # 操作を再開
 
 	var value :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
 
 	if value == Vector2.ZERO:
-		sprite.play("idle")
+		hal_sprite.play("idle")
 	else:
-		sprite.play("walk")
+		hal_sprite.play("walk")
 		# TODO: play_sound_effect(walk_sound)
-		sprite.flip_h = value.x < 0
+		hal_sprite.flip_h = value.x < 0
 		# TODO: ほんとは武器の向きも反転させたい
 		#weapon_sprite_2d.visible = false
 		collision_shape.scale.y = -1 if value.x < 0 else 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=45 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/player/se/attack/attack_short_sword.wav" id="2_1lcni"]
@@ -32,7 +32,7 @@ extends Node
 @onready var attack_timer: Timer = owner.get_node(\"AtackTimer\")
 @onready var animation_player: AnimationPlayer = owner.get_node(\"AnimationPlayer\")
 @onready var levelup_animated_sprite_2d: AnimatedSprite2D = owner.get_node(\"LevelupAnimatedSprite2D\")
-@onready var sprite: AnimatedSprite2D = owner.get_node(\"AnimatedSprite2D\")
+@onready var hal_sprite: AnimatedSprite2D = owner.get_node(\"HalAnimatedSprite2D\")
 @onready var collision_shape: CollisionShape2D = owner.get_node(\"Celloarea2D/llisionShape2D\")
 
 # しきい値を設定してスティックの感度を調整
@@ -61,7 +61,7 @@ func _ready() -> void:
 func _on_spawn(position: Vector2, direction: Enum.Direction) -> void:
 	owner.global_position = position
 	if direction == Enum.Direction.LEFT:
-		sprite.flip_h = true
+		hal_sprite.flip_h = true
 
 # メインループ
 func _process(_delta: float) -> void:
@@ -115,11 +115,11 @@ func _process(_delta: float) -> void:
 			value = (attack_target.position - owner.position).normalized()
 
 	#if value == Vector2.ZERO:
-		#sprite.play(\"idle\")
+		#hal_sprite.play(\"idle\")
 	#else:
-		#sprite.play(\"walk\")
+		#hal_sprite.play(\"walk\")
 		## TODO: play_sound_effect(walk_sound)
-		#sprite.flip_h = value.x < 0
+		#hal_sprite.flip_h = value.x < 0
 		## TODO: ほんとは武器の向きも反転させたい
 		#weapon_sprite_2d.visible = false
 		##collision_shape.scale.y = -1 if value.x < 0 else 1
@@ -375,27 +375,39 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2xyxp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yqnb"]
 atlas = ExtResource("10_h7o86")
-region = Rect2(48, 0, 48, 32)
+region = Rect2(96, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pgm62"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4doie"]
 atlas = ExtResource("10_h7o86")
-region = Rect2(0, 0, 48, 32)
+region = Rect2(48, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2bx5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv7rt"]
 atlas = ExtResource("10_h7o86")
-region = Rect2(0, 32, 48, 32)
+region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tafiw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wad3"]
 atlas = ExtResource("10_h7o86")
-region = Rect2(48, 32, 48, 32)
+region = Rect2(0, 48, 48, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_dinka"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgb7p"]
+atlas = ExtResource("10_h7o86")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_asaqp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2xyxp")
+"texture": SubResource("AtlasTexture_4yqnb")
+}],
+"loop": true,
+"name": &"harvest",
+"speed": 1000.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4doie")
 }],
 "loop": true,
 "name": &"idle",
@@ -403,10 +415,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pgm62")
+"texture": SubResource("AtlasTexture_fv7rt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2xyxp")
+"texture": SubResource("AtlasTexture_4doie")
 }],
 "loop": true,
 "name": &"walk",
@@ -414,10 +426,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.06667,
-"texture": SubResource("AtlasTexture_d2bx5")
+"texture": SubResource("AtlasTexture_5wad3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tafiw")
+"texture": SubResource("AtlasTexture_qgb7p")
 }],
 "loop": false,
 "name": &"water",
@@ -530,7 +542,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("AnimatedSprite2D:scale")
+tracks/4/path = NodePath("HalAnimatedSprite2D:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -587,7 +599,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:scale")
+tracks/0/path = NodePath("HalAnimatedSprite2D:scale")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -671,11 +683,11 @@ metadata/_aseprite_wizard_config_ = {
 }
 metadata/_aseprite_wizard_source_file_hash_ = "a746a5577bb4fd559eadb1d8b15b23d6"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="HalAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_dinka")
+sprite_frames = SubResource("SpriteFrames_asaqp")
 animation = &"water"
-offset = Vector2(0, -14)
+offset = Vector2(0, -22)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -690,7 +702,7 @@ metadata/_aseprite_wizard_interface_config_ = {
 "output_section": true,
 "slice_section": true
 }
-metadata/_aseprite_wizard_source_file_hash_ = "b7f8422251d846d62c960661ddfe5f42"
+metadata/_aseprite_wizard_source_file_hash_ = "5ab03b652637615b87cdeb66547be19a"
 
 [node name="GoatAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
