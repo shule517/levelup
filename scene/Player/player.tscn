@@ -1,7 +1,8 @@
-[gd_scene load_steps=45 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=47 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/player/se/attack/attack_short_sword.wav" id="2_1lcni"]
+[ext_resource type="AudioStream" uid="uid://cyyt1b22lgvo1" path="res://scene/player/効果音ラボ_手で穴を掘る2.mp3" id="2_6vlhd"]
 [ext_resource type="Texture2D" uid="uid://bf2yjwiaoevmr" path="res://scene/player/03.png" id="3_66885"]
 [ext_resource type="AudioStream" uid="uid://cp62sk7i6x5pv" path="res://scene/player/se/hit/_hit_sword.wav" id="3_w4xvg"]
 [ext_resource type="AudioStream" uid="uid://cscilg37eqv0j" path="res://scene/player/se/hit/_enemy_hit1.wav" id="4_8cmc2"]
@@ -26,7 +27,7 @@ extends Node
 @export var critical_sound: AudioStream
 
 @onready var global := $/root/Global
-@onready var cell_animated_sprite_2d: AnimatedSprite2D = owner.get_node(\"CellAnimatedSprite2D\")
+#@onready var cell_animated_sprite_2d: AnimatedSprite2D = owner.get_node(\"CellAnimatedSprite2D\")
 @onready var weapon_sprite_2d: Sprite2D = owner.get_node(\"WeaponSprite2D\")
 @onready var hp_progress_bar: ProgressBar = owner.get_node(\"HpProgressBar\")
 @onready var attack_timer: Timer = owner.get_node(\"AtackTimer\")
@@ -375,31 +376,35 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4yqnb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jaswh"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(96, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4doie"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqx0e"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(48, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fv7rt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6xvg"]
+atlas = ExtResource("10_h7o86")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecll5"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5wad3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1h32"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(0, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qgb7p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju376"]
 atlas = ExtResource("10_h7o86")
 region = Rect2(48, 48, 48, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_asaqp"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_x8jxb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4yqnb")
+"texture": SubResource("AtlasTexture_jaswh")
 }],
 "loop": true,
 "name": &"harvest",
@@ -407,7 +412,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4doie")
+"texture": SubResource("AtlasTexture_cqx0e")
 }],
 "loop": true,
 "name": &"idle",
@@ -415,10 +420,18 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fv7rt")
+"texture": SubResource("AtlasTexture_o6xvg")
+}],
+"loop": true,
+"name": &"soil",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecll5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4doie")
+"texture": SubResource("AtlasTexture_cqx0e")
 }],
 "loop": true,
 "name": &"walk",
@@ -426,10 +439,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.06667,
-"texture": SubResource("AtlasTexture_5wad3")
+"texture": SubResource("AtlasTexture_t1h32")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qgb7p")
+"texture": SubResource("AtlasTexture_ju376")
 }],
 "loop": false,
 "name": &"water",
@@ -639,6 +652,7 @@ length = 16.0
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_7typn")
+till_sound = ExtResource("2_6vlhd")
 
 [node name="PlayerBattle" type="Node" parent="."]
 script = SubResource("GDScript_jxoyp")
@@ -685,7 +699,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "a746a5577bb4fd559eadb1d8b15b23d6"
 
 [node name="HalAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_asaqp")
+sprite_frames = SubResource("SpriteFrames_x8jxb")
 animation = &"water"
 offset = Vector2(0, -22)
 metadata/_aseprite_wizard_config_ = {
@@ -702,7 +716,7 @@ metadata/_aseprite_wizard_interface_config_ = {
 "output_section": true,
 "slice_section": true
 }
-metadata/_aseprite_wizard_source_file_hash_ = "5ab03b652637615b87cdeb66547be19a"
+metadata/_aseprite_wizard_source_file_hash_ = "266c869e443c8d623d68550479fc4cbd"
 
 [node name="GoatAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
