@@ -40,8 +40,11 @@ func _process(delta: float) -> void:
 	# 土の水分状態を更新
 	$GroundAnimatedSprite2D.frame = 2 if has_water else 1
 
-	## 水マークの更新
-	if is_selected and need_water():
+	# 選択、水分マークの更新
+	if is_selected and can_harvest():
+		set_chader_selected(true)
+		need_water_sprite.visible = false
+	elif is_selected and need_water():
 		set_chader_selected(true)
 		need_water_sprite.visible = true
 	else:

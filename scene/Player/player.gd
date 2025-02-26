@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var ray_cast: RayCast2D = $RayCast2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CellArea2D/CollisionShape2D
+@onready var crops_tile_map_layer: CropsTileMapPlayer = get_tree().get_root().find_child("CropsTileMapLayer", true, false)
 
 const SPEED: float    = 50.0
 
@@ -15,6 +16,14 @@ func _process(delta: float) -> void:
 	if is_watering:
 		return  # 水やり中はフリーズ
 
+	# 種をまく
+	if Input.is_action_pressed("button_a") and crops_tile_map_layer:
+		crops_tile_map_layer.plant_crop(Vector2(position.x, position.y + 16))
+
+	# TODO: 種をまくセルのガイド表示
+	#cell_animated_sprite_2d.global_position = Vector2(int(owner.global_position.x / 16) * 16 + 8, int(owner.global_position.y / 16) * 16 + 8)
+
+	# 水やり、収穫
 	if crops:
 		var select_crop := crops[0]
 		select_crop.select()
@@ -23,7 +32,13 @@ func _process(delta: float) -> void:
 			if crop != select_crop:
 				crop.unselect()
 
-		if select_crop.need_water():
+		# 収穫
+		if select_crop.can_harvest():
+			if Input.is_action_pressed("button_a"):
+				select_crop.harvest()
+
+		# 水やり
+		elif select_crop.need_water():
 			if Input.is_action_just_pressed("button_a"):
 				select_crop.water_crops()
 				is_watering = true # 操作をフリーズ

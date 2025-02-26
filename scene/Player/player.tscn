@@ -26,7 +26,6 @@ extends Node
 @export var critical_sound: AudioStream
 
 @onready var global := $/root/Global
-@onready var crops_tile_map_layer: CropsTileMapPlayer = get_tree().get_root().find_child(\"CropsTileMapLayer\", true, false)
 @onready var cell_animated_sprite_2d: AnimatedSprite2D = owner.get_node(\"CellAnimatedSprite2D\")
 @onready var weapon_sprite_2d: Sprite2D = owner.get_node(\"WeaponSprite2D\")
 @onready var hp_progress_bar: ProgressBar = owner.get_node(\"HpProgressBar\")
@@ -84,13 +83,6 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed(\"button_x\"):
 		select_enemy()
 		attack_target = selected_enemy()
-
-	# 種をまく
-	if Input.is_action_pressed(\"button_a\") and crops_tile_map_layer:
-		crops_tile_map_layer.plant_crop(Vector2(owner.position.x, owner.position.y + 16))
-
-	# TODO: 種をまくセルのガイド表示
-	#cell_animated_sprite_2d.global_position = Vector2(int(owner.global_position.x / 16) * 16 + 8, int(owner.global_position.y / 16) * 16 + 8)
 
 	# 攻撃ターゲットがいる場合は、すぐに攻撃をはじめる
 	if attack_target != null:
