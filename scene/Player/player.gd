@@ -11,7 +11,7 @@ extends CharacterBody2D
 @onready var ground_tile_map_layer: GroundTileMapPlayer = get_tree().get_root().find_child("GroundTileMapLayer", true, false)
 @onready var cell_animated_sprite_2d: AnimatedSprite2D = $CellAnimatedSprite2D
 
-const SPEED: float    = 50.0
+const SPEED: float = 50.0
 
 var crops: Array[Turnip] = []
 var is_watering: bool = false  # 水やり中かどうかを判定するフラグ
@@ -20,24 +20,29 @@ func _process(delta: float) -> void:
 	if is_watering:
 		return  # 水やり中はフリーズ
 
+	# 選択したセルを取得する
 	var ray_shape := collision_shape.shape as SeparationRayShape2D
 	var ray_shape_length := ray_shape.length if (not hal_sprite.flip_h) else ray_shape.length * -1
-	var local_tip_position := Vector2(position.x + ray_shape_length, position.y)
+	var select_cell_position := Vector2(position.x + ray_shape_length, position.y)
 
 	# TODO: 該当セルの状態を確認する。耕されているか
 
-	# 種をまく
-	if Input.is_action_pressed("button_a") and crops_tile_map_layer:
-		ground_tile_map_layer.till_soil(Vector2(local_tip_position.x, local_tip_position.y)) # 耕す
-		crops_tile_map_layer.plant_crop(Vector2(local_tip_position.x, local_tip_position.y)) # 種を植える
-		is_watering = true # 操作をフリーズ
-		hal_sprite.play("soil")
-		Audio.play_sound_effect(till_sound, self, randf_range(0.8, 1.5))
-		await get_tree().create_timer(0.5).timeout
-		is_watering = false # 操作を再開
+	# 選択したセルを表示
+	cell_animated_sprite_2d.global_position = Vector2(int(select_cell_position.x / 16) * 16 + 8, int(select_cell_position.y / 16) * 16 + 8)
 
-	# TODO: 種をまくセルのガイド表示
-	cell_animated_sprite_2d.global_position = Vector2(int(local_tip_position.x / 16) * 16 + 8, int(local_tip_position.y / 16) * 16 + 8)
+	# 耕す
+	if ground_tile_map_layer and ground_tile_map_layer.can_till_soil(select_cell_position):
+		if Input.is_action_just_pressed("button_y"):
+			is_watering = true # 操作をフリーズ
+			ground_tile_map_layer.till_soil(select_cell_position) # 耕す
+			hal_sprite.play("soil")
+			Audio.play_sound_effect(till_sound, self, randf_range(0.8, 1.5))
+			await get_tree().create_timer(0.5).timeout
+			is_watering = false # 操作を再開
+	# 種をまく
+	elif crops_tile_map_layer and crops_tile_map_layer.can_plant_crop:
+		if Input.is_action_pressed("button_a"):
+			crops_tile_map_layer.plant_crop(select_cell_position)
 
 	# 水やり、収穫
 	if crops:
@@ -66,6 +71,7 @@ func _process(delta: float) -> void:
 				await get_tree().create_timer(1.0).timeout
 				is_watering = false # 操作を再開
 
+	# 移動
 	var left_stick_vector :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")
 
 	if left_stick_vector == Vector2.ZERO:
