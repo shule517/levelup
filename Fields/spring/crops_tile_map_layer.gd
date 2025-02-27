@@ -1,7 +1,7 @@
 class_name CropsTileMapPlayer
 extends TileMapLayer
 
-func plant_crop(position: Vector2) -> void:
+func plant_seed(position: Vector2) -> void:
 	var coords := local_to_map(position)
 	
 	var turnip: Turnip = get_children().filter(func(child: Node) -> bool: return local_to_map(child.position) == coords).front()
@@ -12,7 +12,7 @@ func plant_crop(position: Vector2) -> void:
 		set_cell(coords, 0, Vector2i(0, 0), 0) # 削除
 		set_cell(coords, 0, Vector2i(0, 0), 1) # 植えた
 
-func can_plant_crop(position: Vector2) -> bool:
+func can_plant_seed(position: Vector2) -> bool:
 	var coords := local_to_map(position)
 	var turnip: Turnip = get_children().filter(func(child: Node) -> bool: return local_to_map(child.position) == coords).front()
 	return turnip == null and Global.tunip_seed_count > 0
