@@ -9,6 +9,7 @@ func _process(delta: float) -> void:
 		if Global.tunip_count > 0:
 			Global.tunip_count -= 1
 			Global.tunip_seed_count += 2
+			Global.gold += 35
 			Audio.play_sound_effect(sound, self, randf_range(0.8, 1.5))
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

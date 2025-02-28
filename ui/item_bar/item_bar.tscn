@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dffq1ep3cf1xw"]
+[gd_scene load_steps=18 format=3 uid="uid://dffq1ep3cf1xw"]
 
 [ext_resource type="Script" path="res://ui/item_bar/item_bar.gd" id="1_v8hm5"]
 [ext_resource type="Texture2D" uid="uid://vut0wskmsva7" path="res://ui/item_bar/item_turnip.png" id="3_8s4vo"]
@@ -58,6 +58,35 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_i58da")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqv11"]
+atlas = ExtResource("3_8s4vo")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44one"]
+atlas = ExtResource("3_8s4vo")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2de3"]
+atlas = ExtResource("3_8s4vo")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7msxh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqv11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44one")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2de3")
 }],
 "loop": true,
 "name": &"default",
@@ -128,6 +157,27 @@ metadata/_aseprite_wizard_interface_config_ = {
 }
 metadata/_aseprite_wizard_source_file_hash_ = "cb63a679a6e578ee0110a3ab28eddfa1"
 
+[node name="Item3AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-58.75, 17.5)
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_7msxh")
+frame = 2
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://ui/item_bar/item_turnip.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"slice_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "7248b57f70674e58ab45e359f42ce365"
+
 [node name="Item1CountLabel" type="Label" parent="."]
 offset_left = -141.25
 offset_top = 22.5
@@ -141,6 +191,15 @@ horizontal_alignment = 2
 offset_left = -112.5
 offset_top = 22.5
 offset_right = -72.5
+offset_bottom = 45.5
+text = "16"
+label_settings = SubResource("LabelSettings_phacw")
+horizontal_alignment = 2
+
+[node name="Item3CountLabel" type="Label" parent="."]
+offset_left = -82.5
+offset_top = 22.5
+offset_right = -42.5
 offset_bottom = 45.5
 text = "16"
 label_settings = SubResource("LabelSettings_phacw")

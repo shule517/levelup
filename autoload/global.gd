@@ -14,6 +14,9 @@ var player_level: int = 1
 var tunip_seed_count: int = 16
 var tunip_count: int = 0
 
+# お金
+var gold: int = 0
+
 #var home_scene: PackedScene = preload("res://fields/home/home.tscn")
 #
 ## Mainシーンに切り替え

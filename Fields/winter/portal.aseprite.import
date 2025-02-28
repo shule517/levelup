@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b4kva0kuqhvs3"
+path="res://.godot/imported/portal.aseprite-61b7f213c587e7719d83efb582e4fc53.res"
+
+[deps]
+
+source_file="res://fields/winter/portal.aseprite"
+dest_files=["res://.godot/imported/portal.aseprite-61b7f213c587e7719d83efb582e4fc53.res"]
+
+[params]
+
