@@ -160,7 +160,6 @@ metadata/_aseprite_wizard_source_file_hash_ = "cb63a679a6e578ee0110a3ab28eddfa1"
 [node name="Item3AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-58.75, 17.5)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_7msxh")
 frame = 2
 metadata/_aseprite_wizard_config_ = {

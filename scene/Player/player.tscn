@@ -10,7 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://bgn5wqlr5bx5m" path="res://scene/player/se/土の上を歩く.mp3" id="6_g8c76"]
 [ext_resource type="AudioStream" uid="uid://btnq3nps38thy" path="res://scene/player/se/中パンチ.mp3" id="7_ic2pr"]
 [ext_resource type="Texture2D" uid="uid://cav30l734le55" path="res://scene/player/levelup.png" id="8_l85kp"]
-[ext_resource type="Texture2D" uid="uid://c2f5o6wcrkfx5" path="res://scene/Player/player.png" id="10_h7o86"]
+[ext_resource type="Texture2D" uid="uid://c2f5o6wcrkfx5" path="res://scene/player/player.png" id="10_h7o86"]
 [ext_resource type="Texture2D" uid="uid://6h1qwakeb5b" path="res://scene/player/goat.png" id="11_vdirr"]
 [ext_resource type="Texture2D" uid="uid://b7hyacdb54pls" path="res://scene/player/cell.png" id="12_idnck"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://dmuhhrjetfcar"]
+[gd_scene load_steps=20 format=4 uid="uid://dmuhhrjetfcar"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_wdccg"]
 [ext_resource type="Texture2D" uid="uid://dampm7q6amh07" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Sand/Sand1.png" id="2_r5q00"]
@@ -8,8 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://fields/warp/warp.tscn" id="5_7tmhy"]
 [ext_resource type="Texture2D" uid="uid://bowr74o26admd" path="res://fields/winter/the_end_of_time.png" id="6_5x461"]
 [ext_resource type="Texture2D" uid="uid://dnga3kdv4o333" path="res://fields/winter/the_end_of_time_background.png" id="7_ich8p"]
-[ext_resource type="Texture2D" uid="uid://dvewo18ulvh0u" path="res://fields/winter/portal.png" id="9_4f8v5"]
-[ext_resource type="Script" path="res://fields/winter/portal_animated_sprite_2d.gd" id="10_v7dcj"]
+[ext_resource type="PackedScene" uid="uid://dpyfo1ef4rcg7" path="res://fields/winter/Portal.tscn" id="12_16qtw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ixxsp"]
 atlas = ExtResource("6_5x461")
@@ -159,98 +158,6 @@ texture = ExtResource("3_q3ods")
 sources/0 = SubResource("TileSetAtlasSource_q0qcm")
 sources/1 = SubResource("TileSetAtlasSource_v2uws")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cisal"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_68cvv"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(16, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sfdbn"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(32, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p8qlh"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(48, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hcshc"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(0, 32, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xw7fx"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(16, 32, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o75me"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(32, 32, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gffsn"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(48, 32, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ul30b"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(0, 64, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v63o6"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(16, 64, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_34clg"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(32, 64, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jr6s7"]
-atlas = ExtResource("9_4f8v5")
-region = Rect2(48, 64, 16, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_1sb1s"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cisal")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_68cvv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sfdbn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p8qlh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hcshc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xw7fx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o75me")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gffsn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ul30b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v63o6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_34clg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jr6s7")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}]
-
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3iwiw"]
 a = Vector2(171, 29)
 b = Vector2(242, 62)
@@ -312,152 +219,32 @@ tile_set = SubResource("TileSet_ao3b8")
 position = Vector2(250, 27)
 field = 1
 
-[node name="PortalAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-142, -142)
-sprite_frames = SubResource("SpriteFrames_1sb1s")
-script = ExtResource("10_v7dcj")
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://fields/winter/portal.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "4f22d41b253a3a908cda1423049adb5c"
+[node name="Portal" parent="." instance=ExtResource("12_16qtw")]
+position = Vector2(-126, -166)
 
-[node name="PortalAnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-126, -174)
-sprite_frames = SubResource("SpriteFrames_1sb1s")
-script = ExtResource("10_v7dcj")
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://fields/winter/portal.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "4f22d41b253a3a908cda1423049adb5c"
+[node name="Portal2" parent="." instance=ExtResource("12_16qtw")]
+position = Vector2(-142, -134)
 
-[node name="PortalAnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-110, -206)
-sprite_frames = SubResource("SpriteFrames_1sb1s")
-script = ExtResource("10_v7dcj")
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://fields/winter/portal.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "4f22d41b253a3a908cda1423049adb5c"
+[node name="Portal3" parent="." instance=ExtResource("12_16qtw")]
+position = Vector2(-110, -198)
 
-[node name="PortalAnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-142, -222)
-sprite_frames = SubResource("SpriteFrames_1sb1s")
-script = ExtResource("10_v7dcj")
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://fields/winter/portal.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "4f22d41b253a3a908cda1423049adb5c"
+[node name="Portal4" parent="." instance=ExtResource("12_16qtw")]
+position = Vector2(-174, -150)
 
-[node name="PortalAnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-158, -190)
-sprite_frames = SubResource("SpriteFrames_1sb1s")
-script = ExtResource("10_v7dcj")
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://fields/winter/portal.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "4f22d41b253a3a908cda1423049adb5c"
+[node name="Portal5" parent="." instance=ExtResource("12_16qtw")]
+position = Vector2(-158, -182)
 
-[node name="PortalAnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-190, -207)
-sprite_frames = SubResource("SpriteFrames_1sb1s")
-script = ExtResource("10_v7dcj")
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://fields/winter/portal.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "4f22d41b253a3a908cda1423049adb5c"
+[node name="Portal6" parent="." instance=ExtResource("12_16qtw")]
+position = Vector2(-142, -214)
 
-[node name="PortalAnimatedSprite2D7" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-174, -238)
-sprite_frames = SubResource("SpriteFrames_1sb1s")
-script = ExtResource("10_v7dcj")
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://fields/winter/portal.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "4f22d41b253a3a908cda1423049adb5c"
+[node name="Portal7" parent="." instance=ExtResource("12_16qtw")]
+position = Vector2(-206, -166)
 
-[node name="PortalAnimatedSprite2D8" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-206, -174)
-sprite_frames = SubResource("SpriteFrames_1sb1s")
-script = ExtResource("10_v7dcj")
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://fields/winter/portal.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "4f22d41b253a3a908cda1423049adb5c"
+[node name="Portal8" parent="." instance=ExtResource("12_16qtw")]
+position = Vector2(-190, -199)
 
-[node name="PortalAnimatedSprite2D9" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-174, -158)
-sprite_frames = SubResource("SpriteFrames_1sb1s")
-script = ExtResource("10_v7dcj")
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://fields/winter/portal.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "4f22d41b253a3a908cda1423049adb5c"
-
-[node name="Player" parent="." instance=ExtResource("4_gft6b")]
-position = Vector2(100, 0)
+[node name="Portal9" parent="." instance=ExtResource("12_16qtw")]
+position = Vector2(-174, -230)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -469,3 +256,6 @@ shape = SubResource("SegmentShape2D_3iwiw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(-178, -5)
 shape = SubResource("SegmentShape2D_3iwiw")
+
+[node name="Player" parent="." instance=ExtResource("4_gft6b")]
+position = Vector2(100, 0)

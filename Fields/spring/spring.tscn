@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bw1t2b3qh43r3" path="res://fields/spring/misc.png" id="7_px4um"]
 [ext_resource type="Script" path="res://fields/spring/ground_tile_map_layer.gd" id="8_3moul"]
 [ext_resource type="Script" path="res://fields/spring/crops_tile_map_layer.gd" id="14_juah2"]
-[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/item_bar/item_bar.tscn" id="14_r05t2"]
+[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/player_status/player_status.tscn" id="14_r05t2"]
 [ext_resource type="AudioStream" uid="uid://dxh37rm775k66" path="res://fields/spring/peaceful_forest.mp3" id="15_ai7t6"]
 [ext_resource type="PackedScene" uid="uid://2foqjj2jstxh" path="res://scene/shipping_box/shipping_box.tscn" id="16_7lpbp"]
 

@@ -52,7 +52,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pn8kn"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h751i"]
 shader = ExtResource("4_0n42n")
 shader_parameter/enabled = true
 shader_parameter/is_selected = false
@@ -93,7 +93,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7ir3n"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5h3ib"]
 shader = ExtResource("4_0n42n")
 shader_parameter/enabled = true
 shader_parameter/is_selected = false
@@ -439,9 +439,9 @@ metadata/_aseprite_wizard_interface_config_ = {
 
 [node name="SeedAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-material = SubResource("ShaderMaterial_pn8kn")
+material = SubResource("ShaderMaterial_h751i")
 sprite_frames = SubResource("SpriteFrames_86cvv")
-frame = 2
+frame = 3
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -456,7 +456,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "7ca928754d72b0ac5217b3caa66cfa64"
 [node name="CropAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
 texture_filter = 1
-material = SubResource("ShaderMaterial_7ir3n")
+material = SubResource("ShaderMaterial_5h3ib")
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_5vv0t")
 animation = &"turnip"
@@ -487,6 +487,7 @@ shape = SubResource("CircleShape2D_uqv8v")
 wait_time = 4.0
 
 [node name="NeedWaterAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(0.5, -14)
 sprite_frames = SubResource("SpriteFrames_chfxd")
