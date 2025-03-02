@@ -1,9 +1,10 @@
-[gd_scene load_steps=62 format=3 uid="uid://c4cbde7hcnqcd"]
+[gd_scene load_steps=63 format=3 uid="uid://c4cbde7hcnqcd"]
 
 [ext_resource type="Script" path="res://crops/turnip.gd" id="1_qvich"]
 [ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/吸盤.mp3" id="2_k5hka"]
 [ext_resource type="AudioStream" uid="uid://dy4sfdeawkp7b" path="res://crops/効果音ラボ_水をバシャッとかける2.mp3" id="3_evjyu"]
 [ext_resource type="Shader" path="res://shader/outline.gdshader" id="4_0n42n"]
+[ext_resource type="AudioStream" uid="uid://bbw2ns5h8sold" path="res://crops/効果音ラボ_カーソル移動7.mp3" id="4_1n4fr"]
 [ext_resource type="Texture2D" uid="uid://jdwqgkdyry0t" path="res://crops/seed.png" id="4_hwna2"]
 [ext_resource type="Texture2D" uid="uid://bywxatr6ke5hb" path="res://crops/crops.png" id="6_irfrm"]
 [ext_resource type="Texture2D" uid="uid://407b3p3tan0m" path="res://crops/water.png" id="7_53m72"]
@@ -54,7 +55,7 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h751i"]
 shader = ExtResource("4_0n42n")
-shader_parameter/enabled = true
+shader_parameter/enabled = false
 shader_parameter/is_selected = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lsysm"]
@@ -95,7 +96,7 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5h3ib"]
 shader = ExtResource("4_0n42n")
-shader_parameter/enabled = true
+shader_parameter/enabled = false
 shader_parameter/is_selected = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wwik6"]
@@ -417,6 +418,7 @@ collision_mask = 0
 script = ExtResource("1_qvich")
 harvest_sound = ExtResource("2_k5hka")
 water_sound = ExtResource("3_evjyu")
+grow_sound = ExtResource("4_1n4fr")
 
 [node name="GroundAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = -1

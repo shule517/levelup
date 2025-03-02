@@ -6,6 +6,8 @@ extends Node2D
 
 @export var harvest_sound: AudioStream
 @export var water_sound: AudioStream
+@export var grow_sound: AudioStream
+
 @onready var seed_sprite: AnimatedSprite2D = $SeedAnimatedSprite2D
 @onready var crop_sprite: AnimatedSprite2D = $CropAnimatedSprite2D
 @onready var need_water_sprite: AnimatedSprite2D = $NeedWaterAnimatedSprite2D
@@ -17,6 +19,8 @@ var is_selected: bool = false
 var has_water: bool = false
 
 func _ready() -> void:
+	print(ResourceLoader.get_resource_uid("res://crops/turnip.tscn"))
+
 	seed_sprite.visible = true
 	seed_sprite.frame = randi_range(0, 3) # 種4種類ランダム
 	crop_sprite.visible = false
@@ -93,24 +97,6 @@ func water_crops() -> void:
 	unselect()
 	timer.start()
 
-#func _on_area_2d_body_entered(body: Node2D) -> void:
-	## TODO: 収穫処理はここで書くのがいいのか？ Playerからキックしたほうがいい？
-	#if body.is_in_group("Player"):
-		#is_selected = true
-		#if can_harvest() or need_water():
-			#crop_sprite.material.set_shader_parameter("enabled", true)
-			#crop_sprite.material.set_shader_parameter("is_selected", true)
-			#seed_sprite.material.set_shader_parameter("enabled", true)
-			#seed_sprite.material.set_shader_parameter("is_selected", true)
-#
-#func _on_area_2d_body_exited(body: Node2D) -> void:
-	#if body.is_in_group("Player"):
-		#is_selected = false
-		#crop_sprite.material.set_shader_parameter("enabled", false)
-		#crop_sprite.material.set_shader_parameter("is_selected", false)
-		#seed_sprite.material.set_shader_parameter("enabled", false)
-		#seed_sprite.material.set_shader_parameter("is_selected", false)
-
 # 植物の成長
 func _on_timer_timeout() -> void:
 	timer.stop()
@@ -123,3 +109,5 @@ func _on_timer_timeout() -> void:
 	else:
 		# 芽が成長
 		crop_sprite.frame += 1
+
+	Audio.play_sound_effect(grow_sound, self)

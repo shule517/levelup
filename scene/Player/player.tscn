@@ -189,7 +189,7 @@ func damage(enemy_atk: int) -> void:
 	if global.player_hp <= 0:
 		await get_tree().create_timer(1.0).timeout
 		global.player_hp = global.player_max_hp
-		global.load_home_scene()
+		FieldSwitcher.switch(Enum.Field.HOME)
 
 func attack() -> void:
 	if Time.get_unix_time_from_system() - before_attack_time < Global.player_atk_speed:
@@ -213,7 +213,7 @@ func attack() -> void:
 			await get_tree().create_timer(0.2).timeout
 			if is_instance_valid(attack_target):
 				attack_target.damage(calcurate_enemy_damege(global.player_atk, attack_target.monster_def))
-				play_sound_effect(hit_sound) # 敵にHIT
+				play_sound_effect(hit_sound, -10.0) # 敵にHIT
 	else:
 		weapon_sprite_2d.visible = false
 

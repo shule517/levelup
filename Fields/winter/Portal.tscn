@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://dpyfo1ef4rcg7"]
+[gd_scene load_steps=20 format=3 uid="uid://dpyfo1ef4rcg7"]
 
 [ext_resource type="Script" path="res://fields/winter/portal.gd" id="1_drpvx"]
 [ext_resource type="Texture2D" uid="uid://dvewo18ulvh0u" path="res://fields/winter/portal.png" id="1_m24i0"]
+[ext_resource type="AudioStream" uid="uid://dnjrmbnniu8xd" path="res://fields/winter/sound/効果音ラボ_決定ボタンを押す33.mp3" id="2_jqg2h"]
 [ext_resource type="Shader" path="res://shader/outline.gdshader" id="2_uls6n"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nd1lf"]
@@ -105,6 +106,7 @@ animations = [{
 
 [node name="Portal" type="Node2D"]
 script = ExtResource("1_drpvx")
+audio_stream = ExtResource("2_jqg2h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
