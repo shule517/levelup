@@ -19,8 +19,6 @@ var is_selected: bool = false
 var has_water: bool = false
 
 func _ready() -> void:
-	print(ResourceLoader.get_resource_uid("res://crops/turnip.tscn"))
-
 	seed_sprite.visible = true
 	seed_sprite.frame = randi_range(0, 3) # 種4種類ランダム
 	crop_sprite.visible = false

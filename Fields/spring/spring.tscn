@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=25 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://dxh37rm775k66" path="res://fields/spring/peaceful_forest.mp3" id="15_ai7t6"]
 [ext_resource type="PackedScene" uid="uid://2foqjj2jstxh" path="res://scene/shipping_box/shipping_box.tscn" id="16_7lpbp"]
 [ext_resource type="PackedScene" uid="uid://dg5b05ukmcxeu" path="res://items/turnip.tscn" id="17_88ee7"]
+[ext_resource type="PackedScene" uid="uid://tup2rqm54hyk" path="res://objects/tree/tree.tscn" id="18_ys7n1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5gqc"]
 texture = ExtResource("2_746s0")
@@ -696,6 +697,7 @@ script = ExtResource("8_3moul")
 
 [node name="CropsTileMapLayer" type="TileMapLayer" parent="."]
 y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAJAAoAAAAAAAAAAgALAAsAAAAAAAAAAgAIAAwAAAAAAAAAAgAJAA0AAAAAAAAAAgALAA0AAAAAAAAAAgAKAA4AAAAAAAAAAgAJAA4AAAAAAAAAAgAIAA4AAAAAAAAAAgAIAA8AAAAAAAAAAgAIABAAAAAAAAAAAgALABEAAAAAAAAAAgANAA4AAAAAAAAAAgAIABIAAAAAAAAAAgABABEAAAAAAAAAAgAEAA8AAAAAAAAAAgANABAAAAAAAAAAAgAOABIAAAAAAAAAAgAGABMAAAAAAAAAAgAEABEAAAAAAAAAAgAOAAsAAAAAAAAAAgA=")
 tile_set = ExtResource("7_0kafg")
 script = ExtResource("14_juah2")
 
@@ -769,6 +771,30 @@ position = Vector2(169, 126)
 position = Vector2(158, 57)
 collision_layer = 1
 collision_mask = 1
+
+[node name="Tree" parent="." instance=ExtResource("18_ys7n1")]
+position = Vector2(53, 145)
+
+[node name="Tree2" parent="." instance=ExtResource("18_ys7n1")]
+position = Vector2(83, 141)
+
+[node name="Tree3" parent="." instance=ExtResource("18_ys7n1")]
+position = Vector2(79, 166)
+
+[node name="Tree4" parent="." instance=ExtResource("18_ys7n1")]
+position = Vector2(59, 174)
+
+[node name="Tree5" parent="." instance=ExtResource("18_ys7n1")]
+position = Vector2(69, 188)
+
+[node name="Tree6" parent="." instance=ExtResource("18_ys7n1")]
+position = Vector2(98, 198)
+
+[node name="Tree7" parent="." instance=ExtResource("18_ys7n1")]
+position = Vector2(54, 198)
+
+[node name="Tree8" parent="." instance=ExtResource("18_ys7n1")]
+position = Vector2(65, 217)
 
 [editable path="Warp"]
 [editable path="WarWinter"]

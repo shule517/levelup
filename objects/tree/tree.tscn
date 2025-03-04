@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://tup2rqm54hyk"]
+
+[ext_resource type="Texture2D" uid="uid://cy0ek2ix410s5" path="res://objects/tree/Tree.png" id="1_jr54v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcc05"]
+atlas = ExtResource("1_jr54v")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iksfa"]
+atlas = ExtResource("1_jr54v")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p0qh"]
+atlas = ExtResource("1_jr54v")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t1wt"]
+atlas = ExtResource("1_jr54v")
+region = Rect2(0, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4ld2"]
+atlas = ExtResource("1_jr54v")
+region = Rect2(32, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8sgv"]
+atlas = ExtResource("1_jr54v")
+region = Rect2(64, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl7i3"]
+atlas = ExtResource("1_jr54v")
+region = Rect2(0, 96, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhlin"]
+atlas = ExtResource("1_jr54v")
+region = Rect2(32, 96, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrj8x"]
+atlas = ExtResource("1_jr54v")
+region = Rect2(64, 96, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n17qu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcc05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iksfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0p0qh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t1wt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4ld2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8sgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dl7i3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhlin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrj8x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Tree" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -18)
+sprite_frames = SubResource("SpriteFrames_n17qu")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://objects/tree/Tree.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "7f067e3a598154b9942f8d8622a47b20"
