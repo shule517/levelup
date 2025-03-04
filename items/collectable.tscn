@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ljri1ba4ut3l"]
+[gd_scene load_steps=4 format=3 uid="uid://ljri1ba4ut3l"]
 
 [ext_resource type="Script" path="res://items/collectable.gd" id="1_e00e6"]
+[ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/音人_吸盤.mp3" id="2_cwyvj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bk8ef"]
 resource_local_to_scene = true
@@ -9,6 +10,7 @@ resource_local_to_scene = true
 collision_layer = 16
 collision_mask = 2
 script = ExtResource("1_e00e6")
+collect_sound = ExtResource("2_cwyvj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bk8ef")

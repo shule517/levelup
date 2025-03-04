@@ -1,7 +1,7 @@
 [gd_scene load_steps=63 format=3 uid="uid://c4cbde7hcnqcd"]
 
 [ext_resource type="Script" path="res://crops/turnip.gd" id="1_yacr5"]
-[ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/吸盤.mp3" id="2_vrr13"]
+[ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/音人_吸盤.mp3" id="2_vrr13"]
 [ext_resource type="AudioStream" uid="uid://dy4sfdeawkp7b" path="res://crops/効果音ラボ_水をバシャッとかける2.mp3" id="3_ydc67"]
 [ext_resource type="AudioStream" uid="uid://bbw2ns5h8sold" path="res://crops/効果音ラボ_カーソル移動7.mp3" id="4_y2saf"]
 [ext_resource type="Texture2D" uid="uid://b60kf2873k0w7" path="res://crops/ground.png" id="5_57wpx"]

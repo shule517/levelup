@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scene/shipping_box/shipping_box.gd" id="1_s4x2y"]
 [ext_resource type="Texture2D" uid="uid://bmpr10jr1vs7p" path="res://scene/shipping_box/chest.png" id="1_xaehj"]
-[ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/吸盤.mp3" id="2_rlrx5"]
+[ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/音人_吸盤.mp3" id="2_rlrx5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1dnn2"]
 atlas = ExtResource("1_xaehj")
