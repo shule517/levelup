@@ -8,7 +8,6 @@ resource_local_to_scene = true
 radius = 11.0454
 
 [node name="Turnip" instance=ExtResource("1_8dwcw")]
-collision_mask = 255
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("CircleShape2D_h8844")

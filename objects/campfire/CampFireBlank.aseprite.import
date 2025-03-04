@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b2ku1oj2awtog"
+path="res://.godot/imported/CampFireBlank.aseprite-ba2b35dddbad23dd8a28784c7c0c113d.res"
+
+[deps]
+
+source_file="res://objects/campfire/CampFireBlank.aseprite"
+dest_files=["res://.godot/imported/CampFireBlank.aseprite-ba2b35dddbad23dd8a28784c7c0c113d.res"]
+
+[params]
+
