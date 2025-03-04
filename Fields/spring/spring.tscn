@@ -16,7 +16,7 @@
 [ext_resource type="Script" path="res://fields/spring/crops_tile_map_layer.gd" id="14_juah2"]
 [ext_resource type="AudioStream" uid="uid://dxh37rm775k66" path="res://fields/spring/peaceful_forest.mp3" id="15_ai7t6"]
 [ext_resource type="PackedScene" uid="uid://2foqjj2jstxh" path="res://scene/shipping_box/shipping_box.tscn" id="16_7lpbp"]
-[ext_resource type="PackedScene" uid="uid://dg5b05ukmcxeu" path="res://items/turnip.tscn" id="17_88ee7"]
+[ext_resource type="PackedScene" uid="uid://dg5b05ukmcxeu" path="res://items/turnip/turnip.tscn" id="17_88ee7"]
 [ext_resource type="PackedScene" uid="uid://tup2rqm54hyk" path="res://objects/tree/tree.tscn" id="18_ys7n1"]
 [ext_resource type="PackedScene" uid="uid://yymk4wtu2oxp" path="res://objects/campfire/campfire.tscn" id="19_sqfqq"]
 

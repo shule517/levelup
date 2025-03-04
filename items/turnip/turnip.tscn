@@ -1,42 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnvyu5bt48164"]
+[gd_scene load_steps=5 format=3 uid="uid://dg5b05ukmcxeu"]
 
-[ext_resource type="Texture2D" uid="uid://0sh3jm2sndvd" path="res://items/turnip/turnip.png" id="1_j02k2"]
+[ext_resource type="PackedScene" uid="uid://ljri1ba4ut3l" path="res://items/collectable.tscn" id="1_8dwcw"]
+[ext_resource type="Resource" uid="uid://qtbhu68a8evh" path="res://items/turnip/turnip.tres" id="2_b6pnx"]
+[ext_resource type="Texture2D" uid="uid://bs035wjkwqf0a" path="res://items/turnip/turnip.png" id="2_ycl0x"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ndct"]
-atlas = ExtResource("1_j02k2")
-region = Rect2(0, 0, 16, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_h8844"]
+resource_local_to_scene = true
+radius = 11.0454
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_lpl30"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7ndct")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}]
+[node name="Turnip" instance=ExtResource("1_8dwcw")]
+item_resource = ExtResource("2_b6pnx")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_f7wmn"]
-radius = 22.0
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_h8844")
 
-[node name="Turnip" type="StaticBody2D"]
-collision_layer = 16
-collision_mask = 2
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_lpl30")
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://items/turnip.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "637d971d40e752c7fd780370650bdc0f"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_f7wmn")
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_ycl0x")

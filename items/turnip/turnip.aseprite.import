@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bslaojtwqajkq"
+path="res://.godot/imported/turnip.aseprite-e51c9c2da022022a7518c53ce0e632f6.res"
+
+[deps]
+
+source_file="res://items/turnip/turnip.aseprite"
+dest_files=["res://.godot/imported/turnip.aseprite-e51c9c2da022022a7518c53ce0e632f6.res"]
+
+[params]
+
