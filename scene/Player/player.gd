@@ -2,6 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 @export var till_sound: AudioStream
+@export var inventory: Inventory
 
 @onready var player_battle: Node = $PlayerBattle
 @onready var ray_cast: RayCast2D = $RayCast2D
@@ -10,6 +11,7 @@ extends CharacterBody2D
 @onready var crops_tile_map_layer: CropsTileMapPlayer = get_tree().get_root().find_child("CropsTileMapLayer", true, false)
 @onready var ground_tile_map_layer: GroundTileMapPlayer = get_tree().get_root().find_child("GroundTileMapLayer", true, false)
 @onready var cell_animated_sprite_2d: AnimatedSprite2D = $CellAnimatedSprite2D
+
 
 const SPEED: float = 50.0
 
@@ -112,6 +114,5 @@ func receive_exp(monster_exp: int) -> void:
 	player_battle.receive_exp(monster_exp)
 
 func _on_collect_area_2d_body_entered(body: Node2D) -> void:
-	print(body)
-	if body.is_in_group("collectable"):
-		print("collectable")
+	if body is Collectable:
+		body.collect(inventory)

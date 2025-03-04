@@ -1,9 +1,10 @@
-[gd_scene load_steps=48 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=49 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/player/se/attack/attack_short_sword.wav" id="2_1lcni"]
 [ext_resource type="AudioStream" uid="uid://cyyt1b22lgvo1" path="res://scene/player/効果音ラボ_手で穴を掘る2.mp3" id="2_6vlhd"]
 [ext_resource type="Texture2D" uid="uid://bf2yjwiaoevmr" path="res://scene/player/03.png" id="3_66885"]
+[ext_resource type="Resource" uid="uid://crbvwe4mr8hat" path="res://items/inventory.tres" id="3_v6iut"]
 [ext_resource type="AudioStream" uid="uid://cp62sk7i6x5pv" path="res://scene/player/se/hit/_hit_sword.wav" id="3_w4xvg"]
 [ext_resource type="AudioStream" uid="uid://cscilg37eqv0j" path="res://scene/player/se/hit/_enemy_hit1.wav" id="4_8cmc2"]
 [ext_resource type="AudioStream" uid="uid://cmlsvmo8834i1" path="res://scene/player/se/levelup.wav" id="5_2jmae"]
@@ -657,6 +658,7 @@ collision_layer = 2
 collision_mask = 255
 script = ExtResource("1_7typn")
 till_sound = ExtResource("2_6vlhd")
+inventory = ExtResource("3_v6iut")
 
 [node name="PlayerBattle" type="Node" parent="."]
 script = SubResource("GDScript_jxoyp")
@@ -818,7 +820,7 @@ shape = SubResource("SeparationRayShape2D_rl64b")
 
 [node name="CollectArea2D" type="Area2D" parent="."]
 collision_layer = 2
-collision_mask = 255
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea2D"]
 shape = SubResource("CircleShape2D_7wre7")

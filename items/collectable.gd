@@ -1,7 +1,8 @@
 class_name Collectable
-extends Area2D
+extends StaticBody2D
 
 @export var item_resource: Item
 
-func collect() -> void:
+func collect(inventory: Inventory) -> void:
+	inventory.insert(item_resource)
 	queue_free()
