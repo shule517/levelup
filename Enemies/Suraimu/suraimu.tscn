@@ -13,7 +13,6 @@
 shader = ExtResource("6_asera")
 shader_parameter/enabled = false
 shader_parameter/is_selected = false
-shader_parameter/modulate = null
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xdbdh"]
 atlas = ExtResource("2_1k3mf")
@@ -84,7 +83,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fkh2r"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_tceef"]
 radius = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6emo"]
@@ -141,7 +140,7 @@ die_sound = ExtResource("4_irsp8")
 material = SubResource("ShaderMaterial_3rmu6")
 position = Vector2(2.08165e-12, -6)
 sprite_frames = SubResource("SpriteFrames_2qub0")
-frame_progress = 0.775609
+frame_progress = 0.709188
 offset = Vector2(2.08165e-12, -7)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -155,7 +154,7 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "e19dc0ed217d8f84adfe5c17c92b77ab"
 
 [node name="CollisionShape2D" parent="AttackArea2D" index="0"]
-shape = SubResource("CircleShape2D_fkh2r")
+shape = SubResource("CircleShape2D_tceef")
 
 [node name="AttackTimer" parent="." index="4"]
 wait_time = 2.0

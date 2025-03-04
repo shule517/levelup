@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=6 format=3 uid="uid://cdlaof0dg71pq"]
 
-[ext_resource type="PackedScene" uid="uid://c4cbde7hcnqcd" path="res://crops/turnip.tscn" id="1_dns27"]
+[ext_resource type="PackedScene" uid="uid://c4cbde7hcnqcd" path="res://crops/crop.tscn" id="1_dns27"]
 [ext_resource type="Texture2D" uid="uid://c2aisx6juln08" path="res://assets/glasstown001.png" id="2_eyhtd"]
 [ext_resource type="PackedScene" uid="uid://tup2rqm54hyk" path="res://objects/tree/tree.tscn" id="2_n7bfe"]
 

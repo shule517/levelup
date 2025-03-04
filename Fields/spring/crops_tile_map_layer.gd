@@ -14,5 +14,5 @@ func plant_seed(position: Vector2) -> void:
 
 func can_plant_seed(position: Vector2) -> bool:
 	var coords := local_to_map(position)
-	var turnip: Turnip = get_children().filter(func(child: Node) -> bool: return local_to_map(child.position) == coords).front()
-	return turnip == null and Global.tunip_seed_count > 0
+	var node: Node2D = get_children().filter(func(child: Node) -> bool: return local_to_map(child.position) == coords).front()
+	return node == null and Global.tunip_seed_count > 0

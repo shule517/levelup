@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=48 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/player/se/attack/attack_short_sword.wav" id="2_1lcni"]
@@ -649,9 +649,12 @@ border_color = Color(0.054902, 0.0705882, 0.180392, 1)
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_rl64b"]
 length = 16.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wre7"]
+radius = 64.0078
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
-collision_mask = 17
+collision_mask = 255
 script = ExtResource("1_7typn")
 till_sound = ExtResource("2_6vlhd")
 
@@ -813,6 +816,13 @@ position = Vector2(0, -2)
 rotation = -1.5708
 shape = SubResource("SeparationRayShape2D_rl64b")
 
+[node name="CollectArea2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 255
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea2D"]
+shape = SubResource("CircleShape2D_7wre7")
+
 [connection signal="body_entered" from="ViewArea2D" to="PlayerBattle" method="_on_view_area_2d_body_entered"]
 [connection signal="body_exited" from="ViewArea2D" to="PlayerBattle" method="_on_view_area_2d_body_exited"]
 [connection signal="body_entered" from="AttackArea2D" to="." method="_on_attack_area_2d_body_entered"]
@@ -820,3 +830,4 @@ shape = SubResource("SeparationRayShape2D_rl64b")
 [connection signal="timeout" from="AtackTimer" to="." method="_on_atack_timer_timeout"]
 [connection signal="body_entered" from="CellArea2D" to="." method="_on_cell_area_2d_body_entered"]
 [connection signal="body_exited" from="CellArea2D" to="." method="_on_cell_area_2d_body_exited"]
+[connection signal="body_entered" from="CollectArea2D" to="." method="_on_collect_area_2d_body_entered"]

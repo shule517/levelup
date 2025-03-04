@@ -110,3 +110,8 @@ func damage(enemy_atk: int) -> void:
 
 func receive_exp(monster_exp: int) -> void:
 	player_battle.receive_exp(monster_exp)
+
+func _on_collect_area_2d_body_entered(body: Node2D) -> void:
+	print(body)
+	if body.is_in_group("collectable"):
+		print("collectable")
