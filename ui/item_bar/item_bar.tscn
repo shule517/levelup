@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://dffq1ep3cf1xw"]
+[gd_scene load_steps=19 format=3 uid="uid://dffq1ep3cf1xw"]
 
 [ext_resource type="Script" path="res://ui/item_bar/item_bar.gd" id="1_v8hm5"]
 [ext_resource type="Texture2D" uid="uid://vut0wskmsva7" path="res://ui/item_bar/item_turnip.png" id="3_8s4vo"]
 [ext_resource type="Texture2D" uid="uid://bmfsnnevk5vyc" path="res://ui/item_bar/shortitem_bg.png" id="3_tor2f"]
 [ext_resource type="FontFile" uid="uid://hoe6a4uttksq" path="res://ui/player_status/PixelMplus10-Regular.ttf" id="4_b2tgu"]
+[ext_resource type="PackedScene" uid="uid://vdl33233non3" path="res://ui/item_slot/item_slot.tscn" id="5_u7iqy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6lfxu"]
 atlas = ExtResource("3_tor2f")
@@ -99,7 +100,9 @@ font_size = 10
 font_color = Color(0, 0, 0, 1)
 outline_size = 4
 
-[node name="ItemBar" type="Node2D"]
+[node name="ItemBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_v8hm5")
 
@@ -178,6 +181,7 @@ metadata/_aseprite_wizard_interface_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "7248b57f70674e58ab45e359f42ce365"
 
 [node name="Item1CountLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = -141.25
 offset_top = 22.5
 offset_right = -101.25
@@ -187,6 +191,7 @@ label_settings = SubResource("LabelSettings_phacw")
 horizontal_alignment = 2
 
 [node name="Item2CountLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = -112.5
 offset_top = 22.5
 offset_right = -72.5
@@ -196,6 +201,7 @@ label_settings = SubResource("LabelSettings_phacw")
 horizontal_alignment = 2
 
 [node name="Item3CountLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = -82.5
 offset_top = 22.5
 offset_right = -42.5
@@ -203,3 +209,38 @@ offset_bottom = 45.5
 text = "16"
 label_settings = SubResource("LabelSettings_phacw")
 horizontal_alignment = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = -128.75
+offset_top = -26.25
+offset_right = 107.25
+offset_bottom = 38.75
+columns = 10
+
+[node name="ItemSlot" parent="GridContainer" instance=ExtResource("5_u7iqy")]
+layout_mode = 2
+
+[node name="ItemSlot2" parent="GridContainer" instance=ExtResource("5_u7iqy")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="GridContainer" instance=ExtResource("5_u7iqy")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="GridContainer" instance=ExtResource("5_u7iqy")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="GridContainer" instance=ExtResource("5_u7iqy")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="GridContainer" instance=ExtResource("5_u7iqy")]
+layout_mode = 2
+
+[node name="ItemSlot7" parent="GridContainer" instance=ExtResource("5_u7iqy")]
+layout_mode = 2
+
+[node name="ItemSlot8" parent="GridContainer" instance=ExtResource("5_u7iqy")]
+layout_mode = 2
+
+[node name="ItemSlot9" parent="GridContainer" instance=ExtResource("5_u7iqy")]
+layout_mode = 2

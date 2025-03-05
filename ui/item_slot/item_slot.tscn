@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://vdl33233non3"]
+
+[ext_resource type="Script" path="res://ui/item_slot/item_slot.gd" id="1_5usrg"]
+[ext_resource type="Texture2D" uid="uid://bavtwitlu4kqs" path="res://ui/item_slot/item_slot_bg.png" id="1_tfv7r"]
+[ext_resource type="FontFile" uid="uid://hoe6a4uttksq" path="res://ui/player_status/PixelMplus10-Regular.ttf" id="3_uev8b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3rpps"]
+font = ExtResource("3_uev8b")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[node name="ItemSlot" type="Panel"]
+custom_minimum_size = Vector2(26, 26)
+offset_right = 26.0
+offset_bottom = 26.0
+script = ExtResource("1_5usrg")
+
+[node name="BackgroundSprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_tfv7r")
+centered = false
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://ui/item_slot/item_slot_bg.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "9f2366020af9f516b70c027efca95e35"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 26.0
+offset_bottom = 26.0
+
+[node name="ItemSprite2D" type="Sprite2D" parent="CenterContainer"]
+centered = false
+
+[node name="ItemCountLabel" type="Label" parent="."]
+offset_left = -12.0
+offset_top = 17.0
+offset_right = 28.0
+offset_bottom = 40.0
+text = "16"
+label_settings = SubResource("LabelSettings_3rpps")
+horizontal_alignment = 2

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bhkcg5q6weov4"
+path="res://.godot/imported/item_slot_bg.aseprite-85cac92ea7549081c66f10a5110692eb.res"
+
+[deps]
+
+source_file="res://ui/item_slot/item_slot_bg.aseprite"
+dest_files=["res://.godot/imported/item_slot_bg.aseprite-85cac92ea7549081c66f10a5110692eb.res"]
+
+[params]
+

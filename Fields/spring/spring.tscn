@@ -744,20 +744,20 @@ position = Vector2(108, 65)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -16.0
-offset_top = -32.0
-offset_right = 16.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="ItemBar" parent="CanvasLayer/Control" instance=ExtResource("14_3e7cc")]
+[node name="ItemBar" parent="CanvasLayer/PanelContainer" instance=ExtResource("14_3e7cc")]
+layout_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_ai7t6")
@@ -796,7 +796,16 @@ position = Vector2(65, 217)
 position = Vector2(130, 102)
 
 [node name="Turnip" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(192, 85)
+position = Vector2(192, 95)
+
+[node name="Turnip2" parent="." instance=ExtResource("17_88ee7")]
+position = Vector2(195, 18)
+
+[node name="Turnip3" parent="." instance=ExtResource("17_88ee7")]
+position = Vector2(245, 34)
+
+[node name="Turnip4" parent="." instance=ExtResource("17_88ee7")]
+position = Vector2(235, 96)
 
 [editable path="Warp"]
 [editable path="WarWinter"]

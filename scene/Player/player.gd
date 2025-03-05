@@ -58,7 +58,7 @@ func _process(delta: float) -> void:
 		# 収穫
 		if select_crop.can_harvest():
 			if Input.is_action_pressed("button_a"):
-				select_crop.harvest()
+				select_crop.harvest(inventory)
 				is_watering = true # 操作をフリーズ
 				hal_sprite.play("harvest")
 				await get_tree().create_timer(0.3).timeout

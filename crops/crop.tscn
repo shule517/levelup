@@ -1,10 +1,11 @@
-[gd_scene load_steps=63 format=3 uid="uid://c4cbde7hcnqcd"]
+[gd_scene load_steps=64 format=3 uid="uid://c4cbde7hcnqcd"]
 
 [ext_resource type="Script" path="res://crops/turnip.gd" id="1_yacr5"]
 [ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/音人_吸盤.mp3" id="2_vrr13"]
 [ext_resource type="AudioStream" uid="uid://dy4sfdeawkp7b" path="res://crops/効果音ラボ_水をバシャッとかける2.mp3" id="3_ydc67"]
 [ext_resource type="AudioStream" uid="uid://bbw2ns5h8sold" path="res://crops/効果音ラボ_カーソル移動7.mp3" id="4_y2saf"]
 [ext_resource type="Texture2D" uid="uid://b60kf2873k0w7" path="res://crops/ground.png" id="5_57wpx"]
+[ext_resource type="Resource" uid="uid://qtbhu68a8evh" path="res://items/turnip/turnip.tres" id="5_yoop5"]
 [ext_resource type="Shader" path="res://shader/outline.gdshader" id="6_khj2a"]
 [ext_resource type="Texture2D" uid="uid://jdwqgkdyry0t" path="res://crops/seed.png" id="7_grbto"]
 [ext_resource type="Texture2D" uid="uid://bywxatr6ke5hb" path="res://crops/crops.png" id="8_4w4nr"]
@@ -53,7 +54,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hd1xx"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lmunq"]
 shader = ExtResource("6_khj2a")
 shader_parameter/enabled = false
 shader_parameter/is_selected = false
@@ -94,7 +95,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rvx3m"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t7r4f"]
 shader = ExtResource("6_khj2a")
 shader_parameter/enabled = false
 shader_parameter/is_selected = false
@@ -419,6 +420,7 @@ script = ExtResource("1_yacr5")
 harvest_sound = ExtResource("2_vrr13")
 water_sound = ExtResource("3_ydc67")
 grow_sound = ExtResource("4_y2saf")
+item = ExtResource("5_yoop5")
 
 [node name="GroundAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = -1
@@ -441,9 +443,9 @@ metadata/_aseprite_wizard_interface_config_ = {
 
 [node name="SeedAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-material = SubResource("ShaderMaterial_hd1xx")
+material = SubResource("ShaderMaterial_lmunq")
 sprite_frames = SubResource("SpriteFrames_86cvv")
-frame = 3
+frame = 1
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -458,7 +460,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "7ca928754d72b0ac5217b3caa66cfa64"
 [node name="CropAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
 texture_filter = 1
-material = SubResource("ShaderMaterial_rvx3m")
+material = SubResource("ShaderMaterial_t7r4f")
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_5vv0t")
 animation = &"turnip"
@@ -478,7 +480,8 @@ metadata/_aseprite_wizard_interface_config_ = {
 }
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_mask = 2
+collision_layer = 0
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_uqv8v")

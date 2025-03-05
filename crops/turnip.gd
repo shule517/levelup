@@ -7,6 +7,7 @@ extends Node2D
 @export var harvest_sound: AudioStream
 @export var water_sound: AudioStream
 @export var grow_sound: AudioStream
+@export var item: Item
 
 @onready var seed_sprite: AnimatedSprite2D = $SeedAnimatedSprite2D
 @onready var crop_sprite: AnimatedSprite2D = $CropAnimatedSprite2D
@@ -79,7 +80,8 @@ func can_harvest() -> bool:
 	return crop_sprite.frame == (crop_sprite.sprite_frames.get_frame_count(crop_sprite.animation) - 1)
 
 # 収穫する
-func harvest() -> void:
+func harvest(inventory: Inventory) -> void:
+	inventory.insert(item, 1)
 	Global.tunip_count += 1
 	Audio.play_sound_effect(harvest_sound, self, randf_range(0.8, 1.5))
 	queue_free()

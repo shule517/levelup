@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://qtbhu68a8evh"]
 
-[ext_resource type="Texture2D" uid="uid://bs035wjkwqf0a" path="res://items/turnip/turnip.png" id="1_svj8b"]
-[ext_resource type="Script" path="res://items/item/item.gd" id="2_fhe2k"]
+[ext_resource type="Script" path="res://items/item/item.gd" id="1_xux34"]
+[ext_resource type="Texture2D" uid="uid://bs035wjkwqf0a" path="res://items/turnip/turnip.png" id="2_lrpfk"]
 
 [resource]
-script = ExtResource("2_fhe2k")
+script = ExtResource("1_xux34")
 id = 1
 name = "Turnip"
 description = ""
-icon = ExtResource("1_svj8b")
+texture = ExtResource("2_lrpfk")
