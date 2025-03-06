@@ -16,8 +16,8 @@ func insert(new_item: Item, quantity: int) -> void:
 	new_stack.quantity = quantity
 	items.append(new_stack)
 
-func get_item(index: int) -> Item:
+func get_item(index: int) -> ItemStack:
 	if index < items.size():
-		return items[index].item
+		return items[index]
 	else:
 		return null

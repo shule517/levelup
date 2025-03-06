@@ -3,7 +3,7 @@ class_name ItemSlot
 extends Control
 
 @export var item_stack: ItemStack
-@onready var item_sprite: Sprite2D = $CenterContainer/ItemSprite2D
+@onready var item_sprite: Sprite2D = $CenterContainer/MarginContainer/ItemSprite2D
 @onready var item_count: Label = $ItemCountLabel
 
 func _ready() -> void:

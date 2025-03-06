@@ -42,9 +42,9 @@ func _process(delta: float) -> void:
 			await get_tree().create_timer(0.5).timeout
 			is_watering = false # 操作を再開
 	# 種をまく
-	elif crops_tile_map_layer and crops_tile_map_layer.can_plant_seed(select_cell_position):
+	elif crops_tile_map_layer and crops_tile_map_layer.can_plant_seed(select_cell_position, inventory):
 		if Input.is_action_pressed("button_a"):
-			crops_tile_map_layer.plant_seed(select_cell_position)
+			crops_tile_map_layer.plant_seed(select_cell_position, inventory)
 
 	# 水やり、収穫
 	if crops:

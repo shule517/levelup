@@ -1,104 +1,23 @@
-[gd_scene load_steps=19 format=3 uid="uid://dffq1ep3cf1xw"]
+[gd_scene load_steps=6 format=3 uid="uid://dffq1ep3cf1xw"]
 
 [ext_resource type="Script" path="res://ui/item_bar/item_bar.gd" id="1_v8hm5"]
-[ext_resource type="Texture2D" uid="uid://vut0wskmsva7" path="res://ui/item_bar/item_turnip.png" id="3_8s4vo"]
 [ext_resource type="Texture2D" uid="uid://bmfsnnevk5vyc" path="res://ui/item_bar/shortitem_bg.png" id="3_tor2f"]
-[ext_resource type="FontFile" uid="uid://hoe6a4uttksq" path="res://ui/player_status/PixelMplus10-Regular.ttf" id="4_b2tgu"]
 [ext_resource type="PackedScene" uid="uid://vdl33233non3" path="res://ui/item_slot/item_slot.tscn" id="5_u7iqy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6lfxu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6fj7"]
 atlas = ExtResource("3_tor2f")
 region = Rect2(0, 0, 265, 34)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_fgndv"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_q5j6h"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6lfxu")
+"texture": SubResource("AtlasTexture_k6fj7")
 }],
 "loop": true,
 "name": &"default",
 "speed": 10.0
 }]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_or1ly"]
-atlas = ExtResource("3_8s4vo")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vryr5"]
-atlas = ExtResource("3_8s4vo")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_558ot"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_or1ly")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vryr5")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i22aa"]
-atlas = ExtResource("3_8s4vo")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i58da"]
-atlas = ExtResource("3_8s4vo")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kd3t7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i22aa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i58da")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yqv11"]
-atlas = ExtResource("3_8s4vo")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_44one"]
-atlas = ExtResource("3_8s4vo")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k2de3"]
-atlas = ExtResource("3_8s4vo")
-region = Rect2(0, 16, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7msxh"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yqv11")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_44one")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k2de3")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}]
-
-[sub_resource type="LabelSettings" id="LabelSettings_phacw"]
-font = ExtResource("4_b2tgu")
-font_size = 10
-font_color = Color(0, 0, 0, 1)
-outline_size = 4
 
 [node name="ItemBar" type="Control"]
 layout_mode = 3
@@ -109,113 +28,28 @@ script = ExtResource("1_v8hm5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 18)
-sprite_frames = SubResource("SpriteFrames_fgndv")
+sprite_frames = SubResource("SpriteFrames_q5j6h")
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
 "o_folder": "",
 "o_name": "",
-"only_visible": false,
+"only_visible": true,
 "slice": "",
 "source": "res://ui/item_bar/shortitem_bg.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "d005a47d586894d3b51168b5025fb027"
-
-[node name="Item1AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-116.25, 17.5)
-sprite_frames = SubResource("SpriteFrames_558ot")
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://ui/item_bar/item_turnip.aseprite"
-}
+metadata/_aseprite_wizard_source_file_hash_ = "9c4b561b496aff0944a3c2d02e38c393"
 metadata/_aseprite_wizard_interface_config_ = {
-"layer_section": true,
-"slice_section": true
+"layer_section": false
 }
-metadata/_aseprite_wizard_source_file_hash_ = "cb63a679a6e578ee0110a3ab28eddfa1"
-
-[node name="Item2AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-86.25, 17.5)
-sprite_frames = SubResource("SpriteFrames_kd3t7")
-frame = 1
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://ui/item_bar/item_turnip.aseprite"
-}
-metadata/_aseprite_wizard_interface_config_ = {
-"layer_section": true,
-"slice_section": true
-}
-metadata/_aseprite_wizard_source_file_hash_ = "cb63a679a6e578ee0110a3ab28eddfa1"
-
-[node name="Item3AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-58.75, 17.5)
-sprite_frames = SubResource("SpriteFrames_7msxh")
-frame = 2
-metadata/_aseprite_wizard_config_ = {
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"slice": "",
-"source": "res://ui/item_bar/item_turnip.aseprite"
-}
-metadata/_aseprite_wizard_interface_config_ = {
-"layer_section": true,
-"slice_section": true
-}
-metadata/_aseprite_wizard_source_file_hash_ = "7248b57f70674e58ab45e359f42ce365"
-
-[node name="Item1CountLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = -141.25
-offset_top = 22.5
-offset_right = -101.25
-offset_bottom = 45.5
-text = "16"
-label_settings = SubResource("LabelSettings_phacw")
-horizontal_alignment = 2
-
-[node name="Item2CountLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = -112.5
-offset_top = 22.5
-offset_right = -72.5
-offset_bottom = 45.5
-text = "16"
-label_settings = SubResource("LabelSettings_phacw")
-horizontal_alignment = 2
-
-[node name="Item3CountLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = -82.5
-offset_top = 22.5
-offset_right = -42.5
-offset_bottom = 45.5
-text = "16"
-label_settings = SubResource("LabelSettings_phacw")
-horizontal_alignment = 2
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
-offset_left = -128.75
-offset_top = -26.25
-offset_right = 107.25
-offset_bottom = 38.75
+offset_left = -125.0
+offset_top = 5.0
+offset_right = 125.0
+offset_bottom = 31.0
+theme_override_constants/h_separation = 2
 columns = 10
 
 [node name="ItemSlot" parent="GridContainer" instance=ExtResource("5_u7iqy")]

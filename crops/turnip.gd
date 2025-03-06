@@ -82,7 +82,6 @@ func can_harvest() -> bool:
 # 収穫する
 func harvest(inventory: Inventory) -> void:
 	inventory.insert(item, 1)
-	Global.tunip_count += 1
 	Audio.play_sound_effect(harvest_sound, self, randf_range(0.8, 1.5))
 	queue_free()
 
