@@ -1,6 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://tup2rqm54hyk"]
+[gd_scene load_steps=19 format=3 uid="uid://tup2rqm54hyk"]
 
+[ext_resource type="Shader" path="res://shader/outline.gdshader" id="1_deyhv"]
 [ext_resource type="Texture2D" uid="uid://cy0ek2ix410s5" path="res://objects/tree/Tree.png" id="1_jr54v"]
+[ext_resource type="Script" path="res://objects/tree/tree.gd" id="1_qt68x"]
+[ext_resource type="AudioStream" uid="uid://q0i0qw2wleun" path="res://objects/tree/se/音人_斧（木こり）.mp3" id="2_kb8qj"]
+[ext_resource type="AudioStream" uid="uid://g5glxa0assyi" path="res://objects/tree/se/効果音ラボ_木が倒れる.mp3" id="3_tjw5b"]
+[ext_resource type="Resource" uid="uid://7y5renyja5sw" path="res://items/wood/wood.tres" id="4_d75me"]
+[ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/音人_吸盤.mp3" id="4_hwd4d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pwb1v"]
+resource_local_to_scene = true
+shader = ExtResource("1_deyhv")
+shader_parameter/enabled = true
+shader_parameter/is_selected = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mcc05"]
 atlas = ExtResource("1_jr54v")
@@ -74,9 +86,15 @@ animations = [{
 }]
 
 [node name="Tree" type="Node2D"]
+script = ExtResource("1_qt68x")
+chop_tree_audio = ExtResource("2_kb8qj")
+fall_tree_audio = ExtResource("3_tjw5b")
+get_item_audio = ExtResource("4_hwd4d")
+wood_item = ExtResource("4_d75me")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_pwb1v")
 position = Vector2(0, -18)
 sprite_frames = SubResource("SpriteFrames_n17qu")
 metadata/_aseprite_wizard_config_ = {

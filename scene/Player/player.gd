@@ -12,7 +12,6 @@ extends CharacterBody2D
 @onready var ground_tile_map_layer: GroundTileMapPlayer = get_tree().get_root().find_child("GroundTileMapLayer", true, false)
 @onready var cell_animated_sprite_2d: AnimatedSprite2D = $CellAnimatedSprite2D
 
-
 const SPEED: float = 50.0
 
 var crops: Array[Turnip] = []
@@ -32,8 +31,17 @@ func _process(delta: float) -> void:
 	# 選択したセルを表示
 	cell_animated_sprite_2d.global_position = Vector2(int(select_cell_position.x / 16) * 16 + 8, int(select_cell_position.y / 16) * 16 + 8)
 
+	if crops_tile_map_layer and crops_tile_map_layer.is_tree(select_cell_position):
+		var tree := crops_tile_map_layer.is_tree(select_cell_position)
+		tree.select()
+		if Input.is_action_just_pressed("button_y"):
+			is_watering = true # 操作をフリーズ
+			hal_sprite.play("soil")
+			tree.chop_tree(inventory)
+			await get_tree().create_timer(0.5).timeout
+			is_watering = false # 操作を再開
 	# 耕す
-	if ground_tile_map_layer and ground_tile_map_layer.can_till_soil(select_cell_position):
+	elif ground_tile_map_layer and ground_tile_map_layer.can_till_soil(select_cell_position):
 		if Input.is_action_just_pressed("button_y"):
 			is_watering = true # 操作をフリーズ
 			ground_tile_map_layer.till_soil(select_cell_position) # 耕す

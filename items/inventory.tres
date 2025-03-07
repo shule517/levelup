@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=5 format=3 uid="uid://crbvwe4mr8hat"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=6 format=3 uid="uid://crbvwe4mr8hat"]
 
+[ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/音人_吸盤.mp3" id="1_0t5rm"]
 [ext_resource type="Script" path="res://items/item_stack.gd" id="1_km71v"]
 [ext_resource type="Resource" uid="uid://d3iybfhndp4v" path="res://items/seed/seed.tres" id="2_8flys"]
 [ext_resource type="Script" path="res://items/inventory.gd" id="3_0e1e6"]
@@ -12,3 +13,4 @@ quantity = 6
 [resource]
 script = ExtResource("3_0e1e6")
 items = Array[ExtResource("1_km71v")]([SubResource("Resource_xtkw7")])
+get_item_auduio = ExtResource("1_0t5rm")
