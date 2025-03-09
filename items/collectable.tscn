@@ -1,12 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://ljri1ba4ut3l"]
+[gd_scene load_steps=6 format=3 uid="uid://ljri1ba4ut3l"]
 
 [ext_resource type="Script" path="res://items/collectable.gd" id="1_e00e6"]
 [ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/音人_吸盤.mp3" id="2_cwyvj"]
+[ext_resource type="Texture2D" uid="uid://bs035wjkwqf0a" path="res://items/turnip/turnip.png" id="3_i16rv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bk8ef"]
 resource_local_to_scene = true
+radius = 3.0
 
-[node name="Collectable" type="StaticBody2D" groups=["collectable"]]
+[sub_resource type="CircleShape2D" id="CircleShape2D_5jygj"]
+radius = 11.0
+
+[node name="Collectable" type="CharacterBody2D" groups=["collectable"]]
 collision_layer = 16
 collision_mask = 2
 script = ExtResource("1_e00e6")
@@ -16,3 +21,13 @@ collect_sound = ExtResource("2_cwyvj")
 shape = SubResource("CircleShape2D_bk8ef")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_i16rv")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5jygj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

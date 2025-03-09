@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=50 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/player/se/attack/attack_short_sword.wav" id="2_1lcni"]
@@ -653,8 +653,11 @@ length = 16.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_7wre7"]
 radius = 64.0078
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_j5b4a"]
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
+collision_mask = 17
 script = ExtResource("1_7typn")
 till_sound = ExtResource("2_6vlhd")
 inventory = ExtResource("3_v6iut")
@@ -823,6 +826,13 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea2D"]
 shape = SubResource("CircleShape2D_7wre7")
+
+[node name="ItemGetArea2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemGetArea2D"]
+shape = SubResource("CircleShape2D_j5b4a")
 
 [connection signal="body_entered" from="ViewArea2D" to="PlayerBattle" method="_on_view_area_2d_body_entered"]
 [connection signal="body_exited" from="ViewArea2D" to="PlayerBattle" method="_on_view_area_2d_body_exited"]

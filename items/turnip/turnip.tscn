@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dg5b05ukmcxeu"]
+[gd_scene load_steps=4 format=3 uid="uid://dg5b05ukmcxeu"]
 
 [ext_resource type="PackedScene" uid="uid://ljri1ba4ut3l" path="res://items/collectable.tscn" id="1_8dwcw"]
 [ext_resource type="Resource" uid="uid://qtbhu68a8evh" path="res://items/turnip/turnip.tres" id="2_b6pnx"]
-[ext_resource type="Texture2D" uid="uid://bs035wjkwqf0a" path="res://items/turnip/turnip.png" id="2_ycl0x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h8844"]
 resource_local_to_scene = true
@@ -14,5 +13,4 @@ item_resource = ExtResource("2_b6pnx")
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("CircleShape2D_h8844")
 
-[node name="Sprite2D" parent="." index="1"]
-texture = ExtResource("2_ycl0x")
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
