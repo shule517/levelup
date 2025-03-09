@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=25 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -17,7 +17,6 @@
 [ext_resource type="AudioStream" uid="uid://dxh37rm775k66" path="res://fields/spring/peaceful_forest.mp3" id="15_ai7t6"]
 [ext_resource type="PackedScene" uid="uid://2foqjj2jstxh" path="res://scene/shipping_box/shipping_box.tscn" id="16_7lpbp"]
 [ext_resource type="PackedScene" uid="uid://dg5b05ukmcxeu" path="res://items/turnip/turnip.tscn" id="17_88ee7"]
-[ext_resource type="PackedScene" uid="uid://tup2rqm54hyk" path="res://objects/tree/tree.tscn" id="18_ys7n1"]
 [ext_resource type="PackedScene" uid="uid://yymk4wtu2oxp" path="res://objects/campfire/campfire.tscn" id="19_sqfqq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5gqc"]
@@ -767,30 +766,6 @@ parameters/looping = true
 
 [node name="ShippingBox" parent="." instance=ExtResource("16_7lpbp")]
 position = Vector2(169, 126)
-
-[node name="Tree" parent="." instance=ExtResource("18_ys7n1")]
-position = Vector2(53, 145)
-
-[node name="Tree2" parent="." instance=ExtResource("18_ys7n1")]
-position = Vector2(83, 141)
-
-[node name="Tree3" parent="." instance=ExtResource("18_ys7n1")]
-position = Vector2(79, 166)
-
-[node name="Tree4" parent="." instance=ExtResource("18_ys7n1")]
-position = Vector2(59, 174)
-
-[node name="Tree5" parent="." instance=ExtResource("18_ys7n1")]
-position = Vector2(69, 188)
-
-[node name="Tree6" parent="." instance=ExtResource("18_ys7n1")]
-position = Vector2(98, 198)
-
-[node name="Tree7" parent="." instance=ExtResource("18_ys7n1")]
-position = Vector2(54, 198)
-
-[node name="Tree8" parent="." instance=ExtResource("18_ys7n1")]
-position = Vector2(65, 217)
 
 [node name="Campfire" parent="." instance=ExtResource("19_sqfqq")]
 position = Vector2(130, 102)

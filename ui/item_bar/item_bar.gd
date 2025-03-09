@@ -1,9 +1,5 @@
 extends Control
 
-@onready var item1_count_label: Label = $Item1CountLabel
-@onready var item2_count_label: Label = $Item2CountLabel
-@onready var item3_count_label: Label = $Item3CountLabel
-
 @onready var inventory: Inventory = preload("res://items/inventory.tres")
 @onready var slots: Array = $GridContainer.get_children() # TODO: Array[ItemSlot]と書きたい
 

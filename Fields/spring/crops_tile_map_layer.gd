@@ -21,8 +21,11 @@ func can_plant_seed(position: Vector2, inventory: Inventory) -> bool:
 
 func is_tree(position: Vector2) -> TreeObject:
 	var coords := local_to_map(position)
-	var node: Node2D = get_children().filter(func(child: Node) -> bool: return local_to_map(child.position) == coords).front()
-	if node is TreeObject:
-		return node
-	else:
-		return null
+	var nodes := get_children().filter(func(child: Node) -> bool: return local_to_map(child.position) == coords)
+
+	if nodes.size() > 0:
+		var node :Node = nodes.front()
+		if node is TreeObject:
+			return node
+
+	return null

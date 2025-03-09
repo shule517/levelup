@@ -35,7 +35,7 @@ extends Node
 @onready var animation_player: AnimationPlayer = owner.get_node(\"AnimationPlayer\")
 @onready var levelup_animated_sprite_2d: AnimatedSprite2D = owner.get_node(\"LevelupAnimatedSprite2D\")
 @onready var hal_sprite: AnimatedSprite2D = owner.get_node(\"HalAnimatedSprite2D\")
-@onready var collision_shape: CollisionShape2D = owner.get_node(\"Celloarea2D/llisionShape2D\")
+#@onready var collision_shape: CollisionShape2D = owner.get_node(\"Celloarea2D/llisionShape2D\")
 
 # しきい値を設定してスティックの感度を調整
 const DEADZONE: float = 0.2
@@ -657,7 +657,6 @@ radius = 64.0078
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
-collision_mask = 17
 script = ExtResource("1_7typn")
 till_sound = ExtResource("2_6vlhd")
 inventory = ExtResource("3_v6iut")
