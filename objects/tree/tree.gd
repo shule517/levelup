@@ -7,6 +7,7 @@ extends Node2D
 @export var hp: int = 5
 @export var wood_item: Item
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _process(delta: float) -> void:
 	unselect()
@@ -28,6 +29,7 @@ func chop_tree(inventory: Inventory) -> void:
 	hp -= 1
 
 	if hp <= 0:
+		animation_player.play("fall")
 		Audio.play_sound_effect(fall_tree_audio, self, randf_range(0.8, 1.1))
 		await get_tree().create_timer(2.5).timeout
 		for i in range(13):
