@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://tup2rqm54hyk"]
+[gd_scene load_steps=23 format=3 uid="uid://tup2rqm54hyk"]
 
 [ext_resource type="Shader" path="res://shader/outline.gdshader" id="1_deyhv"]
 [ext_resource type="Texture2D" uid="uid://cy0ek2ix410s5" path="res://objects/tree/Tree.png" id="1_jr54v"]
@@ -14,71 +14,71 @@ shader = ExtResource("1_deyhv")
 shader_parameter/enabled = true
 shader_parameter/is_selected = false
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jsvxy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_f34cn"]
 atlas = ExtResource("1_jr54v")
 region = Rect2(0, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_aqsf7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_suf5i"]
 atlas = ExtResource("1_jr54v")
 region = Rect2(32, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rry0p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pev1"]
 atlas = ExtResource("1_jr54v")
 region = Rect2(64, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7r5pi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2m62"]
 atlas = ExtResource("1_jr54v")
 region = Rect2(0, 48, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0rh8e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ykqs"]
 atlas = ExtResource("1_jr54v")
 region = Rect2(32, 48, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j1eec"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdykt"]
 atlas = ExtResource("1_jr54v")
 region = Rect2(64, 48, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_10qrn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7ile"]
 atlas = ExtResource("1_jr54v")
 region = Rect2(0, 96, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8l22e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_odlqc"]
 atlas = ExtResource("1_jr54v")
 region = Rect2(32, 96, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_73vor"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu27p"]
 atlas = ExtResource("1_jr54v")
 region = Rect2(64, 96, 32, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_nmqtl"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_cge0g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jsvxy")
+"texture": SubResource("AtlasTexture_f34cn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_aqsf7")
+"texture": SubResource("AtlasTexture_suf5i")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rry0p")
+"texture": SubResource("AtlasTexture_3pev1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7r5pi")
+"texture": SubResource("AtlasTexture_n2m62")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0rh8e")
+"texture": SubResource("AtlasTexture_4ykqs")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j1eec")
+"texture": SubResource("AtlasTexture_tdykt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_10qrn")
+"texture": SubResource("AtlasTexture_n7ile")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8l22e")
+"texture": SubResource("AtlasTexture_odlqc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_73vor")
+"texture": SubResource("AtlasTexture_gu27p")
 }],
 "loop": true,
 "name": &"default",
@@ -194,7 +194,11 @@ _data = {
 "fall": SubResource("Animation_qlha1")
 }
 
-[node name="Tree" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_bw5hy"]
+
+[node name="Tree" type="StaticBody2D"]
+collision_layer = 32
+collision_mask = 0
 script = ExtResource("1_qt68x")
 chop_tree_audio = ExtResource("2_kb8qj")
 fall_tree_audio = ExtResource("3_tjw5b")
@@ -204,7 +208,8 @@ wood_item = ExtResource("4_d75me")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 material = SubResource("ShaderMaterial_cwjgl")
-sprite_frames = SubResource("SpriteFrames_nmqtl")
+sprite_frames = SubResource("SpriteFrames_cge0g")
+frame_progress = 0.702677
 offset = Vector2(0, -17.45)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -221,3 +226,6 @@ metadata/_aseprite_wizard_source_file_hash_ = "0c0b0a7d91fde77581097f5e7aacc1e4"
 libraries = {
 "": SubResource("AnimationLibrary_st240")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bw5hy")

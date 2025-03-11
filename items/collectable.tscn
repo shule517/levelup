@@ -13,7 +13,7 @@ radius = 11.0
 
 [node name="Collectable" type="CharacterBody2D" groups=["collectable"]]
 collision_layer = 16
-collision_mask = 2
+collision_mask = 0
 script = ExtResource("1_e00e6")
 collect_sound = ExtResource("2_cwyvj")
 
@@ -30,4 +30,5 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_5jygj")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

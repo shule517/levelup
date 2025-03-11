@@ -12,5 +12,3 @@ item_resource = ExtResource("2_b6pnx")
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("CircleShape2D_h8844")
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

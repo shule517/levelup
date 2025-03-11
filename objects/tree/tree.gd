@@ -1,5 +1,5 @@
 class_name TreeObject
-extends Node2D
+extends StaticBody2D
 
 @export var chop_tree_audio: AudioStream
 @export var fall_tree_audio: AudioStream

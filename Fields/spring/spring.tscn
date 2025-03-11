@@ -772,15 +772,19 @@ position = Vector2(130, 102)
 
 [node name="Turnip" parent="." instance=ExtResource("17_88ee7")]
 position = Vector2(192, 95)
+collision_mask = 2
 
 [node name="Turnip2" parent="." instance=ExtResource("17_88ee7")]
 position = Vector2(195, 18)
+collision_mask = 2
 
 [node name="Turnip3" parent="." instance=ExtResource("17_88ee7")]
 position = Vector2(245, 34)
+collision_mask = 2
 
 [node name="Turnip4" parent="." instance=ExtResource("17_88ee7")]
 position = Vector2(235, 96)
+collision_mask = 2
 
 [editable path="Warp"]
 [editable path="WarWinter"]

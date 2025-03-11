@@ -657,6 +657,7 @@ radius = 64.0078
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
+collision_mask = 33
 script = ExtResource("1_7typn")
 till_sound = ExtResource("2_6vlhd")
 inventory = ExtResource("3_v6iut")
