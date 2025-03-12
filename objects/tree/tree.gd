@@ -33,19 +33,12 @@ func chop_tree(inventory: Inventory) -> void:
 		Audio.play_sound_effect(fall_tree_audio, self, randf_range(0.8, 1.1))
 		await get_tree().create_timer(2.2).timeout
 		for i in range(13):
-			const TurnipScene = preload("res://items/turnip/turnip.tscn")
-			var turnip := TurnipScene.instantiate()
-			var base_x := global_position.x + 15
-			turnip.global_position = Vector2(randf_range(base_x - 10, base_x + 10) , global_position.y - 7)
-			#turnip.global_position = Vector2(randf_range(global_position.x - 10, global_position.x + 10) , randf_range(global_position.y - 5, global_position.y + 5))
-			#var collectable := Collectable.new()
-			#collectable.item_resource = wood_item
-			#collectable.position = Vector2(0, 0)
-			#var turnip := preload("res://items/turnip/turnip.tscn")
-			
-			get_parent().get_parent().add_child(turnip)
-			print(get_parent().get_parent())
-			#inventory.insert(wood_item, 1)
-			#Audio.play_sound_effect(get_item_audio, self, randf_range(0.8, 1.1))
-			#await get_tree().create_timer(randf_range(0.1, 0.01)).timeout
+			item_drop()
 		queue_free()
+
+func item_drop() -> void:
+	const TurnipScene = preload("res://items/turnip/turnip.tscn")
+	var turnip := TurnipScene.instantiate()
+	var base_x := global_position.x + 15
+	turnip.global_position = Vector2(randf_range(base_x - 10, base_x + 10) , global_position.y - 7)
+	get_parent().get_parent().add_child(turnip)
