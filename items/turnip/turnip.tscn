@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dg5b05ukmcxeu"]
 
-[ext_resource type="PackedScene" uid="uid://ljri1ba4ut3l" path="res://items/collectable.tscn" id="1_8dwcw"]
+[ext_resource type="PackedScene" uid="uid://ljri1ba4ut3l" path="res://items/item/item.tscn" id="1_8dwcw"]
 [ext_resource type="Resource" uid="uid://qtbhu68a8evh" path="res://items/turnip/turnip.tres" id="2_b6pnx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h8844"]

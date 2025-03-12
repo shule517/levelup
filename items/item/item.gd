@@ -1,4 +1,4 @@
-class_name Collectable
+class_name Item
 extends CharacterBody2D
 
 @export var item_resource: ItemResource

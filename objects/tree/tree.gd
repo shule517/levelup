@@ -33,10 +33,10 @@ func chop_tree(inventory: Inventory) -> void:
 		Audio.play_sound_effect(fall_tree_audio, self, randf_range(0.8, 1.1))
 		await get_tree().create_timer(2.2).timeout
 		for i in range(13):
-			item_drop()
+			drop_item()
 		queue_free()
 
-func item_drop() -> void:
+func drop_item() -> void:
 	const TurnipScene = preload("res://items/turnip/turnip.tscn")
 	var turnip := TurnipScene.instantiate()
 	var base_x := global_position.x + 15

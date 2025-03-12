@@ -122,5 +122,5 @@ func receive_exp(monster_exp: int) -> void:
 	player_battle.receive_exp(monster_exp)
 
 func _on_collect_area_2d_body_entered(body: Node2D) -> void:
-	if body is Collectable:
+	if body is Item:
 		body.collect(inventory)

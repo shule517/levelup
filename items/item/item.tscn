@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ljri1ba4ut3l"]
 
-[ext_resource type="Script" path="res://items/collectable.gd" id="1_e00e6"]
-[ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/音人_吸盤.mp3" id="2_cwyvj"]
-[ext_resource type="Texture2D" uid="uid://bs035wjkwqf0a" path="res://items/turnip/turnip.png" id="3_i16rv"]
+[ext_resource type="Script" path="res://items/item/item.gd" id="1_syos8"]
+[ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/音人_吸盤.mp3" id="2_jhut1"]
+[ext_resource type="Texture2D" uid="uid://bs035wjkwqf0a" path="res://items/turnip/turnip.png" id="3_sn74j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bk8ef"]
 resource_local_to_scene = true
@@ -11,17 +11,17 @@ radius = 3.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_5jygj"]
 radius = 11.0
 
-[node name="Collectable" type="CharacterBody2D" groups=["collectable"]]
+[node name="Item" type="CharacterBody2D" groups=["collectable"]]
 collision_layer = 16
 collision_mask = 0
-script = ExtResource("1_e00e6")
-collect_sound = ExtResource("2_cwyvj")
+script = ExtResource("1_syos8")
+collect_sound = ExtResource("2_jhut1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bk8ef")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_i16rv")
+texture = ExtResource("3_sn74j")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 16
