@@ -1,7 +1,7 @@
 class_name Collectable
 extends CharacterBody2D
 
-@export var item_resource: Item
+@export var item_resource: ItemResource
 @export var collect_sound: AudioStream
 @onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
 

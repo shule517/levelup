@@ -5,7 +5,7 @@ extends StaticBody2D
 @export var fall_tree_audio: AudioStream
 @export var get_item_audio: AudioStream
 @export var hp: int = 5
-@export var wood_item: Item
+@export var wood_item: ItemResource
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 

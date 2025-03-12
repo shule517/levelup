@@ -1,4 +1,4 @@
-class_name Item
+class_name ItemResource
 extends Resource
 
 @export var id: int = -1

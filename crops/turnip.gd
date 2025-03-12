@@ -7,7 +7,7 @@ extends Node2D
 @export var harvest_sound: AudioStream
 @export var water_sound: AudioStream
 @export var grow_sound: AudioStream
-@export var item: Item
+@export var item: ItemResource
 
 @onready var seed_sprite: AnimatedSprite2D = $SeedAnimatedSprite2D
 @onready var crop_sprite: AnimatedSprite2D = $CropAnimatedSprite2D

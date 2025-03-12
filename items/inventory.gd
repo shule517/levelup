@@ -4,7 +4,7 @@ extends Resource
 @export var items: Array[ItemStack]
 @export var get_item_auduio: AudioStream
 
-func insert(new_item: Item, quantity: int) -> void:
+func insert(new_item: ItemResource, quantity: int) -> void:
 	# 既存に数を追加
 	for stack in items:
 		if stack.item == new_item:
