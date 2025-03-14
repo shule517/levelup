@@ -35,7 +35,7 @@ func chop_tree(inventory: Inventory) -> void:
 		for i in range(13):
 			drop_item()
 		queue_free()
-
+  
 func drop_item() -> void:
 	const ItemScene = preload("res://items/item/item.tscn")
 	var item := ItemScene.instantiate()
