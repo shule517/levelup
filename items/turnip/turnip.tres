@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_xux34")
-id = 1
+id = 107
 name = "Turnip"
 description = ""
 texture = ExtResource("2_lrpfk")

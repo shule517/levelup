@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var item_resource: ItemResource
 @export var collect_sound: AudioStream
 @onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED: float = 80.0
 var is_collecting: bool = false
@@ -19,6 +20,7 @@ var ground_y: float = 0  # 地面の高さ
 var is_entered: bool = false
 
 func _ready() -> void:
+	animated_sprite.frame = item_resource.id
 	ground_y = position.y + 2 # アイテムの着地高さを取得
 	await get_tree().create_timer(float_time).timeout  # 少し浮遊する
 	velocity.y = -100
