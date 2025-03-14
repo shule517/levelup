@@ -37,8 +37,9 @@ func chop_tree(inventory: Inventory) -> void:
 		queue_free()
 
 func drop_item() -> void:
-	const TurnipScene = preload("res://items/turnip/turnip.tscn")
-	var turnip := TurnipScene.instantiate()
+	const ItemScene = preload("res://items/item/item.tscn")
+	var item := ItemScene.instantiate()
+	item.item_resource = load("res://items/item_resources/wood.tres")
 	var base_x := global_position.x + 15
-	turnip.global_position = Vector2(randf_range(base_x - 10, base_x + 10) , global_position.y - 7)
-	get_parent().get_parent().add_child(turnip)
+	item.global_position = Vector2(randf_range(base_x - 10, base_x + 10) , global_position.y - 7)
+	get_parent().get_parent().add_child(item) # add_childされたら、itemの_readyが動く

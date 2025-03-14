@@ -12,7 +12,7 @@ func _ready() -> void:
 func update(item_stack: ItemStack) -> void:
 	if item_stack:
 		item_sprite.visible = true
-		item_sprite.texture = item_stack.item.texture
+		#item_sprite.texture = item_stack.item.texture
 		item_count.visible = true
 		item_count.text = "%d" % item_stack.quantity
 	else:

@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://objects/tree/tree.gd" id="1_qt68x"]
 [ext_resource type="AudioStream" uid="uid://q0i0qw2wleun" path="res://objects/tree/se/音人_斧（木こり）.mp3" id="2_kb8qj"]
 [ext_resource type="AudioStream" uid="uid://g5glxa0assyi" path="res://objects/tree/se/効果音ラボ_木が倒れる.mp3" id="3_tjw5b"]
-[ext_resource type="Resource" uid="uid://7y5renyja5sw" path="res://items/wood/wood.tres" id="4_d75me"]
+[ext_resource type="Resource" uid="uid://7y5renyja5sw" path="res://items/item_resources/wood.tres" id="4_d75me"]
 [ext_resource type="AudioStream" uid="uid://cqxx6xv8u6io1" path="res://crops/音人_吸盤.mp3" id="4_hwd4d"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cwjgl"]

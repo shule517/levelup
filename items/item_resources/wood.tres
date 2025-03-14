@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://7y5renyja5sw"]
+
+[ext_resource type="Script" path="res://items/item_resource/item_resource.gd" id="1_mcyye"]
+
+[resource]
+script = ExtResource("1_mcyye")
+id = 107
+name = "木材"
+description = ""

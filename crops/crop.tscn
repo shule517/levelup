@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://dy4sfdeawkp7b" path="res://crops/効果音ラボ_水をバシャッとかける2.mp3" id="3_ydc67"]
 [ext_resource type="AudioStream" uid="uid://bbw2ns5h8sold" path="res://crops/効果音ラボ_カーソル移動7.mp3" id="4_y2saf"]
 [ext_resource type="Texture2D" uid="uid://b60kf2873k0w7" path="res://crops/ground.png" id="5_57wpx"]
-[ext_resource type="Resource" uid="uid://qtbhu68a8evh" path="res://items/turnip/turnip.tres" id="5_yoop5"]
+[ext_resource type="Resource" uid="uid://qtbhu68a8evh" path="res://items/item_resources/turnip.tres" id="5_yoop5"]
 [ext_resource type="Shader" path="res://shader/outline.gdshader" id="6_khj2a"]
 [ext_resource type="Texture2D" uid="uid://jdwqgkdyry0t" path="res://crops/seed.png" id="7_grbto"]
 [ext_resource type="Texture2D" uid="uid://bywxatr6ke5hb" path="res://crops/crops.png" id="8_4w4nr"]

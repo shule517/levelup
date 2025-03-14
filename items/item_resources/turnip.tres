@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://qtbhu68a8evh"]
+
+[ext_resource type="Script" path="res://items/item_resource/item_resource.gd" id="1_xux34"]
+
+[resource]
+script = ExtResource("1_xux34")
+id = 1
+name = "だいこん"
+description = ""
