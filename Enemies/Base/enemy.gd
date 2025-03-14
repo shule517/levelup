@@ -140,6 +140,9 @@ func damage(damage: int) -> void:
 		# 経験値GET
 		player.receive_exp(monster_exp)
 
+		for i in range(3):
+			drop_item()
+		
 		# 死ぬアニメーション
 		sprite.stop()
 		play_sound_effect(die_sound)
@@ -150,6 +153,15 @@ func damage(damage: int) -> void:
 		tween.tween_callback(_destory)
 	else:
 		$AnimationPlayer.play("damaged")
+
+# TODO: 共通化したい
+func drop_item() -> void:
+	const ItemScene = preload("res://items/item/item.tscn")
+	var item := ItemScene.instantiate()
+	item.item_resource = load("res://items/item_resources/seed.tres")
+	var base_x := global_position.x
+	item.global_position = Vector2(randf_range(base_x - 10, base_x + 10) , global_position.y - 7)
+	get_parent().get_parent().add_child(item) # add_childされたら、itemの_readyが動く
 
 func _destory() -> void:
 	queue_free()

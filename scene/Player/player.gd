@@ -31,10 +31,11 @@ func _process(delta: float) -> void:
 	# 選択したセルを表示
 	cell_animated_sprite_2d.global_position = Vector2(int(select_cell_position.x / 16) * 16 + 8, int(select_cell_position.y / 16) * 16 + 8)
 
+	# 木を切る
 	if crops_tile_map_layer and crops_tile_map_layer.is_tree(select_cell_position):
 		var tree := crops_tile_map_layer.is_tree(select_cell_position)
 		tree.select()
-		if Input.is_action_just_pressed("button_y"):
+		if Input.is_action_just_pressed("button_a"):
 			is_watering = true # 操作をフリーズ
 			hal_sprite.play("soil")
 			tree.chop_tree(inventory)
