@@ -15,10 +15,10 @@ extends CharacterBody2D
 const SPEED: float = 50.0
 
 var crops: Array[Turnip] = []
-var is_watering: bool = false  # 水やり中かどうかを判定するフラグ
+var can_control: bool = true
 
 func _process(delta: float) -> void:
-	if is_watering:
+	if not can_control:
 		return  # 水やり中はフリーズ
 
 	# 選択したセルを取得する
@@ -36,20 +36,20 @@ func _process(delta: float) -> void:
 		var tree := crops_tile_map_layer.is_tree(select_cell_position)
 		tree.select()
 		if Input.is_action_just_pressed("button_a"):
-			is_watering = true # 操作をフリーズ
+			can_control = false # 操作をフリーズ
 			hal_sprite.play("soil")
 			tree.chop_tree(inventory)
 			await get_tree().create_timer(0.5).timeout
-			is_watering = false # 操作を再開
+			can_control = true # 操作を再開
 	# 耕す
 	elif ground_tile_map_layer and ground_tile_map_layer.can_till_soil(select_cell_position):
 		if Input.is_action_just_pressed("button_y"):
-			is_watering = true # 操作をフリーズ
+			can_control = false # 操作をフリーズ
 			ground_tile_map_layer.till_soil(select_cell_position) # 耕す
 			hal_sprite.play("soil")
 			Audio.play_sound_effect(till_sound, self, randf_range(0.8, 1.5))
 			await get_tree().create_timer(0.5).timeout
-			is_watering = false # 操作を再開
+			can_control = true # 操作を再開
 	# 種をまく
 	elif crops_tile_map_layer and crops_tile_map_layer.can_plant_seed(select_cell_position, inventory):
 		if Input.is_action_pressed("button_a"):
@@ -68,19 +68,19 @@ func _process(delta: float) -> void:
 		if select_crop.can_harvest():
 			if Input.is_action_pressed("button_a"):
 				select_crop.harvest(inventory)
-				is_watering = true # 操作をフリーズ
+				can_control = false # 操作をフリーズ
 				hal_sprite.play("harvest")
 				await get_tree().create_timer(0.3).timeout
-				is_watering = false # 操作を再開
+				can_control = true # 操作を再開
 
 		# 水やり
 		elif select_crop.need_water():
 			if Input.is_action_just_pressed("button_a"):
 				select_crop.water_crops()
-				is_watering = true # 操作をフリーズ
+				can_control = false # 操作をフリーズ
 				hal_sprite.play("water")
 				await get_tree().create_timer(1.0).timeout
-				is_watering = false # 操作を再開
+				can_control = true # 操作を再開
 
 	# 移動
 	var left_stick_vector :Vector2 = Input.get_vector("left_stick_left", "left_stick_right", "left_stick_up", "left_stick_down")

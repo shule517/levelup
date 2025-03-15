@@ -19,4 +19,3 @@ func _on_animation_finished(anim_name: String) -> void:
 func transition() -> void:
 	color_rect.visible = true
 	animation_player.play("fade_to_black")
-	
