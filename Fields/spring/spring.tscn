@@ -777,32 +777,32 @@ position = Vector2(169, 126)
 position = Vector2(130, 102)
 
 [node name="Turnip" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(194.026, 112.233)
+position = Vector2(201.459, 118.233)
 collision_mask = 2
-velocity = Vector2(13.1048, 0)
+velocity = Vector2(-44.0607, -100)
 bounce_power = 0.0
 
 [node name="Turnip2" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(223.278, 35.2333)
+position = Vector2(227.684, 41.2333)
 collision_mask = 2
-velocity = Vector2(16.3362, 0)
+velocity = Vector2(-45.2525, -100)
 bounce_power = 0.0
 
 [node name="Turnip3" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(234.867, 51.2333)
+position = Vector2(232.799, 57.2333)
 collision_mask = 2
-velocity = Vector2(-19.4368, 0)
+velocity = Vector2(-47.92, -100)
 bounce_power = 0.0
 
 [node name="Turnip4" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(232.099, 113.233)
+position = Vector2(229.181, 119.233)
 collision_mask = 2
-velocity = Vector2(-2.2966, 0)
+velocity = Vector2(-3.52639, -100)
 bounce_power = 0.0
 
 [node name="Item" parent="." instance=ExtResource("19_a5uy4")]
-position = Vector2(192.954, -1.76672)
-velocity = Vector2(-18.0289, 0)
+position = Vector2(175.49, 4.23328)
+velocity = Vector2(-17.6624, -100)
 item_resource = ExtResource("20_1o1kb")
 bounce_power = 0.0
 

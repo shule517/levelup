@@ -4,6 +4,9 @@ signal on_trigger_player_spawn
 
 func switch(field: Enum.Field) -> void:
 	# 画面切り替え
+	var player: Player = Player.get_instance()
+	player.can_control = false # 操作をフリーズ
+
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
 
