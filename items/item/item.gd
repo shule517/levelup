@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 @export var item_resource: ItemResource
 @export var collect_sound: AudioStream
-@onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
+@onready var player: Player = Player.get_instance()
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED: float = 80.0

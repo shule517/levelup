@@ -14,7 +14,7 @@ extends Node2D
 @onready var need_water_sprite: AnimatedSprite2D = $NeedWaterAnimatedSprite2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var timer: Timer = $Timer
-@onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
+@onready var player: Player = Player.get_instance()
 
 var is_selected: bool = false
 var has_water: bool = false

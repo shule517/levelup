@@ -17,6 +17,10 @@ const SPEED: float = 50.0
 var crops: Array[Turnip] = []
 var can_control: bool = true
 
+static func get_instance() -> Player:
+	var tree := Engine.get_main_loop() as SceneTree  # SceneTree を取得
+	return tree.get_nodes_in_group("Player")[0]
+
 func _process(delta: float) -> void:
 	if not can_control:
 		return  # 水やり中はフリーズ

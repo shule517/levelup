@@ -23,7 +23,7 @@ var monster_hp: int = 250
 @export var die_sound: AudioStream = preload("res://enemies/nezumi/やられた声/voice017.wav")
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var player: Player = get_tree().get_nodes_in_group("Player")[0]
+@onready var player: Player = Player.get_instance()
 @onready var attack_timer: Timer = $AttackTimer
 @onready var name_label: Label = $NameLabel
 @onready var hp_progress_bar: ProgressBar = $HpProgressBar
