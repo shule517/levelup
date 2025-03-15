@@ -26,6 +26,7 @@ func chop_tree(inventory: Inventory) -> void:
 		return
 
 	Audio.play_sound_effect(chop_tree_audio, self, randf_range(0.8, 1.1))
+	Input.start_joy_vibration(0, 0.3, 0.3, 0.2)
 	hp -= 1
 
 	if hp <= 0:
