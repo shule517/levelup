@@ -817,6 +817,7 @@ offset_bottom = 26.0
 layout_mode = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CenterContainer/MarginContainer"]
+visible = false
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_jidrn")
 metadata/_aseprite_wizard_config_ = {

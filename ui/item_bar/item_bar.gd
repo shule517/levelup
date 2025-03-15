@@ -1,3 +1,4 @@
+@tool
 extends Control
 
 @onready var inventory: Inventory = preload("res://items/inventory.tres")

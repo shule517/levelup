@@ -25,6 +25,7 @@ shape = SubResource("RectangleShape2D_q13gx")
 position = Vector2(-19, 0)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 text = "to HOME"

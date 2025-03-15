@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=28 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://csj0hwaue3oq1" path="res://enemies/Suraimu/suraimu.tscn" id="7_ho58m"]
 [ext_resource type="Texture2D" uid="uid://bw1t2b3qh43r3" path="res://fields/spring/misc.png" id="7_px4um"]
 [ext_resource type="Script" path="res://fields/spring/ground_tile_map_layer.gd" id="8_3moul"]
+[ext_resource type="PackedScene" uid="uid://dk2up2k4npas0" path="res://objects/home/home.tscn" id="11_tuxjy"]
 [ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/item_bar/item_bar.tscn" id="14_3e7cc"]
 [ext_resource type="Script" path="res://fields/spring/crops_tile_map_layer.gd" id="14_juah2"]
 [ext_resource type="AudioStream" uid="uid://dxh37rm775k66" path="res://fields/spring/peaceful_forest.mp3" id="15_ai7t6"]
@@ -704,10 +705,13 @@ tile_set = ExtResource("7_0kafg")
 script = ExtResource("14_juah2")
 
 [node name="Warp" parent="." instance=ExtResource("6_2xrom")]
-position = Vector2(132, -5)
+position = Vector2(60, -8)
 
 [node name="SpawnMarker2D" parent="Warp" index="1"]
 position = Vector2(0, 20)
+
+[node name="Home" parent="." instance=ExtResource("11_tuxjy")]
+position = Vector2(68, -2)
 
 [node name="WarWinter" parent="." instance=ExtResource("6_2xrom")]
 position = Vector2(-22, 72)
@@ -773,34 +777,34 @@ position = Vector2(169, 126)
 position = Vector2(130, 102)
 
 [node name="Turnip" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(200.244, 97.08)
+position = Vector2(189.174, 110.233)
 collision_mask = 2
-velocity = Vector2(0.779468, -43.2)
-bounce_power = -25.92
+velocity = Vector2(-5.99318, -100)
+bounce_power = 0.0
 
 [node name="Turnip2" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(211.56, 20.08)
+position = Vector2(216.789, 33.2333)
 collision_mask = 2
-velocity = Vector2(11.3418, -43.2)
-bounce_power = -25.92
+velocity = Vector2(-4.6122, -100)
+bounce_power = 0.0
 
 [node name="Turnip3" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(245.593, 36.08)
+position = Vector2(244.339, 49.2333)
 collision_mask = 2
-velocity = Vector2(12.3696, -43.2)
-bounce_power = -25.92
+velocity = Vector2(-5.87821, -100)
+bounce_power = 0.0
 
 [node name="Turnip4" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(227.549, 98.08)
+position = Vector2(239.981, 111.233)
 collision_mask = 2
-velocity = Vector2(-8.2645, -43.2)
-bounce_power = -25.92
+velocity = Vector2(-44.5763, -100)
+bounce_power = 0.0
 
 [node name="Item" parent="." instance=ExtResource("19_a5uy4")]
-position = Vector2(187.483, -16.92)
-velocity = Vector2(8.1386, -43.2)
+position = Vector2(197.836, -3.76672)
+velocity = Vector2(19.8795, -100)
 item_resource = ExtResource("20_1o1kb")
-bounce_power = -25.92
+bounce_power = 0.0
 
 [editable path="Warp"]
 [editable path="WarWinter"]

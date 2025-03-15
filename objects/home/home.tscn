@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk2up2k4npas0"]
+
+[ext_resource type="Texture2D" uid="uid://decjfxvklwnqo" path="res://objects/home/home.png" id="1_r5f2j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xmk0"]
+size = Vector2(48, 29)
+
+[node name="Home" type="StaticBody2D"]
+y_sort_enabled = true
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_r5f2j")
+offset = Vector2(0, -33.91)
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"slice": "",
+"source": "res://objects/home/home.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "fbbde1da6086da5312ced473e35c1ede"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -13)
+shape = SubResource("RectangleShape2D_2xmk0")
