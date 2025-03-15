@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=27 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -12,12 +12,14 @@
 [ext_resource type="PackedScene" uid="uid://csj0hwaue3oq1" path="res://enemies/Suraimu/suraimu.tscn" id="7_ho58m"]
 [ext_resource type="Texture2D" uid="uid://bw1t2b3qh43r3" path="res://fields/spring/misc.png" id="7_px4um"]
 [ext_resource type="Script" path="res://fields/spring/ground_tile_map_layer.gd" id="8_3moul"]
-[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/player_status/player_status.tscn" id="14_3e7cc"]
+[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/item_bar/item_bar.tscn" id="14_3e7cc"]
 [ext_resource type="Script" path="res://fields/spring/crops_tile_map_layer.gd" id="14_juah2"]
 [ext_resource type="AudioStream" uid="uid://dxh37rm775k66" path="res://fields/spring/peaceful_forest.mp3" id="15_ai7t6"]
 [ext_resource type="PackedScene" uid="uid://2foqjj2jstxh" path="res://scene/shipping_box/shipping_box.tscn" id="16_7lpbp"]
 [ext_resource type="PackedScene" uid="uid://dg5b05ukmcxeu" path="res://items/turnip/turnip.tscn" id="17_88ee7"]
+[ext_resource type="PackedScene" uid="uid://ljri1ba4ut3l" path="res://items/item/item.tscn" id="19_a5uy4"]
 [ext_resource type="PackedScene" uid="uid://yymk4wtu2oxp" path="res://objects/campfire/campfire.tscn" id="19_sqfqq"]
+[ext_resource type="Resource" uid="uid://7y5renyja5sw" path="res://items/item_resources/wood.tres" id="20_1o1kb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5gqc"]
 texture = ExtResource("2_746s0")
@@ -756,6 +758,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="ItemBar" parent="CanvasLayer/PanelContainer" instance=ExtResource("14_3e7cc")]
+layout_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_ai7t6")
@@ -770,20 +773,34 @@ position = Vector2(169, 126)
 position = Vector2(130, 102)
 
 [node name="Turnip" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(192, 95)
+position = Vector2(200.244, 97.08)
 collision_mask = 2
+velocity = Vector2(0.779468, -43.2)
+bounce_power = -25.92
 
 [node name="Turnip2" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(195, 18)
+position = Vector2(211.56, 20.08)
 collision_mask = 2
+velocity = Vector2(11.3418, -43.2)
+bounce_power = -25.92
 
 [node name="Turnip3" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(245, 34)
+position = Vector2(245.593, 36.08)
 collision_mask = 2
+velocity = Vector2(12.3696, -43.2)
+bounce_power = -25.92
 
 [node name="Turnip4" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(235, 96)
+position = Vector2(227.549, 98.08)
 collision_mask = 2
+velocity = Vector2(-8.2645, -43.2)
+bounce_power = -25.92
+
+[node name="Item" parent="." instance=ExtResource("19_a5uy4")]
+position = Vector2(187.483, -16.92)
+velocity = Vector2(8.1386, -43.2)
+item_resource = ExtResource("20_1o1kb")
+bounce_power = -25.92
 
 [editable path="Warp"]
 [editable path="WarWinter"]
