@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://w4kjvj6j2l7u"]
+[gd_scene load_steps=52 format=3 uid="uid://w4kjvj6j2l7u"]
 
 [ext_resource type="Script" path="res://scene/player/player.gd" id="1_7typn"]
 [ext_resource type="AudioStream" uid="uid://uqd0ra1wtdq3" path="res://scene/player/se/attack/attack_short_sword.wav" id="2_1lcni"]
@@ -377,58 +377,71 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u7ifv"]
-atlas = ExtResource("12_e2nw5")
-region = Rect2(0, 48, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7yygx"]
-atlas = ExtResource("12_e2nw5")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wf5nt"]
-atlas = ExtResource("12_e2nw5")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dr6oj"]
-atlas = ExtResource("12_e2nw5")
-region = Rect2(0, 96, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eo7bn"]
-atlas = ExtResource("12_e2nw5")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ctf7u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nx5c2"]
 atlas = ExtResource("12_e2nw5")
 region = Rect2(48, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wt7aq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgsp8"]
+atlas = ExtResource("12_e2nw5")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_watvf"]
+atlas = ExtResource("12_e2nw5")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3eh4v"]
+atlas = ExtResource("12_e2nw5")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csjbn"]
+atlas = ExtResource("12_e2nw5")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqd61"]
+atlas = ExtResource("12_e2nw5")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kcbi"]
 atlas = ExtResource("12_e2nw5")
 region = Rect2(96, 48, 48, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_i5r6m"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8j84"]
+atlas = ExtResource("12_e2nw5")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nj41j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u7ifv")
+"texture": SubResource("AtlasTexture_nx5c2")
 }],
 "loop": true,
 "name": &"harvest",
 "speed": 1000.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7yygx")
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_vgsp8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wf5nt")
+"texture": SubResource("AtlasTexture_watvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3eh4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_watvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgsp8")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 1.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dr6oj")
+"texture": SubResource("AtlasTexture_csjbn")
 }],
 "loop": true,
 "name": &"soil",
@@ -436,10 +449,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eo7bn")
+"texture": SubResource("AtlasTexture_uqd61")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7yygx")
+"texture": SubResource("AtlasTexture_vgsp8")
 }],
 "loop": true,
 "name": &"walk",
@@ -447,10 +460,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.06667,
-"texture": SubResource("AtlasTexture_ctf7u")
+"texture": SubResource("AtlasTexture_4kcbi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wt7aq")
+"texture": SubResource("AtlasTexture_y8j84")
 }],
 "loop": false,
 "name": &"water",
@@ -714,7 +727,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "a746a5577bb4fd559eadb1d8b15b23d6"
 
 [node name="HalAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_i5r6m")
+sprite_frames = SubResource("SpriteFrames_nj41j")
 animation = &"water"
 offset = Vector2(0, -22)
 metadata/_aseprite_wizard_config_ = {
@@ -731,7 +744,7 @@ metadata/_aseprite_wizard_interface_config_ = {
 "output_section": true,
 "slice_section": true
 }
-metadata/_aseprite_wizard_source_file_hash_ = "d940e782053b1fa0523e3b585b03a2df"
+metadata/_aseprite_wizard_source_file_hash_ = "de535da6bde4d0a85673340e32b6725d"
 
 [node name="GoatAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
