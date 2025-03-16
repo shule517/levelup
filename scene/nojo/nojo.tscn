@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://qjb5sges8kwn"]
+
+[ext_resource type="Texture2D" uid="uid://cghba6d6i21xn" path="res://scene/nojo/nojo.png" id="1_clicl"]
+[ext_resource type="Script" path="res://scene/nojo/nojo.gd" id="1_ogebc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gr326"]
+atlas = ExtResource("1_clicl")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wg18x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gr326")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kk07f"]
+radius = 8.0
+height = 18.0
+
+[node name="Nojo" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_ogebc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wg18x")
+offset = Vector2(0, -23.55)
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/nojo/nojo.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false,
+"slice_section": false
+}
+metadata/_aseprite_wizard_source_file_hash_ = "8d62606f1c97abb613a4ed7cfd8f14de"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kk07f")

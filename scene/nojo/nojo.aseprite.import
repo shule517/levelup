@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cor333xdcts82"
+path="res://.godot/imported/nojo.aseprite-b58a1bb9649f40dde836c0a42c6fe603.res"
+
+[deps]
+
+source_file="res://scene/nojo/nojo.aseprite"
+dest_files=["res://.godot/imported/nojo.aseprite-b58a1bb9649f40dde836c0a42c6fe603.res"]
+
+[params]
+

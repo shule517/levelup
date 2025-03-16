@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=31 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://ljri1ba4ut3l" path="res://items/item/item.tscn" id="19_a5uy4"]
 [ext_resource type="PackedScene" uid="uid://yymk4wtu2oxp" path="res://objects/campfire/campfire.tscn" id="19_sqfqq"]
 [ext_resource type="Resource" uid="uid://7y5renyja5sw" path="res://items/item_resources/wood.tres" id="20_1o1kb"]
+[ext_resource type="FontFile" uid="uid://cklx14yjeum7n" path="res://fields/spring/LanaPixel.ttf" id="22_wfvt8"]
+[ext_resource type="PackedScene" uid="uid://qjb5sges8kwn" path="res://scene/nojo/nojo.tscn" id="23_sbhi1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5gqc"]
 texture = ExtResource("2_746s0")
@@ -683,6 +685,9 @@ sources/2 = SubResource("TileSetAtlasSource_7s4hi")
 sources/3 = SubResource("TileSetAtlasSource_ies2n")
 sources/4 = SubResource("TileSetAtlasSource_n4gik")
 
+[sub_resource type="LabelSettings" id="LabelSettings_y8v7y"]
+font = ExtResource("22_wfvt8")
+
 [node name="FieldSpring" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_017ow")
@@ -777,34 +782,43 @@ position = Vector2(169, 126)
 position = Vector2(130, 102)
 
 [node name="Turnip" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(201.459, 118.233)
+position = Vector2(191.854, 122.233)
 collision_mask = 2
-velocity = Vector2(-44.0607, -100)
+velocity = Vector2(14.258, -100)
 bounce_power = 0.0
 
 [node name="Turnip2" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(227.684, 41.2333)
+position = Vector2(223.691, 45.2333)
 collision_mask = 2
-velocity = Vector2(-45.2525, -100)
+velocity = Vector2(-0.192647, -100)
 bounce_power = 0.0
 
 [node name="Turnip3" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(232.799, 57.2333)
+position = Vector2(230.665, 61.2333)
 collision_mask = 2
-velocity = Vector2(-47.92, -100)
+velocity = Vector2(-5.55068, -100)
 bounce_power = 0.0
 
 [node name="Turnip4" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(229.181, 119.233)
+position = Vector2(224.984, 123.233)
 collision_mask = 2
-velocity = Vector2(-3.52639, -100)
+velocity = Vector2(33.723, -100)
 bounce_power = 0.0
 
 [node name="Item" parent="." instance=ExtResource("19_a5uy4")]
-position = Vector2(175.49, 4.23328)
-velocity = Vector2(-17.6624, -100)
+position = Vector2(182.916, 8.23328)
+velocity = Vector2(2.08419, -100)
 item_resource = ExtResource("20_1o1kb")
 bounce_power = 0.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "あいうえお道"
+label_settings = SubResource("LabelSettings_y8v7y")
+
+[node name="Nojo" parent="." instance=ExtResource("23_sbhi1")]
+position = Vector2(105, 79)
 
 [editable path="Warp"]
 [editable path="WarWinter"]
