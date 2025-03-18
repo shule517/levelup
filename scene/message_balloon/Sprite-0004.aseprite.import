@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://5drnrp0v5vn7"
+path="res://.godot/imported/Sprite-0004.aseprite-ccc382bfe4cd7286da653afb9c96ef7f.res"
+
+[deps]
+
+source_file="res://scene/message_balloon/Sprite-0004.aseprite"
+dest_files=["res://.godot/imported/Sprite-0004.aseprite-ccc382bfe4cd7286da653afb9c96ef7f.res"]
+
+[params]
+

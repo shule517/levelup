@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=30 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://yymk4wtu2oxp" path="res://objects/campfire/campfire.tscn" id="19_sqfqq"]
 [ext_resource type="Resource" uid="uid://7y5renyja5sw" path="res://items/item_resources/wood.tres" id="20_1o1kb"]
 [ext_resource type="PackedScene" uid="uid://qjb5sges8kwn" path="res://scene/nojo/nojo.tscn" id="23_sbhi1"]
+[ext_resource type="PackedScene" uid="uid://dintt565dl5i5" path="res://scene/suzuyan/suzuyan.tscn" id="23_vru43"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5gqc"]
 texture = ExtResource("2_746s0")
@@ -777,37 +778,40 @@ position = Vector2(169, 126)
 position = Vector2(130, 102)
 
 [node name="Turnip" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(200.126, 134.233)
+position = Vector2(194.421, 140.233)
 collision_mask = 2
-velocity = Vector2(-40.4184, -100)
+velocity = Vector2(-13.3019, 0)
 bounce_power = 0.0
 
 [node name="Turnip2" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(217.462, 57.2333)
+position = Vector2(223.056, 63.2333)
 collision_mask = 2
-velocity = Vector2(46.679, -100)
+velocity = Vector2(8.17167, 0)
 bounce_power = 0.0
 
 [node name="Turnip3" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(219.867, 73.2333)
+position = Vector2(227.709, 79.2333)
 collision_mask = 2
-velocity = Vector2(30.9221, -100)
+velocity = Vector2(6.65405, 0)
 bounce_power = 0.0
 
 [node name="Turnip4" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(210.468, 135.233)
+position = Vector2(213.044, 141.233)
 collision_mask = 2
-velocity = Vector2(20.6816, -100)
+velocity = Vector2(6.99582, 0)
 bounce_power = 0.0
 
 [node name="Item" parent="." instance=ExtResource("19_a5uy4")]
-position = Vector2(170.408, 20.2333)
-velocity = Vector2(-29.5857, -100)
+position = Vector2(165.219, 26.2333)
+velocity = Vector2(6.11154, 0)
 item_resource = ExtResource("20_1o1kb")
 bounce_power = 0.0
 
 [node name="Nojo" parent="." instance=ExtResource("23_sbhi1")]
 position = Vector2(105, 79)
+
+[node name="Suzuyan" parent="." instance=ExtResource("23_vru43")]
+position = Vector2(135, 11)
 
 [editable path="Warp"]
 [editable path="WarWinter"]

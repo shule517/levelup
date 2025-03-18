@@ -1,11 +1,11 @@
+class_name MessageBolloon
 extends Control
 
 @onready var label: Label = $Label
 @onready var timer: Timer = $Timer
 
 @export var voice_sounds: Array[AudioStream] = []
-
-var text_list: Array[String] = [
+@export var text_list: Array[String] = [
 	"わいは『スズやん』っちゅーんや！
 	これからよろしゅうな！",
 	"おやおや、あんさん畑仕事はじめてか？
@@ -20,7 +20,8 @@ var text_index := 0
 var is_typing := false  # 文字送り中かどうか
 
 func _ready() -> void:
-	start_typing(text_list[text_index])
+	if not text_list.is_empty():
+		start_typing(text_list[text_index])
 
 func start_typing(text: String) -> void:
 	full_text = text
@@ -55,6 +56,9 @@ func play_random_voice() -> void:
 		Audio.play_sound_effect(voice_sounds[randi() % voice_sounds.size()], self, randf_range(0.8, 1.5))
 
 func _process(delta: float) -> void:
+	if text_list.is_empty():
+		return
+
 	# Aボタン押したら
 	if Input.is_action_just_pressed("button_a"):
 		if is_typing:

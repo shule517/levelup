@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://dintt565dl5i5"]
+
+[ext_resource type="Texture2D" uid="uid://xbibw451hn5l" path="res://scene/suzuyan/suzuyan.png" id="1_0qtlu"]
+[ext_resource type="Script" path="res://scene/suzuyan/suzuyan.gd" id="1_58b7l"]
+[ext_resource type="PackedScene" uid="uid://bflexv35g13fj" path="res://scene/message_balloon/message_balloon.tscn" id="2_5tghu"]
+[ext_resource type="Shader" path="res://shader/outline.gdshader" id="2_bqyvo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6msg1"]
+shader = ExtResource("2_bqyvo")
+shader_parameter/enabled = true
+shader_parameter/is_selected = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnm3e"]
+atlas = ExtResource("1_0qtlu")
+region = Rect2(0, 0, 48, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t8fq"]
+atlas = ExtResource("1_0qtlu")
+region = Rect2(48, 0, 48, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ki6h7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnm3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t8fq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1wrej"]
+radius = 42.0
+height = 84.0
+
+[node name="Suzuyan" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_58b7l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_6msg1")
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_ki6h7")
+offset = Vector2(-5, -19)
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/suzuyan/suzuyan.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5e2767b1821d739a0f84cde7e37bc15c"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"slice_section": true
+}
+
+[node name="MessageBalloon" parent="." instance=ExtResource("2_5tghu")]
+visible = false
+offset_left = -83.0
+offset_top = -69.0
+offset_right = -83.0
+offset_bottom = -69.0
+text_list = Array[String]([])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("CapsuleShape2D_1wrej")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
