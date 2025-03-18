@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cqacor56tbt8i"
+path="res://.godot/imported/message_balloon.aseprite-8aa2b13e6af96049a1ec2a570c532c6c.res"
+
+[deps]
+
+source_file="res://scene/message_balloon/message_balloon.aseprite"
+dest_files=["res://.godot/imported/message_balloon.aseprite-8aa2b13e6af96049a1ec2a570c532c6c.res"]
+
+[params]
+
