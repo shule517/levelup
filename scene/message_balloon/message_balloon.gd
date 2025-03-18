@@ -42,7 +42,7 @@ func _on_timer_timeout() -> void:
 		current_index += 1
 
 		# 改行の後は少し長めに待つ（次の文字送りの前に待つイメージ）
-		if char == '\n' or char == '\t':
+		if char == '\n' or char == '\t' or char == ' ':
 			timer.start(0.4)  # 改行の時だけ間を空ける
 		else:
 			play_random_voice()

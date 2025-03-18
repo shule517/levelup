@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bflexv35g13fj"]
+[gd_scene load_steps=10 format=3 uid="uid://bflexv35g13fj"]
 
 [ext_resource type="FontFile" uid="uid://3ry2fwsh54ui" path="res://scene/message_balloon/fusion-pixel-10px-monospaced-ja.ttf" id="1_laq32"]
 [ext_resource type="Script" path="res://scene/message_balloon/message_balloon.gd" id="1_tnmk4"]
 [ext_resource type="AudioStream" uid="uid://brtd45je1e84c" path="res://scene/message_balloon/soundeffect-lab_カーソル移動10.mp3" id="2_3vy8d"]
 [ext_resource type="Texture2D" uid="uid://ddobvjp7wocul" path="res://scene/message_balloon/message_balloon.png" id="2_08xrh"]
+[ext_resource type="Texture2D" uid="uid://2jbhux7p88sb" path="res://scene/message_balloon/fukidashi.png" id="5_f11qb"]
 
 [sub_resource type="Theme" id="Theme_alp8c"]
 
@@ -14,7 +15,14 @@ texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_j48iy"]
+resource_local_to_scene = true
+font = ExtResource("1_laq32")
+font_size = 10
+font_color = Color(0.802095, 0.76493, 0.664797, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_4i4ww"]
+resource_local_to_scene = true
 font = ExtResource("1_laq32")
 font_size = 10
 font_color = Color(0.29634, 0.231972, 0.26716, 1)
@@ -28,16 +36,26 @@ voice_sounds = Array[AudioStream]([ExtResource("2_3vy8d")])
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0
 offset_right = 195.0
-offset_bottom = 40.0
+offset_bottom = 56.0
 theme = SubResource("Theme_alp8c")
 theme_override_styles/panel = SubResource("StyleBoxTexture_sg6lr")
+
+[node name="NameLabel" type="Label" parent="."]
+offset_left = 9.0
+offset_top = -6.0
+offset_right = 191.0
+offset_bottom = 30.0
+text = "スズやん"
+label_settings = SubResource("LabelSettings_j48iy")
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
 offset_left = 8.0
-offset_top = 3.0
+offset_top = 17.0
 offset_right = 190.0
-offset_bottom = 39.0
+offset_bottom = 53.0
 text = "なんや あんさん 畑仕事はじめてかいななんや あんさん 畑仕事はじめてかいな"
 label_settings = SubResource("LabelSettings_4i4ww")
 vertical_alignment = 1
@@ -45,5 +63,23 @@ autowrap_mode = 3
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(88, 54)
+texture = ExtResource("5_f11qb")
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://scene/message_balloon/fukidashi.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f638801cffda473ef3819ccbc6441785"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

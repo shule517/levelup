@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dintt565dl5i5"]
+[gd_scene load_steps=11 format=3 uid="uid://dintt565dl5i5"]
 
 [ext_resource type="Texture2D" uid="uid://xbibw451hn5l" path="res://scene/suzuyan/suzuyan.png" id="1_0qtlu"]
 [ext_resource type="Script" path="res://scene/suzuyan/suzuyan.gd" id="1_58b7l"]
@@ -10,22 +10,29 @@ shader = ExtResource("2_bqyvo")
 shader_parameter/enabled = true
 shader_parameter/is_selected = false
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nnm3e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbpdx"]
 atlas = ExtResource("1_0qtlu")
 region = Rect2(0, 0, 48, 53)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6t8fq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pjgu"]
 atlas = ExtResource("1_0qtlu")
 region = Rect2(48, 0, 48, 53)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ki6h7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyaxb"]
+atlas = ExtResource("1_0qtlu")
+region = Rect2(0, 53, 48, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mmwh6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nnm3e")
+"texture": SubResource("AtlasTexture_hbpdx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6t8fq")
+"texture": SubResource("AtlasTexture_0pjgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyaxb")
 }],
 "loop": true,
 "name": &"default",
@@ -45,7 +52,7 @@ script = ExtResource("1_58b7l")
 texture_filter = 1
 material = SubResource("ShaderMaterial_6msg1")
 position = Vector2(0, -1)
-sprite_frames = SubResource("SpriteFrames_ki6h7")
+sprite_frames = SubResource("SpriteFrames_mmwh6")
 offset = Vector2(-5, -19)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -56,7 +63,7 @@ metadata/_aseprite_wizard_config_ = {
 "slice": "",
 "source": "res://scene/suzuyan/suzuyan.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "5e2767b1821d739a0f84cde7e37bc15c"
+metadata/_aseprite_wizard_source_file_hash_ = "ea2acc298fed29dc61b4819e977fc9cd"
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "slice_section": true
@@ -64,10 +71,10 @@ metadata/_aseprite_wizard_interface_config_ = {
 
 [node name="MessageBalloon" parent="." instance=ExtResource("2_5tghu")]
 visible = false
-offset_left = -83.0
-offset_top = -69.0
-offset_right = -83.0
-offset_bottom = -69.0
+offset_left = -85.0
+offset_top = -96.0
+offset_right = -85.0
+offset_bottom = -96.0
 text_list = Array[String]([])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

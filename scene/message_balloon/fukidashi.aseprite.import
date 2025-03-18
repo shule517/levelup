@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://x05ipvrjv2m5"
+path="res://.godot/imported/fukidashi.aseprite-1f3e3b605b5d67dcb92a90f0b01636df.res"
+
+[deps]
+
+source_file="res://scene/message_balloon/fukidashi.aseprite"
+dest_files=["res://.godot/imported/fukidashi.aseprite-1f3e3b605b5d67dcb92a90f0b01636df.res"]
+
+[params]
+

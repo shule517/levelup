@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed: float = 20.0  # 最大速度
-@export var acceleration: float = 10.0  # 加速度
+@export var acceleration: float = 2.0  # 加速度
 @export var max_offset: float = 0.5  # 上下移動の範囲
 
 var direction: int = 1  # 1: 下方向, -1: 上方向
