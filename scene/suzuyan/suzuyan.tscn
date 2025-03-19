@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dintt565dl5i5"]
+[gd_scene load_steps=12 format=3 uid="uid://dintt565dl5i5"]
 
 [ext_resource type="Texture2D" uid="uid://xbibw451hn5l" path="res://scene/suzuyan/suzuyan.png" id="1_0qtlu"]
 [ext_resource type="Script" path="res://scene/suzuyan/suzuyan.gd" id="1_58b7l"]
@@ -10,33 +10,40 @@ shader = ExtResource("2_bqyvo")
 shader_parameter/enabled = true
 shader_parameter/is_selected = false
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hbpdx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg60w"]
 atlas = ExtResource("1_0qtlu")
 region = Rect2(0, 0, 48, 53)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0pjgu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mplfb"]
 atlas = ExtResource("1_0qtlu")
 region = Rect2(48, 0, 48, 53)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nyaxb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_r54su"]
 atlas = ExtResource("1_0qtlu")
 region = Rect2(0, 53, 48, 53)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mmwh6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cetap"]
+atlas = ExtResource("1_0qtlu")
+region = Rect2(48, 53, 48, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_frkm2"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hbpdx")
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_dg60w")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0pjgu")
+"texture": SubResource("AtlasTexture_mplfb")
 }, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nyaxb")
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_r54su")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_cetap")
 }],
 "loop": true,
 "name": &"default",
-"speed": 10.0
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1wrej"]
@@ -52,7 +59,7 @@ script = ExtResource("1_58b7l")
 texture_filter = 1
 material = SubResource("ShaderMaterial_6msg1")
 position = Vector2(0, -1)
-sprite_frames = SubResource("SpriteFrames_mmwh6")
+sprite_frames = SubResource("SpriteFrames_frkm2")
 offset = Vector2(-5, -19)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -63,19 +70,17 @@ metadata/_aseprite_wizard_config_ = {
 "slice": "",
 "source": "res://scene/suzuyan/suzuyan.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "ea2acc298fed29dc61b4819e977fc9cd"
+metadata/_aseprite_wizard_source_file_hash_ = "e4e2b51ea8d4cb755c8da6b7f9047dee"
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "slice_section": true
 }
 
 [node name="MessageBalloon" parent="." instance=ExtResource("2_5tghu")]
-visible = false
 offset_left = -85.0
 offset_top = -96.0
 offset_right = -85.0
 offset_bottom = -96.0
-text_list = Array[String]([])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)

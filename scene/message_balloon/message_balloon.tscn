@@ -36,7 +36,7 @@ voice_sounds = Array[AudioStream]([ExtResource("2_3vy8d")])
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0
 offset_right = 195.0
-offset_bottom = 56.0
+offset_bottom = 63.0
 theme = SubResource("Theme_alp8c")
 theme_override_styles/panel = SubResource("StyleBoxTexture_sg6lr")
 
@@ -53,20 +53,20 @@ autowrap_mode = 3
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
 offset_left = 8.0
-offset_top = 17.0
+offset_top = 21.0
 offset_right = 190.0
-offset_bottom = 53.0
-text = "なんや あんさん 畑仕事はじめてかいななんや あんさん 畑仕事はじめてかいな"
+offset_bottom = 57.0
+text = "なんや あんさん 畑仕事はじめてかいななんや あんさん 畑仕事はじめてかいな あんさん 畑仕事はじめてかいな"
 label_settings = SubResource("LabelSettings_4i4ww")
 vertical_alignment = 1
-autowrap_mode = 3
+autowrap_mode = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(88, 54)
+position = Vector2(88, 61)
 texture = ExtResource("5_f11qb")
 metadata/_aseprite_wizard_config_ = {
 "i_mode": 1,

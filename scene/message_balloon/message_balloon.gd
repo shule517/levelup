@@ -5,22 +5,26 @@ extends Control
 @onready var timer: Timer = $Timer
 
 @export var voice_sounds: Array[AudioStream] = []
-@export var text_list: Array[String] = [
-	"わいは『スズやん』っちゅーんや！
-	これからよろしゅうな！",
-	"おやおや、あんさん畑仕事はじめてか？
-	ほなまずは畑からやな！",
-	"畑仕事っちゅうくらいやし、まずは畑こしらえなアカンわ！",
-	"ええか？ 地面に向かって Yボタン 押すんや！	間違うたらアカンで〜！",
-]
+var text_list: Array[String] = []
 
 var full_text := ""
 var current_index := 0
 var text_index := 0
 var is_typing := false  # 文字送り中かどうか
+var is_talking := false  # 会話中か
+var is_start_frame := false
 
-func _ready() -> void:
-	if not text_list.is_empty():
+func set_messsage(list: Array[String]) -> void:
+	text_list = list
+	current_index = 0
+
+func start() -> void:
+	if not is_start_frame and not is_talking and not text_list.is_empty():
+		is_start_frame = true
+		is_talking = true
+		visible = true
+		text_index = 0
+		Player.get_instance().can_control = false
 		start_typing(text_list[text_index])
 
 func start_typing(text: String) -> void:
@@ -59,8 +63,13 @@ func _process(delta: float) -> void:
 	if text_list.is_empty():
 		return
 
+	# 開始フレームはスキップする
+	if is_start_frame:
+		is_start_frame = false
+		return
+
 	# Aボタン押したら
-	if Input.is_action_just_pressed("button_a"):
+	if is_talking and Input.is_action_just_pressed("button_a"):
 		if is_typing:
 			# 文字送り中なら全文表示スキップ
 			timer.stop()
@@ -69,8 +78,14 @@ func _process(delta: float) -> void:
 		else:
 			# 次のテキストへ進む
 			text_index += 1
+			
 			if text_index < text_list.size():
 				start_typing(text_list[text_index])
 			else:
 				# すべての文章が終わった
-				queue_free()  # 画面から消す
+				visible = false
+				is_typing = false
+				is_talking = false
+				text_index = 0
+				Player.get_instance().can_control = true
+				#queue_free()  # 画面から消す

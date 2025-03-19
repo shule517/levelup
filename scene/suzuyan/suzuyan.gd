@@ -6,9 +6,11 @@ extends Node
 var is_selected: bool = false
 
 @export var text_list: Array[String] = [
-	"ほな、最初に農業の仕方、教えたるで！",
+	"おっ、はじめましてやな！
+	農業の仕方、教えたるで！",
 	"わいは『スズやん』っちゅーんや！
-	たこ焼きみたいに丸っとしてるけど、ちゃんと畑仕事も得意なんやで！",
+	たこ焼きみたいに丸っとしてるけど、
+	ちゃんと畑仕事も得意なんやで！",
 	"これからよろしゅうな！
 	いろいろ教えたるで～！",
 	"おやおや、あんさん畑仕事はじめてか？
@@ -17,11 +19,16 @@ var is_selected: bool = false
 	"ええか？ 地面に向かって (Ｙボタン) 押すんや！	間違うたらアカンで〜！",
 ]
 
+func _ready() -> void:
+	animated_sprite.play("default")
+	message_balloon.set_messsage(text_list)
+	message_balloon.visible = false
+
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("button_a"):
+	if is_selected and Input.is_action_just_pressed("button_a"):
 		message_balloon.visible = true
-		message_balloon.text_list = text_list
-		Player.get_instance().can_control = false
+		message_balloon.start()
+		#Player.get_instance().can_control = false
 		animated_sprite.material.set_shader_parameter("is_selected", false)
 
 func _on_body_entered(body: Node2D) -> void:
