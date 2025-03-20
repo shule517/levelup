@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=29 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://fields/spring/crops_tile_map_layer.gd" id="14_juah2"]
 [ext_resource type="AudioStream" uid="uid://dxh37rm775k66" path="res://fields/spring/peaceful_forest.mp3" id="15_ai7t6"]
 [ext_resource type="PackedScene" uid="uid://2foqjj2jstxh" path="res://scene/shipping_box/shipping_box.tscn" id="16_7lpbp"]
+[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/player_status/player_status.tscn" id="16_mr2pf"]
 [ext_resource type="PackedScene" uid="uid://yymk4wtu2oxp" path="res://objects/campfire/campfire.tscn" id="19_sqfqq"]
 [ext_resource type="PackedScene" uid="uid://qjb5sges8kwn" path="res://scene/nojo/nojo.tscn" id="23_sbhi1"]
 [ext_resource type="PackedScene" uid="uid://dintt565dl5i5" path="res://scene/suzuyan/suzuyan.tscn" id="23_vru43"]
@@ -763,6 +764,9 @@ grow_vertical = 0
 
 [node name="ItemBar" parent="CanvasLayer/PanelContainer" instance=ExtResource("14_3e7cc")]
 layout_mode = 2
+
+[node name="PlayerStatus" parent="CanvasLayer/PanelContainer" instance=ExtResource("16_mr2pf")]
+position = Vector2(-154, -241)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_ai7t6")

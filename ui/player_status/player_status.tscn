@@ -27,7 +27,9 @@ font = ExtResource("2_q7x2l")
 font_size = 9
 font_color = Color(0, 0, 0, 1)
 
-[node name="PlayerStatus" type="Node2D"]
+[node name="PlayerStatus" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_fxs86")
 
