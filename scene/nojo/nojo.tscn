@@ -3,15 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://cghba6d6i21xn" path="res://scene/nojo/nojo.png" id="1_clicl"]
 [ext_resource type="Script" path="res://scene/nojo/nojo.gd" id="1_ogebc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j1ct7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_scmmd"]
 atlas = ExtResource("1_clicl")
 region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_dtewt"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_vrar8"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j1ct7")
+"texture": SubResource("AtlasTexture_scmmd")
 }],
 "loop": true,
 "name": &"default",
@@ -30,7 +30,7 @@ script = ExtResource("1_ogebc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_dtewt")
+sprite_frames = SubResource("SpriteFrames_vrar8")
 offset = Vector2(0, -23.55)
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -45,7 +45,7 @@ metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": false,
 "slice_section": false
 }
-metadata/_aseprite_wizard_source_file_hash_ = "8b01fc968f930f910f79125872b75a12"
+metadata/_aseprite_wizard_source_file_hash_ = "44888434a3e8888813996109b501b51d"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_kk07f")

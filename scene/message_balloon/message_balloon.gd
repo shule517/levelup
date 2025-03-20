@@ -79,7 +79,7 @@ func _process(delta: float) -> void:
 		return
 
 	# Aボタン押したら
-	if is_talking and Input.is_action_just_pressed("button_a"):
+	if is_talking and (Input.is_action_just_pressed("button_a") or Input.is_action_just_pressed("button_b")):
 		Audio.play_sound_effect(button_sound, self)
 
 		if is_typing:
