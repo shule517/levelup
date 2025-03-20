@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bflexv35g13fj"]
+[gd_scene load_steps=15 format=3 uid="uid://bflexv35g13fj"]
 
 [ext_resource type="FontFile" uid="uid://3ry2fwsh54ui" path="res://scene/message_balloon/fusion-pixel-10px-monospaced-ja.ttf" id="1_laq32"]
 [ext_resource type="Script" path="res://scene/message_balloon/message_balloon.gd" id="1_tnmk4"]
 [ext_resource type="AudioStream" uid="uid://brtd45je1e84c" path="res://scene/message_balloon/soundeffect-lab_カーソル移動10.mp3" id="2_3vy8d"]
 [ext_resource type="Texture2D" uid="uid://ddobvjp7wocul" path="res://scene/message_balloon/message_balloon.png" id="2_08xrh"]
 [ext_resource type="Texture2D" uid="uid://2jbhux7p88sb" path="res://scene/message_balloon/fukidashi.png" id="5_f11qb"]
+[ext_resource type="Texture2D" uid="uid://bxyadmrdcrcfx" path="res://scene/message_balloon/cursor.png" id="6_3v5yp"]
 
 [sub_resource type="Theme" id="Theme_alp8c"]
 
@@ -19,13 +20,45 @@ texture_margin_bottom = 8.0
 resource_local_to_scene = true
 font = ExtResource("1_laq32")
 font_size = 10
-font_color = Color(0.802095, 0.76493, 0.664797, 1)
+font_color = Color(0.774941, 0.723858, 0.58623, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4i4ww"]
 resource_local_to_scene = true
 font = ExtResource("1_laq32")
 font_size = 10
 font_color = Color(0.29634, 0.231972, 0.26716, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7jaj"]
+atlas = ExtResource("6_3v5yp")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppngk"]
+atlas = ExtResource("6_3v5yp")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnim2"]
+atlas = ExtResource("6_3v5yp")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tks18"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7jaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppngk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnim2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppngk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
 
 [node name="MessageBalloon" type="Control"]
 layout_mode = 3
@@ -56,7 +89,9 @@ offset_left = 8.0
 offset_top = 21.0
 offset_right = 190.0
 offset_bottom = 57.0
-text = "なんや あんさん 畑仕事はじめてかいななんや あんさん 畑仕事はじめてかいな あんさん 畑仕事はじめてかいな"
+text = "なんや あんさん 畑仕事はじめてかいな
+なんや あんさん 畑仕事はじめてかいな
+なんや あんさん 畑仕事はじめてかいな"
 label_settings = SubResource("LabelSettings_4i4ww")
 vertical_alignment = 1
 autowrap_mode = 1
@@ -81,5 +116,20 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://scene/message_balloon/fukidashi.aseprite"
 }
 metadata/_aseprite_wizard_source_file_hash_ = "f638801cffda473ef3819ccbc6441785"
+
+[node name="CursorAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(184, 55)
+sprite_frames = SubResource("SpriteFrames_tks18")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://scene/message_balloon/cursor.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "6f6ed8ce912fd610e05bec6c06e21d19"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

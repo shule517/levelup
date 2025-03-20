@@ -3,6 +3,7 @@ extends Control
 
 @onready var label: Label = $Label
 @onready var timer: Timer = $Timer
+@onready var cursor_animated_sprite: AnimatedSprite2D = $CursorAnimatedSprite2D
 
 @export var voice_sounds: Array[AudioStream] = []
 var text_list: Array[String] = []
@@ -13,6 +14,10 @@ var text_index := 0
 var is_typing := false  # 文字送り中かどうか
 var is_talking := false  # 会話中か
 var is_start_frame := false
+
+func _ready() -> void:
+	cursor_animated_sprite.visible = false
+	cursor_animated_sprite.play("default")
 
 func set_messsage(list: Array[String]) -> void:
 	text_list = list
@@ -62,6 +67,9 @@ func play_random_voice() -> void:
 func _process(delta: float) -> void:
 	if text_list.is_empty():
 		return
+
+	# Cursorを表示する
+	cursor_animated_sprite.visible = not is_typing
 
 	# 開始フレームはスキップする
 	if is_start_frame:

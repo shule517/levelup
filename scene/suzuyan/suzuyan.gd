@@ -5,38 +5,122 @@ extends Node
 
 var is_selected: bool = false
 
-@export var text_list: Array[String] = [
+var text_list1:Array[String] = [
 	"おっ、はじめましてやな！
-	農業の仕方、教えたるで！",
-	"わいは『スズやん』っちゅーんや！
-	たこ焼きみたいに丸っとしてるけど、
-	ちゃんと畑仕事も得意なんやで！",
+	わいは『スズやん』っちゅーんや！",
+	"え？丸っとして、たこ焼きみたいやて？
+	どう見ても『スズメ』ですがな〜！
+	あんさん、しっかりしておくれや〜！",
+	"まぁまぁ、こんな見た目でも畑仕事はバッチリやで！",
 	"これからよろしゅうな！
 	いろいろ教えたるで～！",
 	"おやおや、あんさん畑仕事はじめてか？
-	ほなまずは畑からやな！",
+	ほなまずは土を耕すとこからやな！",
 	"畑仕事っちゅうくらいやし、まずは畑こしらえなアカンわ！",
 	"ええか？ 地面に向かって (Ｙボタン) 押すんや！	間違うたらアカンで〜！",
 ]
 
+var text_list2:Array[String] = [
+	"おぉ！ええ感じに畑がこしらえたな！
+	ようやったで、あんさん！",
+	"もしかして才能あるんちゃうんか？
+	農業の第一歩、しっかり踏み出したな！",
+	"ほな、次やけど、
+	今度は種をまかなアカンで！",
+	"ほれ、これが種や。
+	最初だけのサービスやで？
+	これ渡したるからな！",
+	"耕した畑に向かって、(Ａボタン) を押すんや。
+	これで種をポンポンまけるからな！",
+	"そして、まいたら今度は水やで！
+	水やりも (Ａボタン)！
+	あんさん、覚えときなよ〜！",
+]
+
+var text_list3: Array[String] = [
+	"おぉ~！見事に水まきまで終わったな！
+	ようやったで、あんた！
+	これで準備万端や！",
+	"でもな、このまま待ってても
+	植物は成長せえへんで。",
+	"成長するには、寝ることが大事やねん！",
+	"ベッドでぐっすり眠ると、
+	朝になったら グングン育つんや！
+	寝るのも仕事やで〜！",
+	"おうちのベッドで寝るんやで
+	ほなまた明日な〜！"
+]
+
+var text_list4: Array[String] = [
+	"おはようさん！
+	ぐっすり寝れたか〜？",
+	"どや？	植物が成長するの
+	かわいいやろ？",
+	"さぁ、今日は収穫の時やで！
+	作物が元気に育っとるで！",
+	"収穫やけど、(Ａボタン)を押すと
+	作物が スポーンッ！ って抜けるんや！
+	これが気持ちいいんや！",
+	"収穫の楽しさを味わってみ〜！"
+]
+
+var text_list5: Array[String] = [
+	"うわっ、今日はなんかおかしなことが 起こってるな！",
+	"ほんま？
+	今日は1日で収穫できるって！？
+	ほんとは4日かかるはずやのに…",
+	"な、なんでかしらんけど、不思議なこともあるんやな〜。",
+	"き… 気にしたらあかんわ！
+	ほんま、チュートリアルって怖いわ〜！"
+]
+
+var text_list6: Array[String] = [
+	"おっしゃ！
+	最後のポイント、教えたるで！",
+	"この畑に横にある、これ！
+	見て分かるやろ？
+	そう！ 『収穫バコーン』や！",
+	"これ、ほんまに便利やで！
+	収穫した作物、
+	バコーンッ！ と入れるだけ!",
+	"そしたら 勝手に換金されて、
+	朝には 売上ドーン！ や！",
+	"つまり、
+	『バコーンッ！	で	ドーン！！』
+	っちゅーことなんや！！",
+	"…	…	…。
+	おっと、ちょっと盛り上がりすぎたわ。",
+	"誰かが夜中に取りに来るなんてことはないんや。
+	なんせ、最新式の機械やからな！",
+	"作物がどこに行ってるか、
+	スズやんも よう知らんけどな！
+	でも、しっかりお金になるんやで！",
+	"さて、ちょっと聞いてくれや～！
+	実は、わい お店開いてんねん！",
+	"そう！	その名も「スズメ商店」や！
+	ここでは、畑仕事がもっと楽しくなる
+	アイテムをいろいろ取り揃えとるんやで！",
+	"さぁ、さぁ、さぁ！
+	さっそくお店に来て、新しいアイテムをゲットや！	 スズやんが待っとるで～！"
+]
+
 func _ready() -> void:
 	animated_sprite.play("default")
-	message_balloon.set_messsage(text_list)
+	message_balloon.set_messsage(text_list6)
 	message_balloon.visible = false
 
 func _process(delta: float) -> void:
 	if is_selected and Input.is_action_just_pressed("button_a"):
 		message_balloon.visible = true
 		message_balloon.start()
-		#Player.get_instance().can_control = false
 		animated_sprite.material.set_shader_parameter("is_selected", false)
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		is_selected = true
 		animated_sprite.material.set_shader_parameter("is_selected", true)
 
-func _on_body_exited(body: Node2D) -> void:
+func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		is_selected = false
 		animated_sprite.material.set_shader_parameter("is_selected", false)

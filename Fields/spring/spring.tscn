@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=28 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -17,12 +17,10 @@
 [ext_resource type="Script" path="res://fields/spring/crops_tile_map_layer.gd" id="14_juah2"]
 [ext_resource type="AudioStream" uid="uid://dxh37rm775k66" path="res://fields/spring/peaceful_forest.mp3" id="15_ai7t6"]
 [ext_resource type="PackedScene" uid="uid://2foqjj2jstxh" path="res://scene/shipping_box/shipping_box.tscn" id="16_7lpbp"]
-[ext_resource type="PackedScene" uid="uid://dg5b05ukmcxeu" path="res://items/turnip/turnip.tscn" id="17_88ee7"]
-[ext_resource type="PackedScene" uid="uid://ljri1ba4ut3l" path="res://items/item/item.tscn" id="19_a5uy4"]
 [ext_resource type="PackedScene" uid="uid://yymk4wtu2oxp" path="res://objects/campfire/campfire.tscn" id="19_sqfqq"]
-[ext_resource type="Resource" uid="uid://7y5renyja5sw" path="res://items/item_resources/wood.tres" id="20_1o1kb"]
 [ext_resource type="PackedScene" uid="uid://qjb5sges8kwn" path="res://scene/nojo/nojo.tscn" id="23_sbhi1"]
 [ext_resource type="PackedScene" uid="uid://dintt565dl5i5" path="res://scene/suzuyan/suzuyan.tscn" id="23_vru43"]
+[ext_resource type="PackedScene" uid="uid://bjkqj4nxoyj68" path="res://objects/bakon/bakon.tscn" id="24_vumpi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5gqc"]
 texture = ExtResource("2_746s0")
@@ -702,7 +700,7 @@ script = ExtResource("8_3moul")
 
 [node name="CropsTileMapLayer" type="TileMapLayer" parent="."]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAJAAoAAAAAAAAAAgALAAsAAAAAAAAAAgAIAAwAAAAAAAAAAgAJAA0AAAAAAAAAAgALAA0AAAAAAAAAAgAKAA4AAAAAAAAAAgAJAA4AAAAAAAAAAgAIAA4AAAAAAAAAAgAIAA8AAAAAAAAAAgAIABAAAAAAAAAAAgALABEAAAAAAAAAAgANAA4AAAAAAAAAAgAIABIAAAAAAAAAAgABABEAAAAAAAAAAgAEAA8AAAAAAAAAAgANABAAAAAAAAAAAgAOABIAAAAAAAAAAgAGABMAAAAAAAAAAgAEABEAAAAAAAAAAgAOAAsAAAAAAAAAAgABAAgAAAAAAAAAAgD5/wcAAAAAAAAAAgD3/wAAAAAAAAAAAgAGAPb/AAAAAAAAAgATAP7/AAAAAAAAAgACAPv/AAAAAAAAAgD0//7/AAAAAAAAAgD1//X/AAAAAAAAAgD2//X/AAAAAAAAAgD7//b/AAAAAAAAAgD6//r/AAAAAAAAAgAHAPv/AAAAAAAAAgAIAPv/AAAAAAAAAgARAPf/AAAAAAAAAgAQAP3/AAAAAAAAAgD///7/AAAAAAAAAgAIAAQAAAAAAAAAAgARAAMAAAAAAAAAAgAWAAwAAAAAAAAAAgASABMAAAAAAAAAAgD8/xAAAAAAAAAAAgD7/xAAAAAAAAAAAgD1/woAAAAAAAAAAgDy/wEAAAAAAAAAAgD4//7/AAAAAAAAAgD2//n/AAAAAAAAAgAAAPX/AAAAAAAAAgD9//n/AAAAAAAAAgD8/wMAAAAAAAAAAgD9/woAAAAAAAAAAgAJAPr/AAAAAAAAAgAQAPf/AAAAAAAAAgAHAP3/AAAAAAAAAgAWAAEAAAAAAAAAAgAWAAIAAAAAAAAAAgAWAAsAAAAAAAAAAgARAAgAAAAAAAAAAgAYABIAAAAAAAAAAgAZABkAAAAAAAAAAgAFABkAAAAAAAAAAgD0/xkAAAAAAAAAAgDy/xAAAAAAAAAAAgD+/xUAAAAAAAAAAgD6/xcAAAAAAAAAAgD0/wkAAAAAAAAAAgDv//r/AAAAAAAAAgDv/wMAAAAAAAAAAgDv/wQAAAAAAAAAAgD4/wIAAAAAAAAAAgAFAPn/AAAAAAAAAgAEAO7/AAAAAAAAAgD8/+7/AAAAAAAAAgALAO//AAAAAAAAAgALAO7/AAAAAAAAAgAJAPL/AAAAAAAAAgAKAPr/AAAAAAAAAgAOAAAAAAAAAAAAAgAcAPz/AAAAAAAAAgAfAAYAAAAAAAAAAgAYAAoAAAAAAAAAAgAcAPv/AAAAAAAAAgAXAPX/AAAAAAAAAgALAPX/AAAAAAAAAgD+//P/AAAAAAAAAgD4//D/AAAAAAAAAgDu//z/AAAAAAAAAgDs/wEAAAAAAAAAAgDs/wkAAAAAAAAAAgDs/xAAAAAAAAAAAgDv/xYAAAAAAAAAAgDw/xYAAAAAAAAAAgD4/xcAAAAAAAAAAgAQABYAAAAAAAAAAgA=")
+tile_map_data = PackedByteArray("AAAJAAoAAAAAAAAAAgALAAsAAAAAAAAAAgAIAAwAAAAAAAAAAgAJAA0AAAAAAAAAAgALAA0AAAAAAAAAAgAKAA4AAAAAAAAAAgAJAA4AAAAAAAAAAgAIAA4AAAAAAAAAAgAIAA8AAAAAAAAAAgAIABAAAAAAAAAAAgALABEAAAAAAAAAAgANAA4AAAAAAAAAAgAIABIAAAAAAAAAAgABABEAAAAAAAAAAgAEAA8AAAAAAAAAAgANABAAAAAAAAAAAgAOABIAAAAAAAAAAgAGABMAAAAAAAAAAgAEABEAAAAAAAAAAgAOAAsAAAAAAAAAAgABAAgAAAAAAAAAAgD5/wcAAAAAAAAAAgD3/wAAAAAAAAAAAgAGAPb/AAAAAAAAAgATAP7/AAAAAAAAAgACAPv/AAAAAAAAAgD0//7/AAAAAAAAAgD1//X/AAAAAAAAAgD2//X/AAAAAAAAAgD7//b/AAAAAAAAAgD6//r/AAAAAAAAAgAHAPv/AAAAAAAAAgAIAPv/AAAAAAAAAgARAPf/AAAAAAAAAgAQAP3/AAAAAAAAAgD///7/AAAAAAAAAgARAAMAAAAAAAAAAgAWAAwAAAAAAAAAAgASABMAAAAAAAAAAgD8/xAAAAAAAAAAAgD7/xAAAAAAAAAAAgD1/woAAAAAAAAAAgDy/wEAAAAAAAAAAgD4//7/AAAAAAAAAgD2//n/AAAAAAAAAgAAAPX/AAAAAAAAAgD9//n/AAAAAAAAAgD8/wMAAAAAAAAAAgD9/woAAAAAAAAAAgAJAPr/AAAAAAAAAgAQAPf/AAAAAAAAAgAHAP3/AAAAAAAAAgAWAAEAAAAAAAAAAgAWAAIAAAAAAAAAAgAWAAsAAAAAAAAAAgARAAgAAAAAAAAAAgAYABIAAAAAAAAAAgAZABkAAAAAAAAAAgAFABkAAAAAAAAAAgD0/xkAAAAAAAAAAgDy/xAAAAAAAAAAAgD+/xUAAAAAAAAAAgD6/xcAAAAAAAAAAgD0/wkAAAAAAAAAAgDv//r/AAAAAAAAAgDv/wMAAAAAAAAAAgDv/wQAAAAAAAAAAgD4/wIAAAAAAAAAAgAFAPn/AAAAAAAAAgAEAO7/AAAAAAAAAgD8/+7/AAAAAAAAAgALAO//AAAAAAAAAgALAO7/AAAAAAAAAgAJAPL/AAAAAAAAAgAKAPr/AAAAAAAAAgAOAAAAAAAAAAAAAgAcAPz/AAAAAAAAAgAfAAYAAAAAAAAAAgAYAAoAAAAAAAAAAgAcAPv/AAAAAAAAAgAXAPX/AAAAAAAAAgALAPX/AAAAAAAAAgD+//P/AAAAAAAAAgD4//D/AAAAAAAAAgDu//z/AAAAAAAAAgDs/wEAAAAAAAAAAgDs/wkAAAAAAAAAAgDs/xAAAAAAAAAAAgDv/xYAAAAAAAAAAgDw/xYAAAAAAAAAAgD4/xcAAAAAAAAAAgAQABYAAAAAAAAAAgD9////AAAAAAAAAgD8/wAAAAAAAAAAAgD7//z/AAAAAAAAAgD+//v/AAAAAAAAAgALAPz/AAAAAAAAAgATAAAAAAAAAAAAAgD6/wMAAAAAAAAAAgD3/wQAAAAAAAAAAgD6////AAAAAAAAAgAAAPn/AAAAAAAAAgAEAPr/AAAAAAAAAgABAPv/AAAAAAAAAgADAPz/AAAAAAAAAgAFAP3/AAAAAAAAAgA=")
 tile_set = ExtResource("7_0kafg")
 script = ExtResource("14_juah2")
 
@@ -777,41 +775,14 @@ position = Vector2(169, 126)
 [node name="Campfire" parent="." instance=ExtResource("19_sqfqq")]
 position = Vector2(130, 102)
 
-[node name="Turnip" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(208.229, 146.233)
-collision_mask = 2
-velocity = Vector2(-3.79554, -100)
-bounce_power = 0.0
-
-[node name="Turnip2" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(225.712, 69.2333)
-collision_mask = 2
-velocity = Vector2(-38.6224, -100)
-bounce_power = 0.0
-
-[node name="Turnip3" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(220.898, 85.2333)
-collision_mask = 2
-velocity = Vector2(40.7612, -100)
-bounce_power = 0.0
-
-[node name="Turnip4" parent="." instance=ExtResource("17_88ee7")]
-position = Vector2(211.021, 147.233)
-collision_mask = 2
-velocity = Vector2(23.3537, -100)
-bounce_power = 0.0
-
-[node name="Item" parent="." instance=ExtResource("19_a5uy4")]
-position = Vector2(174.852, 32.2333)
-velocity = Vector2(31.8981, -100)
-item_resource = ExtResource("20_1o1kb")
-bounce_power = 0.0
-
 [node name="Nojo" parent="." instance=ExtResource("23_sbhi1")]
 position = Vector2(105, 79)
 
 [node name="Suzuyan" parent="." instance=ExtResource("23_vru43")]
 position = Vector2(135, 11)
+
+[node name="Bakon" parent="." instance=ExtResource("24_vumpi")]
+position = Vector2(186, 30)
 
 [editable path="Warp"]
 [editable path="WarWinter"]

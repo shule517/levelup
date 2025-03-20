@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjkqj4nxoyj68"]
+
+[ext_resource type="Texture2D" uid="uid://dsuywxsrtwdyu" path="res://objects/bakon/bakon.png" id="1_m4hpf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mme3h"]
+size = Vector2(36, 11)
+
+[node name="Bakon" type="StaticBody2D"]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-10, -16)
+texture = ExtResource("1_m4hpf")
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"slice": "",
+"source": "res://objects/bakon/bakon.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "63fbeddc86b54bd3020a7aa8b766d96d"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"slice_section": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -4.5)
+shape = SubResource("RectangleShape2D_mme3h")
