@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://tcd71myuicl8"
+path="res://.godot/imported/bakon_standard.aseprite-4fd128947d1b69f3dcfd47d1b4bd8b91.res"
+
+[deps]
+
+source_file="res://objects/bakon/bakon_standard.aseprite"
+dest_files=["res://.godot/imported/bakon_standard.aseprite-4fd128947d1b69f3dcfd47d1b4bd8b91.res"]
+
+[params]
+

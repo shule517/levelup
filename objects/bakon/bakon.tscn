@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dsuywxsrtwdyu" path="res://objects/bakon/bakon.png" id="1_m4hpf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mme3h"]
-size = Vector2(36, 11)
+size = Vector2(39, 11)
 
 [node name="Bakon" type="StaticBody2D"]
 collision_mask = 0
@@ -24,12 +24,12 @@ metadata/_aseprite_wizard_config_ = {
 "slice": "",
 "source": "res://objects/bakon/bakon.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "63fbeddc86b54bd3020a7aa8b766d96d"
+metadata/_aseprite_wizard_source_file_hash_ = "361380da7c38367fdce97878832a8b2d"
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "slice_section": false
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4.5)
+position = Vector2(-1.5, -4.5)
 shape = SubResource("RectangleShape2D_mme3h")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://bflexv35g13fj"]
+[gd_scene load_steps=16 format=3 uid="uid://bflexv35g13fj"]
 
 [ext_resource type="FontFile" uid="uid://3ry2fwsh54ui" path="res://scene/message_balloon/fusion-pixel-10px-monospaced-ja.ttf" id="1_laq32"]
 [ext_resource type="Script" path="res://scene/message_balloon/message_balloon.gd" id="1_tnmk4"]
 [ext_resource type="AudioStream" uid="uid://brtd45je1e84c" path="res://scene/message_balloon/soundeffect-lab_カーソル移動10.mp3" id="2_3vy8d"]
 [ext_resource type="Texture2D" uid="uid://ddobvjp7wocul" path="res://scene/message_balloon/message_balloon.png" id="2_08xrh"]
+[ext_resource type="AudioStream" uid="uid://c7hgf5na78nh2" path="res://scene/message_balloon/soundeffect-lab_カーソル移動7.mp3" id="2_ala3k"]
 [ext_resource type="Texture2D" uid="uid://2jbhux7p88sb" path="res://scene/message_balloon/fukidashi.png" id="5_f11qb"]
 [ext_resource type="Texture2D" uid="uid://bxyadmrdcrcfx" path="res://scene/message_balloon/cursor.png" id="6_3v5yp"]
 
@@ -65,6 +66,7 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_tnmk4")
 voice_sounds = Array[AudioStream]([ExtResource("2_3vy8d")])
+button_sound = ExtResource("2_ala3k")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0

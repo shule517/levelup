@@ -766,7 +766,7 @@ grow_vertical = 0
 layout_mode = 2
 
 [node name="PlayerStatus" parent="CanvasLayer/PanelContainer" instance=ExtResource("16_mr2pf")]
-position = Vector2(-154, -241)
+layout_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_ai7t6")

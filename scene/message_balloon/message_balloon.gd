@@ -6,6 +6,8 @@ extends Control
 @onready var cursor_animated_sprite: AnimatedSprite2D = $CursorAnimatedSprite2D
 
 @export var voice_sounds: Array[AudioStream] = []
+@export var button_sound: AudioStream
+
 var text_list: Array[String] = []
 
 var full_text := ""
@@ -78,6 +80,8 @@ func _process(delta: float) -> void:
 
 	# Aボタン押したら
 	if is_talking and Input.is_action_just_pressed("button_a"):
+		Audio.play_sound_effect(button_sound, self)
+
 		if is_typing:
 			# 文字送り中なら全文表示スキップ
 			timer.stop()
