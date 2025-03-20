@@ -17,7 +17,7 @@ var is_start_frame := false
 
 func _ready() -> void:
 	cursor_animated_sprite.visible = false
-	cursor_animated_sprite.play("default")
+	#cursor_animated_sprite.play("default")
 
 func set_messsage(list: Array[String]) -> void:
 	text_list = list

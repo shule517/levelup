@@ -28,36 +28,36 @@ font = ExtResource("1_laq32")
 font_size = 10
 font_color = Color(0.29634, 0.231972, 0.26716, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e7jaj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1nbc"]
 atlas = ExtResource("6_3v5yp")
 region = Rect2(0, 0, 8, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ppngk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sis1y"]
 atlas = ExtResource("6_3v5yp")
 region = Rect2(8, 0, 8, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vnim2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl58j"]
 atlas = ExtResource("6_3v5yp")
 region = Rect2(0, 8, 8, 8)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_tks18"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vgpu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e7jaj")
+"texture": SubResource("AtlasTexture_e1nbc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ppngk")
+"texture": SubResource("AtlasTexture_sis1y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vnim2")
+"texture": SubResource("AtlasTexture_gl58j")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ppngk")
+"texture": SubResource("AtlasTexture_sis1y")
 }],
 "loop": true,
 "name": &"default",
-"speed": 7.0
+"speed": 4.0
 }]
 
 [node name="MessageBalloon" type="Control"]
@@ -120,7 +120,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "f638801cffda473ef3819ccbc6441785"
 [node name="CursorAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(184, 55)
-sprite_frames = SubResource("SpriteFrames_tks18")
+sprite_frames = SubResource("SpriteFrames_3vgpu")
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -130,6 +130,6 @@ metadata/_aseprite_wizard_config_ = {
 "slice": "",
 "source": "res://scene/message_balloon/cursor.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "6f6ed8ce912fd610e05bec6c06e21d19"
+metadata/_aseprite_wizard_source_file_hash_ = "c63cc19d5fb01edb63761585abd1c4f4"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
