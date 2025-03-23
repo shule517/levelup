@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://buddnq8167l0b"
+path="res://.godot/imported/iruze.aseprite-b0b1345a19e5d920e9fa0c7809403bc9.res"
+
+[deps]
+
+source_file="res://scene/kokoniiruze/iruze.aseprite"
+dest_files=["res://.godot/imported/iruze.aseprite-b0b1345a19e5d920e9fa0c7809403bc9.res"]
+
+[params]
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=31 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://djabtdit4nyg1" path="res://bags/pachindo/pachindo.tscn" id="23_p325b"]
 [ext_resource type="PackedScene" uid="uid://qjb5sges8kwn" path="res://scene/nojo/nojo.tscn" id="23_sbhi1"]
 [ext_resource type="PackedScene" uid="uid://dintt565dl5i5" path="res://scene/suzuyan/suzuyan.tscn" id="23_vru43"]
+[ext_resource type="PackedScene" uid="uid://cpgmhvd06jstc" path="res://scene/kokoniiruze/kokoniiruze.tscn" id="24_7yu0d"]
 [ext_resource type="PackedScene" uid="uid://bjkqj4nxoyj68" path="res://objects/bakon/bakon.tscn" id="24_vumpi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5gqc"]
@@ -716,7 +717,7 @@ position = Vector2(0, 20)
 position = Vector2(68, -2)
 
 [node name="WarWinter" parent="." instance=ExtResource("6_2xrom")]
-position = Vector2(-22, 72)
+position = Vector2(-58.07, 72)
 field = 3
 spawn_direction = 3
 
@@ -737,7 +738,7 @@ position = Vector2(-18, 0)
 text = "to SAND"
 
 [node name="Suraimu" parent="." instance=ExtResource("7_ho58m")]
-position = Vector2(70, 103)
+position = Vector2(66, 103)
 
 [node name="Suraimu2" parent="." instance=ExtResource("7_ho58m")]
 position = Vector2(197, 67)
@@ -792,6 +793,9 @@ position = Vector2(186, 30)
 
 [node name="Pachindo" parent="." instance=ExtResource("23_p325b")]
 position = Vector2(356, 100)
+
+[node name="Kokoniiruze" parent="." instance=ExtResource("24_7yu0d")]
+position = Vector2(-6, 48)
 
 [editable path="Warp"]
 [editable path="WarWinter"]

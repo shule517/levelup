@@ -1,0 +1,224 @@
+[gd_scene load_steps=26 format=3 uid="uid://cpgmhvd06jstc"]
+
+[ext_resource type="Shader" path="res://shader/outline.gdshader" id="1_1lpue"]
+[ext_resource type="Texture2D" uid="uid://bn08l0tg0u18k" path="res://scene/kokoniiruze/kokoniiruze.png" id="1_040oi"]
+[ext_resource type="Script" path="res://scene/kokoniiruze/kokoniiruze.gd" id="1_u8thc"]
+[ext_resource type="Texture2D" uid="uid://cu572jos1l72h" path="res://scene/kokoniiruze/iruze.png" id="4_stir8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ms7e7"]
+resource_local_to_scene = true
+shader = ExtResource("1_1lpue")
+shader_parameter/enabled = true
+shader_parameter/is_selected = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx6uw"]
+atlas = ExtResource("1_040oi")
+region = Rect2(216, 96, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkp03"]
+atlas = ExtResource("1_040oi")
+region = Rect2(288, 96, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbmeq"]
+atlas = ExtResource("1_040oi")
+region = Rect2(0, 144, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ju1r"]
+atlas = ExtResource("1_040oi")
+region = Rect2(72, 144, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxx1a"]
+atlas = ExtResource("1_040oi")
+region = Rect2(144, 144, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_325ea"]
+atlas = ExtResource("1_040oi")
+region = Rect2(0, 0, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0yk0"]
+atlas = ExtResource("1_040oi")
+region = Rect2(72, 0, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sic8"]
+atlas = ExtResource("1_040oi")
+region = Rect2(144, 0, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w15al"]
+atlas = ExtResource("1_040oi")
+region = Rect2(216, 0, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcm8f"]
+atlas = ExtResource("1_040oi")
+region = Rect2(288, 0, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ru1t3"]
+atlas = ExtResource("1_040oi")
+region = Rect2(0, 48, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wboen"]
+atlas = ExtResource("1_040oi")
+region = Rect2(72, 48, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u366"]
+atlas = ExtResource("1_040oi")
+region = Rect2(144, 48, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xj36x"]
+atlas = ExtResource("1_040oi")
+region = Rect2(216, 48, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jccuq"]
+atlas = ExtResource("1_040oi")
+region = Rect2(288, 48, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wgoq"]
+atlas = ExtResource("1_040oi")
+region = Rect2(0, 96, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afber"]
+atlas = ExtResource("1_040oi")
+region = Rect2(72, 96, 72, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxstw"]
+atlas = ExtResource("1_040oi")
+region = Rect2(144, 96, 72, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g1kvo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx6uw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkp03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbmeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ju1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxx1a")
+}, {
+"duration": 1.6,
+"texture": SubResource("AtlasTexture_rx6uw")
+}],
+"loop": true,
+"name": &"cry",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_325ea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0yk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sic8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w15al")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcm8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ru1t3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wboen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8u366")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xj36x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jccuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wgoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jccuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xj36x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afber")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxstw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afber")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_36gm2"]
+radius = 37.0135
+
+[node name="Kokoniiruze" type="Node2D"]
+script = ExtResource("1_u8thc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_ms7e7")
+sprite_frames = SubResource("SpriteFrames_g1kvo")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/kokoniiruze/kokoniiruze.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "9172d15deca093cfe2fbaf067a1f26c7"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"output_section": false
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_36gm2")
+
+[node name="IruzeSprite2D" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("4_stir8")
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"slice": "",
+"source": "res://scene/kokoniiruze/iruze.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5a60ea18c1f63fe55ad77ce534817a4d"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
