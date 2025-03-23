@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://6rsp0x7tay8h"
+path="res://.godot/imported/cafe.aseprite-fb481b534c15df25cbc7e32515ce4f3a.res"
+
+[deps]
+
+source_file="res://scene/cafe/cafe.aseprite"
+dest_files=["res://.godot/imported/cafe.aseprite-fb481b534c15df25cbc7e32515ce4f3a.res"]
+
+[params]
+
