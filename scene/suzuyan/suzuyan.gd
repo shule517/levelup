@@ -9,7 +9,7 @@ var text_list1:Array[String] = [
 	"おっ、	はじめましてやな！
 	わいは	『スズやん』	っちゅーんや！",
 	"え？	丸っとして、	たこ焼きみたいやて？
-	…	…	どこがやねん！
+	…	…		どこがやねん！
 	どう見ても『スズメ』ですがな〜！",
 	# あんさん、しっかりしておくれや〜！
 	"まぁまぁ、
@@ -155,7 +155,7 @@ var text_list6: Array[String] = [
 
 func _ready() -> void:
 	animated_sprite.play("default")
-	message_balloon.set_messsage(text_list4)
+	message_balloon.set_messsage(text_list1)
 	message_balloon.visible = false
 
 func _process(delta: float) -> void:

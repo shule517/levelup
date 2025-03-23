@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=30 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://2foqjj2jstxh" path="res://scene/shipping_box/shipping_box.tscn" id="16_7lpbp"]
 [ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/player_status/player_status.tscn" id="16_mr2pf"]
 [ext_resource type="PackedScene" uid="uid://yymk4wtu2oxp" path="res://objects/campfire/campfire.tscn" id="19_sqfqq"]
+[ext_resource type="PackedScene" uid="uid://djabtdit4nyg1" path="res://bags/pachindo/pachindo.tscn" id="23_p325b"]
 [ext_resource type="PackedScene" uid="uid://qjb5sges8kwn" path="res://scene/nojo/nojo.tscn" id="23_sbhi1"]
 [ext_resource type="PackedScene" uid="uid://dintt565dl5i5" path="res://scene/suzuyan/suzuyan.tscn" id="23_vru43"]
 [ext_resource type="PackedScene" uid="uid://bjkqj4nxoyj68" path="res://objects/bakon/bakon.tscn" id="24_vumpi"]
@@ -788,6 +789,9 @@ position = Vector2(135, 11)
 
 [node name="Bakon" parent="." instance=ExtResource("24_vumpi")]
 position = Vector2(186, 30)
+
+[node name="Pachindo" parent="." instance=ExtResource("23_p325b")]
+position = Vector2(356, 100)
 
 [editable path="Warp"]
 [editable path="WarWinter"]

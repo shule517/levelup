@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c6qa8rodu1nk1"]
+[gd_scene load_steps=15 format=3 uid="uid://c6qa8rodu1nk1"]
 
 [ext_resource type="Texture2D" uid="uid://lkdayohtpu0n" path="res://fields/home/houses_inside.png" id="1_w38up"]
 [ext_resource type="PackedScene" uid="uid://bux57ckmy2stp" path="res://scene/nupu/nupu.tscn" id="2_lbwjr"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ceo73qbbxxnr2" path="res://fields/warp/warp.tscn" id="4_2yg5u"]
 [ext_resource type="PackedScene" uid="uid://c5714kl8webjf" path="res://ui/world_clock/world_clock.tscn" id="6_qgo6x"]
 [ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/item_bar/item_bar.tscn" id="7_pum0v"]
+[ext_resource type="Texture2D" uid="uid://btkna0praq2aa" path="res://fields/home/bag.png" id="7_vhvxf"]
+[ext_resource type="Texture2D" uid="uid://bvo3cwytd2ldi" path="res://fields/home/bag2.png" id="8_rb0pe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nn4d4"]
 texture = ExtResource("1_w38up")
@@ -104,16 +106,11 @@ texture_region_size = Vector2i(32, 32)
 7:1/0 = 0
 7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:2/0 = 0
-7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:3/0 = 0
-7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 6:3/0 = 0
 5:3/0 = 0
-5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:3/0 = 0
-4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:2/0 = 0
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 6:2/0 = 0
 3:3/0 = 0
 3:4/0 = 0
@@ -134,12 +131,40 @@ texture_region_size = Vector2i(32, 32)
 7:4/0 = 0
 7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 5:2/0 = 0
-5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSet" id="TileSet_f3vfl"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_nn4d4")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dq7on"]
+atlas = ExtResource("7_vhvxf")
+region = Rect2(0, 0, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbv7w"]
+atlas = ExtResource("7_vhvxf")
+region = Rect2(16, 0, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50lha"]
+atlas = ExtResource("7_vhvxf")
+region = Rect2(0, 21, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2h033"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dq7on")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbv7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50lha")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Home" type="Node2D"]
 position = Vector2(-240, 93)
@@ -194,5 +219,68 @@ offset_left = 9.0
 offset_top = 10.0
 offset_right = 9.0
 offset_bottom = 10.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-26, 85)
+texture = ExtResource("8_rb0pe")
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"slice": "",
+"source": "res://bags/bag2.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"slice_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "159ce394ff1e870b8188253c2060e673"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-27, 104)
+sprite_frames = SubResource("SpriteFrames_2h033")
+frame = 1
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://bags/bag.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"output_section": false
+}
+metadata/_aseprite_wizard_source_file_hash_ = "eb766cdf4557736d66e9a1463ab7fe98"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-28, 57)
+sprite_frames = SubResource("SpriteFrames_2h033")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://bags/bag.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"output_section": false
+}
+metadata/_aseprite_wizard_source_file_hash_ = "eb766cdf4557736d66e9a1463ab7fe98"
 
 [editable path="Objects/Warp"]

@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://djabtdit4nyg1"]
+
+[ext_resource type="Texture2D" uid="uid://upqa8mhgug8t" path="res://bags/pachindo/pachin-do2.png" id="1_b5ean"]
+[ext_resource type="Texture2D" uid="uid://c2a25rkybi0n1" path="res://bags/pachindo/pachin-do.png" id="1_sfddw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0r6de"]
+size = Vector2(68, 20)
+
+[node name="Pachindo" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_b5ean")
+offset = Vector2(-5, -22)
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"slice": "",
+"source": "res://bags/pachindo/pachin-do2.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"slice_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "dc714d24c73c462c5ed17c374bfa9cc8"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("1_sfddw")
+offset = Vector2(-5, -22)
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"slice": "",
+"source": "res://bags/pachindo/pachin-do.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"slice_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "53f49023cfd5262b238fd8690748bc5c"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -10)
+shape = SubResource("RectangleShape2D_0r6de")

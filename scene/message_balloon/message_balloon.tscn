@@ -91,7 +91,8 @@ offset_left = 8.0
 offset_top = 21.0
 offset_right = 190.0
 offset_bottom = 57.0
-text = "なんや あんさん 畑仕事はじめてかいな
+text = "ここにいるよ！
+なんや あんさん 畑仕事はじめてかいな
 なんや あんさん 畑仕事はじめてかいな
 なんや あんさん 畑仕事はじめてかいな"
 label_settings = SubResource("LabelSettings_4i4ww")
