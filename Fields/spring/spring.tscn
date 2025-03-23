@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=32 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dintt565dl5i5" path="res://scene/suzuyan/suzuyan.tscn" id="23_vru43"]
 [ext_resource type="PackedScene" uid="uid://cpgmhvd06jstc" path="res://scene/kokoniiruze/kokoniiruze.tscn" id="24_7yu0d"]
 [ext_resource type="PackedScene" uid="uid://bjkqj4nxoyj68" path="res://objects/bakon/bakon.tscn" id="24_vumpi"]
+[ext_resource type="PackedScene" uid="uid://b5mj7i02akyre" path="res://scene/cafe/cafe.tscn" id="25_q3msr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5gqc"]
 texture = ExtResource("2_746s0")
@@ -796,6 +797,9 @@ position = Vector2(356, 100)
 
 [node name="Kokoniiruze" parent="." instance=ExtResource("24_7yu0d")]
 position = Vector2(-6, 48)
+
+[node name="Cafe" parent="." instance=ExtResource("25_q3msr")]
+position = Vector2(10, 195)
 
 [editable path="Warp"]
 [editable path="WarWinter"]

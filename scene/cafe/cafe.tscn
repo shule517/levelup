@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5mj7i02akyre"]
+
+[ext_resource type="Texture2D" uid="uid://c5xmijyoje4yv" path="res://scene/cafe/cafe.png" id="1_5big2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02443"]
+atlas = ExtResource("1_5big2")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvqwo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02443")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Cafe" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_mvqwo")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/cafe/cafe.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "2738b0017eae2cc8bd44d690496eb6ea"
