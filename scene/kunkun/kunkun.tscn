@@ -1,24 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpem4x6q438ef"]
+[gd_scene load_steps=10 format=3 uid="uid://dpem4x6q438ef"]
 
 [ext_resource type="Script" path="res://scene/kunkun/kunkun.gd" id="1_agcuf"]
 [ext_resource type="Texture2D" uid="uid://dxwtdq7ticamf" path="res://scene/kunkun/kunkun.png" id="1_f1fh6"]
+[ext_resource type="PackedScene" uid="uid://bflexv35g13fj" path="res://scene/message_balloon/message_balloon.tscn" id="3_rg8ul"]
+[ext_resource type="AudioStream" uid="uid://bdnqhrakuj7t7" path="res://scene/kunkun/soundeffect-lab_犬の鳴き声4.mp3" id="4_era3t"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_davqq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nqie"]
 atlas = ExtResource("1_f1fh6")
 region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ysoij"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnk6v"]
 atlas = ExtResource("1_f1fh6")
 region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_h55x4"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_te1fv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_davqq")
+"texture": SubResource("AtlasTexture_3nqie")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ysoij")
+"texture": SubResource("AtlasTexture_vnk6v")
 }],
 "loop": true,
 "name": &"default",
@@ -28,14 +30,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvkor"]
 size = Vector2(128, 17)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rgqgb"]
+radius = 49.0408
+
 [node name="Kunkun" type="StaticBody2D"]
 collision_mask = 0
 script = ExtResource("1_agcuf")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="KunKunAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -47)
-sprite_frames = SubResource("SpriteFrames_h55x4")
+sprite_frames = SubResource("SpriteFrames_te1fv")
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
 "o_ex_p": "",
@@ -45,7 +50,7 @@ metadata/_aseprite_wizard_config_ = {
 "slice": "",
 "source": "res://scene/kunkun/kunkun.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "26f144101a4c7d03d1ceace1b2ccb930"
+metadata/_aseprite_wizard_source_file_hash_ = "f478b83a3ea6ec49f56332cddc83dac6"
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "slice_section": false
@@ -54,3 +59,23 @@ metadata/_aseprite_wizard_interface_config_ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_pvkor")
+
+[node name="MessageBalloon" parent="." instance=ExtResource("3_rg8ul")]
+visible = false
+offset_left = -69.0
+offset_top = -133.0
+offset_right = -69.0
+offset_bottom = -133.0
+voice_sounds = Array[AudioStream]([ExtResource("4_era3t")])
+chara_name = "くんくん"
+is_voice_single = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_rgqgb")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

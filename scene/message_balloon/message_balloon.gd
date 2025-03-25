@@ -2,11 +2,14 @@ class_name MessageBolloon
 extends Control
 
 @onready var label: Label = $Label
+@onready var name_label: Label = $NameLabel
 @onready var timer: Timer = $Timer
 @onready var cursor_animated_sprite: AnimatedSprite2D = $CursorAnimatedSprite2D
 
 @export var voice_sounds: Array[AudioStream] = []
 @export var button_sound: AudioStream
+@export var chara_name: String = "スズやん"
+@export var is_voice_single: bool = false
 
 var text_list: Array[String] = []
 
@@ -18,6 +21,7 @@ var is_talking := false  # 会話中か
 var is_start_frame := false
 
 func _ready() -> void:
+	name_label.text = chara_name
 	cursor_animated_sprite.visible = false
 	#cursor_animated_sprite.play("default")
 
@@ -52,11 +56,16 @@ func _on_timer_timeout() -> void:
 		label.text += char
 		current_index += 1
 
+		if is_voice_single:
+			if current_index == 1 or full_text[current_index - 2] == '\t':
+				play_random_voice()
+
 		# 改行の後は少し長めに待つ（次の文字送りの前に待つイメージ）
 		if char == '\n' or char == '\t' or char == ' ':
 			timer.start(0.4)  # 改行の時だけ間を空ける
 		else:
-			play_random_voice()
+			if not is_voice_single:
+				play_random_voice()
 			timer.start(0.1)  # 通常の文字送り速度
 	else:
 		is_typing = false
