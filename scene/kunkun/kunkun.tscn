@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpem4x6q438ef"]
+
+[ext_resource type="Script" path="res://scene/kunkun/kunkun.gd" id="1_agcuf"]
+[ext_resource type="Texture2D" uid="uid://dxwtdq7ticamf" path="res://scene/kunkun/kunkun.png" id="1_f1fh6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_davqq"]
+atlas = ExtResource("1_f1fh6")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysoij"]
+atlas = ExtResource("1_f1fh6")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h55x4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_davqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysoij")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvkor"]
+size = Vector2(128, 17)
+
+[node name="Kunkun" type="StaticBody2D"]
+collision_mask = 0
+script = ExtResource("1_agcuf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -47)
+sprite_frames = SubResource("SpriteFrames_h55x4")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/kunkun/kunkun.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "26f144101a4c7d03d1ceace1b2ccb930"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"slice_section": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_pvkor")

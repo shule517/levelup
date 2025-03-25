@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://brm4gs12o0vhe"
+path="res://.godot/imported/mao.aseprite-51edfeaeee37322c702a59fc5e7c1648.res"
+
+[deps]
+
+source_file="res://scene/mao/mao.aseprite"
+dest_files=["res://.godot/imported/mao.aseprite-51edfeaeee37322c702a59fc5e7c1648.res"]
+
+[params]
+

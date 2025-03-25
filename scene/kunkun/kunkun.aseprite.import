@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://8xbkqk0iftpf"
+path="res://.godot/imported/kunkun.aseprite-1bc083cb19acc3d67a0de29891cecb68.res"
+
+[deps]
+
+source_file="res://scene/kunkun/kunkun.aseprite"
+dest_files=["res://.godot/imported/kunkun.aseprite-1bc083cb19acc3d67a0de29891cecb68.res"]
+
+[params]
+

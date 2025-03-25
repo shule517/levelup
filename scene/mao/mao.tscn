@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://gjxn0fkasclf"]
+
+[ext_resource type="Texture2D" uid="uid://b1610hnghas3u" path="res://scene/mao/mao.png" id="1_1srk1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ka7u3"]
+atlas = ExtResource("1_1srk1")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xn6na"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ka7u3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Mao" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_xn6na")
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/mao/mao.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "845cc1c0cedf4f23a6f4617ecc324acf"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true
+}
