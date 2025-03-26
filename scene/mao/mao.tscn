@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://gjxn0fkasclf"]
+[gd_scene load_steps=5 format=3 uid="uid://gjxn0fkasclf"]
 
 [ext_resource type="Texture2D" uid="uid://b1610hnghas3u" path="res://scene/mao/mao.png" id="1_1srk1"]
+[ext_resource type="Script" path="res://scene/mao/mao.gd" id="1_msmh5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ka7u3"]
 atlas = ExtResource("1_1srk1")
@@ -18,6 +19,7 @@ animations = [{
 }]
 
 [node name="Mao" type="Node2D"]
+script = ExtResource("1_msmh5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
