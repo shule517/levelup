@@ -76,6 +76,7 @@ theme = SubResource("Theme_alp8c")
 theme_override_styles/panel = SubResource("StyleBoxTexture_sg6lr")
 
 [node name="NameLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 9.0
 offset_top = -6.0
 offset_right = 191.0

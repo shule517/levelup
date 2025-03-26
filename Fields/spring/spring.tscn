@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=36 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://bw1t2b3qh43r3" path="res://fields/spring/misc.png" id="7_px4um"]
 [ext_resource type="Script" path="res://fields/spring/ground_tile_map_layer.gd" id="8_3moul"]
 [ext_resource type="PackedScene" uid="uid://dk2up2k4npas0" path="res://objects/home/home.tscn" id="11_tuxjy"]
-[ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/item_bar/item_bar.tscn" id="14_3e7cc"]
 [ext_resource type="Script" path="res://fields/spring/crops_tile_map_layer.gd" id="14_juah2"]
 [ext_resource type="AudioStream" uid="uid://dxh37rm775k66" path="res://fields/spring/peaceful_forest.mp3" id="15_ai7t6"]
 [ext_resource type="PackedScene" uid="uid://2foqjj2jstxh" path="res://scene/shipping_box/shipping_box.tscn" id="16_7lpbp"]
@@ -27,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://b5mj7i02akyre" path="res://scene/cafe/cafe.tscn" id="25_q3msr"]
 [ext_resource type="PackedScene" uid="uid://gjxn0fkasclf" path="res://scene/mao/mao.tscn" id="26_vlnq1"]
 [ext_resource type="PackedScene" uid="uid://dpem4x6q438ef" path="res://scene/kunkun/kunkun.tscn" id="27_23vej"]
+[ext_resource type="Shader" path="res://shader/chromatic_aberration.gdshader" id="27_88fod"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5gqc"]
 texture = ExtResource("2_746s0")
@@ -689,6 +689,12 @@ sources/2 = SubResource("TileSetAtlasSource_7s4hi")
 sources/3 = SubResource("TileSetAtlasSource_ies2n")
 sources/4 = SubResource("TileSetAtlasSource_n4gik")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5lqle"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_43kgd"]
+shader = ExtResource("27_88fod")
+shader_parameter/strength = 1.0
+
 [node name="FieldSpring" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_017ow")
@@ -767,10 +773,23 @@ offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="ItemBar" parent="CanvasLayer/PanelContainer" instance=ExtResource("14_3e7cc")]
+[node name="ItemBar" parent="CanvasLayer/PanelContainer" instance=ExtResource("16_mr2pf")]
 layout_mode = 2
 
 [node name="PlayerStatus" parent="CanvasLayer/PanelContainer" instance=ExtResource("16_mr2pf")]
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5lqle")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PanelContainer2"]
+material = SubResource("ShaderMaterial_43kgd")
+clip_contents = true
 layout_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
