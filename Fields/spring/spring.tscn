@@ -694,7 +694,7 @@ sources/4 = SubResource("TileSetAtlasSource_n4gik")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_43kgd"]
 shader = ExtResource("27_88fod")
 shader_parameter/strength = 1.0
-shader_parameter/aberration_scale = 0.004
+shader_parameter/aberration_scale = 0.003
 
 [node name="FieldSpring" type="Node2D"]
 y_sort_enabled = true
