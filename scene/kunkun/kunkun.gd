@@ -4,6 +4,7 @@ extends Node2D
 @onready var message_balloon: MessageBolloon = $MessageBalloon
 
 var messages: Array[String] = [
+	"ｸﾝｸﾝ…	 いいにおいする…", # 最初は顔をつっこんでない。おいしそうなご飯を持ってると、顔を出してきて、イベントがはじまる
 	"だ、だれかいるの？",
 	"あ…	えっと	 はじめまして…
 	くんくんだよ！",
