@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://6fydadthp1n7"
+path="res://.godot/imported/player_megane.aseprite-b73dd1d0a7c10dac4c9331da77ab0c49.res"
+
+[deps]
+
+source_file="res://scene/player/player_megane.aseprite"
+dest_files=["res://.godot/imported/player_megane.aseprite-b73dd1d0a7c10dac4c9331da77ab0c49.res"]
+
+[params]
+
