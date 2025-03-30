@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://yt3ek2hdiiwk"
+path="res://.godot/imported/koinobori.aseprite-10e90d30def24f2543317b0f33bc234a.res"
+
+[deps]
+
+source_file="res://charas/koinobori/koinobori.aseprite"
+dest_files=["res://.godot/imported/koinobori.aseprite-10e90d30def24f2543317b0f33bc234a.res"]
+
+[params]
+

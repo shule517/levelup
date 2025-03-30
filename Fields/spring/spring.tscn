@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://cyknr7jttda31"]
+[gd_scene load_steps=37 format=4 uid="uid://cyknr7jttda31"]
 
 [ext_resource type="Script" path="res://fields/base/field.gd" id="1_017ow"]
 [ext_resource type="Texture2D" uid="uid://cwfskfhnmdfho" path="res://assets/Hana Caraka - Topdown Tileset/Tileset/Spring/Spring1.png" id="2_746s0"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://dxh37rm775k66" path="res://fields/spring/peaceful_forest.mp3" id="15_ai7t6"]
 [ext_resource type="PackedScene" uid="uid://2foqjj2jstxh" path="res://scene/shipping_box/shipping_box.tscn" id="16_7lpbp"]
 [ext_resource type="PackedScene" uid="uid://dffq1ep3cf1xw" path="res://ui/player_status/player_status.tscn" id="16_mr2pf"]
+[ext_resource type="PackedScene" uid="uid://iqh6edh3742o" path="res://scene/player/megane.tscn" id="17_th8sv"]
 [ext_resource type="PackedScene" uid="uid://yymk4wtu2oxp" path="res://objects/campfire/campfire.tscn" id="19_sqfqq"]
 [ext_resource type="PackedScene" uid="uid://djabtdit4nyg1" path="res://bags/pachindo/pachindo.tscn" id="23_p325b"]
 [ext_resource type="PackedScene" uid="uid://qjb5sges8kwn" path="res://scene/nojo/nojo.tscn" id="23_sbhi1"]
@@ -760,6 +761,9 @@ position = Vector2(198, 135)
 y_sort_enabled = true
 position = Vector2(108, 65)
 
+[node name="Megane" parent="." instance=ExtResource("17_th8sv")]
+position = Vector2(321, 90)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
@@ -815,7 +819,7 @@ position = Vector2(135, 11)
 position = Vector2(186, 30)
 
 [node name="Pachindo" parent="." instance=ExtResource("23_p325b")]
-position = Vector2(356, 100)
+position = Vector2(383, 105)
 
 [node name="Kokoniiruze" parent="." instance=ExtResource("24_7yu0d")]
 position = Vector2(-6, 48)

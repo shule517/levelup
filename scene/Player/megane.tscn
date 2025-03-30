@@ -1,0 +1,122 @@
+[gd_scene load_steps=13 format=3 uid="uid://iqh6edh3742o"]
+
+[ext_resource type="Texture2D" uid="uid://v0lgw8n72ig5" path="res://scene/player/player_megane.png" id="1_83b1t"]
+[ext_resource type="Script" path="res://scene/player/megane.gd" id="1_ofif8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06p7w"]
+atlas = ExtResource("1_83b1t")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdql6"]
+atlas = ExtResource("1_83b1t")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4n8ci"]
+atlas = ExtResource("1_83b1t")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3shj"]
+atlas = ExtResource("1_83b1t")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shhy1"]
+atlas = ExtResource("1_83b1t")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3m0s"]
+atlas = ExtResource("1_83b1t")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_171vn"]
+atlas = ExtResource("1_83b1t")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lsu5"]
+atlas = ExtResource("1_83b1t")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_px0py"]
+atlas = ExtResource("1_83b1t")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0yr4o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06p7w")
+}],
+"loop": true,
+"name": &"harvest",
+"speed": 1000.0
+}, {
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_fdql6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n8ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3shj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n8ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdql6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shhy1")
+}],
+"loop": true,
+"name": &"soil",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3m0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_171vn")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.06667,
+"texture": SubResource("AtlasTexture_8lsu5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_px0py")
+}],
+"loop": true,
+"name": &"water",
+"speed": 7.0
+}]
+
+[node name="Megane" type="Node2D"]
+script = ExtResource("1_ofif8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_0yr4o")
+animation = &"walk"
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"slice": "",
+"source": "res://scene/player/player_megane.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "6b4a23b88a0f7de686950c0383920fa2"
